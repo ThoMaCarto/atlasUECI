@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
+    <title>Atlas Eau Potable Assainissement Côte d'Ivoire Bouaké</title>
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <link rel="icon" type="image/x-icon" href="../static/images/favicon.ico">
+    
+
+    
+	<!-- appelle la librairie javascript Leaflet et le fichier CSS Leaflet -->	
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+	<script type="text/javascript" src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+	
+	<!-- jQuery - indispensable pour utiliser les fichiers geojson -->
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	
+</head>
+
+<body>
+<header class="header-bar">
+    <div><a class="header-nav" href="../index.html">
+        <img src="../static/images/UElogo.png" alt="Atlas Eau Potable Assainissement Côte d'Ivoire Bouaké logo">
+    </a>
+    <span class="header-title" title="L'Atlas en ligne du projet ETUPO Vallée du Bandama présente les résultats de l'étude sur l'accès à l'eau potable et à l'assainissement à Bouaké et dans les villages périphériques.">Atlas Urgence Eau Bouaké</span></div>
+<nav>
+<ul>
+<li><a href="../index.html"><br><img src="../static/images/home_icon.png"></a></li>
+
+
+
+<li><a title="La présentation de l'étude"><br>Informations</a>
+<ul class="submenu">
+<li><a href="../pages/projet.html">L'étude</a></li>
+<li><a href="../pages/methodes-de-diagnostic.html">Les méthodes de diagnostic</a></li>
+<li><a href="../pages/auteurs-de-letude.html">Les auteurs</a></li>
+<li><a href="../pages/telechargements.html">Télécharger les données</a></li>
+<li><a href="../pages/contacts.html">Contacts</a></li>
+</ul>
+</li>
+
+<li><a href="../pages/vulnerabilite.html">Diagnostic<br>localités</a></li>
+<li><a href="../pages/analyse-des-points-deau.html">Diagnostic<br>points d'eau</a></li>
+
+
+
+
+<li class="selectedout"><a href="http://urgenceeau.com/"><br>Urgence Eau ></a></li>
+
+</ul>
+</nav>
+    
+</header>
+    <div id="main"> 
+    
+<section class="withmap">
+	<div class="map" id="map" title="Cliquer sur une localité pour accéder à son diagnostic">
+	<script type="text/javascript">
+	////Carte de la page d'accueil
+  
+
+//// création de la carte et paramétrages généraux : 
+//centre et niveau de zoom,zoom minimum,zoom maximum, 
+// et limites du canevas (afin que l'ordinateur ne charge pas trop de tuiles de fond de carte)
+// les paramètres de la fonction setView (coordonnées du centre de la vue=coordonnée de la localité
+//niveau de zoom = 14 pour un quartier et 16 pour un village) seront extraits des métadata de chaque 
+//fiches localité.
+var map = L.map('map');
+	map.setView([7.75, -5.038], 11);
+	map.setMinZoom(11);
+	map.setMaxZoom(19);
+	map.setMaxBounds([[7.5,-4.8],[7.9,-5.3]])	       
+     
+	</script>
+	<script type="text/javascript" >
+		// construire une variable url pour chaque fichiers annexes affichée sur la page
+			var urllocalites = "../doc/map/bdd/localites.geojson"
+			var urlpointdeau = "../doc/map/bdd/pointseau.geojson"
+			var urlNorthArray = '<img src="../static/images/compass.png" style="width:30px;">'
+			var urlwhiteshadow = '../doc/map/icone/white.png'
+			var urlpuitsmoderne = '../doc/map/icone/puits_moderne.png'
+			var urlpuitstradi = '../doc/map/icone/puits_tradi.png'
+			var urlforage = '../doc/map/icone/forage.png'
+			var urlborne = '../doc/map/icone/borne.png'
+			var urlsurface = '../doc/map/icone/marigot.png'
+		</script>
+	</div>
+	<div class="fiche">
+		<header>
+			
+		</header>
+		<h3 title="Les résultats détaillés de l'étude menée par Urgence Eau">Eau potable et Assainissement dans la région de Bouaké</h3>
+		<img id="imgaccueil" src="../static/images/eaupotable.jpg" alt="trouver de l'eau potable" title="Parfois, les habitants font des kilomètres pour ramener de l'eau dans des bidons de 20 litres.">
+		
+		
+			<ul>
+				<li><em>Cliquez sur une localité pour voir son diagnostic détaillé</em></li>
+				<li><em> Diagnostic des <a href="../pages/vulnerabilite.html">localités</a></em></li>
+				<li><em> Diagnostic des <a href="../pages/analyse-des-points-deau.html">points d'eau</a></em></li>
+				<li><em><a href="../pages/telechargements.html">Les bases de données des résultats</a></em></li>
+			</ul>
+		<p title="La crise qu’a connue la Côte d’Ivoire pendant 10 ans a causé un important retard dans les investissements et la maintenance des infrastructures d’eau potable et d’assainissement, entraînant une forte dégradation du service en milieu urbain. En conséquence, les citadins privilégies l'eau de puits privés ou communautaires souvent de mauvaise qualité. "><strong>></strong> En <strong>ville</strong> : des points d'eau alternatifs pollués</p>		
+		<details>		
+		<summary>détails</summary>	
+		<p>La <strong>crise</strong> qu’a connue la Côte d’Ivoire pendant 10 ans a causé un important <strong>retard dans les investissements</strong> et la maintenance des infrastructures d’eau potable et d’assainissement, entraînant une forte <strong>dégradation du service</strong> en <strong>milieu urbain</strong>. En conséquence, les citadins privilégies l'eau de puits privés ou communautaires souvent de mauvaise qualité. </p>
+		</details>
+		<p title="En zones rurales, les pompes hydrauliques installées dans les villages sont assez souvent vieilles et tombent en panne. Les installations ne sont pas toujours bien gérées, et les habitants sont obligés de prélever l’eau insalubre des marigots. Les zones rurales, particulièrement touchées, sont à considérer en priorité."><strong>></strong> Dans les <strong>villages</strong> : un grave déficit en infrastructures</p>
+		<details>
+		<summary>détails</summary>
+		<p>En <strong>zones rurales</strong>, les pompes hydrauliques installées dans les villages sont assez souvent vieilles et tombent en panne. Les installations ne sont pas toujours bien gérées, et les habitants sont obligés de prélever <strong>l’eau insalubre des marigots</strong>. Les zones rurales, particulièrement touchées, sont à considérer en priorité.</p>
+		</details>
+		 
+		
+		
+		
+		
+	</div>
+</section>
+    </div>
+    <footer class="footer-bar">
+
+
+
+	<a href="http://urgenceeau.com/"><img src="../static/images/UElogo.png" alt="Urgence Eau logo"></a>
+	<a href="http://urgenceeau.com/urgence-eau-cote-divoire-ueci/"><img src="../static/images/UECIlogo.png" alt="Urgence Eau - Côte d'Ivoire logo"></a>
+	<span class="footer-text"> <a href="http://urgenceeau.com/">Urgence Eau </a><br>
+	<a href="http://urgenceeau.com/urgence-eau-cote-divoire-ueci/">Urgence Eau - Côte d'Ivoire</a></span>
+    <span class="footer-text" style="text-align: center;">Site développé par <a href='http://www.ladyss.com/thomas-maillard'>Thomas Maillard</a><br>© 2018 Urgence Eau | <a href="http://urgenceeau.com/mentions-legales/">Mentions légales</a></span>
+    <span class="footer-text" style="text-align: right;">Un projet soutenu par la <a href="https://www.normandie.fr/">Région Normandie</a><br>à travers l'initiative <a href="https://www.normandie.fr/normandie-pour-la-paix">Normandie pour la Paix.</a></span>
+    <a href="https://www.normandie.fr/"><img src="../static/images/logo_r_normandie-portrait-cmjn.jpg" alt="Region Normandie logo"></a>
+	<a href="https://www.normandie.fr/normandie-pour-la-paix"><img src="../static/images/Label_Normandie-pour-la-Paix.jpg" alt="Label Normandie pour la paix logo"></a>
+  
+    <script src="../static/js/script.js"></script>
+
+	<!-- appelle le fichier JS codant la carte de la page d'accueil -->	
+	<script type="text/javascript" src="../doc/map/map_home.js" ></script>
+    </footer>
+</body>
+ 
+</html>
