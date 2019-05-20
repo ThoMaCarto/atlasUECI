@@ -16,13 +16,13 @@ controlLayers.addOverlay(localites, "Localités","Diagnostic des localités");
 function getColorVuln(vulnerabilit) {
           switch (vulnerabilit) {
             case 'Vulnérabilité faible':
-              return  'green';
+              return  'yellow';
             case 'Vulnérabilité moyenne':
               return 'orange';
             case 'Vulnérabilité forte':
               return 'red';
             case 'Majoritairement':
-            	return 'green';
+            	return 'yellow';
             case 'Partiellement':
             	return 'orange';
      		default:

@@ -102,7 +102,7 @@ $.getJSON(urllocalites,function(data2)
 {
 	var vulnLocalites= L.geoJson(data2,{style: function(feature){return { color : getColorVuln(feature.properties.vulnerabil), weight : 1, fillColor : getColorVuln(feature.properties.vulnerabil), fillOpacity : .5 };},
 	onEachFeature : function(feature, layer ) {layer.bindPopup('<b><u>Nom de la localité</u></b><br>' + feature.properties.a_quartier +'<br>Niveau de Vulnérabilité : '+ feature.properties.vulnerabil+
-	 '<br><strong> Diagnostic détaillé : </strong> <a href="articles/'+ feature.properties.lien +'" style="text-transform: capitalize;">'+ feature.properties.a_quartier +'</a>')}
+	 '<br><strong> Diagnostic détaillé : </strong> <a href="articles/' + articlespath + feature.properties.lien +'" style="text-transform: capitalize;">'+ feature.properties.a_quartier +'</a>')}
 });
 vulnLocalites.addTo(map);
 controlLayers.addOverlay(vulnLocalites, "Niveau de Vulnérabilité");

@@ -4,7 +4,7 @@ $.getJSON(urllocalites,function(data)
 	var localites= L.geoJson(data,{style: function(feature){
 		return { color : 'red', weight : 1.5, fillColor : 'red', fillOpacity : .0, };},
 		onEachFeature : function(feature, layer ) {layer.bindPopup('<b><u>Nom de la localité</u></b><br>' + feature.properties.a_quartier +'<br>Niveau de Vulnérabilité : '+ feature.properties.vulnerabil+
-	 '<br><strong> Diagnostic détaillé : </strong> <a href="articles/'+ feature.properties.lien +'" style="text-transform: capitalize;">'+ feature.properties.a_quartier +'</a>')}
+	 '<br><strong> Diagnostic détaillé : </strong> <a href="articles/' + articlespath + feature.properties.lien +'" style="text-transform: capitalize;">'+ feature.properties.a_quartier +'</a>')}
 });
 localites.addTo(map);
 controlLayers.addOverlay(localites, "Localités","Diagnostic des localités");
