@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+
+{% for cat, articles in categories|sort %}
+<section class="list-element">
+    <h2 class="list-element-title">
+        <a href="/{{ cat.url }}">{{ cat }}</a>
+    </h2>
+    <div class="list-element-count">
+        ({{ articles|count }} article{% if articles|length > 1 %}s{% endif %})
+    </div>
+</section>
+{% endfor %}
+
+{% endblock %}

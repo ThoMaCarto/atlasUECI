@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="{{ DEFAULT_LANG }}">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
+    <title>{% block titre %}{{ SITENAME }}{% endblock %}</title>
+    <link rel="stylesheet" href="{{SITEURL}}/{{ THEME_STATIC_DIR }}/css/style.css" />
+    <link rel="icon" type="image/x-icon" href="{{SITEURL}}/{{ THEME_STATIC_DIR }}/images/favicon.ico">
+    
+
+    
+    {% block extra_head %}
+    {% endblock %}
+</head>
+
+<body>
+    {% include 'parts/header.part.html' %}
+
+    <div id="main"> 
+    
+       {% block content %}
+       {% endblock %}
+    </div>
+    <footer class="footer-bar">
+
+    {% include 'parts/footer.part.html' %}
+
+    <script src="{{SITEURL}}/{{ THEME_STATIC_DIR }}/js/script.js"></script>
+   {% block extra_js %}
+    {% endblock %}
+    </footer>
+</body>
+ 
+</html>

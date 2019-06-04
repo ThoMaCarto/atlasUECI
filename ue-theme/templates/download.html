@@ -1,0 +1,116 @@
+<!-- page pour l'affichage de données dans des tabulator -->
+
+{% extends "base.html" %}
+
+
+
+{% block extra_head %}
+
+<!-- jQuery - indispensable pour utiliser les fichiers geojson -->
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	
+
+	
+	
+	
+
+
+<!-- liens vers les fichiers de la librairy tabulator permettant d'afficher les tableaux de données -->
+<link href="https://unpkg.com/tabulator-tables@4.2.7/dist/css/tabulator.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://unpkg.com/tabulator-tables@4.2.7/dist/js/tabulator.min.js"></script>
+
+
+
+{% endblock %}
+
+
+
+{% block content %}
+
+<script type="text/javascript" >
+		// construire une variable url pour chaque base de donnée affichée sur la page
+			var urllocalites = "{{ SITEURL }}/{{DOC_STATIC_DIR}}/map/bdd/localites.json"
+			var urlpointdeau = "{{ SITEURL }}/{{DOC_STATIC_DIR}}/map/bdd/pointseau.json"
+			
+			
+		</script>
+
+<section class="nomap" style="width:100%;  overflow-y:auto;">
+	<h2  class="block">Télécharger  les données de l'étude</h2>
+
+<p  class="block">Les tableaux ci-dessous permettent de visualiser, filtrer et télécharger sous différents format les bases de données de l'étude.</p>
+
+	<h4 class="block">Données par localités</h4>
+	<div id="localites-table"  class="block"></div>
+	
+     
+<div class="table-controls" style="display:block;margin:auto;">
+      <button id="download-csv">Download CSV</button>
+      <button><a href="{{ SITEURL }}/{{DOC_STATIC_DIR}}/map/bdd/localites.geojson" download="UECI_localites">Download GEOJSON</a></button>
+     
+</div>
+	<h4 class="block">Données par points d'eau</h4>
+	<div class="block">
+	<div class="table-controls">
+        <span>
+          <label>Champs : </label>
+          <select id="filter-field">
+              <option></option>
+              <option value="properties.Zone">Zone (Rural/Urbain)</option>
+              <option value="properties.Note d\'évaluation de la vulnérabilité">Niveau de vulnérabilité [0-10]</option>
+             
+              <option value="properties.E Coli  (UFC/100 mL)">E. Coli</option>
+              <option value="properties.Ammoniac (mg/L)">Concentration en Ammoniac</option>
+              <option value="properties.Nitrate (mg/L)">Concentration en Nitrate</option>
+              
+          </select>
+        </span>
+
+        <span>
+          <label>Type: </label>
+          <select id="filter-type">
+          	<option value="like">like</option>
+              <option value="=">=</option>
+              <option value="<">&lt;</option>
+              <option value="<=">&lt;=</option>
+              <option value=">">&gt;</option>
+              <option value=">=">&gt;=</option>
+              <option value="!=">!=</option>
+              
+          </select>
+        </span>
+
+          <span><label>Valeur: </label> <input id="filter-value" type="text" placeholder="value to filter"></span>
+
+          <button id="filter-clear">Clear Filter</button>
+    </div>
+    </div>
+
+
+	
+	
+	<div id="ptseau-table"  class="block"></div>
+	
+     
+<div class="table-controls" style="display:block;margin:auto;">
+      <button id="download-csv">Download CSV</button>
+      <button><a href="{{ SITEURL }}/{{DOC_STATIC_DIR}}/map/bdd/pointseau.geojson" download="UECI_pointseau">Download GEOJSON</a></button>
+     
+</div>
+	
+</section>
+
+{% endblock %}
+
+
+
+
+{% block extra_js %}
+
+<!-- appelle le fichier JS codant les tableaux -->	
+
+<script type="text/javascript" src="{{SITEURL}}/{{DOC_STATIC_DIR}}/map/complexe-table.js"></script>
+
+
+{% endblock %}

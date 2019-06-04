@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block extra_head %}
+<!-- appelle la librairie javascript Leaflet et le fichier CSS Leaflet -->	
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+	<script type="text/javascript" src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+	
+	<!-- jQuery - indispensable pour utiliser les fichiers geojson -->
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+	
+	<!-- liens vers les fichiers permettant de créer les controles de groupes de couche dans la carte -->
+	<link rel="stylesheet" href="{{SITEURL}}/{{ THEME_STATIC_DIR }}/css/leaflet.groupedlayercontrol.min.css"/>
+	
+	
+	
+	
+{% endblock %}
+
+{% block content %}
+<div class="content">
+	<div id="map" class="map">
+		<script type="text/javascript">
+			//// création de la carte et paramétrages généraux : 
+			//centre et niveau de zoom,zoom minimum,zoom maximum, 
+			// et limites du canevas (afin que l'ordinateur ne charge pas trop de tuiles de fond de carte)
+			// les paramètres de la fonction setView (coordonnées du centre de la vue=coordonnée de la localité
+			//niveau de zoom = 14 pour un quartier et 16 pour un village) seront extraits des métadata de chaque 
+			//fiches localité.
+			var map = L.map('map');
+			map.setView([{{ article.latitude }},{{ article.longitude }}], {{ article.zoom }});
+			map.setMinZoom(11);
+			map.setMaxZoom(19);
+			map.setMaxBounds({{ BORDER_LIMIT }})
+				
+		</script>
+		<script type="text/javascript" >
+		// construire une variable url pour chaque base de donnée affichée sur la page
+			var urllocalites = "{{ SITEURL }}/{{DOC_STATIC_DIR}}/map/bdd/localites.geojson"
+			var urlpointdeau = "{{ SITEURL }}/{{DOC_STATIC_DIR}}/map/bdd/pointseau.geojson"
+			var urlNorthArray = '<img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/compass.png" style="width:30px;">'
+			var articlespath = '{{ SITEURL }}/'
+			
+		</script>
+		<script type="text/javascript" >
+		<!-- Script rapide pour filtrer les différents tableaux de données affiché dans la fiche -->
+		var filtreTableau = "{{ article.iddbb }}"
+		table.setFilter("properties.a_quartier", "=", filtreTableau );
+		
+		</script>
+	</div>
+	<div id="" class="fiche">
+		<header>
+			 <h1>{{ article.title }}</h1>
+			 <h4>{{ article.localisation }}</h4>
+		</header>
+		{{ article.content }}
+	</div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<!-- liens vers les fichiers permettant de créer les controles de groupes de couche dans la carte -->
+<script type="text/javascript" src="{{SITEURL}}/{{ THEME_STATIC_DIR }}/js/leaflet.groupedlayercontrol.min.js.map"></script>
+	<script type="text/javascript" src="{{SITEURL}}/{{ THEME_STATIC_DIR }}/js/leaflet.groupedlayercontrol.min.js"></script>
+<!-- les scripts d'affichage de l'habillage de la carte -->
+<script type="text/javascript" src="{{SITEURL}}/{{DOC_STATIC_DIR}}/map/map_habillage.js" ></script>
+<!-- script d'affichage des groupes de couche dans le contrôleur de couches -->
+<script type="text/javascript" src="{{SITEURL}}/{{DOC_STATIC_DIR}}/map/groupecontrole.js"></script>
+<!-- script d'affichage des différentes couches -->
+<script type="text/javascript" src="{{SITEURL}}/{{DOC_STATIC_DIR}}/map/vulnerabilite.js" ></script>
+<script type="text/javascript" src="{{SITEURL}}/{{DOC_STATIC_DIR}}/map/pe_type.js" ></script>
+
+
+{% endblock %}

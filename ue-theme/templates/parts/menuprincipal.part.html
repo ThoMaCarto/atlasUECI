@@ -1,0 +1,30 @@
+<nav>
+<ul>
+{% if DISPLAY_HOME or DISPLAY_HOME is not defined %}
+<li{% if output_file == "index.html" %} class="selected" id=""{% endif %}><a href="{{ SITEURL }}/index.html"><br><img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/home_icon.png"></a></li>
+{% endif %}
+
+
+
+<li><a title="La présentation de l'étude"><br>Informations</a>
+<ul class="submenu">
+{% for name, link, file in SUBMENU_INTERNAL_PAGES %}
+<li{% if output_file == file %} class="selected"{% endif %}><a href="{{SITEURL}}/{{ link }}">{{ name }}</a></li>
+{% endfor %}
+</ul>
+</li>
+
+{% for name, link, file in MENU_INTERNAL_PAGES %}
+<li{% if output_file == file %} class="selected"{% endif %}><a href="{{SITEURL}}/{{ link }}">{{ name }}</a></li>
+{% endfor %}
+
+
+
+
+{% for title, link in MENUITEMS %}
+<li class="selectedout"><a href="{{ link }}">{{ title }} ></a></li>
+{% endfor %}
+
+</ul>
+</nav>
+
