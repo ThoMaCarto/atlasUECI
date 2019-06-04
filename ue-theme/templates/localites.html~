@@ -27,7 +27,7 @@
 
 {% block content %}
 <section class="withmap">
-	<div class="mapall" id="map" title="Cliquer sur un point d'eau pour accéder à son diagnostic détaillé">
+	<div class="mapall" id="map" title="Cliquer sur une localites pour accéder à son diagnostic détaillé">
 	<script type="text/javascript">
 	////Carte de la page d'accueil
   
