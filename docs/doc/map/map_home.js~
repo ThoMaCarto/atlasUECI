@@ -27,7 +27,7 @@ north.addTo(map);
 
 // création d'un contrôle des couches pour modifier les couches affichées
 var fond ={ "Noir et blanc": toner};
-var controlLayers=L.control.layers(null,null,{collapsed : true}).addTo(map)
+var controlLayers=L.control.layers(null,null,{collapsed : false}).addTo(map)
 
 
 //Titre et légende de la carte
