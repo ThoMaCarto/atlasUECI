@@ -61,7 +61,7 @@ function getColorVuln(vulnerabilit) {
           }
         };
   
-var iconclusters = L.markerClusterGroup({maxClusterRadius:30,
+var iconclusters = L.markerClusterGroup({maxClusterRadius:40,
 singleMarkerMode:false,
 zoomToBoundsOnClick:true,
 spiderfyOnMaxZoom:true,
