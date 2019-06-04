@@ -39,7 +39,7 @@
 //niveau de zoom = 14 pour un quartier et 16 pour un village) seront extraits des métadata de chaque 
 //fiches localité.
 var map = L.map('map');
-	map.setView({{ CENTRAGE_MAP }}, {{ ZOOM_GENERAL }});
+	map.setView({{ CENTRAGE_MAP }}, 16);
 	map.setMinZoom(11);
 	map.setMaxZoom(19);
 	map.setMaxBounds({{ BORDER_LIMIT }})	       
