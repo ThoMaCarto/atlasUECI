@@ -70,13 +70,14 @@
         <span>
           <label>Type: </label>
           <select id="filter-type">
+          	<option value="like">like</option>
               <option value="=">=</option>
               <option value="<">&lt;</option>
               <option value="<=">&lt;=</option>
               <option value=">">&gt;</option>
               <option value=">=">&gt;=</option>
               <option value="!=">!=</option>
-              <option value="like">like</option>
+              
           </select>
         </span>
 
