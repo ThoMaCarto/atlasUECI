@@ -10,7 +10,14 @@ localites.addTo(map);
 controlLayers.addOverlay(localites, "Localités","Diagnostic des localités");
 });
 
-
+//Titre et légende de la carte
+var maptitle = L.control({position:"bottomright",},);
+maptitle.onAdd = function (map){
+var div = L.DomUtil.create("div", "legendin");
+div.innerHTML ='<details title="cliquer sur la flèche pour afficher la légende"><summary><strong>Niveau de vulnérabilité des localités</strong></summary><table class="info-legend"><thead><tr ><th></th><th>Milieu rural</th><th>Milieu urbain</th></tr</thead><tbody><tr></tr><tr><td style="background-color:Red;height:10px;width:30px;opacity:.8;border:1px solid Red;"></td><td>Vulnérabilité forte</td><td> Non raccordée au réseau</td></tr><tr></tr><tr><td style="background-color:Orange;height:10px;width:30px;opacity:.8;border:1px solid Orange;"></td><td>Vulnérabilité moyenne</td><td>Partiellement raccordée</td></tr><tr></tr><tr><td style="background-color:yellow;height:10px;width:30px;opacity:.8;border:1px solid yellow;"></td><td>Vulnérabilité faible</td><td>Majoritairement raccordée</td></tr></tbody></table></details>';
+return div;
+}
+maptitle.addTo(map);
 
 //Couleur en fonction de la vulnérabilité
 function getColorVuln(vulnerabilit) {
