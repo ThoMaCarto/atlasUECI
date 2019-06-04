@@ -1,4 +1,5 @@
 date: 2019-05-10
+template: article
 title: Minankro
 slug: Minankro
 tags: Rural

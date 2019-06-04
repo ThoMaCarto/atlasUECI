@@ -47,8 +47,9 @@ margin: auto;
 }
 #main {
   min-width: 100%;
-  /*min-height: 80%;*/
-  flex:1;
+  min-height: 80%;
+  max-height: 100%;
+  
    
 }
 strong{
@@ -375,24 +376,7 @@ td{
     color: black;
 }
 
-.popup-fixed {
-  position: fixed;
-  top: auto;
-  bottom: 0 !important;
-  left: 0 !important;
-  right: 0 !important;
-  transform: none !important;
-  margin: 0;
-  border-radius: 0;
- }
-  
-.leaflet-popup-tip-container-page {
-    display: none;
-  }
-  
-  .leaflet-popup-content-wrapper-page {
-    border-radius: 0;
-  }
+
 
 
 .leaflet-control-layers,

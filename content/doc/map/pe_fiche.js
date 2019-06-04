@@ -32,20 +32,24 @@ function getColortype(Type_de_point_deau) {
 $.getJSON(urlpointdeau,function(data){
 	//transformation de la base de donnée en couche (Layer)
 	var typePE = L.geoJson(data,{
-		//Affichage sous forme de point
-		pointToLayer:function(feature,latlng){
-			//caractéristique des points
-			var marker = L.circleMarker(latlng,{radius: 5,fillOpacity: 1, color: 'black', fillColor: getColortype(feature.properties.Type_de_point_deau),weight: 1,fillOpacity: 0.8,});
-			//caractéristiques des popup
-			marker.bindPopup('<b><u>Type de point d\'eau</u></b><br><i>' + feature.properties.Type_de_point_deau+ ' <br><i>détail:</i> ' + feature.properties.B_type + '<br><b><u>Nom du point d\'eau : </u></b>'+feature.properties.A_nom);
-			//Affichage des marqueurs
-			return marker;
-		}
+		 onEachFeature: function (feature, layer){
+		 	layer.setOpacity(0);
+           
+           layer.on({
+                click: function showResultsInDiv() {
+                    var d = document.getElementById('popupstatic');
+                    d.innerHTML = "";
+                        for (prop in feature.properties){
+                        d.innerHTML += "<strong>"+prop+": </strong>"+feature.properties[prop]+"<br>";
+                        }
+                    console.log(d.innerHTML);
+                }
+            }); }
 		});
 	//Affichage sur la carte
-	//typePE.addTo(map);
+	typePE.addTo(map);
 	//Affichage dans le controleur de couche
-	//controlLayers.addOverlay(typePE, "Type de point d'eau");
+	controlLayers.addOverlay(typePE, "Diagnostic détaillé");
 	//controlLayers.addOverlay(typePE, "Type de point d'eau", "Diagnostic des points d'eau");
 });
 
@@ -75,10 +79,12 @@ $.getJSON(urlpointdeau,function(data){
 			//caractéristique des points
 			var marker2 = L.circleMarker(latlng,{radius: 5,fillOpacity: 1, color: 'black', fillColor: getColorEcoli(feature.properties.ecoli),weight: 1,fillOpacity: 0.8,});
 			//caractéristiques des popup
-			marker2.bindPopup('<p>Comptage <em>E. coli</em>: ' + feature.properties.ecoli + ' UFC / 100 ml</p>');
+			//marker2.bindPopup('<p>Comptage <em>E. coli</em>: ' + feature.properties.ecoli + ' UFC / 100 ml</p>');
 			//Affichage des marqueurs
 			return marker2;
 		}
+		
+		
 		});
 	//Affichage sur la carte
 	
@@ -115,7 +121,7 @@ $.getJSON(urlpointdeau,function(data){
 			//caractéristique des points
 			var marker = L.circleMarker(latlng,{radius: 5,fillOpacity: 1, color: 'black', fillColor: getColorNitrates(feature.properties.nitrate),weight: 1,fillOpacity: 0.8,});
 			//caractéristiques des popup
-			marker.bindPopup(' <p>Concentration en <em>Nitrate</em>: ' + feature.properties.nitrate + ' mg/l </p>');
+			//marker.bindPopup(' <p>Concentration en <em>Nitrate</em>: ' + feature.properties.nitrate + ' mg/l </p>');
 			//Affichage des marqueurs
 			return marker;
 		}
@@ -152,7 +158,7 @@ $.getJSON(urlpointdeau,function(data){
 			//caractéristique des points
 			var marker = L.circleMarker(latlng,{radius: 5,fillOpacity: 1, color: 'black', fillColor: getColorAmmoniac(feature.properties.ammoniac),weight: 1,fillOpacity: 0.8,});
 			//caractéristiques des popup
-			marker.bindPopup(' <p>Concentration en <em>Ammoniac</em>: ' + feature.properties.ammoniac + ' mg/l </p>');
+			//marker.bindPopup(' <p>Concentration en <em>Ammoniac</em>: ' + feature.properties.ammoniac + ' mg/l </p>');
 			//Affichage des marqueurs
 			return marker;
 		}

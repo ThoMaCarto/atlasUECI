@@ -26,7 +26,7 @@
 {% endblock %}
 
 {% block content %}
-<section class="withmap">
+<section class="content">
 	<div class="mapall" id="map" title="Cliquer sur un point d'eau pour accéder à son diagnostic détaillé">
 	<script type="text/javascript">
 	////Carte de la page d'accueil
@@ -39,7 +39,7 @@
 //niveau de zoom = 14 pour un quartier et 16 pour un village) seront extraits des métadata de chaque 
 //fiches localité.
 var map = L.map('map');
-	map.setView({{ CENTRAGE_MAP }}, 16);
+	map.setView({{ CENTRAGE_MAP }}, 12);
 	map.setMinZoom(11);
 	map.setMaxZoom(19);
 	map.setMaxBounds({{ BORDER_LIMIT }})	       
@@ -58,6 +58,8 @@ var map = L.map('map');
 			var urlsurface = '{{ SITEURL }}/{{ DOC_STATIC_DIR }}/map/icone/marigot.png'
 			var articlespath = '{{ SITEURL }}/'
 		</script>
+	</div>
+	<div class="fiche" id="popupstatic">
 	</div>
 	
 </section>

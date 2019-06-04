@@ -1,4 +1,5 @@
 date: 2019-05-10
+template: article
 title: Zone Industrielle – Djézoukouamékro
 slug: zone_industrielle
 tags: Urbain,Ville,Vulnérabilité urbaine

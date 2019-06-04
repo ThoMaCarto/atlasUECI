@@ -2,7 +2,7 @@ date: 2019-05-10
 title: Zone Industrielle – Djézoukouamékro
 slug: zone_industrielle
 tags: Urbain,Ville,Vulnérabilité urbaine
-author: BROU Yves Oscar Kouadio, SORO Doba, MAILLARD Thomas, DIAKITE A. Cheick, KOHE A. Christelle, OUATTARA Mafine, SERI A. Jonathan
+authors: BROU Yves Oscar Kouadio, SORO Doba, MAILLARD Thomas, DIAKITE A. Cheick, KOHE A. Christelle, OUATTARA Mafine, SERI A. Jonathan, N'GUESSAN Firmain Kouakou
 latitude: 7.70400
 longitude: -5.05500
 zoom: 14
@@ -12,7 +12,7 @@ localisation: Quartier à l'ouest de Bouaké
 |Informations générales||
 |:--|--:|
 | Nom de la localité : | Zone Industrielle - Djézoukouamékro | 
-| Population : | nd | 
+| Population (2014) : | 48787 habitants | 
 | Aire : | 5 km² | 
 | Dessertes en eau potable | Totalement raccordé au réseau SODECI | 
 | Gestion des excrétas | Assainissement autonome | 
@@ -28,20 +28,22 @@ Ces éléments permettent de décrire de façon sommaire le quartier Zone Indust
 
 
 ## Configuration spatiale
-Le quartier de Zone Industrielle est un quartier majoritairement loti de standing bas, mais englobe des poches plus récentes de zones non loties. Il est délimité au sud par la voie ferrée, à l'est par un bas-fond et au nord par des quartiers lotis de standing plus élevés : Gonfreville et Soussonoubougou.  Le quartier dispose des infrastructures de base : centres de santé et écoles.  Il est desservi par une voie principale bitumée, mais la voirie secondaire n'est pas bitumée et n'a pas de réseau de drainage. En conséquence, certaines zones souffrent d’importants problèmes d'érosion. 
+Le quartier de Zone Industrielle est un quartier majoritairement loti de standing bas, mais englobe des poches plus récentes de zones non loties. Il est délimité au sud par la voie ferrée, à l'est par un quartier spontané qui est Soussonoubougou, au nord par des quartiers lotis de moyen standing (Gonfreville et Beaufort) et à l’ouest par un village intégré à la ville qui est Sarakakro. Le quartier dispose des infrastructures de base : centres de santé et écoles. Il est desservi par une voie principale bitumée, mais la voirie secondaire n'est pas bitumée et n'a pas de réseau de drainage. En conséquence, certaines zones souffrent d’importants problèmes d'érosion. 
 
 
 Le tissu urbain est hétérogène. Les parcelles de la zone lotie forment un plan en damier et sont raccordées aux réseaux d'eau potable et d'électricité.  
 Dans les zones non loti le plan est moins régulier, mais les habitations sont raccordées aux réseaux.
 
 
-**Paysage urbain**
+## Paysage urbain
+
+
 ![Zone Industrielle lotie](images/zi001.jpg "Zone Industrielle lotie") ![Zone Industrielle non loti](images/zi002.jpg "Zone Industrielle non lotie")  
 ![Armoire de compteurs à l'entrée des zones non loties](images/zi003.jpg "Armoire de compteurs à l'entrée des zones non loties")
  
 
 ## Diagnostic des points d'eau analysés
-Les enquêtes sanitaires ont porté sur un ensemble de 29 points d’eau : 26 puits familiaux dont 02 construit par des ONG musulmanes, 03 puits communautaires situés dans des mosquées et 02 points d’eau de surface (un marigot et un bras du barrage de Gonfréville). 
+Les enquêtes sanitaires ont porté sur un ensemble de 31 points d’eau : 26 puits familiaux dont deux construit par des ONG musulmanes, trois puits communautaires situés dans des mosquées et deux points d’eau de surface (un marigot et un bras du barrage de Gonfréville). 
 
 
 ### Forages
@@ -93,7 +95,7 @@ Deux sources d’eau de surface sont utilisées par les populations de zone indu
 
 
 ## Pratiques et modes d’approvisionnement en eau
-La population du quartier s'approvisionne majoritairement au réseau de la SODECI, dans des puits communautaires (puits de mosquées ou d'églises) et dans des puits privés situés dans la cour de l'habitation ou à l'extérieur de la parcelle. Les coupures récurrentes dans l'approvisionnement de la SODECI les incitent à privilégier les puits. Les plans d'eau de surface (mare et réservoir de barrage) sont utilisés principalement en période de crise (coupure longue du réseau et tarissement des puits). Lors de la crise de 2018, le quartier  a été approvisionné en eau par des camions citernes de l'Office National de l'Eau Potable (ONEP).  
+La population du quartier s'approvisionne au réseau de la SODECI, dans des puits communautaires (puits de mosquées ou d'églises) et dans des puits privés situés dans la cour de l'habitation ou à l'extérieur de la parcelle. Les coupures récurrentes dans l'approvisionnement de la SODECI les incitent à privilégier les puits. Les plans d'eau de surface (mare et réservoir de barrage) sont utilisés principalement en période de crise (coupure longue du réseau et tarissement des puits). Lors de la crise de 2018, le quartier  a été approvisionné en eau par des camions citernes de l'Office National de l'Eau Potable (ONEP).  
 Certaines personnes signalent qu'elles n'utilisent l'eau des puits que pour les tâches ménagères et privilégient l'eau de la SODECI pour la boisson. 
 
 
@@ -146,5 +148,5 @@ Les tensions majeures autour de la question de l’eau ont eu lieu pendant la p�
 
 
 ### Relations avec les localités voisines
-Lors de la pénurie de 2018, certaines résidentes du quartier partaient s’approvisionner en eau de boisson dans les quartiers sud de la ville. En effet, ceux-ci souffraient moins de la pénurie, car ils sont approvisionnés par le lac du barrage de camp. Ce réservoir a une capacité potentielle plus faible que la Loka, mais il n’est pas comblé par les sédiments.
-L’eau était parfois payante, mais dans la majorité des cas, les habitants des quartiers sud fournissaient gratuitement de l’eau à leurs amis, collègues ou aux membres de leur famille résidant dans des quartiers plus exposés à la pénurie. La crise de l’eau a donc réactualisé les réseaux de solidarité existant et en a parfois suscité de nouveaux. Si l’eau était gratuite, le déplacement et le transport présentaient un coût non négligeable dans le budget familial. Certains fonctionnaires partaient avec des bidons vides le matin et revenaient avec de l’eau le soir pour approvisionner le ménage. « Chaque matin, je prends trois bidons de 25 litres que je remplie au bureau à Nimbo que je ramène le soir à ma descente » nous dit un leader de jeunesse.  C’est à croire que ceux qui ont un moyen de transport avaient beaucoup plus de possibilité de ravitailler leurs ménages à partir des zones sud où il y avait de l’eau. 
+Lors de la pénurie de 2018, certaines résidentes du quartier partaient s’approvisionner en eau de boisson dans les quartiers sud de la ville. En effet, ceux-ci souffraient moins de la pénurie, car ils sont approvisionnés par le lac du barrage de camp. Ce réservoir a une capacité potentielle plus faible (3 millions de m3) que la Loka (25 millions de m3), mais il n’est pas comblé par les sédiments.
+L’eau était parfois payante, mais dans la majorité des cas, les habitants des quartiers sud fournissaient gratuitement de l’eau à leurs amis, collègues ou aux membres de leur famille résidant dans des quartiers plus exposés à la pénurie. La crise de l’eau a donc réactualisé les liens de solidarité existant et en a parfois suscité de nouveaux. Si l’eau était gratuite, le déplacement et le transport présentaient un coût non négligeable dans le budget familial. Certains fonctionnaires partaient avec des bidons vides le matin et revenaient avec de l’eau le soir pour approvisionner le ménage. « Chaque matin, je prends trois bidons de 25 litres que je remplie au bureau à Nimbo que je ramène le soir à ma descente » nous dit un leader de jeunesse.  C’est à croire que ceux qui ont un moyen de transport avaient beaucoup plus de possibilité de ravitailler leurs ménages à partir des zones sud où il y avait de l’eau. 
