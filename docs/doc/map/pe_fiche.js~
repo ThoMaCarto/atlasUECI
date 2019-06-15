@@ -39,9 +39,11 @@ $.getJSON(urlpointdeau,function(data){
                 click: function showResultsInDiv() {
                     var d = document.getElementById('popupstatic');
                     d.innerHTML = "";
+                    d.innerHTML = "<table>";
                         for (prop in feature.properties){
-                        d.innerHTML += "<strong>"+prop+": </strong>"+feature.properties[prop]+"<br>";
+                        d.innerHTML += "<tr><td><strong>"+prop+": </strong></td><td>"+feature.properties[prop]+"</td></tr>";
                         }
+                    d.innerHTML += "</table>";
                     console.log(d.innerHTML);
                 }
             }); }
@@ -49,7 +51,7 @@ $.getJSON(urlpointdeau,function(data){
 	//Affichage sur la carte
 	typePE.addTo(map);
 	//Affichage dans le controleur de couche
-	controlLayers.addOverlay(typePE, "Diagnostic détaillé");
+	//controlLayers.addOverlay(typePE, "Diagnostic détaillé");
 	//controlLayers.addOverlay(typePE, "Type de point d'eau", "Diagnostic des points d'eau");
 });
 

@@ -39,9 +39,12 @@ $.getJSON(urlpointdeau,function(data){
                 click: function showResultsInDiv() {
                     var d = document.getElementById('popupstatic');
                     d.innerHTML = "";
+                    tableNew = "<table>";
                         for (prop in feature.properties){
-                        d.innerHTML += "<strong>"+prop+": </strong>"+feature.properties[prop]+"<br>";
+                        tableNew += "<tr><td><strong>"+prop+": </strong></td><td>"+feature.properties[prop]+"</td></tr>";
                         }
+                    tableNew += "</table>";
+                    d.innerHTML = tableNew;
                     console.log(d.innerHTML);
                 }
             }); }
