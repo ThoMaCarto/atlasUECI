@@ -13,4 +13,4 @@ var options = {
 };
 
 // insertion des groupe dans le contrôleur de couches
-var controlLayers = L.control.groupedLayers(fond, groupedOverlays, options).addTo(map);
+var controlLayers = L.control.groupedLayers(null, groupedOverlays, options).addTo(map);

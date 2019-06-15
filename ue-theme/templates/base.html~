@@ -28,7 +28,7 @@
     {% include 'parts/footer.part.html' %}
 
     <script src="{{SITEURL}}/{{ THEME_STATIC_DIR }}/js/script.js"></script>
-    
+    <script src="{{SITEURL}}/{{ THEME_STATIC_DIR }}/js/L.TileLayer.Multi.js"></script>
    {% block extra_js %}
     {% endblock %}
     </footer>

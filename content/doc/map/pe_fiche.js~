@@ -79,7 +79,7 @@ $.getJSON(urlpointdeau,function(data){
 			//caractéristique des points
 			var marker2 = L.circleMarker(latlng,{radius: 5,fillOpacity: 1, color: 'black', fillColor: getColorEcoli(feature.properties.ecoli),weight: 1,fillOpacity: 0.8,});
 			//caractéristiques des popup
-			marker2.bindPopup('<p>Comptage <em>E. coli</em>: ' + feature.properties.ecoli + ' UFC / 100 ml</p>');
+			//marker2.bindPopup('<p>Comptage <em>E. coli</em>: ' + feature.properties.ecoli + ' UFC / 100 ml</p>');
 			//Affichage des marqueurs
 			return marker2;
 		}
@@ -121,7 +121,7 @@ $.getJSON(urlpointdeau,function(data){
 			//caractéristique des points
 			var marker = L.circleMarker(latlng,{radius: 5,fillOpacity: 1, color: 'black', fillColor: getColorNitrates(feature.properties.nitrate),weight: 1,fillOpacity: 0.8,});
 			//caractéristiques des popup
-			marker.bindPopup(' <p>Concentration en <em>Nitrate</em>: ' + feature.properties.nitrate + ' mg/l </p>');
+			//marker.bindPopup(' <p>Concentration en <em>Nitrate</em>: ' + feature.properties.nitrate + ' mg/l </p>');
 			//Affichage des marqueurs
 			return marker;
 		}
@@ -158,7 +158,7 @@ $.getJSON(urlpointdeau,function(data){
 			//caractéristique des points
 			var marker = L.circleMarker(latlng,{radius: 5,fillOpacity: 1, color: 'black', fillColor: getColorAmmoniac(feature.properties.ammoniac),weight: 1,fillOpacity: 0.8,});
 			//caractéristiques des popup
-			marker.bindPopup(' <p>Concentration en <em>Ammoniac</em>: ' + feature.properties.ammoniac + ' mg/l </p>');
+			//marker.bindPopup(' <p>Concentration en <em>Ammoniac</em>: ' + feature.properties.ammoniac + ' mg/l </p>');
 			//Affichage des marqueurs
 			return marker;
 		}

@@ -49,7 +49,7 @@ $.getJSON(urlpointdeau,function(data){
 	//Affichage sur la carte
 	typePE.addTo(map);
 	//Affichage dans le controleur de couche
-	controlLayers.addOverlay(typePE, "Diagnostic détaillé");
+	//controlLayers.addOverlay(typePE, "Diagnostic détaillé");
 	//controlLayers.addOverlay(typePE, "Type de point d'eau", "Diagnostic des points d'eau");
 });
 
