@@ -40,7 +40,7 @@ $.getJSON(urlpointdeau,function(data){
                     var d = document.getElementById('popupstatic');
                     d.innerHTML = "";
                     tableNew = "<table>";
-                        for (prop in feature.properties != null){
+                        for (prop !=null in feature.properties){
                         tableNew += "<tr><td><strong>"+prop+": </strong></td><td>"+feature.properties[prop]+"</td></tr>";
                         }
                     tableNew += "</table>";
