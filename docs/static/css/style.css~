@@ -46,9 +46,10 @@ box-shadow: 0px 6px 6px 0px rgba(12,13,14,0.1),0 1px 6px rgba(59,64,69,0.4);
 margin: auto;
 }
 #main {
-  min-width: 100%;
+  
   min-height: 80%;
   max-height: 100%;
+  flex:1;
   
    
 }
@@ -276,6 +277,7 @@ a.header-nav img {
 	display: flex;
 	width: 100%;
 	height: 100%;
+	
 	border:0px solid #000;
 	justify-content: flex-start;
 	align-items: flex-start;
@@ -302,7 +304,7 @@ a.header-nav img {
 }
 
 .fiche{
-	width: 49%;
+	width: 48%;
 	height: 100%;
 	padding-left: 10px;
 	padding-right: 10px;
@@ -450,7 +452,7 @@ td{
   font-weight: bold;
   border-radius: 5rem;
   
-  line-height: 1rem;
+  
   box-shadow: 6px 6px 6px 0px rgba(0, 0, 0,.5);
 }
 
