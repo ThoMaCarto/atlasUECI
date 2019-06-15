@@ -39,11 +39,12 @@ $.getJSON(urlpointdeau,function(data){
                 click: function showResultsInDiv() {
                     var d = document.getElementById('popupstatic');
                     d.innerHTML = "";
-                    d.innerHTML = "<table>";
-                        for (prop in feature.properties){
-                        d.innerHTML += "<tr><td><strong>"+prop+": </strong></td><td>"+feature.properties[prop]+"</td></tr>";
+                    tableNew = "<table>";
+                        for (prop in feature.properties != null){
+                        tableNew += "<tr><td><strong>"+prop+": </strong></td><td>"+feature.properties[prop]+"</td></tr>";
                         }
-                    d.innerHTML += "</table>";
+                    tableNew += "</table>";
+                    d.innerHTML = tableNew;
                     console.log(d.innerHTML);
                 }
             }); }
