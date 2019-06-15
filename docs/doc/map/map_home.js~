@@ -1,5 +1,5 @@
 
-var attribUECI ='Fond de carte © <a href="http://osm.org/copyright">Contributeurs OpenStreetMap</a><br>Données © <a href="http://urgenceeau.com/urgence-eau-cote-divoire-ueci/">Urgence Eaux Côte d\'Ivoire</a> | Cartographie © <a href="http://www.ladyss.com/thomas-maillard">T.Maillard</a> '
+var attribUECI ='Fond de carte © <a href="http://osm.org/copyright">Contributeurs OpenStreetMap</a><br>Données © <a href="http://urgenceeau.com/urgence-eau-cote-divoire-ueci/">Urgence Eaux Côte d\'Ivoire</a> | Cartographie © <a href="http://www.ladyss.com/thomas-maillard">T.Maillard</a> & Firmain Kouakou N\'guessan '
 
 
 // création d'une couche en grisaille
@@ -80,7 +80,7 @@ function getColorVuln(vulnerabilit) {
 				
 				
 				
-				return L.divIcon({ html: '<span>'+n+'</span>', className: 'mycluster', iconSize: L.point(e, e) });
+				return L.divIcon({ html: n, className: 'mycluster', iconSize: L.point(e, e) });
 			},
 			//Disable all of the defaults:
 			singleMarkerMode: true,
