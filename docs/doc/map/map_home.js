@@ -71,13 +71,16 @@ function getColorVuln(vulnerabilit) {
 
 //Custom radius and icon create function
 		var iconclusters = L.markerClusterGroup({
-			maxClusterRadius: 40,
+			maxClusterRadius: 45,
 			
 			iconCreateFunction: function (cluster) {
 				var markers = cluster.getAllChildMarkers();
 				var n = markers.length;
+				var e =n/2 +4;
 				
-				return L.divIcon({ html: n, className: 'mycluster', iconSize: L.point(40, 40) });
+				
+				
+				return L.divIcon({ html: n, className: 'mycluster', iconSize: L.point(e, e) });
 			},
 			//Disable all of the defaults:
 			singleMarkerMode: true,
