@@ -76,11 +76,11 @@ function getColorVuln(vulnerabilit) {
 			iconCreateFunction: function (cluster) {
 				var markers = cluster.getAllChildMarkers();
 				var n = markers.length;
-				var e =n/2 +1;
-				var r=n/2;
+				var e =n/2 +4;
 				
 				
-				return L.divIcon({ html: n, className: 'mycluster', iconSize: L.point(e, e) });
+				
+				return L.divIcon({ html: '<span>'+n+'</span>', className: 'mycluster', iconSize: L.point(e, e) });
 			},
 			//Disable all of the defaults:
 			singleMarkerMode: true,
