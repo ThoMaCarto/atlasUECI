@@ -438,5 +438,16 @@ td{
 
 }
 
-
+.mycluster{
+	border-radius: 30px;
+  width: 60px;
+  height: 60px;
+  background-color: rgba(70, 130, 180, .2);
+  border: 3px solid rgba(70, 130, 180, .5);
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  padding-top: 10px;
+  box-sizing: border-box;
+}
 

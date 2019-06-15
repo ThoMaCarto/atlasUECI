@@ -60,13 +60,29 @@ function getColorVuln(vulnerabilit) {
               return 'DarkSlateGray ';
           }
         };
-  
-var iconclusters = L.markerClusterGroup({maxClusterRadius:45,
-singleMarkerMode:false,
-zoomToBoundsOnClick:true,
-spiderfyOnMaxZoom:true,
-});
 
+
+  
+//var iconclusters = L.markerClusterGroup({maxClusterRadius:45,
+//singleMarkerMode:true,
+//zoomToBoundsOnClick:true,
+//spiderfyOnMaxZoom:true,
+//});
+
+//Custom radius and icon create function
+		var iconclusters = L.markerClusterGroup({
+			maxClusterRadius: 40,
+			
+			iconCreateFunction: function (cluster) {
+				var markers = cluster.getAllChildMarkers();
+				var n = markers.length;
+				
+				return L.divIcon({ html: n, className: 'mycluster', iconSize: L.point(40, 40) });
+			},
+			//Disable all of the defaults:
+			singleMarkerMode: true,
+			//spiderfyOnMaxZoom: false, showCoverageOnHover: false, zoomToBoundsOnClick: false
+		});
 
 $.getJSON(urlpointdeau,function(data){
 	var geoJsonLayer = L.geoJson (data,{
@@ -88,38 +104,7 @@ $.getJSON(urlpointdeau,function(data){
 }); 
   
  
-    
-    
-       
-////Création de la couche (Layer) type de point d'eau
-//transformation de la base de donné "point_eau.geojson" en une couche type de points d'eau
-//lecture de la base de donnée
-//$.getJSON(urlpointdeau,function(data){
-	//transformation de la base de donnée en couche (Layer)
-	//var pointseau = L.geoJson(data,{
-		//Affichage sous forme de point
-		//pointToLayer:function(feature,latlng){
-			
-			
-			
-				//caractéristique des points
-				//var marker = L.circleMarker(latlng,{radius: 5,fillOpacity: 1, color: 'black', fillColor: 'white' ,weight: 1,fillOpacity: 0.8,});
-				//caractéristiques des popup
-				//marker.bindPopup('<b><u>Type de point d\'eau</u></b><br><i>' + feature.properties.Type_de_point_deau
-					//								+ ' <br><i>détail:</i> ' + feature.properties.B_type + '<br><b><u>Nom du point d\'eau : </u></b>'+feature.properties.A_nom
-						//							);
-				//Affichage des marqueurs
-				//return marker;
-			
-			
-			
-		//}
-		//});
-	//Affichage sur la carte
-	//typePE.addTo(map);
-	//Affichage dans le controleur de couche
-	//controlLayers.addOverlay(pointseau, "Points d'eau diagnostiqués");
-//});
+ 
 
 // création d’une couche geoJson qui appelle le fichier « localites.geojson »
 $.getJSON(urllocalites,function(data2)
