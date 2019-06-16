@@ -1,14 +1,4 @@
-//Titre et légende de la carte
-var maptitle = L.control({position:"bottomright",},);
-maptitle.onAdd = function (map){
-var div = L.DomUtil.create("div", "legendin");
-div.innerHTML ='<table class="info-legend"><thead><tr><th></th><th>Diagnostic des points d\'eau</th></tr</thead><tbody><tr></tr><tr><td style="background-color:Red;height:10px;width:30px;opacity:1;border:1px solid Red;"></td><td>Non conforme aux normes de potabilité</td></tr><tr></tr><tr><td style="background-color:green;height:10px;width:30px;opacity:1;border:1px solid green;"></td><td>Conforme aux normes de potabilité</td></tr></tbody></table><details title="cliquer sur la flèche pour afficher la légende"><summary><strong>Normes OMS</strong></summary><table class="info-legend"><thead><tr><th>Élément analysé</th><th>Norme OMS</th></tr><thead><tbody><tr><td><em>E. Coli</em></td><td>0 UFC/100ml</td></tr><tr><td><em>Concentration en Ammoniac</em></td><td>1,5 mg/l</td></tr><tr><td><em>Concentration en Nitrate</em></td><td>50 mg/l</td></tr></tbody></table><a href="https://www.who.int/water_sanitation_health/dwq/gdwq3rev/fr/">OMS : Directives pour la qualité de l\'eau de boisson</a></details>';
-return div;
-}
-maptitle.addTo(map);
-
-var pane = map.createPane('fixed', document.getElementById('map'));
-
+//
 
 
 ////Création de la couche (Layer) type de point d'eau
@@ -32,47 +22,22 @@ function getColortype(Type_de_point_deau) {
 $.getJSON(urlpointdeau,function(data){
 	//transformation de la base de donnée en couche (Layer)
 	var typePE = L.geoJson(data,{
-		 onEachFeature: function (feature, layer){
-		 	layer.setOpacity(0);
-           
-           layer.on({
-                click: function showResultsInDiv() {
-                    var d = document.getElementById('popupstatic');
-                    
-                    d.innerHTML = "";
-                    tableNew = "<table>";
-                    //tableNew += "<tr><td></td></tr>";
-                    tableNew += "<tr><td>Informations générales</td></tr>";
-                    
-                    
-                    
-                 
-                       
-                        for (prop in feature.properties){
-                        	
-                        	
-                        	 if (feature.properties[prop] !== null) 
-                        		{
-                        			tableNew += "<tr><td><strong>"+prop+": </strong></td><td>"+feature.properties[prop]+"</td></tr>" ;
-                        			}
-                        		else {;}
-                        		;
-                        		
-                        	  }                     	
-                        	
-                        
-                    
-                    tableNew += "</table>";
-                    d.innerHTML = tableNew;
-                    console.log(prop);
-                    console.log(d.innerHTML);
-                }
-            }); }
+		//Affichage sous forme de point
+		pointToLayer:function(feature,latlng){
+			//caractéristique des points
+			var marker = L.circleMarker(latlng,{radius: 5,fillOpacity: 1, color: 'black', fillColor: getColortype(feature.properties.Type_de_point_deau),weight: 1,fillOpacity: 0.8,});
+			//caractéristiques des popup
+			marker.bindPopup('<b><u>Type de point d\'eau</u></b><br><i>' + feature.properties.Type_de_point_deau
+												+ ' <br><i>détail:</i> ' + feature.properties.B_type + '<br><b><u>Nom du point d\'eau : </u></b>'+feature.properties.A_nom
+												);
+			//Affichage des marqueurs
+			return marker;
+		}
 		});
 	//Affichage sur la carte
-	typePE.addTo(map);
+	//typePE.addTo(map);
 	//Affichage dans le controleur de couche
-	//controlLayers.addOverlay(typePE, "Diagnostic détaillé");
+	//controlLayers.addOverlay(typePE, "Type de point d'eau");
 	//controlLayers.addOverlay(typePE, "Type de point d'eau", "Diagnostic des points d'eau");
 });
 
@@ -100,14 +65,12 @@ $.getJSON(urlpointdeau,function(data){
 		//Affichage sous forme de point
 		pointToLayer:function(feature,latlng){
 			//caractéristique des points
-			var marker2 = L.circleMarker(latlng,{radius: 5,fillOpacity: 1, color: 'black', fillColor: getColorEcoli(feature.properties.ecoli),weight: 1,fillOpacity: 0.8,});
+			var marker2 = L.circleMarker(latlng,{radius: 5,fillOpacity: 1, color: 'black', fillColor: getColorEcoli(feature.properties.Ecoli_UFC100ml),weight: 1,fillOpacity: 0.8,});
 			//caractéristiques des popup
-			//marker2.bindPopup('<p>Comptage <em>E. coli</em>: ' + feature.properties.ecoli + ' UFC / 100 ml</p>');
+			marker2.bindPopup('<p>Comptage <em>E. coli</em>: ' + feature.properties.Ecoli_UFC100ml + ' UFC / 100 ml</p>');
 			//Affichage des marqueurs
 			return marker2;
 		}
-		
-		
 		});
 	//Affichage sur la carte
 	
@@ -144,7 +107,7 @@ $.getJSON(urlpointdeau,function(data){
 			//caractéristique des points
 			var marker = L.circleMarker(latlng,{radius: 5,fillOpacity: 1, color: 'black', fillColor: getColorNitrates(feature.properties.nitrate),weight: 1,fillOpacity: 0.8,});
 			//caractéristiques des popup
-			//marker.bindPopup(' <p>Concentration en <em>Nitrate</em>: ' + feature.properties.nitrate + ' mg/l </p>');
+			marker.bindPopup(' <p>Concentration en <em>Nitrate</em>: ' + feature.properties.nitrate + ' mg/l </p>');
 			//Affichage des marqueurs
 			return marker;
 		}
@@ -181,7 +144,7 @@ $.getJSON(urlpointdeau,function(data){
 			//caractéristique des points
 			var marker = L.circleMarker(latlng,{radius: 5,fillOpacity: 1, color: 'black', fillColor: getColorAmmoniac(feature.properties.ammoniac),weight: 1,fillOpacity: 0.8,});
 			//caractéristiques des popup
-			//marker.bindPopup(' <p>Concentration en <em>Ammoniac</em>: ' + feature.properties.ammoniac + ' mg/l </p>');
+			marker.bindPopup(' <p>Concentration en <em>Ammoniac</em>: ' + feature.properties.ammoniac + ' mg/l </p>');
 			//Affichage des marqueurs
 			return marker;
 		}

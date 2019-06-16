@@ -38,13 +38,33 @@ $.getJSON(urlpointdeau,function(data){
            layer.on({
                 click: function showResultsInDiv() {
                     var d = document.getElementById('popupstatic');
+                    
                     d.innerHTML = "";
                     tableNew = "<table>";
-                        for (prop !=null in feature.properties){
-                        tableNew += "<tr><td><strong>"+prop+": </strong></td><td>"+feature.properties[prop]+"</td></tr>";
-                        }
+                    //tableNew += "<tr><td></td></tr>";
+                    tableNew += "<tr><td>Informations générales</td></tr>";
+                    
+                    
+                    
+                 
+                       
+                        for (prop in feature.properties){
+                        	
+                        	
+                        	 if (feature.properties[prop] !== null) 
+                        		{
+                        			tableNew += "<tr><td><strong>"+prop+": </strong></td><td>"+feature.properties[prop]+"</td></tr>" ;
+                        			}
+                        		else {;}
+                        		;
+                        		
+                        	  }                     	
+                        	
+                        
+                    
                     tableNew += "</table>";
                     d.innerHTML = tableNew;
+                    console.log(prop);
                     console.log(d.innerHTML);
                 }
             }); }

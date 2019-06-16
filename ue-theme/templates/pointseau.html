@@ -22,7 +22,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	
 	
-	<script src="{{SITEURL}}/{{ THEME_STATIC_DIR }}/js/L.TileLayer.Multi.js"></script>
+	
 	
 	
 {% endblock %}
@@ -61,7 +61,10 @@ var map = L.map('map');
 			var articlespath = '{{ SITEURL }}/'
 		</script>
 	</div>
-	<div class="fiche" id="popupstatic">
+	<div class="fiche">
+	<h4>Diagnostic détaillé du point d'eau sélectionné :</h4>
+		<div id="popupstatic">
+		</div>
 	</div>
 	
 </section>

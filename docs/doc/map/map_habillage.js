@@ -47,8 +47,7 @@ var north = L.control({position: "topleft"});
 		}
 north.addTo(map);
 
-// création d'un contrôle des couches pour modifier les couches affichées
-var fond ={ "Noir et blanc": toner, "OSM humanitaire": HOTOSM, "OSM Classique": osmfr};
+
 
 //var controlLayers= L.control.layers(null,null,{}).addTo(map);
 var groupedOverlays = {  "Diagnostic des points d'eau": {},"Diagnostic des localites":{},};
