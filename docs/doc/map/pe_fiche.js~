@@ -7,7 +7,12 @@ return div;
 }
 maptitle.addTo(map);
 
-var pane = map.createPane('fixed', document.getElementById('map'));
+//var paneau = map.createPane('fixed', document.getElementById('map'));
+map.createPane('650');
+map.getPane('650').style.zIndex = 1000;
+
+map.createPane('600');
+map.getPane('600').style.zIndex = 600;
 
 
 
@@ -34,12 +39,12 @@ function getColortype(Type_de_point_deau) {
 $.getJSON(urlpointdeau,function(data){
 	//transformation de la base de donnée en couche (Layer)
 	var typePE = L.geoJson(data,{
-		
+		pane:'popupPane',
 		pointToLayer: function (feature, latlng) {
             return L.circleMarker(latlng, {radius: 10, color: 'red', fillColor: 'red',weight: 0,fillOpacity: 0,});
     },
 		 
-		 
+		
 		 onEachFeature: function (feature, layer){
 		 	//marker.setOpacity(0);
 		 	
@@ -77,7 +82,7 @@ $.getJSON(urlpointdeau,function(data){
 		var eventCible = typePE.on("click", function(e){
 		//typePE.clearMarkers();
 					
-		var marker = new L.circleMarker([e.latlng.lat, e.latlng.lng],{radius: 10, color: 'red', fillColor: 'red',weight: 2,fillOpacity: 0,dashArray:"4",})
+		var marker = new L.circleMarker([e.latlng.lat, e.latlng.lng],{radius: 10, color: 'red', fillColor: 'red',weight: 3,fillOpacity: 0,dashArray:"5",})
 		.addTo(map);
 		if (markers.length > 0) {map.removeLayer(markers.pop());}
 		var marker;
@@ -116,6 +121,7 @@ $.getJSON(urlpointdeau,function(data){
 	//transformation de la base de donnée en couche (Layer)
 	
 	var Ecoli = L.geoJson(data,{
+		pane:'600',
 		//Affichage sous forme de point
 		pointToLayer:function(feature,latlng){
 			//caractéristique des points
@@ -158,6 +164,7 @@ $.getJSON(urlpointdeau,function(data){
 	//transformation de la base de donnée en couche (Layer)
 	
 	var Nitrate = L.geoJson(data,{
+		pane:'600',
 		//Affichage sous forme de point
 		pointToLayer:function(feature,latlng){
 			//caractéristique des points
@@ -195,6 +202,7 @@ $.getJSON(urlpointdeau,function(data){
 	//transformation de la base de donnée en couche (Layer)
 	
 	var Ammoniac = L.geoJson(data,{
+		pane:'600',
 		//Affichage sous forme de point
 		pointToLayer:function(feature,latlng){
 			//caractéristique des points
