@@ -27,23 +27,6 @@ function getColortype(Type_de_point_deau) {
         };
         
 
-$.getJSON(urlpointdeau,function(data){
-	var cible = L.geoJson(data,{
-		style: style;
-		pointToLayer: function (feature,latlng) {
-		 	var iconCible = L.circleMarker(latlng,{radius: 0, color: 'blue', fillColor: 'red',weight: 1,fillOpacity: 0,});
-         return iconCible;
-        },
-      
-		
-	}).on("click", function(e){var mp = new L.circleMarker([e.latlng.lat, e.latlng.lng],{radius: 8, color: 'red', fillColor: 'red',weight: 1,fillOpacity: 0,})
-		.addTo(map)
-		;
-		
- });
- cible.addTo(map);
-	
-});
 
      
 //transformation de la base de donné "point_eau.geojson" en une couche type de points d'eau
@@ -52,11 +35,13 @@ $.getJSON(urlpointdeau,function(data){
 	//transformation de la base de donnée en couche (Layer)
 	var typePE = L.geoJson(data,{
 		
-		
+		pointToLayer: function (feature, latlng) {
+            return L.circleMarker(latlng, {radius: 10, color: 'red', fillColor: 'red',weight: 0,fillOpacity: 0,});
+    },
 		 
 		 
 		 onEachFeature: function (feature, layer){
-		 	layer.setOpacity(1);
+		 	//marker.setOpacity(0);
 		 	
           
            
@@ -86,8 +71,17 @@ $.getJSON(urlpointdeau,function(data){
                     
                     
                 }
-            }); }
+            }) }
 		});
+		var eventCible = typePE.on("click", function(e){
+		//typePE.clearMarkers();
+		var mp;
+				
+		var mp = new L.circleMarker([e.latlng.lat, e.latlng.lng],{radius: 10, color: 'red', fillColor: 'red',weight: 2,fillOpacity: 0,dashArray:"4",})
+		.addTo(map);
+		
+		
+});
 		
 	//Affichage sur la carte
 	typePE.addTo(map);
