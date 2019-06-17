@@ -41,7 +41,7 @@ $.getJSON(urlpointdeau,function(data){
 	var typePE = L.geoJson(data,{
 		pane:'popupPane',
 		pointToLayer: function (feature, latlng) {
-            return L.circleMarker(latlng, {radius: 10, color: 'red', fillColor: 'red',weight: 0,fillOpacity: 0.1,});
+            return L.circleMarker(latlng, {radius: 10, color: 'white', fillColor: 'black',weight: 0,fillOpacity: 0.2,});
     },
 		 
 		
