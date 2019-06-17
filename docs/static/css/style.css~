@@ -297,7 +297,7 @@ a.header-nav img {
 
 }
 .map{
-	width: 49%;
+	width: 48%;
 	height: 100%;
 	z-index: 0;
 	

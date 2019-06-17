@@ -26,27 +26,45 @@ function getColortype(Type_de_point_deau) {
           }
         };
         
+
+$.getJSON(urlpointdeau,function(data){
+	var cible = L.geoJson(data,{
+		pointToLayer: function (feature,latlng) {
+		 	var iconCible = L.circleMarker(latlng,{radius: 0, color: 'blue', fillColor: 'red',weight: 1,fillOpacity: 0,});
+         return iconCible;
+        },
       
+		
+	}).on("click", function(e){var mp = new L.circleMarker([e.latlng.lat, e.latlng.lng],{radius: 8, color: 'red', fillColor: 'red',weight: 1,fillOpacity: 0,})
+		.addTo(map)
+		;
+		
+ });
+ cible.addTo(map);
+	
+});
+
+     
 //transformation de la base de donné "point_eau.geojson" en une couche type de points d'eau
 //lecture de la base de donnée
 $.getJSON(urlpointdeau,function(data){
 	//transformation de la base de donnée en couche (Layer)
 	var typePE = L.geoJson(data,{
+		
+		
+		 
+		 
 		 onEachFeature: function (feature, layer){
-		 	layer.setOpacity(0);
+		 	layer.setOpacity(1);
+		 	
+          
            
            layer.on({
                 click: function showResultsInDiv() {
                     var d = document.getElementById('popupstatic');
-                    
                     d.innerHTML = "";
                     tableNew = "<table>";
                     //tableNew += "<tr><td></td></tr>";
-                    tableNew += "<tr><td>Informations générales</td></tr>";
-                    
-                    
-                    
-                 
                        
                         for (prop in feature.properties){
                         	
@@ -64,11 +82,12 @@ $.getJSON(urlpointdeau,function(data){
                     
                     tableNew += "</table>";
                     d.innerHTML = tableNew;
-                    console.log(prop);
-                    console.log(d.innerHTML);
+                    
+                    
                 }
             }); }
 		});
+		
 	//Affichage sur la carte
 	typePE.addTo(map);
 	//Affichage dans le controleur de couche

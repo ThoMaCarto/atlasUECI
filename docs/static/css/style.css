@@ -456,5 +456,10 @@ td{
   box-shadow: 6px 6px 6px 0px rgba(0, 0, 0,.5);
 }
 
-
+.iconcible{
+	background-color: rgba(70, 130, 180, .2);
+  border: 3px solid rgba(70, 130, 180, .8);
+  height: 20px;
+  width: 20px;
+}
 
