@@ -73,15 +73,20 @@ $.getJSON(urlpointdeau,function(data){
                 }
             }) }
 		});
+		var markers = [];	
 		var eventCible = typePE.on("click", function(e){
-		typePE.clearMarker();
-		var mp;
-				
-		var mp = new L.circleMarker([e.latlng.lat, e.latlng.lng],{radius: 10, color: 'red', fillColor: 'red',weight: 2,fillOpacity: 0,dashArray:"4",})
+		//typePE.clearMarkers();
+					
+		var marker = new L.circleMarker([e.latlng.lat, e.latlng.lng],{radius: 10, color: 'red', fillColor: 'red',weight: 2,fillOpacity: 0,dashArray:"4",})
 		.addTo(map);
+		if (markers.length > 0) {map.removeLayer(markers.pop());}
+		var marker;
+		markers.push(marker)
+      return marker;
 		
 		
 });
+
 		
 	//Affichage sur la carte
 	typePE.addTo(map);
