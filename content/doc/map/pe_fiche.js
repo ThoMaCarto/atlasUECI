@@ -82,7 +82,7 @@ $.getJSON(urlpointdeau,function(data){
 		var eventCible = typePE.on("click", function(e){
 		//typePE.clearMarkers();
 					
-		var marker = new L.circleMarker([e.latlng.lat, e.latlng.lng],{radius: 10, color: 'red', fillColor: 'red',weight: 3,fillOpacity: 0,dashArray:"5",})
+		var marker = new L.circleMarker([e.latlng.lat, e.latlng.lng],{radius: 10, color: 'dodgerblue', fillColor: 'dodgerblue',weight: 3,fillOpacity: 0,dashArray:"5",})
 		.addTo(map);
 		if (markers.length > 0) {map.removeLayer(markers.pop());}
 		var marker;
