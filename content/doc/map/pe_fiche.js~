@@ -30,26 +30,9 @@ function getColortype(Type_de_point_deau) {
               return 'grey';
           }
         };
-        
-
-
-     
-//transformation de la base de donné "point_eau.geojson" en une couche type de points d'eau
-//lecture de la base de donnée
-$.getJSON(urlpointdeau,function(data){
-	//transformation de la base de donnée en couche (Layer)
-	var typePE = L.geoJson(data,{
-		pane:'popupPane',
-		pointToLayer: function (feature, latlng) {
-            return L.circleMarker(latlng, {radius: 10, color: 'white', fillColor: 'black',weight: 0,fillOpacity: 0.2,});
-    },
-		 
-		
-		 onEachFeature: function (feature, layer){
-		 	//marker.setOpacity(0);
-		 	
-          
-           
+ // fonction pour l'affichage dans le panneau à droite des données du point       
+function oneachfeature(feature, layer){
+		 	//marker.setOpacity(0); 
            layer.on({
                 click: function showResultsInDiv() {
                     var d = document.getElementById('popupstatic');
@@ -77,12 +60,10 @@ $.getJSON(urlpointdeau,function(data){
                     
                 }
             }) }
-		});
-		var markers = [];	
-		var eventCible = typePE.on("click", function(e){
-		//typePE.clearMarkers();
-					
-		var marker = new L.circleMarker([e.latlng.lat, e.latlng.lng],{radius: 10, color: 'dodgerblue', fillColor: 'red',weight: 3,fillOpacity: 0,dashArray:"5",})
+//fonction pour afficher un cible bleu autour du point sélectionné
+function cible(e){
+						
+		var marker = new L.circleMarker([e.latlng.lat, e.latlng.lng],{radius: 10, color: 'dodgerblue', fillColor: 'dodgerblue',weight: 3,fillOpacity: 0,dashArray:"5",})
 		.addTo(map);
 		if (markers.length > 0) {map.removeLayer(markers.pop());}
 		var marker;
@@ -90,15 +71,11 @@ $.getJSON(urlpointdeau,function(data){
       return marker;
 		
 		
-});
+}
 
-		
-	//Affichage sur la carte
-	typePE.addTo(map);
-	//Affichage dans le controleur de couche
-	//controlLayers.addOverlay(typePE, "Diagnostic détaillé");
-	//controlLayers.addOverlay(typePE, "Type de point d'eau", "Diagnostic des points d'eau");
-});
+//Création d'un compteur de marker
+var markers = [];	   
+
 
 //Création de la couche contamination Ecoli
 //Couleur en fonction de la présence d'E. coli
@@ -122,6 +99,7 @@ $.getJSON(urlpointdeau,function(data){
 	
 	var Ecoli = L.geoJson(data,{
 		pane:'600',
+		onEachFeature: oneachfeature,
 		//Affichage sous forme de point
 		pointToLayer:function(feature,latlng){
 			//caractéristique des points
@@ -133,7 +111,7 @@ $.getJSON(urlpointdeau,function(data){
 		}
 		
 		
-		});
+		}).on("click", cible);
 	//Affichage sur la carte
 	
 	Ecoli.addTo(map);
@@ -165,6 +143,7 @@ $.getJSON(urlpointdeau,function(data){
 	
 	var Nitrate = L.geoJson(data,{
 		pane:'600',
+		onEachFeature: oneachfeature,
 		//Affichage sous forme de point
 		pointToLayer:function(feature,latlng){
 			//caractéristique des points
@@ -174,7 +153,7 @@ $.getJSON(urlpointdeau,function(data){
 			//Affichage des marqueurs
 			return marker;
 		}
-		});
+		}).on("click", cible);
 	//Affichage sur la carte
 	
 	
@@ -203,6 +182,7 @@ $.getJSON(urlpointdeau,function(data){
 	
 	var Ammoniac = L.geoJson(data,{
 		pane:'600',
+		onEachFeature: oneachfeature,
 		//Affichage sous forme de point
 		pointToLayer:function(feature,latlng){
 			//caractéristique des points
@@ -212,7 +192,7 @@ $.getJSON(urlpointdeau,function(data){
 			//Affichage des marqueurs
 			return marker;
 		}
-		});
+		}).on("click", cible);
 	//Affichage sur la carte
 	
 	
