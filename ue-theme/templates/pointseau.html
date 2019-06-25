@@ -3,12 +3,8 @@
 
 {% block extra_head %}
 	<!-- appelle la librairie javascript Leaflet et le fichier CSS Leaflet -->	
-	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
-  integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-  crossorigin=""/>
-<script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
-  integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
-  crossorigin=""></script>
+	<link rel="stylesheet" href="{{SITEURL}}/{{ THEME_STATIC_DIR }}/dist/leaflet.css"/>
+<script src="{{SITEURL}}/{{ THEME_STATIC_DIR }}/dist/leaflet.js"></script>
 	
 	<!-- fichier permettant d'afficher les markercluster -->
 	
@@ -18,8 +14,8 @@
 
 	
 	<!-- jQuery - indispensable pour utiliser les fichiers geojson -->
-	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="{{SITEURL}}/{{ THEME_STATIC_DIR }}/dist/jquery-3.4.1.min.js"></script>
+	<script src="{{SITEURL}}/{{ THEME_STATIC_DIR }}/dist/jquery.min.js"></script>
 	
 	
 	
@@ -53,6 +49,7 @@ var map = L.map('map');
 			var urlpointdeau = "{{ SITEURL }}/{{DOC_STATIC_DIR}}/map/bdd/pointseau.geojson"
 			var urlNorthArray = '<img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/compass.png" style="width:30px;">'
 			var urlwhiteshadow = '{{ SITEURL }}/{{ DOC_STATIC_DIR }}/map/icone/white.png'
+			var urlredshadow = '{{ SITEURL }}/{{ DOC_STATIC_DIR }}/map/icone/red.png'
 			var urlpuitsmoderne = '{{ SITEURL }}/{{ DOC_STATIC_DIR }}/map/icone/puits_moderne.png'
 			var urlpuitstradi = '{{ SITEURL }}/{{ DOC_STATIC_DIR }}/map/icone/puits_tradi.png'
 			var urlforage = '{{ SITEURL }}/{{ DOC_STATIC_DIR }}/map/icone/forage.png'

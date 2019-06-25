@@ -6,26 +6,23 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     
     <title>Atlas Eau Potable Assainissement Côte d'Ivoire Bouaké</title>
-    <link rel="stylesheet" href="../static/css/style.css" />
-    <link rel="icon" type="image/x-icon" href="../static/images/favicon.ico">
+    <link rel="stylesheet" href="http://localhost:8000/static/css/style.css" />
+    <link rel="icon" type="image/x-icon" href="http://localhost:8000/static/images/favicon.ico">
     
 
     
 <!-- appelle la librairie javascript Leaflet et le fichier CSS Leaflet -->	
-	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
-  integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-  crossorigin=""/>
-<script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
-  integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
-  crossorigin=""></script>
+	<link rel="stylesheet" href="http://localhost:8000/static/dist/leaflet.css"/>
+<script src="http://localhost:8000/static/dist/leaflet.js"></script>
   
 	<!-- jQuery - indispensable pour utiliser les fichiers geojson -->
-	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+	<script src="http://localhost:8000/static/dist/jquery-3.4.1.min.js"></script>
+	<script src="http://localhost:8000/static/dist/jquery.min.js"></script>
+	
 	
 	<!-- liens vers les fichiers permettant de créer les controles de groupes de couche dans la carte -->
-	<link rel="stylesheet" href="../static/css/leaflet.groupedlayercontrol.min.css"/>
+	<link rel="stylesheet" href="http://localhost:8000/static/dist/leaflet.groupedlayercontrol.min.css"/>
+	
 	
 	
 	
@@ -34,28 +31,28 @@
 
 <body>
 <header class="header-bar">
-    <div><a class="header-nav" href="../index.html">
-        <img src="../static/images/UElogo.png" alt="Atlas Eau Potable Assainissement Côte d'Ivoire Bouaké logo">
+    <div><a class="header-nav" href="http://localhost:8000/index.html">
+        <img src="http://localhost:8000/static/images/UElogo.png" alt="Atlas Eau Potable Assainissement Côte d'Ivoire Bouaké logo">
     </a>
     <span class="header-title" title="L'Atlas en ligne du projet ETUPO Vallée du Bandama présente les résultats de l'étude sur l'accès à l'eau potable et à l'assainissement à Bouaké et dans les villages périphériques.">Atlas Urgence Eau Bouaké</span></div>
 <nav>
 <ul>
-<li><a href="../index.html"><br><img src="../static/images/home_icon.png"></a></li>
+<li><a href="http://localhost:8000/index.html"><br><img src="http://localhost:8000/static/images/home_icon.png"></a></li>
 
 
 
 <li><a title="La présentation de l'étude"><br>Informations</a>
 <ul class="submenu">
-<li><a href="../pages/projet.html">L'étude</a></li>
-<li><a href="../pages/methodes-de-diagnostic.html">Les méthodes de diagnostic</a></li>
-<li><a href="../pages/auteurs-de-letude.html">Les auteurs</a></li>
-<li><a href="../pages/telechargements.html">Télécharger les données</a></li>
-<li><a href="../pages/contacts.html">Contacts</a></li>
+<li><a href="http://localhost:8000/pages/projet.html">L'étude</a></li>
+<li><a href="http://localhost:8000/pages/methodes-de-diagnostic.html">Les méthodes de diagnostic</a></li>
+<li><a href="http://localhost:8000/pages/auteurs-de-letude.html">Les auteurs</a></li>
+<li><a href="http://localhost:8000/pages/telechargements.html">Télécharger les données</a></li>
+<li><a href="http://localhost:8000/pages/contacts.html">Contacts</a></li>
 </ul>
 </li>
 
-<li><a href="../pages/vulnerabilite.html">Diagnostic<br>localités</a></li>
-<li><a href="../pages/analyse-des-points-deau.html">Diagnostic<br>points d'eau</a></li>
+<li><a href="http://localhost:8000/pages/vulnerabilite.html">Diagnostic<br>localités</a></li>
+<li><a href="http://localhost:8000/pages/analyse-des-points-deau.html">Diagnostic<br>points d'eau</a></li>
 
 
 
@@ -86,10 +83,10 @@
 		</script>
 		<script type="text/javascript" >
 		// construire une variable url pour chaque base de donnée affichée sur la page
-			var urllocalites = "../doc/map/bdd/localites.geojson"
-			var urlpointdeau = "../doc/map/bdd/pointseau.geojson"
-			var urlNorthArray = '<img src="../static/images/compass.png" style="width:30px;">'
-			var articlespath = '../'
+			var urllocalites = "http://localhost:8000/doc/map/bdd/localites.geojson"
+			var urlpointdeau = "http://localhost:8000/doc/map/bdd/pointseau.geojson"
+			var urlNorthArray = '<img src="http://localhost:8000/static/images/compass.png" style="width:30px;">'
+			var articlespath = 'http://localhost:8000/'
 			
 		</script>
 		<script type="text/javascript" >
@@ -217,26 +214,27 @@ En somme, il existe des tensions entre les femmes ; mais qui ne peuvent porter 
 
 
 
-	<a href="http://urgenceeau.com/"><img src="../static/images/UElogo.png" alt="Urgence Eau logo"></a>
-	<a href="http://urgenceeau.com/urgence-eau-cote-divoire-ueci/"><img src="../static/images/UECIlogo.png" alt="Urgence Eau - Côte d'Ivoire logo"></a>
+	<a href="http://urgenceeau.com/"><img src="http://localhost:8000/static/images/UElogo.png" alt="Urgence Eau logo"></a>
+	<a href="http://urgenceeau.com/urgence-eau-cote-divoire-ueci/"><img src="http://localhost:8000/static/images/UECIlogo.png" alt="Urgence Eau - Côte d'Ivoire logo"></a>
 	<span class="footer-text"> <a href="http://urgenceeau.com/">Urgence Eau </a><br>
 	<a href="http://urgenceeau.com/urgence-eau-cote-divoire-ueci/">Urgence Eau - Côte d'Ivoire</a></span>
     <span class="footer-text" style="text-align: center;">Site développé par <a href='http://www.ladyss.com/thomas-maillard'>Thomas Maillard</a><br>© 2018 Urgence Eau | <a href="http://urgenceeau.com/mentions-legales/">Mentions légales</a></span>
     <span class="footer-text" style="text-align: right;">Un projet soutenu par la <a href="https://www.normandie.fr/">Région Normandie</a><br>à travers l'initiative <a href="https://www.normandie.fr/normandie-pour-la-paix">Normandie pour la Paix.</a></span>
-    <a href="https://www.normandie.fr/"><img src="../static/images/logo_r_normandie-portrait-cmjn.jpg" alt="Region Normandie logo"></a>
-	<a href="https://www.normandie.fr/normandie-pour-la-paix"><img src="../static/images/Label_Normandie-pour-la-Paix.jpg" alt="Label Normandie pour la paix logo"></a>
+    <a href="https://www.normandie.fr/"><img src="http://localhost:8000/static/images/logo_r_normandie-portrait-cmjn.jpg" alt="Region Normandie logo"></a>
+	<a href="https://www.normandie.fr/normandie-pour-la-paix"><img src="http://localhost:8000/static/images/Label_Normandie-pour-la-Paix.jpg" alt="Label Normandie pour la paix logo"></a>
   
-    <script src="../static/js/script.js"></script>
+    <script src="http://localhost:8000/static/js/script.js"></script>
+    
 <!-- liens vers les fichiers permettant de créer les controles de groupes de couche dans la carte -->
-<script type="text/javascript" src="../static/js/leaflet.groupedlayercontrol.min.js.map"></script>
-	<script type="text/javascript" src="../static/js/leaflet.groupedlayercontrol.min.js"></script>
+<script type="text/javascript" src="http://localhost:8000/static/js/leaflet.groupedlayercontrol.min.js.map"></script>
+	<script type="text/javascript" src="http://localhost:8000/static/js/leaflet.groupedlayercontrol.min.js"></script>
 <!-- les scripts d'affichage de l'habillage de la carte -->
-<script type="text/javascript" src="../doc/map/map_habillage.js" ></script>
+<script type="text/javascript" src="http://localhost:8000/doc/map/map_habillage.js" ></script>
 <!-- script d'affichage des groupes de couche dans le contrôleur de couches -->
-<script type="text/javascript" src="../doc/map/groupecontrole.js"></script>
+<script type="text/javascript" src="http://localhost:8000/doc/map/groupecontrole.js"></script>
 <!-- script d'affichage des différentes couches -->
-<script type="text/javascript" src="../doc/map/vulnerabilite.js" ></script>
-<script type="text/javascript" src="../doc/map/pe_type.js" ></script>
+<script type="text/javascript" src="http://localhost:8000/doc/map/vulnerabilite.js" ></script>
+<script type="text/javascript" src="http://localhost:8000/doc/map/pe_type.js" ></script>
 
 
     </footer>

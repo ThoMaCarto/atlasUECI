@@ -7,29 +7,86 @@ return div;
 }
 maptitle.addTo(map);
 
-//var paneau = map.createPane('fixed', document.getElementById('map'));
-map.createPane('650');
-map.getPane('650').style.zIndex = 1000;
-
-map.createPane('600');
-map.getPane('600').style.zIndex = 600;
 
 
 
-////Création de la couche (Layer) type de point d'eau
-//Couleur en fonction du type de point d'eau
-function getColortype(Type_de_point_deau) {
-          switch (Type_de_point_deau) {
-            case 'puits_ouvert':
-              return  'blue';
-            case 'point_equipe':
-              return 'purple';
-            case 'surface':
-              return 'green';
+
+        
+////Création des icones par type de points d'eau
+
+var modernIcon = L.icon({shadowUrl:urlwhiteshadow,shadowSize:[,30],shadowAnchor: [15, 15],iconAnchor:[10,5],iconSize:[20,],iconUrl: urlpuitsmoderne});
+var tradiIcon = L.icon({shadowUrl:urlwhiteshadow,shadowSize:[,30],shadowAnchor: [15, 15],iconAnchor:[ 10,5],iconSize:[20,],iconUrl: urlpuitstradi});
+var forageIcon = L.icon({shadowUrl:urlwhiteshadow,shadowSize:[,30],shadowAnchor: [15, 15],iconAnchor:[5,10],iconSize:[,20],iconUrl: urlforage}); 
+var borneIcon = L.icon({shadowUrl:urlwhiteshadow,shadowSize:[,30],shadowAnchor: [15, 15],iconAnchor:[5,10],iconSize:[,20],iconUrl: urlborne}); 
+var surfaceIcon = L.icon({shadowUrl:urlwhiteshadow,shadowSize:[,30],shadowAnchor: [15, 15],iconAnchor:[10,10],iconSize:[,20],iconUrl: urlsurface});
+var testIcon = L.icon({shadowUrl:urlredshadow,shadowSize:[,30],shadowAnchor: [15, 15],iconAnchor:[10,10],iconSize:[,20],iconUrl: urlredshadow});
+
+//création de la fonction qui appliquera l'icone en fonction de la variable type de points d'eau feature.properties.Type de point d'eau
+function geticontype(t) {
+          switch (t) {
+            case 'Marigot':
+              return  surfaceIcon;
+            case 'Mare':
+              return  surfaceIcon;
+            case 'Lac':
+              return  surfaceIcon;
+            case 'Rivière':
+              return  surfaceIcon;
+              
+             case 'Borne fontaine':
+              return borneIcon;
+              
+            case 'Puits traditionnels':
+              return  tradiIcon;
+              
+            case 'Puits busés':
+              return  modernIcon;                                                                                   
+            case 'Puits maçonnés':
+              return modernIcon;  
+              
+//            case 'Puits équipé d\'une PMH':
+  //            return modernIcon;
+    //        case 'Puits équipé d\'une  pompe immergée':
+      //        return modernIcon;
+              
+ //            case 'Forage équipé d\'une pompe immergée':
+   //           return  forageIcon;
+     //       case 'Forage équipé d\'une PMH':
+       //       return forageIcon;
+              
      		default:
-              return 'grey';
+              return forageIcon;
           }
-        };
+        }
+ //création de la couche type de point d'eau
+$.getJSON(urlpointdeau,function(data){
+	//transformation de la base de donnée en couche (Layer)
+	
+	var typePE = L.geoJson(data,{
+		
+		onEachFeature: oneachfeature,
+		//Affichage sous forme de point
+		pointToLayer:function(feature,latlng){
+			//caractéristique des points
+			var marker = L.marker(latlng,{icon:geticontype(feature.properties.Type)});
+			//caractéristiques des popup
+			//marker2.bindPopup('<p>Comptage <em>E. coli</em>: ' + feature.properties.ecoli + ' UFC / 100 ml</p>');
+			//Affichage des marqueurs
+			return marker;
+		}
+		
+		
+		});
+		//.on("click", cible);
+	//Affichage sur la carte
+	
+	//typePE.addTo(map);
+	//Affichage dans le controleur de couche
+	
+	//controlLayers.addOverlay(Ecoli, "" );
+	//controlLayers.addOverlay(typePE, "Type de Point d'eau", "Diagnostic des points d'eau");
+});    
+        
  // fonction pour l'affichage dans le panneau à droite des données du point       
 function oneachfeature(feature, layer){
 		 	//marker.setOpacity(0); 
@@ -98,7 +155,7 @@ $.getJSON(urlpointdeau,function(data){
 	//transformation de la base de donnée en couche (Layer)
 	
 	var Ecoli = L.geoJson(data,{
-		pane:'600',
+		
 		onEachFeature: oneachfeature,
 		//Affichage sous forme de point
 		pointToLayer:function(feature,latlng){
@@ -142,7 +199,7 @@ $.getJSON(urlpointdeau,function(data){
 	//transformation de la base de donnée en couche (Layer)
 	
 	var Nitrate = L.geoJson(data,{
-		pane:'600',
+		
 		onEachFeature: oneachfeature,
 		//Affichage sous forme de point
 		pointToLayer:function(feature,latlng){
@@ -181,7 +238,7 @@ $.getJSON(urlpointdeau,function(data){
 	//transformation de la base de donnée en couche (Layer)
 	
 	var Ammoniac = L.geoJson(data,{
-		pane:'600',
+		
 		onEachFeature: oneachfeature,
 		//Affichage sous forme de point
 		pointToLayer:function(feature,latlng){

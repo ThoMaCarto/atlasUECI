@@ -22,7 +22,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	
 	
-	<script src="{{SITEURL}}/{{ THEME_STATIC_DIR }}/js/L.TileLayer.Multi.js"></script>
+	
 	
 	
 {% endblock %}
@@ -53,6 +53,7 @@ var map = L.map('map');
 			var urlpointdeau = "{{ SITEURL }}/{{DOC_STATIC_DIR}}/map/bdd/pointseau.geojson"
 			var urlNorthArray = '<img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/compass.png" style="width:30px;">'
 			var urlwhiteshadow = '{{ SITEURL }}/{{ DOC_STATIC_DIR }}/map/icone/white.png'
+			var urlredshadow = '{{ SITEURL }}/{{ DOC_STATIC_DIR }}/map/icone/red.png'
 			var urlpuitsmoderne = '{{ SITEURL }}/{{ DOC_STATIC_DIR }}/map/icone/puits_moderne.png'
 			var urlpuitstradi = '{{ SITEURL }}/{{ DOC_STATIC_DIR }}/map/icone/puits_tradi.png'
 			var urlforage = '{{ SITEURL }}/{{ DOC_STATIC_DIR }}/map/icone/forage.png'
