@@ -1,0 +1,110 @@
+<!-- page pour l'affichage de données dans des tabulator -->
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
+    <title>Atlas Eau Potable Assainissement Côte d'Ivoire Bouaké</title>
+    <link rel="stylesheet" href="http://urgenceeau.com/atlas/static/css/style.css" />
+    <link rel="icon" type="image/x-icon" href="http://urgenceeau.com/atlas/static/images/favicon.ico">
+    
+
+    
+
+<!-- jQuery - indispensable pour utiliser les fichiers geojson -->
+	<script src="http://urgenceeau.com/atlas/static/dist/jquery-3.4.1.min.js"></script>
+	<script src="http://urgenceeau.com/atlas/static/dist/jquery.min.js"></script>
+	
+	<!-- appelle la librairie javascript Leaflet et le fichier CSS Leaflet -->	
+	<link rel="stylesheet" href="http://urgenceeau.com/atlas/static/dist/leaflet.css" />
+	<script src="http://urgenceeau.com/atlas/static/dist/leaflet.js"></script>
+	
+	
+	
+
+
+<!-- liens vers les fichiers de la librairy tabulator permettant d'afficher les tableaux de données -->
+<link rel="stylesheet" href="http://urgenceeau.com/atlas/static/dist/tabulator.min.css">
+<script src="http://urgenceeau.com/atlas/static/dist/tabulator.min.js"></script>
+
+
+
+</head>
+
+<body>
+<header class="header-bar">
+    <div><a class="header-nav" href="http://urgenceeau.com/atlas/index.html">
+        <img src="http://urgenceeau.com/atlas/static/images/UElogo.png" alt="Atlas Eau Potable Assainissement Côte d'Ivoire Bouaké logo">
+    </a>
+    <span class="header-title" title="L'Atlas en ligne du projet ETUPO Vallée du Bandama présente les résultats de l'étude sur l'accès à l'eau potable et à l'assainissement à Bouaké et dans les villages périphériques.">Atlas Urgence Eau Bouaké</span></div>
+<nav>
+<ul>
+<li><a href="http://urgenceeau.com/atlas/index.html"><br><img src="http://urgenceeau.com/atlas/static/images/home_icon.png"></a></li>
+
+
+
+<li><a title="La présentation de l'étude"><br>Informations</a>
+<ul class="submenu">
+<li><a href="http://urgenceeau.com/atlas/pages/projet.html">L'étude</a></li>
+<li class="selected"><a href="http://urgenceeau.com/atlas/pages/methodes-de-diagnostic.html">Les méthodes de diagnostic</a></li>
+<li><a href="http://urgenceeau.com/atlas/pages/auteurs-de-letude.html">Les auteurs</a></li>
+<li><a href="http://urgenceeau.com/atlas/pages/telechargements.html">Télécharger les données</a></li>
+<li><a href="http://urgenceeau.com/atlas/pages/contacts.html">Contacts</a></li>
+</ul>
+</li>
+
+<li><a href="http://urgenceeau.com/atlas/pages/vulnerabilite.html">Diagnostic<br>localités</a></li>
+<li><a href="http://urgenceeau.com/atlas/pages/analyse-des-points-deau.html">Diagnostic<br>points d'eau</a></li>
+
+
+
+
+<li class="selectedout"><a href="http://urgenceeau.com/"><br>Urgence Eau ></a></li>
+
+</ul>
+</nav>
+    
+</header>
+    <div id="main"> 
+    
+<script type="text/javascript" >
+		// construire une variable url pour chaque base de donnée affichée sur la page
+			var urllocalites = "http://urgenceeau.com/atlas/doc/map/bdd/localites.json"
+			var urlpointdeau = "http://urgenceeau.com/atlas/doc/map/bdd/pointseau.json"
+			
+			
+		</script>
+
+<h2>Les méthodes de diagnostic</h2>
+<p>Contenu de l'article en test</p>
+
+    </div>
+    <footer class="footer-bar">
+
+
+
+	<a href="http://urgenceeau.com/"><img src="http://urgenceeau.com/atlas/static/images/UElogo.png" alt="Urgence Eau logo"></a>
+	<a href="http://urgenceeau.com/urgence-eau-cote-divoire-ueci/"><img src="http://urgenceeau.com/atlas/static/images/UECIlogo.png" alt="Urgence Eau - Côte d'Ivoire logo"></a>
+	<span class="footer-text"> <a href="http://urgenceeau.com/">Urgence Eau </a><br>
+	<a href="http://urgenceeau.com/urgence-eau-cote-divoire-ueci/">Urgence Eau - Côte d'Ivoire</a></span>
+    <span class="footer-text" style="text-align: center;">Site développé par <a href='http://www.ladyss.com/thomas-maillard'>Thomas Maillard</a><br>© 2018 Urgence Eau | <a href="http://urgenceeau.com/mentions-legales/">Mentions légales</a></span>
+    <span class="footer-text" style="text-align: right;">Un projet soutenu par la <a href="https://www.normandie.fr/">Région Normandie</a><br>à travers l'initiative <a href="https://www.normandie.fr/normandie-pour-la-paix">Normandie pour la Paix.</a></span>
+    <a href="https://www.normandie.fr/"><img src="http://urgenceeau.com/atlas/static/images/logo_r_normandie-portrait-cmjn.jpg" alt="Region Normandie logo"></a>
+	<a href="https://www.normandie.fr/normandie-pour-la-paix"><img src="http://urgenceeau.com/atlas/static/images/Label_Normandie-pour-la-Paix.jpg" alt="Label Normandie pour la paix logo"></a>
+  
+    <script src="http://urgenceeau.com/atlas/static/js/script.js"></script>
+    
+<!-- appelle le fichier JS codant l'habillage de la carte -->	
+<script type="text/javascript" src="http://urgenceeau.com/atlas/doc/map/map_habillage.js" ></script>
+<!-- appelle le fichier JS codant la carte de la page d'accueil -->	
+
+<script type="text/javascript" src="http://urgenceeau.com/atlas/doc/map/complexe-table.js"></script>
+
+
+    </footer>
+</body>
+ 
+</html>
