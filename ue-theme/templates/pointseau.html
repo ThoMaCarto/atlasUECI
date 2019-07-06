@@ -71,7 +71,9 @@ var map = L.map('map');
 
 {% block extra_js %}
 
-
+	<!-- liens vers les fichiers permettant de créer les controles de groupes de couche dans la carte -->
+<script type="text/javascript" src="{{SITEURL}}/{{ THEME_STATIC_DIR }}/dist/leaflet.groupedlayercontrol.min.js.map"></script>
+	<script type="text/javascript" src="{{SITEURL}}/{{ THEME_STATIC_DIR }}/dist/leaflet.groupedlayercontrol.min.js"></script>	
 <!-- les scripts d'affichage de l'habillage de la carte -->
 <script type="text/javascript" src="{{SITEURL}}/{{DOC_STATIC_DIR}}/map/map_habillage.js" ></script>
 <!-- script d'affichage des groupes de couche dans le contrôleur de couches -->
