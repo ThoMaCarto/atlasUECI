@@ -70,8 +70,8 @@
 </header>
     <div id="main"> 
     
-<section class="withmap">
-	<div class="mapall" id="map" title="Cliquer sur une localites pour accéder à son diagnostic détaillé">
+<section class="content">
+	<div class="map" id="map" title="Cliquer sur une localités pour accéder à son diagnostic détaillé">
 	<script type="text/javascript">
 	////Carte de la page d'accueil
   
@@ -102,6 +102,11 @@ var map = L.map('map');
 			var urlsurface = 'http://urgenceeau.com/atlas/doc/map/icone/marigot.png'
 			var articlespath = 'http://urgenceeau.com/atlas/'
 		</script>
+	</div>
+	<div class="fiche">
+	<h4>Diagnostic détaillé de la localité sélectionnée :</h4>
+		<div id="popupstatic">
+		</div>
 	</div>
 	
 </section>

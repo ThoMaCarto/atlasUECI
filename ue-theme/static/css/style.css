@@ -363,12 +363,14 @@ th{
 	padding: 1% 1%;
 	background-color: grey;
 	color:#FFF;
+	word-wrap: break-word;
 }
 
 td{
 	border: 3px solid #FFF;
 	padding: 1% 1%;
 	background-color: lightgrey;
+	word-wrap: break-word;
 }
 
 /* mise en forme des popups de la carte Leaflet */
@@ -376,6 +378,7 @@ td{
 .leaflet-popup-content-wrapper {
     background: white;
     color: black;
+    
 }
 
 
