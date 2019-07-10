@@ -4,8 +4,8 @@ $.getJSON(urllocalites,function(data)
 	var localites= L.geoJson(data,{style: function(feature){
 		return { color : 'red', weight : 1.5, fillColor : 'red', fillOpacity : .0, };},
 		onEachFeature: oneachfeature,
-});
-//localites.addTo(map);
+}).on("click", cible);
+localites.addTo(map);
 controlLayers.addOverlay(localites, "Localités","Diagnostic des localités");
 });
 
@@ -61,7 +61,7 @@ function oneachfeature(feature, layer){
 //fonction pour afficher un cible bleu autour du point sélectionné
 function cible(e){
 						
-		var marker = new L.circleMarker([e.latlng.lat, e.latlng.lng],{radius: 10, color: 'dodgerblue', fillColor: 'dodgerblue',weight: 3,fillOpacity: 0,dashArray:"5",})
+		var marker = new L.circleMarker([e.latlng.lat, e.latlng.lng],{radius: 5, color: 'dodgerblue', fillColor: 'dodgerblue',weight: 3,fillOpacity: 0,dashArray:"5",})
 		.addTo(map);
 		if (markers.length > 0) {map.removeLayer(markers.pop());}
 		var marker;
@@ -116,7 +116,7 @@ $.getJSON(urllocalites,function(data2)
 	onEachFeature: oneachfeature,
 })
 .on("click", cible);
-vulnLocalites.addTo(map);
+//vulnLocalites.addTo(map);
 controlLayers.addOverlay(vulnLocalites, "Niveau de Vulnérabilité","Diagnostic des localités");
 });
 

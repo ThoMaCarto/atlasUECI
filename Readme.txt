@@ -15,6 +15,9 @@ $ make devserver
 ## Publier les modifications
 $ pelican content -s publishconf.py
 
+##publier les modifications dans atlas/
+$ pelican content -s atlasconf.py
+
 
 # Procédure de mise à jour sur github
 
