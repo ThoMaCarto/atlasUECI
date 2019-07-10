@@ -18,6 +18,9 @@ $ pelican content -s publishconf.py
 ##publier les modifications dans atlas/
 $ pelican content -s atlasconf.py
 
+##Ou les deux à la fois
+pelican content -s publishconf.py && pelican content -s atlasconf.py
+
 
 # Procédure de mise à jour sur github
 
