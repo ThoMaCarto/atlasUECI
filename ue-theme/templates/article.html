@@ -40,10 +40,17 @@
 		</script>
 		<script type="text/javascript" >
 		// construire une variable url pour chaque base de donnée affichée sur la page
+			
+			var articlespath = '{{ SITEURL }}/'
 			var urllocalites = "{{ SITEURL }}/{{DOC_STATIC_DIR}}/map/bdd/localites_v2.geojson"
 			var urlpointdeau = "{{ SITEURL }}/{{DOC_STATIC_DIR}}/map/bdd/pointseau_v2.geojson"
 			var urlNorthArray = '<img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/compass.png" style="width:30px;">'
-			var articlespath = '{{ SITEURL }}/'
+			var urlwhiteshadow = '{{ SITEURL }}/{{ DOC_STATIC_DIR }}/map/icone/white.png'
+			var urlpuitsmoderne = '{{ SITEURL }}/{{ DOC_STATIC_DIR }}/map/icone/puits_moderne.png'
+			var urlpuitstradi = '{{ SITEURL }}/{{ DOC_STATIC_DIR }}/map/icone/puits_tradi.png'
+			var urlforage = '{{ SITEURL }}/{{ DOC_STATIC_DIR }}/map/icone/forage.png'
+			var urlborne = '{{ SITEURL }}/{{ DOC_STATIC_DIR }}/map/icone/borne.png'
+			var urlsurface = '{{ SITEURL }}/{{ DOC_STATIC_DIR }}/map/icone/marigot.png'
 			
 		</script>
 		<script type="text/javascript" >
@@ -72,7 +79,7 @@
 <!-- script d'affichage des groupes de couche dans le contrôleur de couches -->
 <script type="text/javascript" src="{{SITEURL}}/{{DOC_STATIC_DIR}}/map/groupecontrole.js"></script>
 <!-- script d'affichage des différentes couches -->
-<script type="text/javascript" src="{{SITEURL}}/{{DOC_STATIC_DIR}}/map/vulnerabilite.js" ></script>
+<script type="text/javascript" src="{{SITEURL}}/{{DOC_STATIC_DIR}}/map/localites_type.js" ></script>
 <script type="text/javascript" src="{{SITEURL}}/{{DOC_STATIC_DIR}}/map/pe_type.js" ></script>
 
 

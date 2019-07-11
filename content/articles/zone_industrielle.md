@@ -1,7 +1,7 @@
 date: 2019-05-10
 template: article
 title: Zone Industrielle – Djézoukouamékro
-slug: zone_industrielle
+slug: zone-industrielle
 tags: Urbain,Ville,Vulnérabilité urbaine
 authors: BROU Yves Oscar Kouadio, SORO Doba, MAILLARD Thomas, DIAKITE A. Cheick, KOHE A. Christelle, OUATTARA Mafine, SERI A. Jonathan, N'GUESSAN Firmain Kouakou
 latitude: 7.70400
