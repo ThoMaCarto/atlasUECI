@@ -101,9 +101,19 @@ var map = L.map('map');
 			var urlborne = 'http://urgenceeau.com/atlas/doc/map/icone/borne.png'
 			var urlsurface = 'http://urgenceeau.com/atlas/doc/map/icone/marigot.png'
 			var articlespath = 'http://urgenceeau.com/atlas/'
+		
 		</script>
 	</div>
 	<div class="fiche">
+	<span>
+	
+	<select id="filter-localites" onchange="window.location.href=this.value;">
+	<option>Voir la fiche détaillée d'une localité</option>
+	<option value="http://urgenceeau.com/atlas/articles/belleville-1.html">Belleville 1</option>
+	<option value="http://urgenceeau.com/atlas/articles/minankro.html">Minankro</option>
+	<option value="http://urgenceeau.com/atlas/articles/zone-industrielle.html">Zone Industrielle – Djézoukouamékro</option>
+	</select>
+	</span>
 	<h4>Diagnostic détaillé de la localité sélectionnée :</h4>
 		<div id="popupstatic">
 		</div>

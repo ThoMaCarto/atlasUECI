@@ -57,9 +57,19 @@ var map = L.map('map');
 			var urlborne = '{{ SITEURL }}/{{ DOC_STATIC_DIR }}/map/icone/borne.png'
 			var urlsurface = '{{ SITEURL }}/{{ DOC_STATIC_DIR }}/map/icone/marigot.png'
 			var articlespath = '{{ SITEURL }}/'
+		
 		</script>
 	</div>
 	<div class="fiche">
+	<span>
+	
+	<select id="filter-localites" onchange="window.location.href=this.value;">
+	<option>Voir la fiche détaillée d'une localité</option>
+	{% for article in articles %}
+	<option value="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</option>
+	{% endfor %}
+	</select>
+	</span>
 	<h4>Diagnostic détaillé de la localité sélectionnée :</h4>
 		<div id="popupstatic">
 		</div>

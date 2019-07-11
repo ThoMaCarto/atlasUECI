@@ -108,8 +108,15 @@ var map = L.map('map');
 		
 		
 			<ul>
-				<li><em>Cliquez sur une localité pour voir son diagnostic détaillé</em></li>
-				<li><em> Diagnostic des <a href="http://urgenceeau.com/atlas/pages/vulnerabilite.html">localités</a></em></li>
+				<li><em>Cliquez sur une localité pour voir son diagnostic détaillé</em>
+				<span>
+	
+	<select id="filter-localites" onchange="window.location.href=this.value;">
+	<option></option>
+	<option value="http://urgenceeau.com/atlas/articles/zone-industrielle.html">Zone Industrielle – Djézoukouamékro</option>
+	</select>
+	</span></li>
+				<li><em> Diagnostic des <a href="http://urgenceeau.com/atlas/pages/vulnerabilite.html">localités (quartiers ou villages)</a></em></li>
 				<li><em> Diagnostic des <a href="http://urgenceeau.com/atlas/pages/analyse-des-points-deau.html">points d'eau</a></em></li>
 				<li><em><a href="http://urgenceeau.com/atlas/pages/telechargements.html">Les bases de données des résultats</a></em></li>
 			</ul>

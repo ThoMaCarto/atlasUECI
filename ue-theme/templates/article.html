@@ -62,6 +62,15 @@
 	</div>
 	<div id="" class="fiche">
 		<header>
+		<span>
+	
+	<select id="filter-localites" onchange="window.location.href=this.value;">
+	<option>Voir la fiche détaillée d'une autre localité</option>
+	{% for article in articles %}
+	<option value="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</option>
+	{% endfor %}
+	</select>
+	</span>
 			 <h1>{{ article.title }}</h1>
 			 <h4>{{ article.localisation }}</h4>
 		</header>

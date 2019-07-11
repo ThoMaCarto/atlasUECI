@@ -1,7 +1,7 @@
 
 
 
- // fonction pour l'affichage dans le panneau à droite des données du point       
+ // fonction pour l\'affichage dans le panneau à droite des données du point       
 function oneachfeature(feature, layer){
 		 	//marker.setOpacity(0); 
            layer.on({
