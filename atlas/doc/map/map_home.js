@@ -30,36 +30,34 @@ var fond ={ "Noir et blanc": toner};
 var controlLayers=L.control.layers(null,null,{collapsed : false}).addTo(map)
 
 
-//Titre et légende de la carte
-var maptitle = L.control({position:"bottomright",},);
-maptitle.onAdd = function (map){
+//Légende de vulnLocalites
+var legendVuln = L.control({position:"bottomright",},);
+legendVuln.onAdd = function (map){
 var div = L.DomUtil.create("div", "legendin");
-div.innerHTML ='<details title="cliquer sur la flèche pour afficher la légende"><summary><strong>Niveau de vulnérabilité des localités</strong></summary><table class="info-legend"><thead><tr ><th></th><th>Milieu rural</th><th>Milieu urbain</th></tr</thead><tbody><tr></tr><tr><td style="background-color:Red;height:10px;width:30px;opacity:.8;border:1px solid Red;"></td><td>Vulnérabilité forte</td><td> Non raccordée au réseau</td></tr><tr></tr><tr><td style="background-color:Orange;height:10px;width:30px;opacity:.8;border:1px solid Orange;"></td><td>Vulnérabilité moyenne</td><td>Partiellement raccordée</td></tr><tr></tr><tr><td style="background-color:yellow;height:10px;width:30px;opacity:.8;border:1px solid yellow;"></td><td>Vulnérabilité faible</td><td>Majoritairement raccordée</td></tr></tbody></table></details>';
+div.innerHTML =
+'<details title="Cliquez sur la flèche noir pour afficher la légende détaillée">'
++'<summary><strong>Niveau de vulnérabilité des localités</strong></summary>'
++'<table class="info-legend">'
++'<thead><tr ><th></th><th>Milieu rural</th><th>Milieu urbain</th></tr</thead>'
++'<tbody>'
++'<tr></tr>'
++'<tr><td style="background-color:Red;height:10px;width:30px;opacity:.8;border:1px solid Red;"></td><td title="Aucune pompe ou aucune pompe fonctionnelle">Vulnérabilité forte<br>(Aucun accès à l\'hydraulique moderne)</td><td> Non raccordée au réseau</td></tr>'
++'<tr></tr>'
++'<tr><td style="background-color:Orange;height:10px;width:30px;opacity:.8;border:1px solid Orange;"></td><td title="Raccordé exclusievement au réseau ou disposant de pompes majoritairement en panne">Vulnérabilité moyenne<br>(Accès à un seul équipement d\'hydraulique moderne sans alternative)</td><td>Partiellement raccordée</td></tr>'
++'<tr></tr>'
++'<tr><td style="background-color:yellow;height:10px;width:30px;opacity:.8;border:1px solid yellow;"></td><td title="Plusieurs types d\'équipements:réseau, plusieurs pompes dont la majorité sont fonctionnelles">Vulnérabilité faible<br>(Accès à plusieurs équipements d\'hydraulique moderne en bon état)</td><td>Majoritairement raccordée</td></tr>'
++'</tbody>'
++'</table>'
++'</details>';
 return div;
-}
-maptitle.addTo(map);
+};
+legendVuln.addTo(map);
 
 ////Paramétrage de la charte graphique des éléments cartographiés
 
 
         
-//Couleur en fonction de la vulnérabilité
-function getColorVuln2(vulnerabilit) {
-          switch (vulnerabilit) {
-            case 'Vulnérabilité faible':
-              return  'yellow';
-            case 'Vulnérabilité moyenne':
-              return 'orange';
-            case 'Vulnérabilité forte':
-              return 'red';
-            case 'Majoritairement':
-            	return 'yellow';
-            case 'Partiellement':
-            	return 'orange';
-     		default:
-              return 'DarkSlateGray ';
-          }
-        };
+
 
 
 
@@ -145,7 +143,9 @@ $.getJSON(urllocalites,function(data2)
 	var vulnLocalites= L.geoJson(data2,{style: function(feature){return { color : getColorVuln(feature.properties.Points_deau_diagnostiqués_conformes_aux_normes_OMS,feature.properties.Nombre_de_points_deau_diagnostiqués,feature.properties.EAU_SODECI,feature.properties.Pompes_Fonctionnelles), weight : 1, fillColor : getColorVuln(feature.properties.Points_deau_diagnostiqués_conformes_aux_normes_OMS,feature.properties.Nombre_de_points_deau_diagnostiqués,feature.properties.EAU_SODECI,feature.properties.Pompes_Fonctionnelles), fillOpacity : .5 };},
 	onEachFeature : function(feature, layer ) {layer.bindPopup('<b><u>Nom de la localité</u></b><br>' + feature.properties.a_quartier +'<br><strong> Diagnostic détaillé : </strong> <a href="articles/' + articlespath + feature.properties.lien +'" style="text-transform: capitalize;">'+ feature.properties.a_quartier +'</a>')}
 });
+//vulnLocalites.beforeAdd = function (map) {legendVuln.addTo(map);};
 vulnLocalites.addTo(map);
+
 controlLayers.addOverlay(vulnLocalites, "Niveau de vulnérabilité<br>des quartiers / villages");
 });
 

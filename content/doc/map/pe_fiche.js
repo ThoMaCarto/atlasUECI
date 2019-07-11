@@ -1,11 +1,11 @@
 //Titre et légende de la carte
-var maptitle = L.control({position:"bottomright",},);
-maptitle.onAdd = function (map){
+var omsLegend = L.control({position:"bottomright",},);
+omsLegend.onAdd = function (map){
 var div = L.DomUtil.create("div", "legendin");
 div.innerHTML ='<table class="info-legend"><thead><tr><th></th><th>Diagnostic des points d\'eau</th></tr</thead><tbody><tr></tr><tr><td style="background-color:Red;height:10px;width:30px;opacity:1;border:1px solid Red;"></td><td>Non conforme aux normes de potabilité</td></tr><tr></tr><tr><td style="background-color:green;height:10px;width:30px;opacity:1;border:1px solid green;"></td><td>Conforme aux normes de potabilité</td></tr></tbody></table><details title="cliquer sur la flèche pour afficher la légende"><summary><strong>Normes OMS</strong></summary><table class="info-legend"><thead><tr><th>Élément analysé</th><th>Norme OMS</th></tr><thead><tbody><tr><td><em>E. Coli</em></td><td>0 UFC/100ml</td></tr><tr><td><em>Concentration en Ammoniac</em></td><td>1,5 mg/l</td></tr><tr><td><em>Concentration en Nitrate</em></td><td>50 mg/l</td></tr></tbody></table><a href="https://www.who.int/water_sanitation_health/dwq/gdwq3rev/fr/">OMS : Directives pour la qualité de l\'eau de boisson</a></details>';
 return div;
 }
-maptitle.addTo(map);
+omsLegend.addTo(map);
 
 
 
@@ -133,11 +133,9 @@ function cible(e){
 //Création d'un compteur de marker
 var markers = [];	   
 
-
-//Création de la couche contamination Ecoli
+//// Création de la charte graphique
 //Couleur en fonction de la présence d'E. coli
-
-  function getColorEcoli(ecoli) {
+function getColorEcoli(ecoli) {
           if (ecoli == 0 == true) {
           	return('green');
           }
@@ -149,40 +147,8 @@ var markers = [];
           }
        };
        
-//transformation de la base de donné "point_eau.geojson" en une couche E.coli
-//lecture de la base de donnée
-$.getJSON(urlpointdeau,function(data){
-	//transformation de la base de donnée en couche (Layer)
-	
-	var Ecoli = L.geoJson(data,{
-		
-		onEachFeature: oneachfeature,
-		//Affichage sous forme de point
-		pointToLayer:function(feature,latlng){
-			//caractéristique des points
-			var marker2 = L.circleMarker(latlng,{radius: 5,fillOpacity: 1, color: 'black', fillColor: getColorEcoli(feature.properties.ecoli),weight: 1,fillOpacity: 0.8,});
-			//caractéristiques des popup
-			//marker2.bindPopup('<p>Comptage <em>E. coli</em>: ' + feature.properties.ecoli + ' UFC / 100 ml</p>');
-			//Affichage des marqueurs
-			return marker2;
-		}
-		
-		
-		}).on("click", cible);
-	//Affichage sur la carte
-	
-	Ecoli.addTo(map);
-	//Affichage dans le controleur de couche
-	
-	//controlLayers.addOverlay(Ecoli, "" );
-	controlLayers.addOverlay(Ecoli, "Contamination par E. coli", "Diagnostic des points d'eau");
-});
-
-
-//Création de la couche pollution nitrates
 //Couleur en fonction de la concentration en Nitrates
-
-  function getColorNitrates(Nitrate) {
+ function getColorNitrates(Nitrate) {
           if (Nitrate < 50 == true) {
           	return('green');
           }
@@ -192,36 +158,9 @@ $.getJSON(urlpointdeau,function(data){
           else {
           	return('grey');
           }
-       };     
-//transformation de la base de donné "point_eau.geojson" en une couche nitrate
-//lecture de la base de donnée
-$.getJSON(urlpointdeau,function(data){
-	//transformation de la base de donnée en couche (Layer)
-	
-	var Nitrate = L.geoJson(data,{
-		
-		onEachFeature: oneachfeature,
-		//Affichage sous forme de point
-		pointToLayer:function(feature,latlng){
-			//caractéristique des points
-			var marker = L.circleMarker(latlng,{radius: 5,fillOpacity: 1, color: 'black', fillColor: getColorNitrates(feature.properties.nitrate),weight: 1,fillOpacity: 0.8,});
-			//caractéristiques des popup
-			//marker.bindPopup(' <p>Concentration en <em>Nitrate</em>: ' + feature.properties.nitrate + ' mg/l </p>');
-			//Affichage des marqueurs
-			return marker;
-		}
-		}).on("click", cible);
-	//Affichage sur la carte
-	
-	
-	//controlLayers.addOverlay(Ecoli, "" );
-	controlLayers.addOverlay(Nitrate, "Pollution au Nitrate", "Diagnostic des points d'eau");
-});
-
-//Création de la couche pollution Ammoniac
+       }; 
 //Couleur en fonction de la concentration en Ammoniac
-
-  function getColorAmmoniac(Ammoniac) {
+function getColorAmmoniac(Ammoniac) {
           if (Ammoniac < 1 == true) {
           	return('green');
           }
@@ -231,33 +170,64 @@ $.getJSON(urlpointdeau,function(data){
           else {
           	return('grey');
           }
-       };     
-//transformation de la base de donné "point_eau.geojson" en une couche Ammoniac
+       };  
+       
+          
+
 //lecture de la base de donnée
 $.getJSON(urlpointdeau,function(data){
+	
 	//transformation de la base de donnée en couche (Layer)
 	
+	// création de la couche E coli
+	var Ecoli = L.geoJson(data,{
+		onEachFeature: oneachfeature,
+		//Affichage sous forme de point
+		pointToLayer:function(feature,latlng){
+			//caractéristique des points
+			var marker2 = L.circleMarker(latlng,{radius: 5,fillOpacity: 1, color: 'black', fillColor: getColorEcoli(feature.properties.ecoli),weight: 1,fillOpacity: 0.8,});
+			//Affichage des marqueurs
+			return marker2;
+		}
+		}).on("click", cible);
+	//Affichage sur la carte
+	Ecoli.addTo(map);
+	//Affichage dans le controleur de couche
+	controlLayers.addOverlay(Ecoli, "Contamination par <em>E. coli</em>", "<strong>Diagnostic des points d'eau</strong>");
+	
+	//Création de la couche Nitrate
+	var Nitrate = L.geoJson(data,{
+		onEachFeature: oneachfeature,
+		//Affichage sous forme de point
+		pointToLayer:function(feature,latlng){
+			//caractéristique des points
+			var marker = L.circleMarker(latlng,{radius: 5,fillOpacity: 1, color: 'black', fillColor: getColorNitrates(feature.properties.nitrate),weight: 1,fillOpacity: 0.8,});
+			//Affichage des marqueurs
+			return marker;
+		}
+		}).on("click", cible);
+	controlLayers.addOverlay(Nitrate, "Pollution au Nitrate", "<strong>Diagnostic des points d'eau</strong>");
+	
+	//Création de la couche Ammoniac
 	var Ammoniac = L.geoJson(data,{
-		
 		onEachFeature: oneachfeature,
 		//Affichage sous forme de point
 		pointToLayer:function(feature,latlng){
 			//caractéristique des points
 			var marker = L.circleMarker(latlng,{radius: 5,fillOpacity: 1, color: 'black', fillColor: getColorAmmoniac(feature.properties.ammoniac),weight: 1,fillOpacity: 0.8,});
-			//caractéristiques des popup
-			//marker.bindPopup(' <p>Concentration en <em>Ammoniac</em>: ' + feature.properties.ammoniac + ' mg/l </p>');
 			//Affichage des marqueurs
 			return marker;
 		}
 		}).on("click", cible);
-	//Affichage sur la carte
-	
-	
-	
-	controlLayers.addOverlay(Ammoniac, "Pollution à l'Ammoniac", "Diagnostic des points d'eau");
+	controlLayers.addOverlay(Ammoniac, "Pollution à l'Ammoniac", "<strong>Diagnostic des points d'eau</strong>");
 });
 
-//Création d'une couche avec un icone
+
+
+
+
+
+
 
 
 

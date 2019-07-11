@@ -2,8 +2,8 @@
 var options = {
   // Make the "Landmarks" group exclusive (use radio inputs)
   exclusiveGroups: [
-  "Diagnostic des points d'eau",
-  "Diagnostic des localités"
+  "<strong>Diagnostic des points d'eau</strong>",
+  "<strong>Diagnostic des localités</strong>"
   ],
   // Show a checkbox next to non-exclusive group labels for toggling all
   groupCheckboxes: false,
