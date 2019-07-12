@@ -84,7 +84,7 @@ L’inspection sanitaire des puits à usage domestique de la Zone industrielle r
 ![Dégradation de la superstructure](images/zi_sup.jpg " Dégradation de la superstructure ")
 
 
-L’analyse de la qualité des eaux vient confirmer la vulnérabilité sanitaire des ouvrages. En effet, 20 puits sont contaminés par la bactérie *E coli*. La présente de *E coli* dans les eaux indique une contamination fécale d’origine humaine ou animale à moins de 30 mètres. Cette contamination s’explique par un défaut d’étanchéité des fosses des latrines, une mauvaise gestion des ordures ménagères et la présence d’enclos à bétail.  Les puits ne sont quasiment pas traités au chlore.
+L’analyse de la qualité des eaux vient confirmer la vulnérabilité sanitaire des ouvrages. En effet, 20 puits sont contaminés par la bactérie *E coli*. La présente de *E coli* dans les eaux indique une contamination fécale d’origine humaine ou animale à moins de 30 mètres. Cette contamination pourrait s’expliquer par un défaut d’étanchéité des fosses des latrines, une mauvaise gestion des ordures ménagères et la présence d’enclos à bétail.  Les puits ne sont quasiment pas traités au chlore.
 L’analyse des paramètres chimiques révèle que les ouvrages sont sujets à une pollution azotée : l’ammoniac et le nitrate. Cinq puits ont des concentrations en ammoniac supérieures à la norme admissible (1,5 mg/l) recommandée pour les eaux de boisson par l’OMS. Seul un des puits a une concentration en nitrate supérieure à 50 mg/L mais les concentrations restent élevées dans de nombreux ouvrages (supérieures à 44 mg/L).
 Les eaux de puits  dans le quartier de Zone industrielle ont un pH acide (4,91 à 5,33). Leur goût, leur couleur et leur odeur est globalement jugée acceptable par les consommateurs.
 
@@ -100,8 +100,14 @@ Certaines personnes signalent qu'elles n'utilisent l'eau des puits que pour les 
 
 ## Mode de gestion
 L’eau courante est gérée par la SODECI. C’est une structure privée qui a un contrat d’affermage avec l’État et s’occupe de l’hydraulique urbaine. Celui ou celle qui veut avoir de l’eau courante se réfère à la Direction régionale qui se charge de lui vendre le compteur et envoie un agent faire l’installation.
+
+
 Les points d'eau communautaires (mosquées et églises) sont gérés par un comité local. Ces comités sont créés et composés de membres de la congrégation. Ils sont chargés de la collecte des fonds.
-Les puits privés relèvent de la responsabilité de leur propriétaire. 
+
+
+Les puits privés relèvent de la responsabilité de leur propriétaire.
+
+
 Le marigot n’est pas géré. Tous ceux qui le désirent peuvent s’approvisionner selon leur besoin. 
 
 
@@ -131,7 +137,7 @@ Les entretiens montrent que la population utilise l'eau des puits en réaction �
 ## Tensions ressenties lors des entretiens
 
 ### Tensions générales
-Il n’y a pas de tensions notables entre les habitants du quartier Zone Industrielle. Les habitants des différents quartiers cohabitent sans conflits. 
+Il n’y a pas de tensions notables entre les habitants du quartier Zone Industrielle. Les habitants cohabitent sans conflits. 
 
 ### Tensions autour de l'eau
 Les tensions majeures autour de la question de l’eau ont eu lieu pendant la pénurie d’eau de 2018. Les habitants évoquent des querelles dans la file d’attente des citernes de l’Office Nationale de l’Eau Potable (ONEP). Ces disputes portaient sur la ration d’eau distribuée et le non-respect de l’ordre de la file. Les femmes ont été particulièrement touchées par ces tensions, car ce sont elles qui sont chargées de l’approvisionnement en eau dans les ménages. Des tensions ponctuelles sont apparues autour de certains puits privés lorsque leurs propriétaires décidaient d’en restreindre l’accès. Ces tensions sont exclusivement liées aux épisodes de pénurie.
