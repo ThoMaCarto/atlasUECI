@@ -5,7 +5,7 @@ idbdd: Belleville 1
 tags: Urbain,Ville,Vulnérabilité faible
 authors: BROU Yves Oscar Kouadio, SORO Doba, MAILLARD Thomas, DIAKITE A. Cheick, KOHE A. Christelle, OUATTARA Mafine, SERI A. Jonathan, N'GUESSAN Firmain Kouakou
 date: 2019-05-18
-latitude: 7.707563
+latitude: 7.70756
 longitude: -5.00327
 zoom: 14
 localisation: Quartier au nord-est de Bouaké
@@ -51,6 +51,7 @@ Comme dans tous les quartiers de Bouaké, la superstructure des ouvrages est con
 
 
 L’inspection sanitaire des puits à usage domestique dans le quartier de Belleville 1 révèlent qu’environ 60% des points d’eau soit 10 puits sur les 17 présentent une vulnérabilité élevée à très élevée à la pollution.
+
 
 |Niveau de vulnérabilité| Très élevé|Élevé|Moyen|Faible|
 | :--:|:--:|:--:|:--:|:--:|

@@ -5,7 +5,7 @@ idbdd: Belleville 2
 tags: Urbain,Ville,Vulnérabilité urbaine
 authors: BROU Yves Oscar Kouadio, SORO Doba, MAILLARD Thomas, DIAKITE A. Cheick, KOHE A. Christelle, OUATTARA Mafine, SERI A. Jonathan, N'GUESSAN Firmain Kouakou
 date: 2019-05-08
-latitude: 7.71843833333333
+latitude: 7.71844
 longitude: -4.98846
 zoom: 14
 localisation: Quartier au nord-est de Bouaké
@@ -51,6 +51,8 @@ Comme dans tous les quartiers de Bouaké, la superstructure des ouvrages est con
 
 
 L’inspection sanitaire des puits à usage domestique dans le quartier de Belleville 2 révèlent que 65% des points d’eau soit 13 puits sur 20 sont sujets à un risque de pollution élevé ou très élevé. 
+
+
 |Niveau de vulnérabilité| Très élevé|Élevé|Moyen|Faible|
 | :--:|:--:|:--:|:--:|:--:|
 |Effectif des puits|2|11|6|1|
