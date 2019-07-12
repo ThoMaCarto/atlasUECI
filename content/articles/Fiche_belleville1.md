@@ -5,8 +5,8 @@ idbdd: Belleville 1
 tags: Urbain,Ville,Vulnérabilité faible
 authors: BROU Yves Oscar Kouadio, SORO Doba, MAILLARD Thomas, DIAKITE A. Cheick, KOHE A. Christelle, OUATTARA Mafine, SERI A. Jonathan, N'GUESSAN Firmain Kouakou
 date: 2019-05-18
-latitude: 7,707563
-longitude: -5,00327
+latitude: 7.707563
+longitude: -5.00327
 zoom: 14
 localisation: Quartier au nord-est de Bouaké
 
