@@ -1,14 +1,14 @@
 ﻿layout: fiche
 title: Belleville 2
 slug: belleville-2
-idbdd : Belleville 2
+idbdd: Belleville 2
 tags: Urbain,Ville,Vulnérabilité urbaine
 authors: BROU Yves Oscar Kouadio, SORO Doba, MAILLARD Thomas, DIAKITE A. Cheick, KOHE A. Christelle, OUATTARA Mafine, SERI A. Jonathan, N'GUESSAN Firmain Kouakou
-date : 2019-05-08
+date: 2019-05-08
 latitude: 7,71843833333333
 longitude: -4,98846
 zoom: 14
-localisation : Quartier au nord-est de Bouaké
+localisation: Quartier au nord-est de Bouaké
 
 
  |Informations générales||
