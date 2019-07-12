@@ -65,7 +65,7 @@ var map = L.map('map');
 	
 	<select id="filter-localites" onchange="window.location.href=this.value;">
 	<option>Voir la fiche détaillée d'une localité</option>
-	{% for article in articles %}
+	{% for article in articles | sort (attribute='title')%}
 	<option value="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</option>
 	{% endfor %}
 	</select>
