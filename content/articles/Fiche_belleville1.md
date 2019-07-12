@@ -54,7 +54,7 @@ L’inspection sanitaire des puits à usage domestique dans le quartier de Belle
 
 
 |Niveau de vulnérabilité| Très élevé|Élevé|Moyen|Faible|
-| :--:|:--:|:--:|:--:|:--:|
+|:--:|:--:|:--:|:--:|:--:|
 |Effectif des puits|3|7|6|1|
 
  Les risques potentiels observés autour des ouvrages sont dus en grande partie à :

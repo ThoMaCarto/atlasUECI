@@ -54,7 +54,7 @@ L’inspection sanitaire des puits à usage domestique dans le quartier de Belle
 
 
 |Niveau de vulnérabilité| Très élevé|Élevé|Moyen|Faible|
-| :--:|:--:|:--:|:--:|:--:|
+|:--:|:--:|:--:|:--:|:--:|
 |Effectif des puits|2|11|6|1|
 
  Les risques potentiels observés autour des ouvrages sont dus en grande partie à :
@@ -104,7 +104,8 @@ Le quartier de Belleville 2 ne dispose pas d’un réseau de collecte et d’év
 
 
 ## Desiderata des habitants
-
+ | Type d'entretien | Date | 
+ | :-- | :--: | 
 |03 entretiens individuel auprès de personnes ressources|26 Nov-09 Déc 2018| 
 |02 Focus group femmes|26 Nov-09 Déc 2018|
 |02 Focus group hommes|26 Nov-09 Déc 2018|
