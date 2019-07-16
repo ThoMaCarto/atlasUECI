@@ -2,7 +2,16 @@
 var omsLegend = L.control({position:"bottomright",},);
 omsLegend.onAdd = function (map){
 var div = L.DomUtil.create("div", "legendin");
-div.innerHTML ='<table class="info-legend"><thead><tr><th></th><th>Diagnostic des points d\'eau</th></tr</thead><tbody><tr></tr><tr><td style="background-color:Red;height:10px;width:30px;opacity:1;border:1px solid Red;"></td><td>Non conforme aux normes de potabilité</td></tr><tr></tr><tr><td style="background-color:green;height:10px;width:30px;opacity:1;border:1px solid green;"></td><td>Conforme aux normes de potabilité</td></tr></tbody></table><details title="cliquer sur la flèche pour afficher la légende"><summary><strong>Normes OMS</strong></summary><table class="info-legend"><thead><tr><th>Élément analysé</th><th>Norme OMS</th></tr><thead><tbody><tr><td><em>E. Coli</em></td><td>0 UFC/100ml</td></tr><tr><td><em>Concentration en Ammoniac</em></td><td>1,5 mg/l</td></tr><tr><td><em>Concentration en Nitrate</em></td><td>50 mg/l</td></tr></tbody></table><a href="https://www.who.int/water_sanitation_health/dwq/gdwq3rev/fr/">OMS : Directives pour la qualité de l\'eau de boisson</a></details>';
+div.innerHTML ='<div style="display:inline-block;">'
++'<div><strong>Diagnostic des points d\'eau</strong></div>'
++'<div style="display:flex;justify-content: flex-start;">'
++'<div style="height:10px;width:10px;border-radius:5rem;background-color:green;border:1px solid black;"></div><div> Conforme aux normes OMS</div>'
++'</div>'
+
++'<div style="display:flex;justify-content: flex-start;">'
++'<div style="height:10px;width:10px;border-radius:5rem;background-color:red;border:1px solid black;"></div><div> Non-conforme aux normes OMS</div>'
++'</div>'
++'<details title="cliquer sur la flèche pour afficher la légende"><summary><strong>Normes OMS</strong></summary><table class="info-legend"><thead><tr><th>Élément analysé</th><th>Norme OMS</th></tr><thead><tbody><tr><td><em>E. Coli</em></td><td>0 UFC/100ml</td></tr><tr><td><em>Concentration en Ammoniac</em></td><td>1,5 mg/l</td></tr><tr><td><em>Concentration en Nitrate</em></td><td>50 mg/l</td></tr></tbody></table><a href="https://www.who.int/water_sanitation_health/dwq/gdwq3rev/fr/">OMS : Directives pour la qualité de l\'eau de boisson</a></details>';
 return div;
 }
 omsLegend.addTo(map);
