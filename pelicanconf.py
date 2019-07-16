@@ -42,6 +42,7 @@ PATH = 'content'
 ARTICLE_PATHS = ['articles']
 PAGE_PATHS = ['pages']
 
+
 STATIC_PATHS = ['doc','articles/images', 'pages/image']
 DOC_STATIC_DIR = 'doc'
 

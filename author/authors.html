@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<h1 class="list-title">Liste des auteurs</h1>
+
+{% for author in authors | sort (attribute='tags')%}
+<ul>
+	<li><a href="{{ SITEURL }}/{{ PAGE_URL }}/{{ page.slug }}.html" >{{ page.title }}</a></li>
+	
+</ul>
+
+{% endfor %}
+
+{% endblock %}
+

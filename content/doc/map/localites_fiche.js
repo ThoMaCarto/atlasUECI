@@ -95,24 +95,33 @@ function getColorVuln (e,f,g,h){
 
 
 //Légende de vulnLocalites
+var div = L.DomUtil.create("div", "legendin");
 var legendVuln = L.control({position:"bottomright",},);
 legendVuln.onAdd = function (map){
-var div = L.DomUtil.create("div", "legendin");
+
 div.innerHTML =
-'<details title="Cliquez sur la flèche noir pour afficher la légende détaillée">'
-+'<summary><strong>Niveau de vulnérabilité des localités</strong></summary>'
+'<strong>Accessibilité à l\'eau potable</strong>'
++'<table>'
++'<tr><td style="color:black;background-color:yellow;height:10px;width:10px;opacity:.8;border:1px solid yellow;text-align:center;"><strong>Bonne</strong></td>'
++'<td style="color:black;background-color:orange;height:10px;width:10px;opacity:.8;border:1px solid orange;text-align:center;"><strong>Moyenne</strong></td>'
++'<td style="color:black;background-color:Red;height:10px;width:10px;opacity:.8;border:1px solid Red;text-align:center;"><strong>Faible</strong></td></tr>'
++'</table>'
++'<div class="legendin">'
++'<details title="Cliquez sur la flèche noir pour afficher la légende détaillée">'
++'<summary>détails</summary>'
 +'<table class="info-legend">'
 +'<thead><tr ><th></th><th>Milieu rural</th><th>Milieu urbain</th></tr</thead>'
 +'<tbody>'
 +'<tr></tr>'
-+'<tr><td style="background-color:Red;height:10px;width:30px;opacity:.8;border:1px solid Red;"></td><td title="Aucune pompe ou aucune pompe fonctionnelle">Vulnérabilité forte<br>(Aucun accès à l\'hydraulique moderne)</td><td> Non raccordée au réseau</td></tr>'
++'<tr><td style="background-color:yellow;height:10px;width:30px;opacity:.8;border:1px solid yellow;"></td><td title="Plusieurs types d\'équipements:réseau, plusieurs pompes dont la majorité sont fonctionnelles">Bon accès<br>(plusieurs équipements d\'hydraulique moderne en bon état)</td><td>Majoritairement raccordée</td></tr>'
 +'<tr></tr>'
-+'<tr><td style="background-color:Orange;height:10px;width:30px;opacity:.8;border:1px solid Orange;"></td><td title="Raccordé exclusievement au réseau ou disposant de pompes majoritairement en panne">Vulnérabilité moyenne<br>(Accès à un seul équipement d\'hydraulique moderne sans alternative)</td><td>Partiellement raccordée</td></tr>'
++'<tr><td style="background-color:Orange;height:10px;width:30px;opacity:.8;border:1px solid Orange;"></td><td title="Raccordé exclusivement au réseau ou disposant de pompes majoritairement en panne">Accès moyen<br>(un seul équipement d\'hydraulique moderne sans alternative)</td><td>Partiellement raccordée</td></tr>'
 +'<tr></tr>'
-+'<tr><td style="background-color:yellow;height:10px;width:30px;opacity:.8;border:1px solid yellow;"></td><td title="Plusieurs types d\'équipements:réseau, plusieurs pompes dont la majorité sont fonctionnelles">Vulnérabilité faible<br>(Accès à plusieurs équipements d\'hydraulique moderne en bon état)</td><td>Majoritairement raccordée</td></tr>'
++'<tr><td style="background-color:Red;height:10px;width:30px;opacity:.8;border:1px solid Red;"></td><td title="Aucune pompe ou aucune pompe fonctionnelle">Faible accès<br>(Aucun accès à l\'hydraulique moderne)</td><td> Non raccordée au réseau</td></tr>'
 +'</tbody>'
 +'</table>'
-+'</details>';
++'</details>'
++'</div>';
 return div;
 };
 //legendVuln.addTo(map);
@@ -122,8 +131,8 @@ return div;
 var legendLoc = L.control ({position:'bottomright',},);
 legendLoc.onAdd = function () {
 div.innerHTML = 
-'<table>'
-+'<tr><td style="background-color:white;height:10px;width:30px;opacity:.8;border:1px solid red;"></td><td>Localité diagnostiquée</td></tr>'
+'<table class="info-legend">'
++'<tr><td style="background-color:white;height:10px;width:30px;opacity:.8;border:2px solid red;"></td><td>Localité diagnostiquée</td></tr>'
 +'</table>';
 return div;
 };
@@ -137,7 +146,8 @@ $.getJSON(urllocalites,function(data)
 		return { color : 'red', weight : 1.5, fillColor : 'red', fillOpacity : .0, };},
 		onEachFeature: oneachfeature,
 });
-localites.beforeAdd = function (map) {legendLoc.remove(map);};
+localites.beforeAdd = function (map) {legendVuln.remove(map);};
+localites.beforeAdd = function (map) {legendLoc.addTo(map);};
 localites.on("click", cible);
 localites.addTo(map);
 controlLayers.addOverlay(localites, "Localités","<strong>Diagnostic des localités</strong>");
@@ -146,6 +156,7 @@ controlLayers.addOverlay(localites, "Localités","<strong>Diagnostic des localit
 var vulnLocalites= L.geoJson(data,{style: function(feature){return { color : getColorVuln(feature.properties.Points_deau_diagnostiqués_conformes_aux_normes_OMS,feature.properties.Nombre_de_points_deau_diagnostiqués,feature.properties.EAU_SODECI,feature.properties.Pompes_Fonctionnelles), weight : 1, fillColor : getColorVuln(feature.properties.Points_deau_diagnostiqués_conformes_aux_normes_OMS,feature.properties.Nombre_de_points_deau_diagnostiqués,feature.properties.EAU_SODECI,feature.properties.Pompes_Fonctionnelles), fillOpacity : .5 };},
 	onEachFeature: oneachfeature,
 });
+vulnLocalites.beforeAdd = function (map) {legendLoc.remove(map);};
 vulnLocalites.beforeAdd = function (map) {legendVuln.addTo(map);};
 vulnLocalites.on("click", cible);
 //vulnLocalites.addTo(map);
