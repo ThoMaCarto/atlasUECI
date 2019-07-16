@@ -27,31 +27,10 @@ north.addTo(map);
 
 // création d'un contrôle des couches pour modifier les couches affichées
 var fond ={ "Noir et blanc": toner};
-var controlLayers=L.control.layers(null,null,{collapsed : false}).addTo(map)
+var controlLayers=L.control.layers(null,null,{collapsed : false,position:"bottomright"},).addTo(map)
 
 
-//Légende de vulnLocalites
-var legendVuln = L.control({position:"bottomright",},);
-legendVuln.onAdd = function (map){
-var div = L.DomUtil.create("div", "legendin");
-div.innerHTML =
-'<details title="Cliquez sur la flèche noir pour afficher la légende détaillée">'
-+'<summary><strong>Niveau d\'accessibilité des localités</strong></summary>'
-+'<table class="info-legend">'
-+'<thead><tr ><th></th><th>Milieu rural</th><th>Milieu urbain</th></tr</thead>'
-+'<tbody>'
-+'<tr></tr>'
-+'<tr><td style="background-color:Red;height:10px;width:30px;opacity:.8;border:1px solid Red;"></td><td title="Aucune pompe ou aucune pompe fonctionnelle">Bonne accessibilité<br>(Aucun accès à l\'hydraulique moderne)</td><td> Non raccordée au réseau</td></tr>'
-+'<tr></tr>'
-+'<tr><td style="background-color:Orange;height:10px;width:30px;opacity:.8;border:1px solid Orange;"></td><td title="Raccordé exclusivement au réseau ou disposant de pompes majoritairement en panne">Accessibilité moyenne<br>(Accès à un seul équipement d\'hydraulique moderne sans alternative)</td><td>Partiellement raccordée</td></tr>'
-+'<tr></tr>'
-+'<tr><td style="background-color:yellow;height:10px;width:30px;opacity:.8;border:1px solid yellow;"></td><td title="Plusieurs types d\'équipements:réseau, plusieurs pompes dont la majorité sont fonctionnelles">Accessibilité faible<br>(Accès à plusieurs équipements d\'hydraulique moderne en bon état)</td><td>Majoritairement raccordée</td></tr>'
-+'</tbody>'
-+'</table>'
-+'</details>';
-return div;
-};
-legendVuln.addTo(map);
+
 
 
 
@@ -103,7 +82,15 @@ $.getJSON(urlpointdeau,function(data){
   iconclusters.addTo(map);
   // Add the markercluster group to the map
 	//map.addLayer(mClusters);
-	controlLayers.addOverlay(iconclusters, "Effectifs des points d'eau <br> diagnostiqués");
+	controlLayers.addOverlay(iconclusters, '<strong>Effectifs des points d\'eau <br> diagnostiqués </strong>'
+
++'<div style="display:flex;flex-wrap:nowrap;align-items: center;justify-content: space-around;">'
++'<div class="mycluster" style="height:54px;width:54px;">100</div>'
++'<div class="mycluster" style="height:29px;width:29px;">50</div>'
++'<div class="mycluster" style="height:4.5px;width:4.5px;">1</div>'
++'</div>'
+
+);
 }); 
 
 
@@ -145,7 +132,28 @@ $.getJSON(urllocalites,function(data2)
 //vulnLocalites.beforeAdd = function (map) {legendVuln.addTo(map);};
 vulnLocalites.addTo(map);
 
-controlLayers.addOverlay(vulnLocalites, "Niveau d\'accessibilité<br>des quartiers / villages");
+controlLayers.addOverlay(vulnLocalites, '<strong>Accessibilité à l\'eau potable</strong>'
++'<table>'
++'<tr><td style="color:black;background-color:yellow;height:10px;width:10px;opacity:.8;border:1px solid yellow;text-align:center;"><strong>Bonne</strong></td>'
++'<td style="color:black;background-color:orange;height:10px;width:10px;opacity:.8;border:1px solid orange;text-align:center;"><strong>Moyenne</strong></td>'
++'<td style="color:black;background-color:Red;height:10px;width:10px;opacity:.8;border:1px solid Red;text-align:center;"><strong>Faible</strong></td></tr>'
++'</table>'
++'<div class="legendin">'
++'<details title="Cliquez sur la flèche noir pour afficher la légende détaillée">'
++'<summary>détails</summary>'
++'<table class="info-legend">'
++'<thead><tr ><th></th><th>Milieu rural</th><th>Milieu urbain</th></tr</thead>'
++'<tbody>'
++'<tr></tr>'
++'<tr><td style="background-color:yellow;height:10px;width:30px;opacity:.8;border:1px solid yellow;"></td><td title="Plusieurs types d\'équipements:réseau, plusieurs pompes dont la majorité sont fonctionnelles">Bon accès<br>(plusieurs équipements d\'hydraulique moderne en bon état)</td><td>Majoritairement raccordée</td></tr>'
++'<tr></tr>'
++'<tr><td style="background-color:Orange;height:10px;width:30px;opacity:.8;border:1px solid Orange;"></td><td title="Raccordé exclusivement au réseau ou disposant de pompes majoritairement en panne">Accès moyen<br>(un seul équipement d\'hydraulique moderne sans alternative)</td><td>Partiellement raccordée</td></tr>'
++'<tr></tr>'
++'<tr><td style="background-color:Red;height:10px;width:30px;opacity:.8;border:1px solid Red;"></td><td title="Aucune pompe ou aucune pompe fonctionnelle">Faible accès<br>(Aucun accès à l\'hydraulique moderne)</td><td> Non raccordée au réseau</td></tr>'
++'</tbody>'
++'</table>'
++'</details>'
++'</div>');
 });
 
        
