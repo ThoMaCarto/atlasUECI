@@ -118,6 +118,17 @@ return div;
 //legendVuln.addTo(map);
 
 
+//Légende de localites
+var legendLoc = L.control ({position:'bottomright',},);
+legendLoc.onAdd = function () {
+div.innerHTML = 
+'<table>'
++'<tr><td style="background-color:white;height:10px;width:30px;opacity:.8;border:1px solid red;"></td><td>Localité diagnostiquée</td></tr>'
++'</table>';
+return div;
+};
+
+
 //lecture de la base de donnée pour créer les différentes couches
 $.getJSON(urllocalites,function(data)
 {
@@ -126,7 +137,7 @@ $.getJSON(urllocalites,function(data)
 		return { color : 'red', weight : 1.5, fillColor : 'red', fillOpacity : .0, };},
 		onEachFeature: oneachfeature,
 });
-localites.beforeAdd = function (map) {legendVuln.remove(map);};
+localites.beforeAdd = function (map) {legendLoc.remove(map);};
 localites.on("click", cible);
 localites.addTo(map);
 controlLayers.addOverlay(localites, "Localités","<strong>Diagnostic des localités</strong>");

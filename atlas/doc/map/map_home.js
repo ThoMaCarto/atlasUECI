@@ -36,16 +36,16 @@ legendVuln.onAdd = function (map){
 var div = L.DomUtil.create("div", "legendin");
 div.innerHTML =
 '<details title="Cliquez sur la flèche noir pour afficher la légende détaillée">'
-+'<summary><strong>Niveau de vulnérabilité des localités</strong></summary>'
++'<summary><strong>Niveau d\'accessibilité des localités</strong></summary>'
 +'<table class="info-legend">'
 +'<thead><tr ><th></th><th>Milieu rural</th><th>Milieu urbain</th></tr</thead>'
 +'<tbody>'
 +'<tr></tr>'
-+'<tr><td style="background-color:Red;height:10px;width:30px;opacity:.8;border:1px solid Red;"></td><td title="Aucune pompe ou aucune pompe fonctionnelle">Vulnérabilité forte<br>(Aucun accès à l\'hydraulique moderne)</td><td> Non raccordée au réseau</td></tr>'
++'<tr><td style="background-color:Red;height:10px;width:30px;opacity:.8;border:1px solid Red;"></td><td title="Aucune pompe ou aucune pompe fonctionnelle">Bonne accessibilité<br>(Aucun accès à l\'hydraulique moderne)</td><td> Non raccordée au réseau</td></tr>'
 +'<tr></tr>'
-+'<tr><td style="background-color:Orange;height:10px;width:30px;opacity:.8;border:1px solid Orange;"></td><td title="Raccordé exclusievement au réseau ou disposant de pompes majoritairement en panne">Vulnérabilité moyenne<br>(Accès à un seul équipement d\'hydraulique moderne sans alternative)</td><td>Partiellement raccordée</td></tr>'
++'<tr><td style="background-color:Orange;height:10px;width:30px;opacity:.8;border:1px solid Orange;"></td><td title="Raccordé exclusivement au réseau ou disposant de pompes majoritairement en panne">Accessibilité moyenne<br>(Accès à un seul équipement d\'hydraulique moderne sans alternative)</td><td>Partiellement raccordée</td></tr>'
 +'<tr></tr>'
-+'<tr><td style="background-color:yellow;height:10px;width:30px;opacity:.8;border:1px solid yellow;"></td><td title="Plusieurs types d\'équipements:réseau, plusieurs pompes dont la majorité sont fonctionnelles">Vulnérabilité faible<br>(Accès à plusieurs équipements d\'hydraulique moderne en bon état)</td><td>Majoritairement raccordée</td></tr>'
++'<tr><td style="background-color:yellow;height:10px;width:30px;opacity:.8;border:1px solid yellow;"></td><td title="Plusieurs types d\'équipements:réseau, plusieurs pompes dont la majorité sont fonctionnelles">Accessibilité faible<br>(Accès à plusieurs équipements d\'hydraulique moderne en bon état)</td><td>Majoritairement raccordée</td></tr>'
 +'</tbody>'
 +'</table>'
 +'</details>';
@@ -53,12 +53,11 @@ return div;
 };
 legendVuln.addTo(map);
 
+
+
+
+
 ////Paramétrage de la charte graphique des éléments cartographiés
-
-
-        
-
-
 
 
   
@@ -146,7 +145,7 @@ $.getJSON(urllocalites,function(data2)
 //vulnLocalites.beforeAdd = function (map) {legendVuln.addTo(map);};
 vulnLocalites.addTo(map);
 
-controlLayers.addOverlay(vulnLocalites, "Niveau de vulnérabilité<br>des quartiers / villages");
+controlLayers.addOverlay(vulnLocalites, "Niveau d\'accessibilité<br>des quartiers / villages");
 });
 
        
