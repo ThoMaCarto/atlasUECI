@@ -3,7 +3,7 @@ slug: projet
 Date: 2019-05-06
 Author: GUERIN Mathieu
 
-
+#Le projet ETUPO Vallée du Bandama
 
 Le  projet  ETUPO (étude de l'accès à l'eau potable et à l'assainissement)  Vallée  du  Bandama  a  été  initié  en  avril  2018  suite  à  une  première  visite  de prise de contact dans la ville de Bouaké, en Côte d’Ivoire. Dans les mois qui ont suivi le projet a  été  développé  en  liens  étroits  avec  les  partenaires  identifiés  sur  place.  Une  association relais, Urgence eau Côte d’Ivoire, a été mise en place. 
 
