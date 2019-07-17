@@ -1,7 +1,7 @@
 title: Méthodes de diagnostic
 category: menu
 Date: 2019-05-06
-Tags: test
+
 Authors: BROU Yves Oscar Kouadio, SORO Doba
 
 ## Méthodologie

@@ -1,4 +1,6 @@
 Title: Auteurs de l'étude
+Author: MAILLARD Thomas
+Date: 2019-05-06
 
 
 
@@ -13,14 +15,14 @@ Title: Auteurs de l'étude
 	<div class="capsule">
 		<details>
 		<summary><h5>BROU Yves Oscar Kouadio</h5></summary>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<p>Ingénieur Spécialisé Eau et Environnement Brou Oscar dirige le volet technique de l'enquête ETUPO à Urgence Eau Côte d'Ivoire depuis septembre 2018.</p>
 		</details>
 	</div>
 	
 	<div class="capsule">
 		<details>
 		<summary><h5>SORO Doba</h5></summary>
-		<p>Praesent mollis leo eros, vitae laoreet arcu sagittis quis. Integer egestas rutrum mauris. Mauris vulputate varius aliquam. Integer hendrerit sed lacus ultrices consequat. Nam posuere ultrices fringilla. Donec imperdiet, tellus sit amet efficitur ultrices, purus dolor efficitur erat, ut faucibus libero sem nec libero. Aenean mollis, neque quis vehicula laoreet, erat purus commodo eros, vel malesuada est purus placerat purus. Quisque tempus nibh a est semper, ut lacinia ante faucibus. Nulla mollis quam mauris, eu bibendum odio pharetra et. Suspendisse eget sodales justo. Aliquam libero orci, iaculis et tincidunt in, fringilla eget lorem. Quisque sagittis odio et metus laoreet congue. Aenean pellentesque id orci in luctus. </p>
+		<p>Docteur en socioanthropologie, Soro Doba dirige le volet socioanthropologique de   l'enquête ETUPO à Urgence Eau Côte d'Ivoire depuis septembre 2018.</p>
 		</details>
 	</div>
 </div>
@@ -33,21 +35,23 @@ Title: Auteurs de l'étude
 	
 	<div class="capsule">
 	<details>
-	<summary><h5>OUATTARA Mafine</h5></summary>
-	<p>Praesent mollis leo eros, vitae laoreet arcu sagittis quis. Integer egestas rutrum mauris. Mauris vulputate varius aliquam. Integer hendrerit sed lacus ultrices consequat. Nam posuere ultrices fringilla. Donec imperdiet, tellus sit amet efficitur ultrices, purus dolor efficitur erat, ut faucibus libero sem nec libero. Aenean mollis, neque quis vehicula laoreet, erat purus commodo eros, vel malesuada est purus placerat purus. Quisque tempus nibh a est semper, ut lacinia ante faucibus. Nulla mollis quam mauris, eu bibendum odio pharetra et. Suspendisse eget sodales justo. Aliquam libero orci, iaculis et tincidunt in, fringilla eget lorem. Quisque sagittis odio et metus laoreet congue. Aenean pellentesque id orci in luctus. </p>
+	<summary><h5>OUATTARA Mafine</h5><img src="../pages/images/portait_MOuattara.jpg" alt="OUATTARA Mafine" style="inline-block;"></summary>
+	<p>OUATTARA Tenin Mafine étudiante en sociologie et anthropologie du développement. Mafine s'intéresse au développement communautaire, au question du genre et leadership féminin, à l'accès des femmes à l'eau potable. Mafine est passionnée de l'infographie, par la nouvelle technologie ( le digital). Elle est engagée pour l'atteinte des ODD en Côte d'Ivoire.
+Elle a travaillé a Urgence Eau Côte d'Ivoire entant qu'assistante de recherche de octobre 2018 à Mai 2019, elle est aussi secrétaire générale Adjointe au bureau Pays D'Urgence Eau Côte d'Ivoire</p>
+<p>faceboock : <a href="www.facebook. com/madelamafine.Ouattara">Mafine Ouattara</a> </p>
 	</details>	
 	</div>
 	<div class="capsule">
 	<details>
 	<summary><h5>KOHE Christelle</h5></summary>
-	<p>Praesent mollis leo eros, vitae laoreet arcu sagittis quis. Integer egestas rutrum mauris. Mauris vulputate varius aliquam. Integer hendrerit sed lacus ultrices consequat. Nam posuere ultrices fringilla. Donec imperdiet, tellus sit amet efficitur ultrices, purus dolor efficitur erat, ut faucibus libero sem nec libero. Aenean mollis, neque quis vehicula laoreet, erat purus commodo eros, vel malesuada est purus placerat purus. Quisque tempus nibh a est semper, ut lacinia ante faucibus. Nulla mollis quam mauris, eu bibendum odio pharetra et. Suspendisse eget sodales justo. Aliquam libero orci, iaculis et tincidunt in, fringilla eget lorem. Quisque sagittis odio et metus laoreet congue. Aenean pellentesque id orci in luctus. </p>
+	<p>Géographe, Kohe Christelle a travaillé a Urgence Eau Côte d'Ivoire en tant qu'assistante de recherche de octobre 2018 à Mai 2019 </p>
 	</details>	
 	</div>
 	<div class="capsule">
 	<details>
-	<summary><h5>DIAKITE Cheick</h5></summary>
+	<summary><h5>DIAKITE Cheick</h5><img src="../pages/images/Portrait_Diakite.jpg" alt="DIAKITE Cheick" style="inline-block;"></summary>
 	<p>DIAKITE Cheick Amadou est doctorant en sociologie et anthropologie de la santé à l’Université Alassane Ouattara en Cote d’ivoire.<br>
-Il travaille actuellement avec URGENCE EAU COTE D’IVOIRE dans le cadre d’une étude socio anthropologique sur l’accès à l’Eau potable, l’hygiène et l’assainissement en milieu urbain et rural. En tant que assistant de recherche, son travail consiste à diagnostiquer les problèmes d’accès à l’Eau potable dans les communautés rurales et urbaines. Il s’intéresse également à la communication des ONG dans le but de vulgariser les résultats de travaux de recherche.<br>
+Il a travaillé a URGENCE EAU COTE D’IVOIRE,  de octobre 2018 à Mai 2019, dans le cadre d’une étude socio anthropologique sur l’accès à l’Eau potable, l’hygiène et l’assainissement en milieu urbain et rural. En tant que assistant de recherche, son travail consiste à diagnostiquer les problèmes d’accès à l’Eau potable dans les communautés rurales et urbaines. Il s’intéresse également à la communication des ONG dans le but de vulgariser les résultats de travaux de recherche.<br>
 Enfin il est  bloggeur  c’est-à-dire qu’il réalise des vidéos sur Youtube et Wordpress sur les thématiques de la sociologie et de la vie sociale en général.</p>
 	<ul><li>Email : <a href="mailto:cheickdiakite002@gmail.com">cheickdiakite002@gmail.com</a></li>
 		<li>Facebook : Cheick Diakité</li>
@@ -59,7 +63,7 @@ Enfin il est  bloggeur  c’est-à-dire qu’il réalise des vidéos sur Youtube
 	<div class="capsule">
 	<details>
 	<summary><h5>SERI Jonathan</h5></summary>
-	<p>Praesent mollis leo eros, vitae laoreet arcu sagittis quis. Integer egestas rutrum mauris. Mauris vulputate varius aliquam. Integer hendrerit sed lacus ultrices consequat. Nam posuere ultrices fringilla. Donec imperdiet, tellus sit amet efficitur ultrices, purus dolor efficitur erat, ut faucibus libero sem nec libero. Aenean mollis, neque quis vehicula laoreet, erat purus commodo eros, vel malesuada est purus placerat purus. Quisque tempus nibh a est semper, ut lacinia ante faucibus. Nulla mollis quam mauris, eu bibendum odio pharetra et. Suspendisse eget sodales justo. Aliquam libero orci, iaculis et tincidunt in, fringilla eget lorem. Quisque sagittis odio et metus laoreet congue. Aenean pellentesque id orci in luctus. </p>
+	<p>Socioanthropologue, il a travaillé a Urgence Eau Côte d'Ivoire comme assistant de recherche de octobre 2018 à Mai 2019</p>
 	</details>	
 	</div>
 
@@ -86,7 +90,7 @@ Il s'intéresse en particulier à l'utilisation de la carte pour faciliter l'imp
 			</div>
 			<div class="capsule">
 			<details>
-	<summary><h5>N'GUESSAN Kouakou Firmain</h5></summary>
+	<summary><h5>N'GUESSAN Kouakou Firmain</h5><img src="../pages/images/Firmain_Portrait.jpg" alt="N'GUESSAN Kouakou Firmain" style="inline-block;"></summary>
 	<p>Firmain Kouakou N'GUESSAN est doctorant en Géographie à l'Université Alassane Ouattara de Bouaké (Côte d'Ivoire).<br>
 Il travaille actuellement pour Urgence Eau comme cartographe avec Thomas MAILLARD. Il vient appuyer le travail de MAILLARD pour l'analyse des faits urbains et de publication des résultats de l'étude.<br>
 Il a fini la rédaction de sa Thèse qui porte sur l'Occupation de l'espace urbain de Bouaké et attend sa soutenance dans les mois avenir. Il a également travaillé comme cartographe avec l'ONG AVSI dans le cadre du projet ''Triangle Pacific'' de septembre 2016 à février 2017.<br>
