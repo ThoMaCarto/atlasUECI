@@ -1,5 +1,5 @@
 title: Le Projet ETUPO Vallée du Bandama
-slug:projet
+slug: projet
 Date: 2019-05-06
 Author: GUERIN Mathieu
 
