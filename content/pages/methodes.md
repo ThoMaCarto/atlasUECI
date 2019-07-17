@@ -23,8 +23,7 @@ le diagnostic de vulnérabilité sanitaire du point d'eau et l'analyse de la qua
 |Diagnostic|Paramètres observés|
 |:---|:---|
 |**Informations générales sur le point d'eau**|Date de construction, coordonnées géographique, emplacement, type de point d'eau, profondeur, niveau statique, description de la superstructure, type d'exhaure,tarrissement, droit d'accès, état du matériel de pompage ou d'exhaure manuel |
-|**Diagnostic de vulnérabilité sanitaire :** Analyse de l'état général du point d'eau
-| Etat de la sperstructure (margelle, dalle anti-bourbier,trottoir, clôture, couvercle, canal de draînage, étanchéité), propreté des outils d'exhaure, de transport et de stockage de l'eau, source de pollution visible dans un rayon de 30 mètres|
+|**Diagnostic de vulnérabilité sanitaire :** Analyse de l'état général du point d'eau| Etat de la sperstructure (margelle, dalle anti-bourbier,trottoir, clôture, couvercle, canal de draînage, étanchéité), propreté des outils d'exhaure, de transport et de stockage de l'eau, source de pollution visible dans un rayon de 30 mètres|
 |**Diagnostic de la qualité de l'eau :** Analyse organoleptique, physicochimique et bactériologique de l'eau|Couleur, Goût, Odeur, pH, Conductivité, turbidité, température,Concentration de certains éléments chimiques (chlore libre, chlore total, ammoniac, nitrate, nitrite, arsenic, fluor), Comptage des bactéries *Echerichya Coli*|
 
 ###Etude socioanthropologique
