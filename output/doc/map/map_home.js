@@ -136,7 +136,6 @@ $.getJSON(urlAggloBouake,function(data)
 	+'<td>Tache urbaine en 2018</td>'
 	+'</tr>'
 	+'</table>');
-	console.log(tacheUrbBouake)
 }
 );
 
@@ -151,10 +150,10 @@ $.getJSON(urllocalites,function(data)
 //vulnLocalites.beforeAdd = function (map) {legendVuln.addTo(map);};
 vulnLocalites.addTo(map);
 
-controlLayers.addOverlay(vulnLocalites, '<strong>Accessibilité à l\'eau potable</strong>'
+controlLayers.addOverlay(vulnLocalites, '<strong>Accès à l\'eau potable</strong>'
 +'<table>'
-+'<tr><td style="color:black;background-color:yellow;height:10px;width:10px;opacity:.8;border:1px solid yellow;text-align:center;"><strong>Bonne</strong></td>'
-+'<td style="color:black;background-color:orange;height:10px;width:10px;opacity:.8;border:1px solid orange;text-align:center;"><strong>Moyenne</strong></td>'
++'<tr><td style="color:black;background-color:yellow;height:10px;width:10px;opacity:.8;border:1px solid yellow;text-align:center;"><strong>Bon</strong></td>'
++'<td style="color:black;background-color:orange;height:10px;width:10px;opacity:.8;border:1px solid orange;text-align:center;"><strong>Moyen</strong></td>'
 +'<td style="color:black;background-color:Red;height:10px;width:10px;opacity:.8;border:1px solid Red;text-align:center;"><strong>Faible</strong></td></tr>'
 +'</table>'
 +'<div class="legendin">'
