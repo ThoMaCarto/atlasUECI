@@ -64,18 +64,18 @@ var map = L.map('map');
 		
 		
 			<ul>
-				<li><em>Cliquez sur une localité sur la carte pour voir son diagnostic détaillé</em></li>
-				<li><em> Sélectionner une localité dans la liste pour voir son diagnostic détaillé</em>
+				<li><em>Cliquez sur une localité sur la carte pour accéder à son diagnostic détaillé</em></li>
+				<li><em>Sélectionner une localité dans la liste pour accéder à son diagnostic détaillé</em>
 				<span>
-	
-	<select id="filter-localites" onchange="window.location.href=this.value;">
-	<option>Quartier ou village</option>
-	{% for article in articles | sort (attribute='title')%}
-	<option value="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</option>
-	{% endfor %}
-	</select>
-	</span></li>
-				<li><em> Diagnostic des <a href="{{SITEURL}}/pages/vulnerabilite.html">localités (quartiers ou villages)</a></em></li>
+					<select id="filter-localites" onchange="window.location.href=this.value;">
+					<option>Quartier ou village</option>
+					{% for article in articles | sort (attribute='title')%}
+					<option value="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</option>
+					{% endfor %}
+					</select>
+				</span>
+				</li>
+				<li><em> Vue d'ensemble des <a href="{{SITEURL}}/pages/vulnerabilite.html">localités (quartiers ou villages)</a></em></li>
 				<li><em> Diagnostic des <a href="{{SITEURL}}/pages/analyse-des-points-deau.html">points d'eau</a></em></li>
 				<li><em><a href="{{SITEURL}}/pages/telechargements.html">Les bases de données des résultats</a></em></li>
 			</ul>
