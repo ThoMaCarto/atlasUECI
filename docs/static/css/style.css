@@ -129,7 +129,7 @@ nav li.selectedout a:hover {
 
 .submenu{display: none;}
 
-nav li:hover .submenu{display: flex; flex-direction: column; position: absolute;top:100%;right: 0%;padding: 0px;width: 200%; z-index:100000;} 
+nav li:hover .submenu{display: flex; flex-direction: column; position: absolute;top:100%;right: 0%;padding: 0px;width: 100%; z-index:100000;} 
 
 
 

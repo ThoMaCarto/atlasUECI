@@ -80,14 +80,15 @@ SUBMENU_INTERNAL_PAGES = (
     ('Les méthodes de diagnostic','pages/methodes-de-diagnostic.html','pages/methodes-de-diagnostic.html'),
     ('Les auteurs','pages/auteurs-de-letude.html','pages/auteurs-de-letude.html'),    
     ('Télécharger les données', 'pages/telechargements.html', 'pages/telechargements.html'),    
-    ('Contacts','pages/contacts.html','pages/contacts.html'),
+    
     )
     
   
     
 # additional menu items
 MENUITEMS = (	     
-    ('<br>Urgence Eau', 'http://urgenceeau.com/'),
+    ('site web<br>Urgence Eau', 'http://urgenceeau.com/'),
+    ('Contacts','http://urgenceeau.com/contact/'),
     #('Linux Kernel', 'https://www.kernel.org/'),
 )
 
