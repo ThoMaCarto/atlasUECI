@@ -35,7 +35,7 @@ Date: 2019-05-06
 	
 	<div class="capsule">
 	<details>
-	<summary><strong>OUATTARA Mafine</strong><img src="../pages/image/portait_MOuattara.jpg" alt="OUATTARA Mafine"  style="display:inline-block;height:100px;padding:10px;"></summary>
+	<summary><strong>OUATTARA Mafine</strong><img src="../pages/image/portait_MOuattara2.png" alt="OUATTARA Mafine"  style="display:inline-block;height:100px;padding:10px;"></summary>
 	<p>OUATTARA Tenin Mafine étudiante en sociologie et anthropologie du développement. Mafine s'intéresse au développement communautaire, au question du genre et leadership féminin, à l'accès des femmes à l'eau potable. Mafine est passionnée de l'infographie, par la nouvelle technologie ( le digital). Elle est engagée pour l'atteinte des ODD en Côte d'Ivoire.
 Elle a travaillé a Urgence Eau Côte d'Ivoire entant qu'assistante de recherche de octobre 2018 à Mai 2019, elle est aussi secrétaire générale Adjointe au bureau Pays D'Urgence Eau Côte d'Ivoire</p>
 <p>faceboock : <a href="www.facebook. com/madelamafine.Ouattara">Mafine Ouattara</a> </p>
