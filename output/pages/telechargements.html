@@ -27,6 +27,8 @@
 <!-- liens vers les fichiers de la librairy tabulator permettant d'afficher les tableaux de données -->
 <link rel="stylesheet" href="http://localhost:8000/static/dist/tabulator.min.css">
 <script type="text/javascript" src="http://localhost:8000/static/dist/tabulator.min.js"></script>
+<link href="dist/css/tabulator.min.css" rel="stylesheet">
+<script type="text/javascript" src="dist/js/tabulator.min.js"></script>
 
 
 
@@ -73,16 +75,32 @@
 
 <script type="text/javascript" >
 		// construire une variable url pour chaque base de donnée affichée sur la page
-			var urllocalites = "http://localhost:8000/doc/map/bdd/localites_v2.json"
-			var urlpointdeau = "http://localhost:8000/doc/map/bdd/pointseautab.js"
-			
+			var urllocalites = "http://localhost:8000/doc/map/bdd/localites_v2.json";
+			var urlpointdeau = "http://localhost:8000/doc/map/bdd/pointseau_v2.json";
+		var table= new Tabulator('#dataLoc',{ajaxURL:urllocalites,autoColumns:true,initialSort:[{column:"name",dir:"asc"}],});
+		var csv1 = $("#download-csvLoc").click(function(){table.download("csv", "UECI_localites.csv");});
+		var table= new Tabulator('#dataPE',{ajaxURL:urlpointdeau,autoColumns:true,initialSort:[{column:"name",dir:"asc"}],});
+		var csv2 = $("#download-csvPE").click(function(){table.download("csv", "UECI_PointsEau.csv");});	
+		
 			
 		</script>
+		
+		
 
-<section class="nomap" style="width:100%;  overflow-y:auto;">
-	<h2  class="block">Télécharger  les données de l'étude</h2>
+<section id="nomap" >
+	<h2>Télécharger  les données de l'étude</h2>
+	<p>Les données de l'étude ETUPO Vallée du Bandama sont librement téléchargeables et utilisables sous condition de mentionner leurs auteurs :
+	<br>© Urgence Eau (2018-2019) et © Urgence Eaux - Côte d'Ivoire (2018-2019).
+	<br>Elle sont fournies sous deux formats de base de données géographiques.</p>
+	<!--<div id="dataLoc"style="border:1px solid red;"></div>
+	<div id="dataPE"></div>-->
+	<table>
+	<tr><th colspan="3">Les données de l'étude</th></tr>
+	<tr><td>Données par localités</td><!--<td><button id="download-csvLoc">Download CSV</button></td>--><td><button><a href="http://localhost:8000/doc/map/bdd/localites_v2.geojson" download="UECI_localites">Download GEOJSON</a></button></td><td><button><a href="http://localhost:8000/doc/map/bdd/localites_v2.zip" download="UECI_localites">Download shape (.zip)</a></button></td></tr>
+	<tr><td>Données par points d'eau</td><!--<td><button id="download-csvPE">Download CSV</button></td>--><td><button><a href="http://localhost:8000/doc/map/bdd/pointseau_v2.geojson" download="UECI_PointsEau">Download GEOJSON</a></button></td><td><button><a href="http://localhost:8000/doc/map/bdd/pointseau_v4.zip" download="UECI_PointsEau">Download shape (.zip)</a></button></td></tr>
+	</table>
 
-<p  class="block">Les tableaux ci-dessous permettent de visualiser, filtrer et télécharger sous différents format les bases de données de l'étude.</p>
+<!-- <p  class="block">Les tableaux ci-dessous permettent de visualiser, filtrer et télécharger sous différents format les bases de données de l'étude.</p>
 
 	<h4 class="block">Données par localités</h4>
 	<div id="localites-table"  class="block"></div>
@@ -140,7 +158,7 @@
       <button id="download-csv">Download CSV</button>
       <button><a href="http://localhost:8000/doc/map/bdd/pointseau.geojson" download="UECI_pointseau">Download GEOJSON</a></button>
      
-</div>
+</div>-->
 	
 </section>
 
@@ -163,7 +181,7 @@
 
 <!-- appelle le fichier JS codant les tableaux -->	
 
-<script type="text/javascript" src="http://localhost:8000/doc/map/complexe-table.js"></script>
+<!-- <script type="text/javascript" src="http://localhost:8000/doc/map/complexe-table.js"></script>-->	
 
 
     </footer>

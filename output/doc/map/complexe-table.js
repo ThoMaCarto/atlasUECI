@@ -25,6 +25,21 @@ var table = new Tabulator("#localites-table", {
 	 //autoColumns:true,
 	 columns:[                 //define the table columns
 		{title:"Localité", field:"properties.a_quartier",frozen:true},
+		{title:"population",field:'properties.Population de la localité',}
+		{title:"Qualité de l'habitat",field:"properties.Qualité de l'habitat",}
+		{title:,field:,}
+		{title:"Raccordement à la SODECI",field:'properties.EAU_SODECI',}
+		{title:"Échantillon de points d'eau diagnostiqués",field:'properties.Nombre_de_points_deau_diagnostiqués',}
+		{title:"Points d'eau conforment aux normes OMS",field:'properties.Points_deau_diagnostiqués_conformes_aux_normes_OMS',}
+		{title:,field:,}
+		{title:,field:,}
+		{title:,field:,}
+		{title:,field:,}
+		{title:,field:,}
+		{title:,field:,}
+		{title:,field:,}
+		{title:,field:,}
+		{title:,field:,}
 		{title:"Niveau de vulnérabilité", field:"properties.vulnerabil"},
 		{title:"Raccordé à la SODECI", field:"properties.Sheet1_EAU"},
 		{title:"Nombre de Pompes fonctionnelles", field:"properties.Sheet1_Pom"},
