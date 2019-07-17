@@ -121,12 +121,31 @@ function getColorVuln (e,f,g,h){
 		else {return ('orange');}
 	}
 }; 
- 
+//création dune couche geoJSON qui appelle le fichier "agglo_Bouake.geojson"
+$.getJSON(urlAggloBouake,function(data)
+{
+	var tacheUrbBouake = L.geoJson(data,{
+		style: function (feature){return { weight : 1, color : 'purple',fillColor:'white',fillOpacity : 0,};},
+	});
+	tacheUrbBouake.addTo(map);
+	
+	controlLayers.addOverlay(tacheUrbBouake,'<strong>Agglomération de Bouaké</strong>'
+	+'<table class="legendin">'
+	+'<tr>'
+	+'<td style="width:30px;border:1px solid purple;text-align:center;"></td>'
+	+'<td>Tache urbaine en 2018</td>'
+	+'</tr>'
+	+'</table>');
+	console.log(tacheUrbBouake)
+}
+);
+
+
 
 // création d’une couche geoJson qui appelle le fichier « localites.geojson »
-$.getJSON(urllocalites,function(data2)
+$.getJSON(urllocalites,function(data)
 {
-	var vulnLocalites= L.geoJson(data2,{style: function(feature){return { color : getColorVuln(feature.properties.Points_deau_diagnostiqués_conformes_aux_normes_OMS,feature.properties.Nombre_de_points_deau_diagnostiqués,feature.properties.EAU_SODECI,feature.properties.Pompes_Fonctionnelles), weight : 1, fillColor : getColorVuln(feature.properties.Points_deau_diagnostiqués_conformes_aux_normes_OMS,feature.properties.Nombre_de_points_deau_diagnostiqués,feature.properties.EAU_SODECI,feature.properties.Pompes_Fonctionnelles), fillOpacity : .5 };},
+	var vulnLocalites= L.geoJson(data,{style: function(feature){return { color : getColorVuln(feature.properties.Points_deau_diagnostiqués_conformes_aux_normes_OMS,feature.properties.Nombre_de_points_deau_diagnostiqués,feature.properties.EAU_SODECI,feature.properties.Pompes_Fonctionnelles), weight : 1, fillColor : getColorVuln(feature.properties.Points_deau_diagnostiqués_conformes_aux_normes_OMS,feature.properties.Nombre_de_points_deau_diagnostiqués,feature.properties.EAU_SODECI,feature.properties.Pompes_Fonctionnelles), fillOpacity : .5 };},
 	onEachFeature : function(feature, layer ) {layer.bindPopup('<b><u>Nom de la localité</u></b><br>' + feature.properties.a_quartier +'<br><strong> Diagnostic détaillé : </strong> <a href='+ articlespath + feature.properties.link_1 +' style="text-transform: capitalize;">'+ feature.properties.a_quartier +'</a>')}
 });
 //vulnLocalites.beforeAdd = function (map) {legendVuln.addTo(map);};
