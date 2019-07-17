@@ -136,7 +136,6 @@ $.getJSON(urlAggloBouake,function(data)
 	+'<td>Tache urbaine en 2018</td>'
 	+'</tr>'
 	+'</table>');
-	console.log(tacheUrbBouake)
 }
 );
 
