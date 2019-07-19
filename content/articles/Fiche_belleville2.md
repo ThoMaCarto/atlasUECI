@@ -1,4 +1,4 @@
-﻿layout: fiche
+template: article
 title: Belleville 2
 slug: belleville-2
 idbdd: Belleville 2
