@@ -3,12 +3,13 @@ title: Kouassiblékro N’Gbassou
 slug: kouassiblekro-ngbassou
 iddbb: Kouassiblékro N’Gbassou
 tags: Rural
-authors: BROU Yves Oscar Kouadio, SORO Doba, MAILLARD Thomas, KOUAKOU Firmin, DIAKITE A. Cheick, KOHE A. Christelle, OUATTARA Mafine, SERI A. Jonathan
+authors: BROU Yves Oscar Kouadio, SORO Doba, MAILLARD Thomas, DIAKITE A. Cheick, KOHE A. Christelle, OUATTARA Mafine, SERI A. Jonathan, N'GUESSAN Firmain Kouakou
+
 date: 2019-01-18
 latitude: 7.79296
 longitude: -4.99105
 zoom: 16
-localisation : Nord de Bouaké
+localisation: Nord de Bouaké
 
 
 |Informations générales|
@@ -22,7 +23,7 @@ localisation : Nord de Bouaké
 ## Présentation de la localité
 
 
-Situé à la sortie nord de la commune de Bouaké, le village de Kouassiblékro N’Gbassou se trouve à environ 1 kilomètre du village de Golikro et à 5 kilomètres de la ville de Bouaké. **Attention, il ne faut pas confondre ce village avec un célèbre village homonyme (chef-lieu de canton) situé sur l'axe de Brobo, moins de 10 kilomètres à l'ouest de Bouaké**.  Il appartient au canton de Konankankro et n'est accessible que par une piste étroite (permettant le passage d'une moto seulement) à partir du village de Golikro. Il abrite une centaine d'habitants.
+Situé à la sortie nord de la commune de Bouaké, le village de Kouassiblékro N’Gbassou se trouve à environ 3 kilomètres du village de Golikro et à 7 kilomètres de la ville de Bouaké. **Attention, il ne faut pas confondre ce village avec un célèbre village homonyme (chef-lieu de canton) situé sur l'axe de Brobo, moins de 10 kilomètres à l'ouest de Bouaké**.  Il appartient au canton de Konankankro et n'est accessible que par une piste étroite (permettant le passage d'une moto seulement) à partir du village de Golikro. Il abrite une centaine d'habitants.
 
 
 Ne disposant d'aucun équipement communautaire de base (ni école, ni centre de santé, ni hydraulique villageoise améliorée), les villageois dépendent des équipements de Golikro.
@@ -61,7 +62,7 @@ L’enquête sanitaire réalisée sur les s d’approvisionnement du village ré
 ![Prélèvement d'eau dans la rivière](images/Eau_riviere.jpg "Prélèvement d'eau dans la rivière")
 ![Marigot 01](images/Marigot 01.jpg "Marigot 01")
 ![Marigot 02](images/Marigot 02.jpg "Marigot 02")
-![](images/.jpg "")
+
 
 
 ### Pratiques et modes d’approvisionnement en eau

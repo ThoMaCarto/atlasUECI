@@ -3,7 +3,8 @@ title: Golikro
 slug: golikro
 idbdd: Golikro
 tags: Rural
-authors: BROU Yves Oscar Kouadio, SORO Doba, MAILLARD Thomas, KOUAKOU Firmin, DIAKITE A. Cheick, KOHE A. Christelle, OUATTARA Mafine, SERI A. Jonathan
+authors: BROU Yves Oscar Kouadio, SORO Doba, MAILLARD Thomas, DIAKITE A. Cheick, KOHE A. Christelle, OUATTARA Mafine, SERI A. Jonathan, N'GUESSAN Firmain Kouakou
+
 date: 2019-01-18
 latitude: 7.76651
 longitude: -5.01059
@@ -23,7 +24,10 @@ localisation: Nord de Bouaké
 Situé à la sortie nord de la commune de Bouaké, le village de Golikro se trouve à environ 4 kilomètres du centre-ville de Bouaké. Il appartient au canton de Konankankro. Il est accessible par une route à deux voies en terre battue. Le village compte environ un millier d'habitants.
 
 
-Golikro dispose d’une école de 6 classes et bientôt d’un centre de santé communautaire en cours de construction. On y retrouve essentiellement des habitations de tous types : des habitations en parpaings, en terre ou en ciment avec des tôles ondulées. 
+Golikro dispose d’une école de 6 classes et bientôt d’un centre de santé communautaire en cours de construction.
+
+
+On y retrouve essentiellement des habitations de tous types : des habitations en parpaings, en terre ou en ciment avec des tôles ondulées. 
 
 
 Il n'y a pas de système de gestion des ordures ménagères, aussi celles-ci sont déposées en marge du village à la lisère de la forêt. Les habitations sont rarement équipées de latrines, aussi les habitants pratiquent la défécation à l'air libre à l'écart des habitations.
@@ -79,7 +83,7 @@ Les puits relèvent de la responsabilité de leur propriétaire.
 
 Le marigot ne fait l’objet d’aucun entretien particulier.
 
-Personnes ressources
+## Personnes ressources
 
 
 * Chef de village Golikro
@@ -123,4 +127,4 @@ Il n'y a pas de tensions notables entre les habitants. Les tensions locales sont
 Du fait de la rareté des points d’eau communautaires (1 pompe fonctionnelle pour près de 1000 habitants), des disputes éclatent dans la file d’attente, toutefois celles-ci demeurent ponctuelles et de faible ampleur.
 
 ### Tensions avec les localités voisines
-En cas de coupure de l'eau du robinet, le village voisin d'Andonsakassou s'approvisionne à la pompe située à côté de l'école primaire. Or, si l'école accueille des enfants des villages environnants, la pompe a été payée et construite par la mutuelle de Golikro, aussi les habitants de Golikro considèrent qu'ils sont prioritaires. Il leur arrive de verrouiller la pompe afin qu'elle ne soit plus accessible aux habitants des autres villages. Cela crée un climat de tension entre les villages.
+En cas de coupure de l'eau du robinet, le village voisin de Kouadio Miankro s'approvisionne à la pompe située à côté de l'école primaire. Or, si l'école accueille des enfants des villages environnants, la pompe a été payée et construite par la mutuelle de Golikro, aussi les habitants de Golikro considèrent qu'ils sont prioritaires. Il leur arrive de verrouiller la pompe afin qu'elle ne soit plus accessible aux habitants des autres villages. Cela crée un climat de tension entre les villages.
