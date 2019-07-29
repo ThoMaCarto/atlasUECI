@@ -20,7 +20,7 @@ localisation : Nord de Bouaké
 
 
 ## Présentation de la localité
-Village situé en bordure de route sur l’axe Bouaké – Katiola, Yobouékro est situé à 11 kilomètres de Bouaké. Il est donc accessible par une large route bitumée. Le village compte environ 800 résidents.
+Village situé en bordure de route sur l’axe Bouaké – Katiola, Yobouékro est situé à 11 kilomètres de Bouaké. Il est donc accessible par une large route bitumée (2x2 voies). Le village compte environ 800 résidents.
 
 
 Le village ne dispose pas d’école primaire et centre de santé communautaire. La population se rend dans le village  de Bamoro pour les problèmes sanitaires et dans le village voisin d’Akpôkro pour la scolarisation des enfants.
