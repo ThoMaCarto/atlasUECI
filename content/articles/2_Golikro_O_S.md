@@ -4,57 +4,56 @@ slug: golikro
 idbdd: Golikro
 tags: Rural
 authors: BROU Yves Oscar Kouadio, SORO Doba, MAILLARD Thomas, DIAKITE A. Cheick, KOHE A. Christelle, OUATTARA Mafine, SERI A. Jonathan, N'GUESSAN Firmain Kouakou
-
 date: 2019-01-18
 latitude: 7.76651
 longitude: -5.01059
 zoom: 16
-localisation: Nord de Bouaké
+localisation: Nord de BouakÃ©
 
 
-|Informations générales|
+|Informations gÃ©nÃ©rales||
 |:--|--:|
-| Nom de la localité : | Golikro | 
+| Nom de la localitÃ© : | Golikro | 
 | Population : | 1000 habitants | 
-| Dessertes en eau potable | Totalement raccordé au réseau SODECI | 
-| Gestion des excrétas | Assainissement autonome | 
+| Dessertes en eau potable | Totalement raccordÃ© au rÃ©seau SODECI | 
+| Gestion des excrÃ©tas | Assainissement autonome | 
 
 
-## Présentation de la localité
-Situé à la sortie nord de la commune de Bouaké, le village de Golikro se trouve à environ 4 kilomètres du centre-ville de Bouaké. Il appartient au canton de Konankankro. Il est accessible par une route à deux voies en terre battue. Le village compte environ un millier d'habitants.
+## PrÃ©sentation de la localitÃ©
+SituÃ© Ã  la sortie nord de la commune de BouakÃ©, le village de Golikro se trouve Ã  environ 4 kilomÃ¨tres du centre-ville de BouakÃ©. Il appartient au canton de Konankankro. Il est accessible par une route Ã  deux voies en terre battue. Le village compte environ un millier d'habitants.
 
 
-Golikro dispose d’une école de 6 classes et bientôt d’un centre de santé communautaire en cours de construction.
+Golikro dispose dâ€™une Ã©cole de 6 classes et bientÃ´t dâ€™un centre de santÃ© communautaire en cours de construction.
 
 
-On y retrouve essentiellement des habitations de tous types : des habitations en parpaings, en terre ou en ciment avec des tôles ondulées. 
+On y retrouve essentiellement des habitations de tous typesÂ : des habitations en parpaings, en terre ou en ciment avec des tÃ´les ondulÃ©es. 
 
 
-Il n'y a pas de système de gestion des ordures ménagères, aussi celles-ci sont déposées en marge du village à la lisère de la forêt. Les habitations sont rarement équipées de latrines, aussi les habitants pratiquent la défécation à l'air libre à l'écart des habitations.
+Il n'y a pas de systÃ¨me de gestion des ordures mÃ©nagÃ¨res, aussi celles-ci sont dÃ©posÃ©es en marge du village Ã  la lisÃ¨re de la forÃªt. Les habitations sont rarement Ã©quipÃ©es de latrines, aussi les habitants pratiquent la dÃ©fÃ©cation Ã  l'air libre Ã  l'Ã©cart des habitations.
 
 
-L'activité principale du village est l'agriculture vivrière (igname, manioc, riz et autres productions maraîchères tomates, piments et aubergines) et la culture de rente de l'anacarde. Les femmes du village transforment le manioc en attiéké dans de petites unités de production familiales. Chaque ménage élève quelques moutons ou quelques chèvres. Durant la saison des pluies, les animaux sont gardés dans des enclos pour qu'ils ne divaguent pas dans les espaces cultivés.
+L'activitÃ© principale du village est l'agriculture vivriÃ¨re (igname, manioc, riz et autres productions maraÃ®chÃ¨res tomates, piments et aubergines) et la culture de rente de l'anacarde. Les femmes du village transforment le manioc en attiÃ©kÃ© dans de petites unitÃ©s de production familiales. Chaque mÃ©nage Ã©lÃ¨ve quelques moutons ou quelques chÃ¨vres. Durant la saison des pluies, les animaux sont gardÃ©s dans des enclos pour qu'ils ne divaguent pas dans les espaces cultivÃ©s.
 
 
-La mutuelle des cadres ressortissants du village occupe une place importante dans le financement des projets de développement local, surtout dans l’accès à l’eau potable.
+La mutuelle des cadres ressortissants du village occupe une place importante dans le financement des projets de dÃ©veloppement local, surtout dans lâ€™accÃ¨s Ã  lâ€™eau potable.
 
 
-## Socio anthropologie de la localité
+## Socio anthropologie de la localitÃ©
 
 
-Minankro est peuplé par les Phali, un sous-groupe Baoulé. L'organisation sociale du village est similaire à l'organisation classique des communautés villageoises Baoulé. Les affaires du village sont gérées par les notables formant une chefferie hiérarchisée qui intègre aussi des représentants des organisations de femmes et de jeunes. La chefferie intervient dans le règlement des conflits (intracommunautaires et extracommunautaires) et joue un rôle d'interface entre la communauté villageoise et les administrations publiques et collectivités territoriales. 
+Minankro est peuplÃ© par les Phali, un sous-groupe BaoulÃ©. L'organisation sociale du village est similaire Ã  l'organisation classique des communautÃ©s villageoises BaoulÃ©. Les affaires du village sont gÃ©rÃ©es par les notables formant une chefferie hiÃ©rarchisÃ©e qui intÃ¨gre aussi des reprÃ©sentants des organisations de femmes et de jeunes. La chefferie intervient dans le rÃ¨glement des conflits (intracommunautaires et extracommunautaires) et joue un rÃ´le d'interface entre la communautÃ© villageoise et les administrations publiques et collectivitÃ©s territoriales. 
 
 
 
- Les habitants sont majoritairement issus des lignages fondateurs du village et les ménages sont constitués de famille nucléaire associant parfois des membres collatéraux (parents, cousins ou fratrie célibataire). Les tâches ménagères et en particulier l'approvisionnement en eau du ménage demeure l'apanage des femmes.
+ Les habitants sont majoritairement issus des lignages fondateurs du village et les mÃ©nages sont constituÃ©s de famille nuclÃ©aire associant parfois des membres collatÃ©raux (parents, cousins ou fratrie cÃ©libataire). Les tÃ¢ches mÃ©nagÃ¨res et en particulier l'approvisionnement en eau du mÃ©nage demeure l'apanage des femmes.
 
 
-## État des lieux des ouvrages d’alimentation en eau potable
+## Ã‰tat des lieux des ouvrages dâ€™alimentation en eau potable
 
 ### Ouvrages existants
-Le village de Golikro est connecté au réseau de distribution d’eau de la SODECI depuis 2016 et compte à ce jour une trentaine de concessions abonnées. En matière d’infrastructures d’hydraulique villageoise, Golikro compte actuellement 3 forages équipés de pompes à motricité humaine (PMH), dont 1 seul fonctionnel au moment des enquêtes. Le village compte également quelques puits traditionnels et des marigots.
-La seule pompe fonctionnelle (Type Vergnet HPV 60) est celle de l’école. Elle a été construite par la mutuelle de développement du village à l’origine pour les instituteurs. Mais elle sert de source d’AEP en cas de rupture sur le réseau de la SODECI dans le village et ceux avoisinants (Kouadiomiankro et Andonsakassou). Quant aux 2 PMH non fonctionnels : ABI 1 et Vergnet HPV 100, elles sont en panne respectivement depuis 8 ans et 5 ans. L’enquête sanitaire réalisée autour de la pompe de l’école révèle une faible vulnérabilité du point d’eau par rapport aux sources de contamination. L’analyse de l’échantillon d’eau prélevé indique un taux de fluor élevé par rapport à la norme recommandée (1,5 mg/l).
-Quant aux puits traditionnels, ils ont une profondeur moyenne de 6 mètres et tarissent tous pendant la saison sèche. L’enquête sanitaire autour de 2 puits du village indique un risque élevé au niveau des 2 puits  et une contamination à la bactérie *E coli*, des concentrations élevées en fluor pour les 2 puits analysés et un taux de nitrate supérieur à 50 mg/l dans un des puits.
+Le village de Golikro est connectÃ© au rÃ©seau de distribution dâ€™eau de la SODECI depuis 2016 et compte Ã  ce jour une trentaine de concessions abonnÃ©es. En matiÃ¨re dâ€™infrastructures dâ€™hydraulique villageoise, Golikro compte actuellement 3 forages Ã©quipÃ©s de pompes Ã  motricitÃ© humaine (PMH), dont 1 seul fonctionnel au moment des enquÃªtes. Le village compte Ã©galement quelques puits traditionnels et des marigots.
+La seule pompe fonctionnelle (Type Vergnet HPV 60) est celle de lâ€™Ã©cole. Elle a Ã©tÃ© construite par la mutuelle de dÃ©veloppement du village Ã  lâ€™origine pour les instituteurs. Mais elle sert de source dâ€™AEP en cas de rupture sur le rÃ©seau de la SODECI dans le village et ceux avoisinants (Kouadiomiankro et Andonsakassou). Quant aux 2 PMH non fonctionnelsÂ : ABI 1 et Vergnet HPV 100, elles sont en panne respectivement depuis 8 ans et 5 ans. Lâ€™enquÃªte sanitaire rÃ©alisÃ©e autour de la pompe de lâ€™Ã©cole rÃ©vÃ¨le une faible vulnÃ©rabilitÃ© du point dâ€™eau par rapport aux sources de contamination. Lâ€™analyse de lâ€™Ã©chantillon dâ€™eau prÃ©levÃ© indique un taux de fluor Ã©levÃ© par rapport Ã  la norme recommandÃ©e (1,5 mg/l).
+Quant aux puits traditionnels, ils ont une profondeur moyenne de 6 mÃ¨tres et tarissent tous pendant la saison sÃ¨che. Lâ€™enquÃªte sanitaire autour de 2 puits du village indique un risque Ã©levÃ© au niveau des 2 puits  et une contamination Ã  la bactÃ©rie *E coli*, des concentrations Ã©levÃ©es en fluor pour les 2 puits analysÃ©s et un taux de nitrate supÃ©rieur Ã  50 mg/l dans un des puits.
 
 
 ![Pompe fonctionnel Golikro](images/IMG_20190118_091501.jpg "Pompe fonctionnel Golikro")
@@ -65,43 +64,43 @@ Quant aux puits traditionnels, ils ont une profondeur moyenne de 6 mètres et tar
 ![Marigot Golikro](images/IMG_20190118_113016.jpg "Marigot Golikro")
 
 
-## Pratiques et modes d’approvisionnement en eau
-Le village étant connecté au réseau de la SODECI, les modes d’approvisionnement dépendent de la disponibilité des compteurs et de la perception de la qualité de l’eau de la SODECI.
-Les habitations abonnées au réseau de distribution utilisent l’eau pour toutes les tâches domestiques et la boisson. Cependant, lorsque la qualité de l’eau au robinet est jugée insatisfaisante par les ménages, elle est utilisée pour les autres besoins domestiques et l’eau des forages est alors utilisée pour la consommation.
-L’eau des forages sert à tous les usages notamment au sein des ménages ne disposant pas de compteurs.
-Les puits et le marigot servent principalement aux tâches domestiques (la lessive principalement pour le marigot) mais peuvent parfois servir à la boisson en cas de longue pénurie et de panne de la pompe.
+### Pratiques et modes dâ€™approvisionnement en eau
+Le village Ã©tant connectÃ© au rÃ©seau de la SODECI, les modes dâ€™approvisionnement dÃ©pendent de la disponibilitÃ© des compteurs et de la perception de la qualitÃ© de lâ€™eau de la SODECI.
+Les habitations abonnÃ©es au rÃ©seau de distribution utilisent lâ€™eau pour toutes les tÃ¢ches domestiques et la boisson. Cependant, lorsque la qualitÃ© de lâ€™eau au robinet est jugÃ©e insatisfaisante par les mÃ©nages, elle est utilisÃ©e pour les autres besoins domestiques et lâ€™eau des forages est alors utilisÃ©e pour la consommation.
+Lâ€™eau des forages sert Ã  tous les usages notamment au sein des mÃ©nages ne disposant pas de compteurs.
+Les puits et le marigot servent principalement aux tÃ¢ches domestiques (la lessive principalement pour le marigot) mais peuvent parfois servir Ã  la boisson en cas de longue pÃ©nurie et de panne de la pompe.
 
 
-## Gestion des points d’eau
+### Gestion des points dâ€™eau
 
 
-Les points d’eau équipés de pompes (PMH) sont communautaires. Cependant, il n’y a pas de comité de gestion spécifique, c’est la mutuelle du village qui finance les réparations, lorsqu’elle le peut. 
+Les points dâ€™eau Ã©quipÃ©s de pompes (PMH) sont communautaires. Cependant, il nâ€™y a pas de comitÃ© de gestion spÃ©cifique, câ€™est la mutuelle du village qui finance les rÃ©parations, lorsquâ€™elle le peut. 
 
 
-Les puits relèvent de la responsabilité de leur propriétaire.
+Les puits relÃ¨vent de la responsabilitÃ© de leur propriÃ©taire.
 
 
-Le marigot ne fait l’objet d’aucun entretien particulier.
+Le marigot ne fait lâ€™objet dâ€™aucun entretien particulier.
 
 ## Personnes ressources
 
 
 * Chef de village Golikro
 * Porte-canne du chef de village
-* Présidente des Femmes 
-* Président de la mutuelle
+* PrÃ©sidente des Femmes 
+* PrÃ©sident de la mutuelle
 
 
-## Assainissement et gestion des excrétas
+## Assainissement et gestion des excrÃ©tas
 
 
-Le village de Golikro ne dispose d’aucun réseau de drainage et d’évacuation des eaux pluviales et des eaux usées domestiques.
+Le village de Golikro ne dispose dâ€™aucun rÃ©seau de drainage et dâ€™Ã©vacuation des eaux pluviales et des eaux usÃ©es domestiques.
 
 
-Les ordures sont évacuées et stockées dans un dépotoir situé à l’écart des habitations en lisière de forêt.
+Les ordures sont Ã©vacuÃ©es et stockÃ©es dans un dÃ©potoir situÃ© Ã  lâ€™Ã©cart des habitations en lisiÃ¨re de forÃªt.
 
 
-Les habitations sont rarement équipées de latrines, quelques-unes disposent de latrines sèches ou de latrines à eau. La majorité des habitants pratique donc la défécation à l’air libre.
+Les habitations sont rarement Ã©quipÃ©es de latrines, quelques-unes disposent de latrines sÃ¨ches ou de latrines Ã  eau. La majoritÃ© des habitants pratique donc la dÃ©fÃ©cation Ã  lâ€™air libre.
 
 
 ## Desiderata des populations
@@ -110,21 +109,21 @@ Les habitations sont rarement équipées de latrines, quelques-unes disposent de l
 | Type d'entretien | Date | 
 | :-- | :--: | 
 | Entretien individuel Chef de village Golikro|18 janvier 2019| 
-| Entretien individuel Présidente des Femmes Golikro|18 janvier 2019|
-| Entretien individuel Présidente du comité de gestion Golikro|18 janvier 2019| | 
+| Entretien individuel PrÃ©sidente des Femmes Golikro|18 janvier 2019|
+| Entretien individuel PrÃ©sidente du comitÃ© de gestion Golikro|18 janvier 2019| | 
 | Focus group hommes Golikro|18 janvier 2019|
 | Focus group femmes Golikro|18 janvier 2019|  
 
 
-Les habitants souhaitent disposer de plusieurs forages ou puits communautaires équipés de pompes (PMH) en état de marche. Ils privilégient ce type d’équipement, car il les rend autonomes en cas de coupure de l’eau du robinet distribuée par la SODECI. En outre, les PMH offrent un meilleur confort d’usage que les puits. 
+Les habitants souhaitent disposer de plusieurs forages ou puits communautaires Ã©quipÃ©s de pompes (PMH) en Ã©tat de marche. Ils privilÃ©gient ce type dâ€™Ã©quipement, car il les rend autonomes en cas de coupure de lâ€™eau du robinet distribuÃ©e par la SODECI. En outre, les PMH offrent un meilleur confort dâ€™usage que les puits. 
 
 ## Tensions ressenties lors des entretiens
 
-### Tensions générales
-Il n'y a pas de tensions notables entre les habitants. Les tensions locales sont généralement encadrées par la notabilité qui fait respecter un ensemble de règles de vie assorties de sanctions (amendes en nature, bannissement) en cas de désobéissance.
+### Tensions gÃ©nÃ©rales
+Il n'y a pas de tensions notables entre les habitants. Les tensions locales sont gÃ©nÃ©ralement encadrÃ©es par la notabilitÃ© qui fait respecter un ensemble de rÃ¨gles de vie assorties de sanctions (amendes en nature, bannissement) en cas de dÃ©sobÃ©issance.
 
 ### Tensions autour de l'eau
-Du fait de la rareté des points d’eau communautaires (1 pompe fonctionnelle pour près de 1000 habitants), des disputes éclatent dans la file d’attente, toutefois celles-ci demeurent ponctuelles et de faible ampleur.
+Du fait de la raretÃ© des points dâ€™eau communautaires (1 pompe fonctionnelle pour prÃ¨s de 1000 habitants), des disputes Ã©clatent dans la file dâ€™attente, toutefois celles-ci demeurent ponctuelles et de faible ampleur.
 
-### Tensions avec les localités voisines
-En cas de coupure de l'eau du robinet, le village voisin de Kouadio Miankro s'approvisionne à la pompe située à côté de l'école primaire. Or, si l'école accueille des enfants des villages environnants, la pompe a été payée et construite par la mutuelle de Golikro, aussi les habitants de Golikro considèrent qu'ils sont prioritaires. Il leur arrive de verrouiller la pompe afin qu'elle ne soit plus accessible aux habitants des autres villages. Cela crée un climat de tension entre les villages.
+### Tensions avec les localitÃ©s voisines
+En cas de coupure de l'eau du robinet, le village voisin de Kouadio Miankro s'approvisionne Ã  la pompe situÃ©e Ã  cÃ´tÃ© de l'Ã©cole primaire. Or, si l'Ã©cole accueille des enfants des villages environnants, la pompe a Ã©tÃ© payÃ©e et construite par la mutuelle de Golikro, aussi les habitants de Golikro considÃ¨rent qu'ils sont prioritaires. Il leur arrive de verrouiller la pompe afin qu'elle ne soit plus accessible aux habitants des autres villages. Cela crÃ©e un climat de tension entre les villages.

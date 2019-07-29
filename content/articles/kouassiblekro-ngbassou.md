@@ -4,7 +4,6 @@ slug: kouassiblekro-ngbassou
 iddbb: Kouassiblékro N’Gbassou
 tags: Rural
 authors: BROU Yves Oscar Kouadio, SORO Doba, MAILLARD Thomas, DIAKITE A. Cheick, KOHE A. Christelle, OUATTARA Mafine, SERI A. Jonathan, N'GUESSAN Firmain Kouakou
-
 date: 2019-01-18
 latitude: 7.79296
 longitude: -4.99105
@@ -12,7 +11,7 @@ zoom: 16
 localisation: Nord de Bouaké
 
 
-|Informations générales|
+|Informations générales||
 |:--|--:|
 | Nom de la localité : | Kouassiblékro N’Gbassou | 
 | Population : | 100 habitants | 

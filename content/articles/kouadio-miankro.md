@@ -11,7 +11,7 @@ zoom: 16
 localisation: Nord de Bouaké
 
 
-|Informations générales|
+|Informations générales||
 |:--|--:|
 | Nom de la localité : | Kouadio-Miankro | 
 | Population : | 900 habitants | 
@@ -48,7 +48,7 @@ En ce qui concerne l’hydraulique villageoise, le village compte 3 points d’e
 ![PMH 1](images/P1_Kouadiomiankro.jpg "PMH 1")
 ![PMH 2](images/P2_Kouadiomiankro.jpg "PMH 2")
 ![PMH 3](images/P3_Kouadiomiankro.jpg "PMH 3")
-![](images/.jpg "")
+
 
 Les coupures d’eau étant fréquentes sur le réseau de la SODECI, les populations s’approvisionnent par la trappe d'accès du puits dont la PMH a été démontée et dans le marigot situé dans le bas-fond en aval du village.
 
