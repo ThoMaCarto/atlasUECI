@@ -1,6 +1,6 @@
 template: article
 title: Yobouékro
-iddbb: Yobouékro
+iddbb: Yobouekro
 slug: Yobouekro
 tags: Rural
 authors: BROU Yves Oscar Kouadio, SORO Doba, MAILLARD Thomas, DIAKITE A. Cheick, KOHE A. Christelle, OUATTARA Mafine, SERI A. Jonathan, N'GUESSAN Firmain Kouakou
@@ -8,7 +8,7 @@ date: 2019-02-11
 latitude: 7.84452
 longitude: -5.05206
 zoom: 16
-localisation : Nord de Bouaké
+localisation: Nord de Bouaké
 
 
 |Informations générales||
