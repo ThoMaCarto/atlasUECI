@@ -7,7 +7,7 @@ authors: BROU Yves Oscar Kouadio, SORO Doba, MAILLARD Thomas, DIAKITE A. Cheick,
 date: 2019-02-18
 latitude: 7.82287
 longitude: -5.07437
-zoom: 14
+zoom: 16
 localisation : Nord de Bouaké
 
 
