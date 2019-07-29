@@ -6,9 +6,11 @@ source venv/bin/activate
 
 read -p 'saisir le commentaire du commit:' commentaire
 
+git pull https://github.com/ThoMaCarto/atlasUECI.git
+
 pelican content -s publishconf.py && pelican content -s atlasconf.py
 
-git pull https://github.com/ThoMaCarto/atlasUECI.git
+
 
 git status
 
