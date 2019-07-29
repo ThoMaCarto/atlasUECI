@@ -1,4 +1,3 @@
-
 template: article
 title: Assankouadiokro
 iddbb: Assankouadiokro
