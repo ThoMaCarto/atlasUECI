@@ -5,8 +5,8 @@ slug: assankouadiokro
 tags: Rural
 authors: BROU Yves Oscar Kouadio, SORO Doba, MAILLARD Thomas, DIAKITE A. Cheick, KOHE A. Christelle, OUATTARA Mafine, SERI A. Jonathan, N'GUESSAN Firmain Kouakou
 date: 2019-01-22
-latitude: 7.82325
-longitude: -5.0492
+latitude: 7.82846
+longitude: -5.04723
 zoom: 16
 localisation: Nord de Bouaké
 
