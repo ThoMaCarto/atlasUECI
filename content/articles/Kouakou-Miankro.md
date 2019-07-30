@@ -40,6 +40,8 @@ Le village est peuplé des Baoulés fahafouè ou pharis. L'organisation sociale 
 ### Existant 
 Le village n’est pas encore raccordé au réseau de la SODECI. Le village possède une pompe hydraulique en panne depuis plusieurs années et plusieurs puits.
 Le forage équipé d’une pompe date des années 1976. C’est une pompe de la marque ABI. La pompe a été abandonnée suite à des pannes répétées auxquelles les habitants ne pouvaient plus faire face. La pompe est actuellement abandonnée dans la broussaille.
+
+
 ![PMH en panne](images/Kouakou-Miankro2.jpg "PMH en panne")
 
 
@@ -47,6 +49,8 @@ Nous avons analysé deux puits. Le premier est un puits traditionnel à l’int�
 
 
 Notre étude a révélé que ces puits sont assez vulnérables aux risques de contamination. Le puits traditionnel se montre plus vulnérable aux risques de contamination avec un score de 8.  Cette vulnérabilité s’explique, car l'absence de clôture autorise l’accès des animaux au point d’eau. La dalle et la margelle du point d’eau présentent des fissures et craquelures. L’environnement immédiat du point d’eau est sale ainsi que le système d’exhaure notamment la puisette. Le puits maçonné quant à lui est moyennement vulnérable avec un score de 4 à cause de l'absence de clôture et de son environnement  sale.
+
+
 ![Puit ONG](images/Kouakou-Miankro3.jpg "Puits ONG")
 ![Puits ONG](images/Kouakou-Miankro6.jpg "Puits ONG")
 ![Puit traditionnel](images/Kouakou-Miankro4.jpg "Puit traditionnel")
@@ -57,6 +61,8 @@ Les analyses de la qualité de l’eau n’ont révélé aucune pollution majeur
 ### Pratiques et modes d’approvisionnement en eau
 
 En l'absence d'équipement hydraulique villageois amélioré (PPMH) et de raccordement au réseau de distribution de la SODECI, les habitants s'approvisionnent dans les puits communautaires et les marigots. Les marigots sont éloignés du village, mais perçus par les femmes comme une eau de très bonne qualité.
+
+
 ![Marigot](images/Kouakou-Miankro1.jpg "Marigot")
 
 ### Gestion des points d’eau
