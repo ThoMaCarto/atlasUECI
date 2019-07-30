@@ -104,7 +104,7 @@ Aucune tension signalée
 
 Aucun conflit signalé autour des points d'eau malgré leur rareté.
 ### Tensions avec les localités voisines
-Aucune tension ignalées
+Aucune tension signalée
 
 
 
