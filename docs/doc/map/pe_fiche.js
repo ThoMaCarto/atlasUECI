@@ -246,7 +246,7 @@ $.getJSON(urlAggloBouake,function(data)
 	+'<td style="width:30px;border:1px solid purple;text-align:center;"></td>'
 	+'<td>Tache urbaine en 2018</td>'
 	+'</tr>'
-	+'</table>','Urbanisation');
+	+'</table>','<strong>Urbanisation</strong>');
 }
 );
 
@@ -256,9 +256,10 @@ $.getJSON(urllocalites,function(data)
 	});
 //vulnLocalites.beforeAdd = function (map) {legendVuln.addTo(map);};
 localites.addTo(map);
-controlLayers.addOverlay(localites, 'Quartier ou village analysés <table class="info-legend">'
+controlLayers.addOverlay(localites, 'Quartier ou village analysés'
++'<table class="legendin">'
 +'<tr><td style="background-color:white;height:10px;width:30px;opacity:.8;border:2px solid red;"></td><td>Localité diagnostiquée</td></tr>'
-+'</table>',"<br>");
++'</table>',"<strong>Enquête Urgence Eau</strong>");
 });
 
 
