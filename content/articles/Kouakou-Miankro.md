@@ -1,5 +1,5 @@
 template: article
-title: Kouakou-Miankro
+title: Kouakou Miankro
 iddbb: Kouakou-Miankro
 slug: kouakou-miankro
 tags: Rural
@@ -13,7 +13,7 @@ localisation: Nord de Bouaké
 
 |Informations générales||
 |:--|--:|
-| Nom de la localité : | N’guessankro | 
+| Nom de la localité : | Kouakou-Miankro | 
 | Population : | 400 habitants | 
 | Dessertes en eau potable | Pas raccordé au réseau SODECI | 
 | Gestion des excrétas | Assainissement autonome | 
