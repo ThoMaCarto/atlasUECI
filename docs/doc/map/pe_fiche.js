@@ -240,7 +240,7 @@ $.getJSON(urlAggloBouake,function(data)
 	});
 	tacheUrbBouake.addTo(map);
 	
-	controlLayers.addOverlay(tacheUrbBouake,'<strong>Agglomération de Bouaké</strong>'
+	controlLayers.addOverlay(tacheUrbBouake,'Agglomération de Bouaké'
 	+'<table class="legendin">'
 	+'<tr>'
 	+'<td style="width:30px;border:1px solid purple;text-align:center;"></td>'
@@ -256,7 +256,9 @@ $.getJSON(urllocalites,function(data)
 	});
 //vulnLocalites.beforeAdd = function (map) {legendVuln.addTo(map);};
 localites.addTo(map);
-controlLayers.addOverlay(localites, "Quartier ou village","<br>");
+controlLayers.addOverlay(localites, 'Quartier ou village analysés <table class="info-legend">'
++'<tr><td style="background-color:white;height:10px;width:30px;opacity:.8;border:2px solid red;"></td><td>Localité diagnostiquée</td></tr>'
++'</table>',"<br>");
 });
 
 
