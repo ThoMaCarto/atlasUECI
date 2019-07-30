@@ -183,7 +183,7 @@ function getColorAmmoniac(Ammoniac) {
        
  // Couleur en fonction de la norme OMS
 
-function getLayerOMS (Name,Field,minOMS,maxOMS)
+function getLayerOMS (NameOMS,Field,minOMS,maxOMS)
 {
 	function getColorOMS (Field,minOMS,maxOMS){
 	if (Field < minOMS == true) {return('red');}
@@ -200,7 +200,7 @@ function getLayerOMS (Name,Field,minOMS,maxOMS)
 		}
 	}).on("click", cible)
 	.addTo(map);
-	controlLayers.addOverlay(LayerOMS, 'Contamination par'+ Name, '<strong>Diagnostic des points d\'eau</strong>');
+	controlLayers.addOverlay(LayerOMS, 'Contamination par'+ NameOMS, '<strong>Diagnostic des points d\'eau</strong>');
 }; 
 
 //lecture de la base de donnée
