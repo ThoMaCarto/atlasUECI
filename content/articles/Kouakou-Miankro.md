@@ -60,7 +60,7 @@ Les analyses de la qualité de l’eau n’ont révélé aucune pollution majeur
 
 ### Pratiques et modes d’approvisionnement en eau
 
-En l'absence d'équipement hydraulique villageois amélioré (PPMH) et de raccordement au réseau de distribution de la SODECI, les habitants s'approvisionnent dans les puits communautaires et les marigots. Les marigots sont éloignés du village, mais perçus par les femmes comme une eau de très bonne qualité.
+En l'absence d'équipement hydraulique villageois amélioré (PPMH) et de raccordement au réseau de distribution de la SODECI, les habitants s'approvisionnent dans les puits communautaires et les marigots. Les marigots sont éloignés du village, mais perçus par les femmes comme délivrant une eau de très bonne qualité.
 
 
 ![Marigot](images/Kouakou-Miankro1.jpg "Marigot")
