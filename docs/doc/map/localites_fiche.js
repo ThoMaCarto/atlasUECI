@@ -152,6 +152,21 @@ localites.on("click", cible);
 localites.addTo(map);
 controlLayers.addOverlay(localites, "Localités","<strong>Diagnostic des localités</strong>");
 
+
+var tacheUrbBouake = L.geoJson(data,{
+		style: function (feature){return { weight : 1, color : 'purple',fillColor:'white',fillOpacity : 0,};},
+	});
+	tacheUrbBouake.addTo(map);
+	
+	controlLayers.addOverlay(tacheUrbBouake,'<strong>Agglomération de Bouaké</strong>'
+	+'<table class="legendin">'
+	+'<tr>'
+	+'<td style="width:30px;border:1px solid purple;text-align:center;"></td>'
+	+'<td>Tache urbaine en 2018</td>'
+	+'</tr>'
+	+'</table>');
+
+
 // création d’une couche geoJson qui appelle le fichier « localites.geojson » pour créer carte en fonction des vulnérabilités
 var vulnLocalites= L.geoJson(data,{style: function(feature){return { color : getColorVuln(feature.properties.Points_deau_diagnostiqués_conformes_aux_normes_OMS,feature.properties.Nombre_de_points_deau_diagnostiqués,feature.properties.EAU_SODECI,feature.properties.Pompes_Fonctionnelles), weight : 1, fillColor : getColorVuln(feature.properties.Points_deau_diagnostiqués_conformes_aux_normes_OMS,feature.properties.Nombre_de_points_deau_diagnostiqués,feature.properties.EAU_SODECI,feature.properties.Pompes_Fonctionnelles), fillOpacity : .5 };},
 	onEachFeature: oneachfeature,
