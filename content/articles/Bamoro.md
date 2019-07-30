@@ -15,7 +15,7 @@ localisation: Nord de Bouaké
 |:--|--:|
 | Nom de la localité : | Bamoro | 
 | Population : | 2000 habitants | 
-| Dessertes en eau potable | Partiellement raccordé au réseau SODECI | 
+| Dessertes en eau potable | Non raccordé au réseau SODECI | 
 | Gestion des excrétas | Assainissement autonome | 
 
 
