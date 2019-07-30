@@ -114,4 +114,4 @@ Accueillir un marché hebdomadaire peut être une source potentielle de désordr
 Ponctuellement des disputes éclatent autour des points d'eau à propos du respect des tours de passage dans la file d'attente ou du refus de payer le prix de l'eau au propriétaire de la pompe.
 
 ### Tensions avec les localités voisines
-Aucune tension signalée
+La fusion des trois villages limitrophes (Bamoro, Djèkro et Béssérikro) a entrainé des conflits de légitimité entre les différents chefs de village, qui peuvent entraver des projets d'intérêt commun.
