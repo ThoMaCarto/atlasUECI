@@ -250,7 +250,14 @@ $.getJSON(urlAggloBouake,function(data)
 }
 );
 
-
+$.getJSON(urllocalites,function(data)
+{
+	var localites= L.geoJson(data,{style: function(feature){return { color : 'red', weight : 1.5, fillColor : 'red', fillOpacity : .0, };},
+	});
+//vulnLocalites.beforeAdd = function (map) {legendVuln.addTo(map);};
+localites.addTo(map);
+controlLayers.addOverlay(localites, "Quartier ou village","<br>");
+});
 
 
 
