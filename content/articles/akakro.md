@@ -31,10 +31,14 @@ Une vie communautaire structurée  autour du chef central de communauté, Akakro
 ## État des lieux des ouvrages d’alimentation en eau potable
 ### Existants
 Nous avons identifié 2 sources principales d’approvisionnement en eau de consommation : les forages et les marigots. Le forage est la principale source d’approvisionnement en eau de boisson pour cause de la qualité. Il sert pour tous les usages. Le forage est entretenu de façon irrégulière et présente régulièrement des pannes mineures. Il tombe en panne en moyenne 1 fois par an. La qualité de l’eau est jugée acceptable par les populations et l’analyse de l’eau n’a pas révélé des anomalies particulières.
+
+
 ![Pompe](images/Akakro2.jpg "Pompe")
 
 
 Les enquêtes ont porté sur le marigot du village. L’eau du marigot est utilisée pour la lessive et le bain dans plusieurs concessions familiales.
+
+
 ![Marigot](images/Akakro1.jpg "Marigot")
 
 
