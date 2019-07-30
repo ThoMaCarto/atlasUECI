@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
+    <title>Atlas Eau Potable Assainissement Côte d'Ivoire Bouaké</title>
+    <link rel="stylesheet" href="http://urgenceeau.com/atlas/static/css/style.css" />
+    <link rel="icon" type="image/x-icon" href="http://urgenceeau.com/atlas/static/images/favicon.ico">
+    
+
+    
+<!-- appelle la librairie javascript Leaflet et le fichier CSS Leaflet -->	
+	<link rel="stylesheet" href="http://urgenceeau.com/atlas/static/dist/leaflet.css"/>
+<script src="http://urgenceeau.com/atlas/static/dist/leaflet.js"></script>
+  
+	<!-- jQuery - indispensable pour utiliser les fichiers geojson -->
+	<script type="text/javascript" src="http://urgenceeau.com/atlas/static/dist/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="http://urgenceeau.com/atlas/static/dist/jquery.min.js"></script>
+	
+	
+	<!-- liens vers les fichiers permettant de créer les controles de groupes de couche dans la carte -->
+	<link rel="stylesheet" href="http://urgenceeau.com/atlas/static/dist/leaflet.groupedlayercontrol.min.css"/>
+	
+		<!-- liens vers les fichiers permettant de créer les controles de groupes de couche dans la carte -->
+<script type="text/javascript" src="http://urgenceeau.com/atlas/static/dist/leaflet.groupedlayercontrol.min.js.map"></script>
+	<script type="text/javascript" src="http://urgenceeau.com/atlas/static/dist/leaflet.groupedlayercontrol.min.js"></script>
+	
+	
+	
+</head>
+
+<body>
+<header class="header-bar">
+    <div><a class="header-nav" href="http://urgenceeau.com/atlas/index.html">
+        <img src="http://urgenceeau.com/atlas/static/images/UElogo.png" alt="Atlas Eau Potable Assainissement Côte d'Ivoire Bouaké logo">
+    </a>
+    <span class="header-title" title="L'Atlas en ligne du projet ETUPO Vallée du Bandama présente les résultats de l'étude sur l'accès à l'eau potable et à l'assainissement à Bouaké et dans les villages périphériques.">Atlas Urgence Eau Bouaké</span></div>
+<nav>
+<ul>
+<li><a href="http://urgenceeau.com/atlas/index.html"><br><img src="http://urgenceeau.com/atlas/static/images/home_icon.png"></a></li>
+
+
+
+<li><a title="La présentation de l'étude"><br>Informations</a>
+<ul class="submenu">
+<li><a href="http://urgenceeau.com/atlas/pages/projet.html">L'étude</a></li>
+<li><a href="http://urgenceeau.com/atlas/pages/methodes-de-diagnostic.html">Les méthodes de diagnostic</a></li>
+<li><a href="http://urgenceeau.com/atlas/pages/auteurs-de-letude.html">Les auteurs</a></li>
+<li><a href="http://urgenceeau.com/atlas/pages/telechargements.html">Télécharger les données</a></li>
+</ul>
+</li>
+
+<li><a href="http://urgenceeau.com/atlas/pages/vulnerabilite.html">Diagnostic<br>localités</a></li>
+<li><a href="http://urgenceeau.com/atlas/pages/analyse-des-points-deau.html">Diagnostic<br>points d'eau</a></li>
+
+
+
+<li class="selectedout"><a>Association<br>Urgence Eau</a>
+<ul class="submenu">
+<li class="selectedout"><a href="http://urgenceeau.com/">site web<br>Urgence Eau ></a></li>
+<li class="selectedout"><a href="http://urgenceeau.com/contact/">Contacts ></a></li>
+</ul>
+
+</ul>
+</nav>
+    
+</header>
+    <div id="main"> 
+    
+<div class="content">
+	<div id="map" class="map">
+		<script type="text/javascript">
+			//// création de la carte et paramétrages généraux : 
+			//centre et niveau de zoom,zoom minimum,zoom maximum, 
+			// et limites du canevas (afin que l'ordinateur ne charge pas trop de tuiles de fond de carte)
+			// les paramètres de la fonction setView (coordonnées du centre de la vue=coordonnée de la localité
+			//niveau de zoom = 14 pour un quartier et 16 pour un village) seront extraits des métadata de chaque 
+			//fiches localité.
+			var map = L.map('map');
+			map.setView([7.83092,-5.04844], 16);
+			map.setMinZoom(11);
+			map.setMaxZoom(19);
+			map.setMaxBounds([[7.5,-4.8],[7.9,-5.3]])
+				
+		</script>
+		<script type="text/javascript" >
+		// construire une variable url pour chaque base de donnée affichée sur la page
+			
+			var articlespath = 'http://urgenceeau.com/atlas/'
+			var urllocalites = "http://urgenceeau.com/atlas/doc/map/bdd/localites_v2.geojson"
+			var urlpointdeau = "http://urgenceeau.com/atlas/doc/map/bdd/pointseau_v2.geojson"
+			var urlNorthArray = '<img src="http://urgenceeau.com/atlas/static/images/compass.png" style="width:30px;">'
+			var urlwhiteshadow = 'http://urgenceeau.com/atlas/doc/map/icone/white.png'
+			var urlpuitsmoderne = 'http://urgenceeau.com/atlas/doc/map/icone/puits_moderne.png'
+			var urlpuitstradi = 'http://urgenceeau.com/atlas/doc/map/icone/puits_tradi.png'
+			var urlforage = 'http://urgenceeau.com/atlas/doc/map/icone/forage.png'
+			var urlborne = 'http://urgenceeau.com/atlas/doc/map/icone/borne.png'
+			var urlsurface = 'http://urgenceeau.com/atlas/doc/map/icone/marigot.png'
+			
+		</script>
+		<script type="text/javascript" >
+		<!-- Script rapide pour filtrer les différents tableaux de données affiché dans la fiche -->
+		var filtreTableau = "Bamoro"
+		table.setFilter("properties.a_quartier", "=", filtreTableau );
+		
+		</script>
+	</div>
+	<div id="" class="fiche">
+		<header>
+		<span>
+	
+	<select id="filter-localites" onchange="window.location.href=this.value;">
+	<option>Voir la fiche détaillée d'une autre localité</option>
+	<option value="http://urgenceeau.com/atlas/articles/akpokro.html">Akpokro</option>
+	<option value="http://urgenceeau.com/atlas/articles/andonsakassou.html">Andon Sakassou</option>
+	<option value="http://urgenceeau.com/atlas/articles/angankro.html">Angankro</option>
+	<option value="http://urgenceeau.com/atlas/articles/assankouadiokro.html">Assankouadiokro</option>
+	<option value="http://urgenceeau.com/atlas/articles/bamoro-gare.html">Bamaro Gare</option>
+	<option value="http://urgenceeau.com/atlas/articles/bamoro.html">Bamoro</option>
+	<option value="http://urgenceeau.com/atlas/articles/belleville-1.html">Belleville 1</option>
+	<option value="http://urgenceeau.com/atlas/articles/belleville-2.html">Belleville 2</option>
+	<option value="http://urgenceeau.com/atlas/articles/Dar-es-salam.html">Dar Es Salam</option>
+	<option value="http://urgenceeau.com/atlas/articles/golikro.html">Golikro</option>
+	<option value="http://urgenceeau.com/atlas/articles/kouadio-miankro.html">Kouadio Miankro</option>
+	<option value="http://urgenceeau.com/atlas/articles/kouakou-miankro.html">Kouakou Miankro</option>
+	<option value="http://urgenceeau.com/atlas/articles/kouassiblekro-ngbassou.html">Kouassiblékro N’Gbassou</option>
+	<option value="http://urgenceeau.com/atlas/articles/minankro.html">Minankro</option>
+	<option value="http://urgenceeau.com/atlas/articles/Ndakro-nzuekro.html">N’dakro et N'Zuekro</option>
+	<option value="http://urgenceeau.com/atlas/articles/ngatta-sakassou.html">N’gatta Sakassou</option>
+	<option value="http://urgenceeau.com/atlas/articles/nguessankro.html">N’guessankro</option>
+	<option value="http://urgenceeau.com/atlas/articles/tolakouadiokro.html">Tolakouadiokro</option>
+	<option value="http://urgenceeau.com/atlas/articles/yobouekro.html">Yobouékro</option>
+	<option value="http://urgenceeau.com/atlas/articles/zone-industrielle.html">Zone Industrielle – Djézoukouamékro</option>
+	</select>
+	</span>
+			 <h1>Bamoro</h1>
+			 <h4>Nord de Bouaké</h4>
+		</header>
+		<table>
+<thead>
+<tr>
+<th align="left">Informations générales</th>
+<th align="right"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Nom de la localité :</td>
+<td align="right">Bamoro</td>
+</tr>
+<tr>
+<td align="left">Population :</td>
+<td align="right">2000 habitants</td>
+</tr>
+<tr>
+<td align="left">Dessertes en eau potable</td>
+<td align="right">Non raccordé au réseau SODECI</td>
+</tr>
+<tr>
+<td align="left">Gestion des excrétas</td>
+<td align="right">Assainissement autonome</td>
+</tr>
+</tbody>
+</table>
+<h2>Présentation de la localité</h2>
+<p>Bamoro est un grand village situé à 10 km de la ville de Bouaké sur l’axe Bouaké-Katiola. C’est un village de plus de 2000 habitants, facilement accessible par une route en terre battue à partir de la route nationale 3. 
+Le village possède une école qui accueille les villageois des alentours et un centre de santé. <strong>Bamoro accueille un important marché hebdomadaire.</strong></p>
+<p>Le type d’habitat est assez moderne. On y retrouve majoritairement des maisons en briques couvertes de tôles, mais aussi des maisons en terre battue couvertes de tôles ou de pailles.</p>
+<p>Il n'y a pas de système de gestion des ordures ménagères, aussi celles-ci sont déposées en marge du village à la lisère de la forêt. Les habitations sont rarement équipées de latrines, aussi les habitants pratiquent la défécation à l'air libre à l'écart des habitations.</p>
+<p>L'activité principale du village est l'agriculture vivrière (igname, manioc, riz et autres productions maraîchères tomates, piments et aubergines) et la culture de rente de l'anacarde. Chaque ménage élève quelques moutons ou quelques chèvres. Durant la saison des pluies, les animaux sont gardés dans des enclos pour qu'ils ne divaguent pas dans les espaces cultivés. On observe également des excréments d’animaux partout dans le village et également à proximité des points d’eau.</p>
+<h2>Socio-Anthropologie</h2>
+<p>Le village est peuplé des Baoulés fahafouè ou pharis. Bamoro était autrefois un point de logement des ouvriers qui construisaient le chemin de fer. Village stratégique dans la zone avec un marché, Bamoro est électrifié, mais n'est pas raccordé au réseau de distribution de l'eau de la SODECI. </p>
+<p>Important bourg commercial, Bamoro accueille en plus des activités agricoles de nombreuses boutiques et artisans (garages, ateliers de couture, mototaxis).</p>
+<p>L'organisation sociale du village est similaire à l'organisation classique des communautés villageoises Baoulé. Les affaires du village sont gérées par les notables formant une chefferie hiérarchisée qui intègre aussi des représentants des organisations de femmes et de jeunes. La chefferie intervient dans le règlement des conflits (intracommunautaires et extracommunautaires) et joue un rôle d'interface entre la communauté villageoise et les administrations publiques et collectivités territoriales.</p>
+<p>Les habitants sont majoritairement issus des lignages fondateurs du village et les ménages sont constitués de famille nucléaire associant parfois des membres collatéraux (parents, cousins ou fratrie célibataire). Les tâches ménagères et en particulier l'approvisionnement en eau du ménage demeure l'apanage des femmes.</p>
+<h2>État des lieux des ouvrages d’alimentation en eau potable</h2>
+<h3>Existant</h3>
+<p>Le village n’est pas encore raccordé au réseau de distribution de l'eau de la SODECI, mais possède plusieurs pompes et des marigots. 
+Les forages appartiennent pour la majorité à des particuliers. Les pompes construites par l’État ont été toutes abandonnées suite à des pannes répétées. En effet, certains chefs de famille ont installé une pompe dans leur maison suite à un programme d’hydraulique villageoise dans les années 1980. La gestion de ces pompes est du ressort des membres de la famille.  Ces pompes sont vétustes. Certaines sont en panne, d’autres abandonnées, et quelques-unes continuent de fonctionner. Les pompes tombent en panne en moyenne 3 fois dans l’année. Ce sont généralement des pannes liées à la tuyauterie. </p>
+<p>Nous avons inspecté pour notre étude  trois forages et un marigot.</p>
+<p>Le taux de vulnérabilité au niveau de ces points d’eau est faible avec des scores variant entre 0 et 2. Ce qui signifie que les points d’eau ne sont pas sujets à des risques de contamination. 
+Au niveau de l’analyse de la qualité de l’eau seulement un forage sur trois a montré un taux élevé de nitrate. Nous n’avons trouvé aucune trace de <em>E. coli</em> dans ces eaux.</p>
+<p><img alt="PMH" src="images/bamoro1.jpg" title="PMH">
+<img alt="PMH" src="images/bamoro2.jpg" title="PMH">
+<img alt="PMH" src="images/bamoro3.jpg" title="PMH">
+<img alt="PMH" src="images/bamoro4.jpg" title="PMH">
+<img alt="PMH" src="images/bamoro5.jpg" title="PMH">
+<img alt="PMH" src="images/bamoro6.jpg" title="PMH">
+<img alt="PMH" src="images/bamoro7.jpg" title="PMH">
+<img alt="PMH" src="images/bamoro8.jpg" title="PMH">
+<img alt="PMH" src="images/bamoro9.jpg" title="PMH"></p>
+<p>Le marigot est généralement utilisé par les personnes du troisième âge ou ceux qui n’ont pas les moyens de s’acheter de l’eau à la pompe. L’eau de marigot est aussi utilisée pour les travaux champêtres ou toute autre activité qui ne demande pas forcément une eau de qualité.
+Les données au niveau du marigot ne révèlent aucune vulnérabilité aux risques de contamination et aucune pollution au niveau de la qualité de l’eau.</p>
+<h3>Pratiques et modes d’approvisionnement en eau</h3>
+<p>La population de Bamoro s'approvisionne majoritairement aux forages, dans des puits communautaires et des marigots. Les pannes récurrentes des forages les incitent à privilégier l’eau du marigot.  Il faut souligner qu’il existe 9 PMH dans le village dont 3 fonctionnelles. Ces équipements sont largement insuffisants pour un village de cette taille.</p>
+<h3>Gestion des points d’eau</h3>
+<p>La majorité des PMH sont privés et la gestion revient à la famille qui en est la propriétaire. Il existe cependant un comité de gestion des pompes. Les forages sont gérés par chaque famille auxquelles ils appartiennent. La fixation du prix de la bassine d’eau est laissée à l’appréciation de chaque gérant : les tarifs varient entre 10 et 50 FCFA la bassine. Chaque famille est chargée de l’entretien de sa pompe ainsi que de la réparation en cas de panne. </p>
+<p>Les marigots sont éloignés du village, mais perçus par les femmes comme délivrant une eau de très bonne qualité. </p>
+<h2>Personnes ressources</h2>
+<ul>
+<li>L’artisan réparateur</li>
+<li>La présidente des femmes</li>
+<li>les membres du comité de Gestion</li>
+</ul>
+<h2>Gestion des excrétas</h2>
+<p>L’on retrouve dans le village plusieurs types de latrines. Ce sont des latrines avec chasse d’eau, des latrines avec fosse septique et des latrines à fosse directe.</p>
+<h2>Desiderata des habitants</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Type d'entretien</th>
+<th align="center">Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Entretien individuel Chef de village</td>
+<td align="center">06 février 2019</td>
+</tr>
+<tr>
+<td align="left">Entretien individuel Présidente des femmes</td>
+<td align="center">06 février 2019</td>
+</tr>
+<tr>
+<td align="left">Entretien individuel Artisan réparateur</td>
+<td align="center">06 février 2019</td>
+</tr>
+<tr>
+<td align="left">Focus group membres du comité de Gestion</td>
+<td align="center">06 février 2019</td>
+</tr>
+<tr>
+<td align="left">Focus group hommes</td>
+<td align="center">06 février 2019</td>
+</tr>
+</tbody>
+</table>
+<p>La population souhaite:</p>
+<ol>
+<li>être raccordé au réseau de distribution de la SODECI </li>
+<li>Réparer la pompe en panne et former les membres d'un nouveau comité de gestion</li>
+<li>Apprendre à entretenir les puits et marigots du village</li>
+<li>Obtenir des latrines et un point de collecte des ordures.</li>
+</ol>
+<h2>Tensions ressenties lors des entretiens</h2>
+<h3>Tensions générales</h3>
+<p>Accueillir un marché hebdomadaire peut être une source potentielle de désordres. Cependant les habitants n'ont pas fait état de graves débordements.</p>
+<h3>Tensions autour de l'eau</h3>
+<p>Ponctuellement des disputes éclatent autour des points d'eau à propos du respect des tours de passage dans la file d'attente ou du refus de payer le prix de l'eau au propriétaire de la pompe.</p>
+<h3>Tensions avec les localités voisines</h3>
+<p>Aucune tension signalée</p>
+	</div>
+</div>
+    </div>
+    <footer class="footer-bar">
+
+
+
+	<a href="http://urgenceeau.com/"><img src="http://urgenceeau.com/atlas/static/images/UElogo.png" alt="Urgence Eau logo"></a>
+	<a href="http://urgenceeau.com/urgence-eau-cote-divoire-ueci/"><img src="http://urgenceeau.com/atlas/static/images/UECIlogo.png" alt="Urgence Eau - Côte d'Ivoire logo"></a>
+	<span class="footer-text"> <a href="http://urgenceeau.com/">Urgence Eau </a><br>
+	<a href="http://urgenceeau.com/urgence-eau-cote-divoire-ueci/">Urgence Eau - Côte d'Ivoire</a></span>
+    <span class="footer-text" style="text-align: center;">Site développé par <a href='http://www.ladyss.com/thomas-maillard'>Thomas Maillard</a><br>© 2018 Urgence Eau | <a href="http://urgenceeau.com/mentions-legales/">Mentions légales</a></span>
+    <span class="footer-text" style="text-align: right;">Un projet soutenu par la <a href="https://www.normandie.fr/">Région Normandie</a><br>à travers l'initiative <a href="https://www.normandie.fr/normandie-pour-la-paix">Normandie pour la Paix.</a></span>
+    <a href="https://www.normandie.fr/"><img src="http://urgenceeau.com/atlas/static/images/logo_r_normandie-portrait-cmjn.jpg" alt="Region Normandie logo"></a>
+	<a href="https://www.normandie.fr/normandie-pour-la-paix"><img src="http://urgenceeau.com/atlas/static/images/Label_Normandie-pour-la-Paix.jpg" alt="Label Normandie pour la paix logo"></a>
+  
+    <script src="http://urgenceeau.com/atlas/static/js/script.js"></script>
+    
+<!-- liens vers les fichiers permettant de créer les controles de groupes de couche dans la carte -->
+<script type="text/javascript" src="http://urgenceeau.com/atlas/static/dist/leaflet.groupedlayercontrol.min.js.map"></script>
+	<script type="text/javascript" src="http://urgenceeau.com/atlas/static/dist/leaflet.groupedlayercontrol.min.js"></script>
+<!-- les scripts d'affichage de l'habillage de la carte -->
+<script type="text/javascript" src="http://urgenceeau.com/atlas/doc/map/map_habillage.js" ></script>
+<!-- script d'affichage des groupes de couche dans le contrôleur de couches -->
+<script type="text/javascript" src="http://urgenceeau.com/atlas/doc/map/groupecontrole.js"></script>
+<!-- script d'affichage des différentes couches -->
+<script type="text/javascript" src="http://urgenceeau.com/atlas/doc/map/localites_type.js" ></script>
+<script type="text/javascript" src="http://urgenceeau.com/atlas/doc/map/pe_type.js" ></script>
+
+
+    </footer>
+</body>
+ 
+</html>
