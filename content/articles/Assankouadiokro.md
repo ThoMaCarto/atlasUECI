@@ -22,11 +22,16 @@ localisation: Nord de Bouaké
 
 ## Présentation de la localité
 Le village de Assankouadiokro est situé à 9 km de la ville de Bouaké sur l’axe Bouaké-Katiola, il est donc accessible par une large route bitumée de 2 voies. C’est un village d’environs 600 habitants. 
+
+
 Le village ne dispose ni d’une école ni d’un centre de santé. Les enfants se rendent au groupe scolaire de Bamoro, village situé à 1 km. C’est dans le centre de santé de ce même village que les populations vont se faire soigner. L’habitat dans le village est composé de maisons en terre crue ou en brique recouverte de paille ou de tôles. L'activité à Assenkouadiokro est essentiellement agricole avec des productions vivrières marchandes et la culture de rente d’anacarde.
+
+
+En ce qui concerne les infrastructures, le village ne dispose d’aucune école et d’aucun point de collecte d’ordures ménagères. Cette situation oblige la communauté à déverser les ordures ménagères dans la forêt juste derrière le village. De plus, il faut noter que la majorité des villageois ne disposent pas de toilettes dans leurs maisons. En effet, les anciennes constructions (cases) ne prévoyaient pas de toilettes, du coup, les villageois vont faire leur besoin dans la forêt. On observe également des excréments d’animaux partout dans le village et également à proximité des points d’eau.
 
 ## Socio-Anthropologie
 
-Ansakouadiokro est un village Baoulé situé au nord de Bouaké. Le village est peuplé des Baoulés Fahafouè ou Pharis. Il appartient au canton de Konankankro. En ce qui concerne les infrastructures, le village ne dispose d’aucune école et d’aucun point de collecte d’ordures ménagères. Cette situation oblige la communauté à déverser les ordures ménagères dans la forêt juste derrière le village. De plus, il faut noter que la majorité des villageois ne disposent pas de toilettes dans leurs maisons. En effet, les anciennes constructions (cases) ne prévoyaient pas de toilettes, du coup, les villageois vont faire leur besoin dans la forêt. On observe également des excréments d’animaux partout dans le village et également à proximité des points d’eau.
+Ansakouadiokro est un village Baoulé situé au nord de Bouaké. Le village est peuplé des Baoulés Fahafouè ou Pharis. Il appartient au canton de Konankankro. 
 L’organisation sociale reste identique à celle des autres communautés aboulées. Le chef de village avec sa notabilité, la présidente des femmes et son bureau et le président des jeunes. À cette organisation s’ajoute le comité de gestion de la pompe.
 
 ## Etat des lieux des infrastructures d’alimentation en eau
