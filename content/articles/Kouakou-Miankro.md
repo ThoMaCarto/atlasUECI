@@ -17,9 +17,7 @@ localisation: Nord de Bouaké
 | Population : | 400 habitants | 
 | Dessertes en eau potable | Pas raccordé au réseau SODECI | 
 | Gestion des excrétas | Assainissement autonome | 
-Localité : Kouakou-Miankro
-Date : 22/01/2019
-Localisation : 7.81176  -5.04771 
+
 
 ## Présentation de la localité
 Kouakou-Miankro est un village situé à 8 km de la ville de Bouaké sur l’axe Bouaké-Katiola, d’environ 400 habitants. On y accède facilement par la route nationale 3 et une large route en terre battue. 
