@@ -153,18 +153,7 @@ localites.addTo(map);
 controlLayers.addOverlay(localites, "Localités","<strong>Diagnostic des localités</strong>");
 
 
-var tacheUrbBouake = L.geoJson(data,{
-		style: function (feature){return { weight : 1, color : 'purple',fillColor:'white',fillOpacity : 0,};},
-	});
-	tacheUrbBouake.addTo(map);
-	
-	controlLayers.addOverlay(tacheUrbBouake,'<strong>Agglomération de Bouaké</strong>'
-	+'<table class="legendin">'
-	+'<tr>'
-	+'<td style="width:30px;border:1px solid purple;text-align:center;"></td>'
-	+'<td>Tache urbaine en 2018</td>'
-	+'</tr>'
-	+'</table>');
+
 
 
 // création d’une couche geoJson qui appelle le fichier « localites.geojson » pour créer carte en fonction des vulnérabilités
@@ -177,6 +166,24 @@ vulnLocalites.on("click", cible);
 //vulnLocalites.addTo(map);
 controlLayers.addOverlay(vulnLocalites, "Niveau de Vulnérabilité","<strong>Diagnostic des localités</strong>");
 });
+
+//création dune couche geoJSON qui appelle le fichier "agglo_Bouake.geojson"
+$.getJSON(urlAggloBouake,function(data)
+{
+	var tacheUrbBouake = L.geoJson(data,{
+		style: function (feature){return { weight : 1, color : 'purple',fillColor:'white',fillOpacity : 0,};},
+	});
+	tacheUrbBouake.addTo(map);
+	
+	controlLayers.addOverlay(tacheUrbBouake,'<strong>Agglomération de Bouaké</strong>'
+	+'<table class="legendin">'
+	+'<tr>'
+	+'<td style="width:30px;border:1px solid purple;text-align:center;"></td>'
+	+'<td>Tache urbaine en 2018</td>'
+	+'</tr>'
+	+'</table>');
+}
+);
 
 
 
