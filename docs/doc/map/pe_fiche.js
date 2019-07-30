@@ -246,7 +246,7 @@ $.getJSON(urlAggloBouake,function(data)
 	+'<td style="width:30px;border:1px solid purple;text-align:center;"></td>'
 	+'<td>Tache urbaine en 2018</td>'
 	+'</tr>'
-	+'</table>');
+	+'</table>','Urbanisation');
 }
 );
 
