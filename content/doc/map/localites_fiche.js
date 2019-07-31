@@ -5,6 +5,46 @@ map.getPane('fond').style.pointerEvents = 'none';
 map.createPane('marker2');
 map.getPane('marker2').style.zIndex = 600;
 
+function creatAlias(prop){
+	switch(prop) {
+		case 'a_quartier':return 'Nom';
+		case 'EAU_SODECI' :return 'Raccordement au réseau de distribution de la SODECI';
+		case 'Pompes_Fonctionnelles' :return 'Pompes fonctionnelles';
+		case 'Pompes N Fonc.' :return 'Pompes en panne';
+		case 'Forage' :return 'Forage';
+		case 'Puits' :return 'Puits';
+		case 'Eau de surface' :return 'Mare/marigot/rivière';
+		case 'Pompes Réhab' :return 'Pompes à réparer';
+		case 'Nombre_de_points_deau_diagnostiqués' :return 'Points d\'eau analysés';
+		case 'Points_deau_diagnostiqués_conformes_aux_normes_OMS' :return 'Points d\'eau conformes aux nomes OMS';
+		case 'Puits diagnostiqués de vulnérabilité faible' :return 'Points d\'eau de vulnérabilité faible';
+		case 'Puits diagnostiqués de vulnérabilité moyenne' :return 'Points d\'eau de vulnérabilité moyenne';
+		case 'Puits diagnostiqués de vulnérabilité élevée' :return 'Points d\'eau de vulnérabilité élevée';
+		case 'Puits diagnostiqués de vulnérabilité très élevée' :return 'Points d\'eau de vulnérabilité très élevée';
+		case 'Points d’eau diagnostiqués d’accès public' :return 'Points d\'eau publics analysés';
+		case 'Points d’eau diagnostiqués d’accès privé' :return 'Points d\'eau privés analysés';
+		case "Comité de gestion d'eau" :return 'Nombre de Comité de gestion';
+		case 'Nombre de membre dans le comité' :return 'Membre dans le comité';
+		case 'Nombre de femme dans le comité' :return 'Femmes dans le comité';
+		case 'Population' :return 'Population';
+		case 'Qualité de l’habitat' :return 'Type d\'habitat';
+		case 'Equipement : y a-t-il une école ?' :return 'École';
+		case 'Equipement : Y a-t-il un centre de santé ?' :return 'Centre de santé';
+		case 'Activités économiques principales de la localité' :return 'Activité économique principale';
+		case 'Type d’assainissement' :return 'Type d’assainissement';
+		case "Défécation à l’air libre" :return 'Défécation à l’air libre';
+		case 'route' :return 'Type de voie d\'accès';
+		case 'Désiderata principal  des femmes' :return 'Désiderata principal  des femmes';
+		case 'Désiderata principaldes hommes' :return 'Désiderata principaldes hommes';
+		case 'Personnes ressources' :return 'Personnes ressources';
+		case 'tensions internes' :return 'Tensions internes';
+		case 'tension avec le voisinages' :return 'Tension avec le voisinages';
+		case 'Dates des enquêtes' :return 'Dates des enquêtes';
+		
+		
+	}
+	};
+
 
  // fonction pour l\'affichage dans le panneau à droite des données du point       
 function oneachfeature(feature, layer){
@@ -29,9 +69,12 @@ function oneachfeature(feature, layer){
                         	 && prop !== 'a_préfect'
                         	 && prop !== 'a__sous_pr'
                         	 && prop !== 'a_sous_qua'
-                        	 && prop !== 'id') 
+                        	 && prop !== 'id'
+                        	 && prop !== 'Pompes Réhab'
+                        	 && prop !== 'Points d’eau diagnostiqués d’accès public'
+                        	 && prop !== 'Points d’eau diagnostiqués d’accès privé') 
                         		{
-                        			tableNew += '<tr><td style="max-width:150px;"><strong>'+prop+" : </strong></td><td>"+feature.properties[prop]+"</td></tr>" ;
+                        			tableNew += '<tr><td style="max-width:150px;"><strong>'+creatAlias(prop)+" : </strong></td><td>"+feature.properties[prop]+"</td></tr>" ;
                         			}
                         		else {;}
                         		;
