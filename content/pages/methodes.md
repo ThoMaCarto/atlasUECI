@@ -41,12 +41,17 @@ authors: BROU Yves Oscar Kouadio, SORO Doba
 </tr>
 </tbody>
 </table>
+
+
 <figure>
 <img src="image/equipetech.jpg" alt="Analyse technique des points d'eau"/>
 <img src="image/terrain_Diakite.jpg" alt="Analyse technique des points d'eau"/>
-<img src="image/terrain_MOuattara" alt="Analyse technique des points d'eau"/>
+<img src="image/terrain_MOuattara.jpg" alt="Analyse technique des points d'eau"/>
 <figcaption>Analyse sur le terrain</figcaption>
 </figure>
+
+
+
 <h3>Analyse technique des points d'eau</h3>
 <p>L'analyse technique des points d'eau menée sous la direction de l'ingénieur Brou Yves Oscar Kouadio se décompose en deux parties : 
 le diagnostic de vulnérabilité sanitaire du point d'eau et l'analyse de la qualité de l'eau.</p>
