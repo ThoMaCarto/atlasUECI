@@ -7,7 +7,9 @@ var options = {
   
   "<strong>Analyse de l'eau</strong>",
   "<strong>Analyse du point d'eau</strong>",
-  "<strong>Diagnostic des localités</strong>"
+  "<strong>Diagnostic des localités</strong>",
+  "<strong>Diagnostic des points d'eau</strong>",
+  
   ],
   // Show a checkbox next to non-exclusive group labels for toggling all
   groupCheckboxes: false,
