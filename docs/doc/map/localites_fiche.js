@@ -93,7 +93,15 @@ function getColorVuln (e,f,g,h){
 	}
 }; 
  
-
+// définir la couleur en fonction du type de route
+function getColorRoute (c){
+	switch(c){
+		case 'Bitume': return 'green';
+		case 'Terre battue': return 'orange';
+		case 'Piste': return 'red';
+		default: return 'white';
+	}
+};
 
 
 
@@ -143,6 +151,33 @@ return div;
 };
 
 
+//Légende de route
+var legendRoute = L.control ({position:'bottomright',},);
+legendRoute.onAdd = function () {
+div.innerHTML = '<strong>Type de voie d\'accès à la localité</strong>'
++'<table>'
++'<tr><td style="color:black;background-color:green;height:10px;width:10px;opacity:.8;border:1px solid green;text-align:center;"><strong>Route bitumée</strong></td>'
++'<td style="color:black;background-color:orange;height:10px;width:10px;opacity:.8;border:1px solid orange;text-align:center;"><strong>Route en terre battue</strong></td>'
++'<td style="color:black;background-color:Red;height:10px;width:10px;opacity:.8;border:1px solid Red;text-align:center;"><strong>Piste étroite</strong></td></tr>'
++'</table>'
++'<div class="legendin">'
++'<details title="Cliquez sur la flèche noir pour afficher la légende détaillée">'
++'<summary>détails</summary>'
++'<table class="info-legend">'
++'<tr></tr>'
++'<tr><td style="background-color:green;height:10px;width:30px;opacity:.8;border:1px solid green;"></td><td>La localité est accessible par une route bitumée.<br>Les habitations sont desservies par des rue en terre battue.</td></tr>'
++'<tr></tr>'
++'<tr><td style="background-color:Orange;height:10px;width:30px;opacity:.8;border:1px solid Orange;"></td><td>La localité est accessible par une route en terre battue.<br>Les habitations sont desservies par des rues en terre<br>battue et des piste plus étroites.</td></tr>'
++'<tr></tr>'
++'<tr><td style="background-color:Red;height:10px;width:30px;opacity:.8;border:1px solid Red;"></td><td>La localité n\'est accessible que par une piste étroite<br>ne permettant que le passage de deux roues.</td></tr>'
++'</table>'
++'</details>'
++'</div>'
+;
+return div;
+};
+
+
 //lecture de la base de donnée pour créer les différentes couches
 $.getJSON(urllocalites,function(data)
 {
@@ -152,10 +187,12 @@ $.getJSON(urllocalites,function(data)
 		onEachFeature: oneachfeature,
 });
 localites.beforeAdd = function (map) {legendVuln.remove(map);};
+localites.beforeAdd = function (map) {legendRoute.remove(map);};
 localites.beforeAdd = function (map) {legendLoc.addTo(map);};
 localites.on("click", cible);
 localites.addTo(map);
 controlLayers.addOverlay(localites, "Localités","<strong>Diagnostic des localités</strong>");
+
 
 
 
@@ -166,10 +203,23 @@ var vulnLocalites= L.geoJson(data,{style: function(feature){return { pane : 'mar
 	onEachFeature: oneachfeature,
 });
 vulnLocalites.beforeAdd = function (map) {legendLoc.remove(map);};
+vulnLocalites.beforeAdd = function (map) {legendRoute.remove(map);};
 vulnLocalites.beforeAdd = function (map) {legendVuln.addTo(map);};
 vulnLocalites.on("click", cible);
 //vulnLocalites.addTo(map);
 controlLayers.addOverlay(vulnLocalites, "Niveau de Vulnérabilité","<strong>Diagnostic des localités</strong>");
+
+
+var routeAcces= L.geoJson(data,{style: function(feature){return { pane : 'marker2',color : getColorRoute(feature.properties.route), weight : 1, fillColor : getColorRoute(feature.properties.route), fillOpacity : .5 };},
+	onEachFeature: oneachfeature,
+});
+routeAcces.beforeAdd = function (map) {legendLoc.remove(map);};
+routeAcces.beforeAdd = function (map) {legendVuln.remove(map);};
+routeAcces.beforeAdd = function (map) {legendRoute.addTo(map);};
+routeAcces.on("click", cible);
+//vulnLocalites.addTo(map);
+controlLayers.addOverlay(routeAcces, "Type de voie d'accès","<strong>Diagnostic des localités</strong>");
+
 });
 
 //création dune couche geoJSON qui appelle le fichier "agglo_Bouake.geojson"

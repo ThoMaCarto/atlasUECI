@@ -30,7 +30,7 @@ legendScoreVuln.onAdd = function (){
 //Légende pollution aux alentours
 var legendPollut = L.control({position:"bottomleft",},);
 legendPollut.onAdd = function (){
-	div1.innerHTML ='<div><strong>Sources de pollution<br>identifiable aux alentours</strong></div>'
+	div1.innerHTML ='<div><strong>Sources de pollution<br>identifiables aux alentours</strong></div>'
 +'<div style="display:flex;justify-content: space-between;">'
 +'<div style="height:12px;width:12px;border-radius:5rem;background-color:white;border:4px solid red;"></div><div> Oui</div>'
 +'</div>'
@@ -161,7 +161,84 @@ $.getJSON(urlpointdeau,function(data){
 	//controlLayers.addOverlay(Ecoli, "" );
 	//controlLayers.addOverlay(typePE, "Type de Point d'eau", "Analyse de l'eau");
 });    
-        
+
+function creatAlias(prop){
+	switch(prop) {
+		case 'Souspref' :return 'Sous-Préfecture';
+		case 'Zone' :return 'Zone';
+		case 'Quartier' :return 'Nom';
+		case 'Sous-quart' :return 'Nom du sous-quartier';
+		case 'ID' :return 'Identifiant';
+		case 'Responsabl' :return 'Responsable de la construction';
+		case 'Construct' :return 'Année de Construction';
+		case 'Emplacemen' :return 'Emplacement';
+		case 'Relief' :return 'Type de relief';
+		case 'Type' :return 'Type de point d\'eau';
+		case 'Profondeur' :return 'Profondeur';
+		case 'LvlWater' :return 'Niveau de l\'eau';
+		case 'Margelle' :return 'Dispose d\'une margelle';
+		case 'Dalle' :return 'Dispose d\'une dalle anti-bourbier';
+		case 'Trottoir' :return 'Dispose d\'un trottoir';
+		case 'Cloture' :return 'Dispose d\'une clôture';
+		case 'Canal' :return 'Dispose d\'un canal de drainage';
+		case 'Couvercle' :return 'Dispose d\'un couvercle adapté';
+		case 'Superstruc' :return 'État général de la superstructure';
+		case 'Exhaure' :return 'Mode d\'exhaure';
+		case 'Disponibil' :return 'Disponibilité de l\eau toute l\'année';
+		case 'tarissmt' :return 'Mois de tarissement';
+		case 'Entretien' :return 'Est entretenu';
+		case 'typEntreti' :return 'Type d\'entretien';
+		case 'FreqPanne' :return 'Nombre de panne par ans';
+		case 'TypPanne' :return 'Type de panne';
+		case 'piecePanne' :return 'Disponibilité des pièces de rechange';
+		case 'Responsa_1' :return 'Responsable de l\'entretien';
+		case 'Variation' :return 'Évolution de la ressource';
+		case 'acces' :return 'Accès';
+		case 'tarif' :return 'Tarif';
+		case 'polluti' :return 'Source de pollution à proximité';
+		case 'descrPollu' :return 'Description de la source de pollution';
+		case 'Cloture2' :return 'Absence de clôture';
+		case 'Canal2' :return 'Absence de canal de draînage';
+		case 'Stagn2' :return 'Présence d\'eau stagnante';
+		case 'Dalle2' :return 'Absence de dalle anti-bourbier';
+		case 'fissur2' :return 'Présence de fissures sur la superstructure';
+		case 'Couvercle2' :return 'Absence de courvercle';
+		case 'etanch2' :return 'Défaut d\'étanchéité sur les 3 premiers mètres';
+		case 'hygien2' :return 'Problème d\'hygiène aux alentours';
+		case 'entreti2' :return 'Mauvais entretien du matériel d\'exhaure';
+		case 'niveau2' :return 'Score de vulnérabilité sanitaire';
+		case 'Couleur' :return 'Couleur';
+		case 'descrcolor' :return 'Description de l\'aspect';
+		case 'gout' :return 'Goût';
+		case 'descrgout' :return 'Description du Goût';
+		case 'Odeur' :return 'Odeur';
+		case 'descrodeur' :return 'Description de l\'odeur';
+		case 'pH' :return 'pH';
+		case 'Conductivi' :return 'Conductivité (µS/cm)';
+		case 'tub' :return 'Turbidité (UTM)';
+		case 'temp' :return 'Température (°C)';
+		case 'chlorelib' :return 'Chlore Libre (mg/l)';
+		case 'chloretot' :return 'Chlore total (mg/l)';
+		case 'ammoniac' :return 'Ammoniac (mg/l)';
+		case 'nitrate' :return 'Nitrate (mg/l)';
+		case 'nitrite' :return 'Nitrite (mg/l)';
+		case 'arsenic' :return 'Arsenic (mg/l)';
+		case 'fluor' :return 'Fluorure (mg/l)';
+		case 'ecoli' :return '<em>E.Coli</em> (UFC/100ml)';
+		case 'remarqu' :return 'Remarque sur la qualité de l\'eau';
+		case 'Latitude' :return 'Lattitude';
+		case 'Longitude' :return 'Longitude';
+		case 'type_1' :return 'Type de point d\'eau';
+		case 'descr' :return 'Description';
+		case '__Date de' :return 'Date des analyses';
+		
+		
+		
+		
+		
+	}
+};
+       
  // fonction pour l'affichage dans le panneau à droite des données du point       
 function oneachfeature(feature, layer){
 		 	//marker.setOpacity(0); 
@@ -175,9 +252,15 @@ function oneachfeature(feature, layer){
                         for (prop in feature.properties){
                         	
                         	
-                        	 if (feature.properties[prop] !== null) 
+                        	 if (feature.properties[prop] !== null
+                        	 && prop !== '__Prendre' 
+                        	 && prop !== '__Prendr_1' 
+                        	 && prop !== '__Prendr_2' 
+                        	 && prop !== '__Prendr_3' 
+                        	 && prop !== '___index' 
+                        	 ) 
                         		{
-                        			tableNew += "<tr><td><strong>"+prop+" : </strong></td><td>"+feature.properties[prop]+"</td></tr>" ;
+                        			tableNew += "<tr><td><strong>"+creatAlias(prop)+" : </strong></td><td>"+feature.properties[prop]+"</td></tr>" ;
                         			}
                         		else {;}
                         		;
@@ -364,7 +447,7 @@ $.getJSON(urlpointdeau,function(data){
 	}).on("click", cible);
 	Pollution.beforeAdd = function (map) {legendScoreVuln.remove(map);};
 	Pollution.beforeAdd = function (map) {legendPollut.addTo(map);};
-	controlLayers.addOverlay(Pollution, "Source de pollution", "<strong>Analyse du point d'eau</strong>");
+	controlLayers.addOverlay(Pollution, "Sources de pollution", "<strong>Analyse du point d'eau</strong>");
 	
 });
 
