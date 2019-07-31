@@ -1,4 +1,9 @@
-
+//Création des différents pane
+map.createPane('fond');
+map.getPane('fond').style.zIndex = 500;
+map.getPane('fond').style.pointerEvents = 'none';
+map.createPane('marker2');
+map.getPane('marker2').style.zIndex = 600;
 
 
  // fonction pour l\'affichage dans le panneau à droite des données du point       
@@ -26,7 +31,7 @@ function oneachfeature(feature, layer){
                         	 && prop !== 'a_sous_qua'
                         	 && prop !== 'id') 
                         		{
-                        			tableNew += '<tr><td style="max-width:300px;"><strong>'+prop+" : </strong></td><td>"+feature.properties[prop]+"</td></tr>" ;
+                        			tableNew += '<tr><td style="max-width:150px;"><strong>'+prop+" : </strong></td><td>"+feature.properties[prop]+"</td></tr>" ;
                         			}
                         		else {;}
                         		;
@@ -143,7 +148,7 @@ $.getJSON(urllocalites,function(data)
 {
 	// création d’une couche geoJson qui appelle le fichier « localites.geojson » pour créer une simple carte des localités étudiées
 	var localites= L.geoJson(data,{style: function(feature){
-		return { color : 'red', weight : 1.5, fillColor : 'red', fillOpacity : .0, };},
+		return { pane : 'marker2',color : 'red', weight : 1.5, fillColor : 'red', fillOpacity : .0, };},
 		onEachFeature: oneachfeature,
 });
 localites.beforeAdd = function (map) {legendVuln.remove(map);};
@@ -157,7 +162,7 @@ controlLayers.addOverlay(localites, "Localités","<strong>Diagnostic des localit
 
 
 // création d’une couche geoJson qui appelle le fichier « localites.geojson » pour créer carte en fonction des vulnérabilités
-var vulnLocalites= L.geoJson(data,{style: function(feature){return { color : getColorVuln(feature.properties.Points_deau_diagnostiqués_conformes_aux_normes_OMS,feature.properties.Nombre_de_points_deau_diagnostiqués,feature.properties.EAU_SODECI,feature.properties.Pompes_Fonctionnelles), weight : 1, fillColor : getColorVuln(feature.properties.Points_deau_diagnostiqués_conformes_aux_normes_OMS,feature.properties.Nombre_de_points_deau_diagnostiqués,feature.properties.EAU_SODECI,feature.properties.Pompes_Fonctionnelles), fillOpacity : .5 };},
+var vulnLocalites= L.geoJson(data,{style: function(feature){return { pane : 'marker2',color : getColorVuln(feature.properties.Points_deau_diagnostiqués_conformes_aux_normes_OMS,feature.properties.Nombre_de_points_deau_diagnostiqués,feature.properties.EAU_SODECI,feature.properties.Pompes_Fonctionnelles), weight : 1, fillColor : getColorVuln(feature.properties.Points_deau_diagnostiqués_conformes_aux_normes_OMS,feature.properties.Nombre_de_points_deau_diagnostiqués,feature.properties.EAU_SODECI,feature.properties.Pompes_Fonctionnelles), fillOpacity : .5 };},
 	onEachFeature: oneachfeature,
 });
 vulnLocalites.beforeAdd = function (map) {legendLoc.remove(map);};
@@ -171,7 +176,7 @@ controlLayers.addOverlay(vulnLocalites, "Niveau de Vulnérabilité","<strong>Dia
 $.getJSON(urlAggloBouake,function(data)
 {
 	var tacheUrbBouake = L.geoJson(data,{
-		style: function (feature){return { weight : 1, color : 'purple',fillColor:'white',fillOpacity : 0,};},
+		style: function (feature){return { pane : 'fond',weight : 1, color : 'purple',fillColor:'white',fillOpacity : 0,};},
 	});
 	tacheUrbBouake.addTo(map);
 	

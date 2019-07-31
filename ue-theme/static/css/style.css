@@ -291,7 +291,7 @@ a.header-nav img {
 }
 
 .mapall{
-	width: 100%;
+	width: 70%;
 	height: 100%;
 	z-index: 0;
 
@@ -312,6 +312,17 @@ a.header-nav img {
 	overflow-y: auto;
 	text-align: justify;
 }
+
+.fichelight{
+	width: 25%;
+	height: 100%;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-left: 3px double grey;
+	overflow-y: auto;
+	text-align: justify;
+}
+
 
 .illustr_fiche{
 	width: 40%;

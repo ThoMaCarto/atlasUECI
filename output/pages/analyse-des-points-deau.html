@@ -73,7 +73,7 @@
     <div id="main"> 
     
 <section class="content">
-	<div class="map" id="map" title="Cliquer sur un point d'eau pour accéder à son diagnostic détaillé">
+	<div class="mapall" id="map" title="Cliquer sur un point d'eau pour accéder à son diagnostic détaillé">
 	<script type="text/javascript">
 	////Carte de la page d'accueil
   
@@ -85,7 +85,7 @@
 //niveau de zoom = 14 pour un quartier et 16 pour un village) seront extraits des métadata de chaque 
 //fiches localité.
 var map = L.map('map');
-	map.setView([7.75, -5.038], 12);
+	map.setView([7.75, -5.038],  11);
 	map.setMinZoom(11);
 	map.setMaxZoom(19);
 	map.setMaxBounds([[7.5,-4.8],[7.9,-5.3]])	       
@@ -107,7 +107,7 @@ var map = L.map('map');
 			var articlespath = 'http://localhost:8000/'
 		</script>
 	</div>
-	<div class="fiche">
+	<div class="fichelight">
 	<h4>Diagnostic détaillé du point d'eau sélectionné :</h4>
 		<div id="popupstatic">
 		</div>
