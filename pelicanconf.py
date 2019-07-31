@@ -87,9 +87,10 @@ SUBMENU_INTERNAL_PAGES = (
     
 # additional menu items
 MENUITEMS = (	     
-    ('site web<br>Urgence Eau', 'http://urgenceeau.com/'),
-    ('Contacts','http://urgenceeau.com/contact/'),
-    #('Linux Kernel', 'https://www.kernel.org/'),
+    ('Association<br>Urgence Eau', 'http://urgenceeau.com/'),
+    ('Contacts Urgence Eau','http://urgenceeau.com/contact/'),
+    ('Région Normandie', 'https://www.normandie.fr/'),
+    ('Initiative Normandie pour la paix', 'https://www.normandie.fr/normandie-pour-la-paix'),
 )
 
 # Feed generation is usually not desired when developing
