@@ -66,6 +66,12 @@ le diagnostic de vulnérabilité sanitaire du point d'eau et l'analyse de la qua
 </tr>
 </tbody>
 </table>
+<figure>
+<img src="image/RIMG0667.JPG" alt="Analyse technique des points d'eau"/>
+<img src="image/terrain_Diakite.jpg" alt="Analyse technique des points d'eau"/>
+<img src="image/terrain_MOuattara" alt="Analyse technique des points d'eau"/>
+<figcaption>Analyse sur le terrain</figcaption>
+</figure>
 <h3>Etude socioanthropologique</h3>
 <p>L'étude socioanthropologie menée sous la direction du docteur Soro Doba, s'appuie sur une vaste enquête ménage complété par de nombreux entretiens avec des personnes ressources (responsables communautaires et religieux) et des focus group auprès de certaines catégories de la population (femmes, hommes, jeunes). Elle aborde quatre thèmes:</p>
 <ul>
