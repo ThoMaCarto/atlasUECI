@@ -145,7 +145,13 @@ $.getJSON(urlAggloBouake,function(data)
 $.getJSON(urllocalites,function(data)
 {
 	var vulnLocalites= L.geoJson(data,{style: function(feature){return { color : getColorVuln(feature.properties.Points_deau_diagnostiqués_conformes_aux_normes_OMS,feature.properties.Nombre_de_points_deau_diagnostiqués,feature.properties.EAU_SODECI,feature.properties.Pompes_Fonctionnelles), weight : 1, fillColor : getColorVuln(feature.properties.Points_deau_diagnostiqués_conformes_aux_normes_OMS,feature.properties.Nombre_de_points_deau_diagnostiqués,feature.properties.EAU_SODECI,feature.properties.Pompes_Fonctionnelles), fillOpacity : .5 };},
-	onEachFeature : function(feature, layer ) {layer.bindPopup('<b><u>Nom de la localité</u></b><br>' + feature.properties.a_quartier +'<br><strong> Diagnostic détaillé : </strong> <a href='+ articlespath + feature.properties.link_1 +' style="text-transform: capitalize;">'+ feature.properties.a_quartier +'</a>')}
+	onEachFeature : function(feature, layer ) {layer.bindPopup(
+	'Nom de la localité : <b>' + feature.properties.a_quartier+'</b>'
+	+ '<br>Population : <b>' + feature.properties.Population+'</b>'
+	+ '<br>Points d\'eau analysés : <b>' + feature.properties.Nombre_de_points_deau_diagnostiqués+'</b>'
+	+ '<br>Points d\'eau conformes aux normes OMS : <b>' + feature.properties.Points_deau_diagnostiqués_conformes_aux_normes_OMS+'</b>'
+	+ '<br>Type de voie d\'accès : <b>' + feature.properties.route+'</b>'
+	)}
 });
 //vulnLocalites.beforeAdd = function (map) {legendVuln.addTo(map);};
 vulnLocalites.addTo(map);
