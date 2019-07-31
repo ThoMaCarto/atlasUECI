@@ -23,7 +23,7 @@ Author: GUERIN Mathieu
 
 <figure>
 <img src="image/urgence-eau-cote-divoire-copie-539x350.jpg" alt="L'équipe d'Urgence Eau Côte d'Ivoire"/>
-<a href="http://urgenceeau.com/urgence-eau-cote-divoire-ueci/"><img src="image/UECIlogo.png" alt="Urgence Eau  Côte d'Ivoire logo" style="width:350px;"></a>
+<a href="http://urgenceeau.com/urgence-eau-cote-divoire-ueci/"><img src="image/UECIlogo.png" alt="Urgence Eau  Côte d'Ivoire logo" style="height:350px;"></a>
 <figcaption>Le bureau d'Urgence Eau Côte d'Ivoire</figcaption>
 </figure>
 
