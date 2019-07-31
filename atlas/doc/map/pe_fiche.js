@@ -356,7 +356,7 @@ $.getJSON(urlpointdeau,function(data){
 		onEachFeature: oneachfeature,
 		
 		pointToLayer: function (feature,latlng){
-			return L.circleMarker(latlng,{pane : 'marker2',fillColor:getColorOMS(feature.properties.ammoniac,0,1),radius:5, fillOpacity:.8, color:'black',weight:1});
+			return L.circleMarker(latlng,{pane : 'marker2',fillColor:getColorOMS(feature.properties.ammoniac,0,0.9),radius:5, fillOpacity:.8, color:'black',weight:1});
 		}
 	}).on("click", cible);
 //	.addTo(map);
