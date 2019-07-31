@@ -156,10 +156,24 @@ var legendRoute = L.control ({position:'bottomright',},);
 legendRoute.onAdd = function () {
 div.innerHTML = '<strong>Type de voie d\'accès à la localité</strong>'
 +'<table>'
-+'<tr><td style="color:black;background-color:green;height:10px;width:10px;opacity:.8;border:1px solid green;text-align:center;"><strong>Route bîtumée</strong></td>'
++'<tr><td style="color:black;background-color:green;height:10px;width:10px;opacity:.8;border:1px solid green;text-align:center;"><strong>Route bitumée</strong></td>'
 +'<td style="color:black;background-color:orange;height:10px;width:10px;opacity:.8;border:1px solid orange;text-align:center;"><strong>Route en terre battue</strong></td>'
 +'<td style="color:black;background-color:Red;height:10px;width:10px;opacity:.8;border:1px solid Red;text-align:center;"><strong>Piste étroite</strong></td></tr>'
-+'</table>';
++'</table>'
++'<div class="legendin">'
++'<details title="Cliquez sur la flèche noir pour afficher la légende détaillée">'
++'<summary>détails</summary>'
++'<table class="info-legend">'
++'<tr></tr>'
++'<tr><td style="background-color:green;height:10px;width:30px;opacity:.8;border:1px solid green;"></td><td>La localité est accessible par une route bitumée.<br>Les habitations sont desservies par des rue en terre battue.</td></tr>'
++'<tr></tr>'
++'<tr><td style="background-color:Orange;height:10px;width:30px;opacity:.8;border:1px solid Orange;"></td><td>La localité est accessible par une route en terre battue.<br>Les habitations sont desservies par des rues en terre<br>battue et des piste plus étroites.</td></tr>'
++'<tr></tr>'
++'<tr><td style="background-color:Red;height:10px;width:30px;opacity:.8;border:1px solid Red;"></td><td>La localité n\'est accessible que par une piste étroite<br>ne permettant que le passage de deux roues.</td></tr>'
++'</table>'
++'</details>'
++'</div>'
+;
 return div;
 };
 
