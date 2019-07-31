@@ -53,6 +53,15 @@ margin: auto;
   
    
 }
+
+figcaption{
+	font-family: serif;
+	font-style: italic;
+	font-size: 90%;
+	
+
+}
+
 strong{
 	font-weight: bolder;
 }

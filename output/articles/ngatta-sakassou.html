@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
+    <title>Atlas Eau Potable Assainissement Côte d'Ivoire Bouaké</title>
+    <link rel="stylesheet" href="http://localhost:8000/static/css/style.css" />
+    <link rel="icon" type="image/x-icon" href="http://localhost:8000/static/images/favicon.ico">
+    
+
+    
+<!-- appelle la librairie javascript Leaflet et le fichier CSS Leaflet -->	
+	<link rel="stylesheet" href="http://localhost:8000/static/dist/leaflet.css"/>
+<script src="http://localhost:8000/static/dist/leaflet.js"></script>
+  
+	<!-- jQuery - indispensable pour utiliser les fichiers geojson -->
+	<script type="text/javascript" src="http://localhost:8000/static/dist/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="http://localhost:8000/static/dist/jquery.min.js"></script>
+	
+	
+	<!-- liens vers les fichiers permettant de créer les controles de groupes de couche dans la carte -->
+	<link rel="stylesheet" href="http://localhost:8000/static/dist/leaflet.groupedlayercontrol.min.css"/>
+	
+		<!-- liens vers les fichiers permettant de créer les controles de groupes de couche dans la carte -->
+<script type="text/javascript" src="http://localhost:8000/static/dist/leaflet.groupedlayercontrol.min.js.map"></script>
+	<script type="text/javascript" src="http://localhost:8000/static/dist/leaflet.groupedlayercontrol.min.js"></script>
+	
+	
+	
+</head>
+
+<body>
+<header class="header-bar">
+    <div><a class="header-nav" href="http://localhost:8000/index.html">
+        <img src="http://localhost:8000/static/images/UElogo.png" alt="Atlas Eau Potable Assainissement Côte d'Ivoire Bouaké logo">
+    </a>
+    <span class="header-title" title="L'Atlas en ligne du projet ETUPO Vallée du Bandama présente les résultats de l'étude sur l'accès à l'eau potable et à l'assainissement à Bouaké et dans les villages périphériques.">Atlas Urgence Eau Bouaké</span></div>
+<nav>
+<ul>
+<li><a href="http://localhost:8000/index.html"><br><img src="http://localhost:8000/static/images/home_icon.png"></a></li>
+
+
+
+<li><a title="La présentation de l'étude"><br>Informations</a>
+<ul class="submenu">
+<li><a href="http://localhost:8000/pages/projet.html">L'étude</a></li>
+<li><a href="http://localhost:8000/pages/methodes-de-diagnostic.html">Les méthodes de diagnostic</a></li>
+<li><a href="http://localhost:8000/pages/auteurs-de-letude.html">Les auteurs</a></li>
+<li><a href="http://localhost:8000/pages/telechargements.html">Télécharger les données</a></li>
+</ul>
+</li>
+
+<li><a href="http://localhost:8000/pages/vulnerabilite.html">Diagnostic<br>localités</a></li>
+<li><a href="http://localhost:8000/pages/analyse-des-points-deau.html">Diagnostic<br>points d'eau</a></li>
+
+
+
+<li class="selectedout"><a>Contacts<br> Institutionnels</a>
+<ul class="submenu">
+<li class="selectedout"><a href="http://urgenceeau.com/">Association<br>Urgence Eau ></a></li>
+<li class="selectedout"><a href="http://urgenceeau.com/contact/">Contacts Urgence Eau ></a></li>
+<li class="selectedout"><a href="https://www.normandie.fr/">Région Normandie ></a></li>
+<li class="selectedout"><a href="https://www.normandie.fr/normandie-pour-la-paix">Initiative Normandie pour la paix ></a></li>
+</ul>
+
+</ul>
+</nav>
+    
+</header>
+    <div id="main"> 
+    
+<div class="content">
+	<div id="map" class="map">
+		<script type="text/javascript">
+			//// création de la carte et paramétrages généraux : 
+			//centre et niveau de zoom,zoom minimum,zoom maximum, 
+			// et limites du canevas (afin que l'ordinateur ne charge pas trop de tuiles de fond de carte)
+			// les paramètres de la fonction setView (coordonnées du centre de la vue=coordonnée de la localité
+			//niveau de zoom = 14 pour un quartier et 16 pour un village) seront extraits des métadata de chaque 
+			//fiches localité.
+			var map = L.map('map');
+			map.setView([7.82586,-5.06562], 16);
+			map.setMinZoom(11);
+			map.setMaxZoom(19);
+			map.setMaxBounds([[7.5,-4.8],[7.9,-5.3]])
+				
+		</script>
+		<script type="text/javascript" >
+		// construire une variable url pour chaque base de donnée affichée sur la page
+			
+			var articlespath = 'http://localhost:8000/'
+			var urllocalites = "http://localhost:8000/doc/map/bdd/localites_v2.geojson"
+			var urlpointdeau = "http://localhost:8000/doc/map/bdd/pointseau_v2.geojson"
+			var urlNorthArray = '<img src="http://localhost:8000/static/images/compass.png" style="width:30px;">'
+			var urlwhiteshadow = 'http://localhost:8000/doc/map/icone/white.png'
+			var urlpuitsmoderne = 'http://localhost:8000/doc/map/icone/puits_moderne.png'
+			var urlpuitstradi = 'http://localhost:8000/doc/map/icone/puits_tradi.png'
+			var urlforage = 'http://localhost:8000/doc/map/icone/forage.png'
+			var urlborne = 'http://localhost:8000/doc/map/icone/borne.png'
+			var urlsurface = 'http://localhost:8000/doc/map/icone/marigot.png'
+			
+		</script>
+		<script type="text/javascript" >
+		<!-- Script rapide pour filtrer les différents tableaux de données affiché dans la fiche -->
+		var filtreTableau = "Ngatta Sakassou"
+		table.setFilter("properties.a_quartier", "=", filtreTableau );
+		
+		</script>
+	</div>
+	<div id="" class="fiche">
+		<header>
+		<span>
+	
+	<select id="filter-localites" onchange="window.location.href=this.value;">
+	<option>Voir la fiche détaillée d'une autre localité</option>
+	<option value="http://localhost:8000/articles/ahoussi-takikro.html">Ahoussi Takikro</option>
+	<option value="http://localhost:8000/articles/akakro.html">Akakro</option>
+	<option value="http://localhost:8000/articles/akpokro.html">Akpokro</option>
+	<option value="http://localhost:8000/articles/andonsakassou.html">Andon Sakassou</option>
+	<option value="http://localhost:8000/articles/angankro.html">Angankro</option>
+	<option value="http://localhost:8000/articles/assankouadiokro.html">Assankouadiokro</option>
+	<option value="http://localhost:8000/articles/assoumankro.html">Assoumankro</option>
+	<option value="http://localhost:8000/articles/bamoro-gare.html">Bamaro Gare</option>
+	<option value="http://localhost:8000/articles/bamoro.html">Bamoro</option>
+	<option value="http://localhost:8000/articles/belleville-1.html">Belleville 1</option>
+	<option value="http://localhost:8000/articles/belleville-2.html">Belleville 2</option>
+	<option value="http://localhost:8000/articles/Dar-es-salam.html">Dar Es Salam</option>
+	<option value="http://localhost:8000/articles/djekro.html">Djêkro</option>
+	<option value="http://localhost:8000/articles/gbesserikro.html">Gbéssérikro</option>
+	<option value="http://localhost:8000/articles/golikro.html">Golikro</option>
+	<option value="http://localhost:8000/articles/konankro.html">Konankro Mizron</option>
+	<option value="http://localhost:8000/articles/kouadio-miankro.html">Kouadio Miankro</option>
+	<option value="http://localhost:8000/articles/kouakou-miankro.html">Kouakou Miankro</option>
+	<option value="http://localhost:8000/articles/kouassiblekro-ngbassou.html">Kouassiblékro N’Gbassou</option>
+	<option value="http://localhost:8000/articles/minankro.html">Minankro</option>
+	<option value="http://localhost:8000/articles/Ndakro-nzuekro.html">N’dakro et N'Zuekro</option>
+	<option value="http://localhost:8000/articles/ngatta-sakassou.html">N’gatta Sakassou</option>
+	<option value="http://localhost:8000/articles/nguessankro.html">N’guessankro</option>
+	<option value="http://localhost:8000/articles/tolakouadiokro.html">Tolakouadiokro</option>
+	<option value="http://localhost:8000/articles/yobouekro.html">Yobouékro</option>
+	<option value="http://localhost:8000/articles/zone-industrielle.html">Zone Industrielle – Djézoukouamékro</option>
+	</select>
+	</span>
+			 <h1>N’gatta Sakassou</h1>
+			 <h4>Nord de Bouaké</h4>
+		</header>
+		<table>
+<thead>
+<tr>
+<th align="left">Informations générales</th>
+<th align="right"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Nom de la localité :</td>
+<td align="right">N’gatta Sakassou</td>
+</tr>
+<tr>
+<td align="left">Population :</td>
+<td align="right">700 habitants</td>
+</tr>
+<tr>
+<td align="left">Dessertes en eau potable</td>
+<td align="right">Non raccordé au réseau SODECI</td>
+</tr>
+<tr>
+<td align="left">Gestion des excrétas</td>
+<td align="right">Assainissement autonome</td>
+</tr>
+</tbody>
+</table>
+<h2>Présentation de la localité</h2>
+<p>N’gatta Sakassou est un village situé au Nord-Est de la commune de Bouaké. On y accède par la large route en terre battue qui relie la route nationale 3 à Bamoro Gare. C’est un village d’environs 7OO habitants.<br>
+Le village possède une école de 6 classes qui accueille aussi les enfants des villages avoisinants. L’habitat à N’gattassakassou est composé de maisons en briques ou en terre battue couvertes de tôles ou de pailles. La population est essentiellement agricole avec les productions vivrières et l’anacarde.</p>
+<p>L’eau est une ressource qui est rare dans ce village. Celui-ci dispose d’une seule PMH où l’ensemble des habitants vont s’approvisionner dans un premier temps. Ensuite, lorsque celle-ci tombe en panne, les habitants ont recours à un marigot, qui tarit régulièrement. </p>
+<h2>Socio anthropologie de la localité</h2>
+<p>C’est un village habité par les Phali, sous-groupe baoulé. L'organisation sociale du village est similaire à l'organisation classique des communautés villageoises Baoulé. Les affaires du village sont gérées par les notables formant une chefferie hiérarchisée qui intègre aussi des représentants des organisations de femmes et de jeunes. La chefferie intervient dans le règlement des conflits (intracommunautaires et extracommunautaires) et joue un rôle d'interface entre la communauté villageoise et les administrations publiques et collectivités territoriales.</p>
+<p>Les habitants sont majoritairement issus des lignages fondateurs du village et les ménages sont constitués de famille nucléaire associant parfois des membres collatéraux (parents, cousins ou fratrie célibataire). Les tâches ménagères et en particulier l'approvisionnement en eau du ménage demeure l'apanage des femmes.</p>
+<p>Bien  que les habitants soient majoritairement autochtones, N’Gatta-Sakassou est un village cosmopolite regroupant en son sein des ressortissants de la CEDEAO (Mali, Burkina-Faso).</p>
+<h2>État des lieux des ouvrages d’alimentation en eau</h2>
+<h3>Existants</h3>
+<p>Un château d’eau de la SODECI a été installé à proximité du village, mais le village n’est pas encore raccordé au réseau. Par contre le village possède 5 pompes dont une seule est utilisée, les autres sont en pannes ou abandonnées.</p>
+<p>La pompe fonctionnelle a été construite en 1976 l’État. Il s’agit d’une pompe de marque ABI. La pompe tombe régulièrement en panne du fait de sa vétusté et de sa trop grande utilisation. Les pannes se rapportent généralement à la tuyauterie.
+ L’inspection autour du point d’eau a révélé que le point d’eau est moyennement vulnérable aux risques de contamination avec un score de 3. Ce score est justifiable par l’eau qui stagne autour du point d’eau, les fissures et craquelures au niveau de la dalle et la clôture du point d’eau. 
+Les analyses de la qualité de l’eau ont donné un taux élevé de nitrate dans l’eau de la pompe. </p>
+<p><img alt="pompe" src="images/ngattasakassou1.jpg" title="pompe"></p>
+<p><img alt="pompe" src="images/ngattasakassou3.jpg" title="pompe">
+<img alt="pièces de rechange de la pompe" src="images/ngattasakassou4.jpg" title="pièces de rechange de la pompe">
+<img alt="pompe démontée" src="images/ngattasakassou5.jpg" title="pompe démontée"></p>
+<p><img alt="pompe" src="images/ngattasakassou7.jpg" title="pompe"></p>
+<p><img alt="pompe" src="images/ngattasakassou10.jpg" title="pompe">
+<img alt="pompe" src="images/ngattasakassou11.jpg" title="pompe">
+<img alt="pompe" src="images/ngattasakassou12.jpg" title="pompe"></p>
+<h3>Pratiques et modes d’approvisionnement en eau</h3>
+<p>A N’gatta Sakassou, la population s’approvisionne à la pompe. Pendant les périodes de pénurie, les villageois se dirigent dans le village voisin où se trouve un puits traditionnel, ou dans les marigots.</p>
+<p><img alt="marigot" src="images/ngattasakassou2.jpg" title="marigot"></p>
+<h3>Gestion des points d’eau</h3>
+<p>La gestion de la pompe est laissée à la charge d’un comité composé essentiellement de femmes. Ce comité est chargé de l’entretien et de la surveillance du point d’eau aussi de la trésorerie. </p>
+<p><img alt="local associatif" src="images/ngattasakassou6.jpg" title="local associatif">
+<img alt="femmes du village" src="images/ngattasakassou8.jpg" title="femmes du village">
+<img alt="femmes du village" src="images/ngattasakassou9.jpg" title="femmes du village"></p>
+<p>Afin de réduire la pression sur la pompe, les habitants doivent se plier à un ordre de passage très strict. Chaque famille est autorisée à s'y approvisionner seulement certains jours de la semaine (1 jour sur 2 ou sur 3). La cuvette d’eau est vendue à 10 FCFA. 
+Quand il y a une panne au niveau de la pompe, la trésorière fournit l’argent pour l’achat du matériel de réparation et la main-d’œuvre du réparateur. Des difficultés interviennent dans la gestion lorsque les pannes sont plus fréquentes et que l’argent que contient la caisse n’arrive plus à subvenir aux dépenses.</p>
+<h2>Personnes ressources</h2>
+<ul>
+<li>Chef de village</li>
+<li>Présidente des Femmes </li>
+<li>Présidente du comité de Gestion</li>
+</ul>
+<h2>Gestion des excréta</h2>
+<p>Dans le village nous retrouvons plusieurs types de latrines notamment les latrines à fosses simples, les latrines à fosses septiques et les latrines à chasse d’eau. Cependant, moins de la moitié de la population dispose de toilettes à proximité des maisons. De ce fait, les personnes n’ayant pas de toilettes défèquent à l’air libre aux alentours du village et dans la forêt. Cela s'ajoute aux déjections des animaux d'élevage.</p>
+<p>À N’gatta-Sakassou, les eaux et ordures ménagères sont généralement déversées dans les cours des maisons et aux alentours du village. Vu qu’il n’y a pas de point de collecte d’ordure, chaque ménage gère les déchets (liquides et solides) de façon autonome. </p>
+<h2>Desideratas des populations</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Type d'entretien</th>
+<th align="center">Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Entretien individuel Chef de village N’Guatta-Sakassou</td>
+<td align="center">8 fevrier 2019</td>
+</tr>
+<tr>
+<td align="left">Entretien individuel Président des Femmes N’Guatta-Sakassou</td>
+<td align="center">8 fevrier 2019</td>
+</tr>
+<tr>
+<td align="left">Entretien individuel Présidente du comité de gestion N’Guatta-Sakassou</td>
+<td align="center">8 fevrier 2019</td>
+</tr>
+<tr>
+<td align="left">Focus group Comité de Gestion N’Guatta-Sakassou</td>
+<td align="center">8 fevrier 2019</td>
+</tr>
+<tr>
+<td align="left">Focus group femmes N’Guatta-Sakassou</td>
+<td align="center">8 fevrier 2019</td>
+</tr>
+</tbody>
+</table>
+<p>Sur les 5 PMH que possède la communauté, 2 sont en réparation et une seule fonctionne. Les habitants souhaiteraient que leurs 4 autres soient réparées. Cela permettra de mieux desservir les populations qui habitent à proximité de ces PMH.</p>
+<h2>Tensions ressenties lors des entretiens</h2>
+<h3>Tensions générales</h3>
+<p>Aucune tension signalée</p>
+<h3>Tensions autour de l'eau</h3>
+<p>Du fait de la rareté des points d’eau communautaires, des disputes éclatent dans la file d’attente, toutefois celles-ci demeurent ponctuelles et de faible ampleur.</p>
+<h3>Tensions avec les localités voisines</h3>
+<p>Aucune tension signalée. </p>
+	</div>
+</div>
+    </div>
+    <footer class="footer-bar">
+
+
+
+	<a href="http://urgenceeau.com/"><img src="http://localhost:8000/static/images/UElogo.png" alt="Urgence Eau logo"></a>
+	<a href="http://urgenceeau.com/urgence-eau-cote-divoire-ueci/"><img src="http://localhost:8000/static/images/UECIlogo.png" alt="Urgence Eau - Côte d'Ivoire logo"></a>
+	<span class="footer-text"> <a href="http://urgenceeau.com/">Urgence Eau </a><br>
+	<a href="http://urgenceeau.com/urgence-eau-cote-divoire-ueci/">Urgence Eau - Côte d'Ivoire</a></span>
+    <span class="footer-text" style="text-align: center;">Site développé par <a href='http://www.ladyss.com/thomas-maillard'>Thomas Maillard</a><br>© 2018 Urgence Eau | <a href="http://urgenceeau.com/mentions-legales/">Mentions légales</a></span>
+    <span class="footer-text" style="text-align: right;">Un projet soutenu par la <a href="https://www.normandie.fr/">Région Normandie</a><br>à travers l'initiative <a href="https://www.normandie.fr/normandie-pour-la-paix">Normandie pour la Paix.</a></span>
+    <a href="https://www.normandie.fr/"><img src="http://localhost:8000/static/images/logo_r_normandie-portrait-cmjn.jpg" alt="Region Normandie logo"></a>
+	<a href="https://www.normandie.fr/normandie-pour-la-paix"><img src="http://localhost:8000/static/images/Label_Normandie-pour-la-Paix.jpg" alt="Label Normandie pour la paix logo"></a>
+  
+    <script src="http://localhost:8000/static/js/script.js"></script>
+    
+<!-- liens vers les fichiers permettant de créer les controles de groupes de couche dans la carte -->
+<script type="text/javascript" src="http://localhost:8000/static/dist/leaflet.groupedlayercontrol.min.js.map"></script>
+	<script type="text/javascript" src="http://localhost:8000/static/dist/leaflet.groupedlayercontrol.min.js"></script>
+<!-- les scripts d'affichage de l'habillage de la carte -->
+<script type="text/javascript" src="http://localhost:8000/doc/map/map_habillage.js" ></script>
+<!-- script d'affichage des groupes de couche dans le contrôleur de couches -->
+<script type="text/javascript" src="http://localhost:8000/doc/map/groupecontrole.js"></script>
+<!-- script d'affichage des différentes couches -->
+<script type="text/javascript" src="http://localhost:8000/doc/map/localites_type.js" ></script>
+<script type="text/javascript" src="http://localhost:8000/doc/map/pe_type.js" ></script>
+
+
+    </footer>
+</body>
+ 
+</html>

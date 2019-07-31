@@ -8,15 +8,22 @@ Author: GUERIN Mathieu
 <div class="fiche">
 <h2>Le projet ETUPO Vallée du Bandama</h2>
 
-<div class="legendin">
-<p>Un projet soutenu par la <a href="https://www.normandie.fr/">Région Normandie</a><br>à travers l'initiative <a href="https://www.normandie.fr/normandie-pour-la-paix">Normandie pour la Paix</a>.</p>
+<div class="legendin" style="width:60%;justify-content: space-between;">
+<p>Un projet d'<a href="http://urgenceeau.com/" alt="UE">Urgence Eau</a> soutenu par la <a href="https://www.normandie.fr/">Région Normandie</a> à travers l'initiative <a href="https://www.normandie.fr/normandie-pour-la-paix">Normandie pour la Paix</a>.</p>
+<figure>
+
+ <a href="https://www.normandie.fr/"><img src="image/logo_r_normandie-portrait-cmjn.jpg" alt="Region Normandie logo" style="width:32%;"></a>
+	<a href="https://www.normandie.fr/normandie-pour-la-paix"><img src="image/Label_Normandie-pour-la-Paix.jpg" alt="Label Normandie pour la paix logo" style="width:30%;"></a>
+<a href="http://urgenceeau.com/"><img src="image/UElogo.png" alt="Urgence Eau logo"  style="width:30%;"></a>
+</figure>
 </div>
+
 <h3> Une collaboration Franco-Ivoirienne</h3>
-<p>Le  projet  ETUPO (étude de l'accès à l'eau potable et à l'assainissement)  Vallée  du  Bandama  a  été  initié  en  avril  2018  suite  à  une  première  visite  de prise de contact dans la ville de Bouaké, en Côte d’Ivoire. Dans les mois qui ont suivi le projet a  été  développé  en  liens  étroits  avec  les  partenaires  identifiés  sur  place.  Une  association relais, Urgence eau Côte d’Ivoire, a été mise en place. </p>
+<p>Le  projet  ETUPO (étude de l'accès à l'eau potable et à l'assainissement)  Vallée  du  Bandama  a  été  initié  en  avril  2018  suite  à  une  première  visite  de prise de contact dans la ville de Bouaké, en Côte d’Ivoire. Dans les mois qui ont suivi le projet a  été  développé  en  liens  étroits  avec  les  partenaires  identifiés  sur  place.  Une  association relais, <a href="http://urgenceeau.com/urgence-eau-cote-divoire-ueci/" alt="UECI">Urgence eau Côte d’Ivoire</a>, a été mise en place. </p>
 
 <figure>
 <img src="image/urgence-eau-cote-divoire-copie-539x350.jpg" alt="L'équipe d'Urgence Eau Côte d'Ivoire"/>
-<figcaption>L'équipe d'Urgence Eau Côte d'Ivoire</figcaption>
+<figcaption>Le bureau d'Urgence Eau Côte d'Ivoire</figcaption>
 </figure>
 
 <h3>S'appuyer sur une étude préalable innovante</h3>
@@ -24,10 +31,9 @@ Author: GUERIN Mathieu
 
 <figure>
 <img src="image/equipetech.jpg" alt="Analyse technique des points d'eau"/>
-<img src="image/terrain_Diakite.jpg" alt="Analyse technique des points d'eau"/>
 <img src="image/terrain_MOuattara.jpg" alt="Analyse technique des points d'eau"/>
 <img src="image/terrain_Diakite.jpg" alt="Analyse technique des points d'eau"/>
-<figcaption>Analyse sur le terrain</figcaption>
+<figcaption>Les analyses sur le terrain</figcaption>
 </figure>
 
 

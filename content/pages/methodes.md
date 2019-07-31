@@ -48,7 +48,7 @@ authors: BROU Yves Oscar Kouadio, SORO Doba
 
 <img src="image/terrain_MOuattara.jpg" alt="Analyse technique des points d'eau"/>
 <img src="image/terrain_Diakite.jpg" alt="Analyse technique des points d'eau"/>
-<figcaption>Analyse sur le terrain</figcaption>
+<figcaption>Les analyses sur le terrain</figcaption>
 </figure>
 
 
