@@ -9,12 +9,15 @@ Author: GUERIN Mathieu
 <h2>Le projet ETUPO Vallée du Bandama</h2>
 
 <div class="legendin" style="width:60%;justify-content: space-between;">
-<p>Un projet d'<a href="http://urgenceeau.com/" alt="UE">Urgence Eau</a> soutenu par la <a href="https://www.normandie.fr/">Région Normandie</a> à travers l'initiative <a href="https://www.normandie.fr/normandie-pour-la-paix">Normandie pour la Paix</a>.</p>
+
 <figure>
 
  <a href="https://www.normandie.fr/"><img src="image/logo_r_normandie-portrait-cmjn.jpg" alt="Region Normandie logo" style="width:32%;"></a>
 	<a href="https://www.normandie.fr/normandie-pour-la-paix"><img src="image/Label_Normandie-pour-la-Paix.jpg" alt="Label Normandie pour la paix logo" style="width:30%;"></a>
 <a href="http://urgenceeau.com/"><img src="image/UElogo.png" alt="Urgence Eau logo"  style="width:30%;"></a>
+<figcaption>
+Un projet d'<a href="http://urgenceeau.com/" alt="UE">Urgence Eau</a> soutenu par la <a href="https://www.normandie.fr/">Région Normandie</a> à travers l'initiative <a href="https://www.normandie.fr/normandie-pour-la-paix">Normandie pour la Paix</a>.
+</figcaption>
 </figure>
 </div>
 
