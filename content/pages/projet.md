@@ -8,8 +8,10 @@ Author: GUERIN Mathieu
 <div class="fiche">
 <h2>Le projet ETUPO Vallée du Bandama</h2>
 
-<p class="legendin">Un projet soutenu par la <a href="https://www.normandie.fr/">Région Normandie</a><br>à travers l'initiative <a href="https://www.normandie.fr/normandie-pour-la-paix">Normandie pour la Paix</a>.</p>
-
+<div class="legendin">
+<p>Un projet soutenu par la <a href="https://www.normandie.fr/">Région Normandie</a><br>à travers l'initiative <a href="https://www.normandie.fr/normandie-pour-la-paix">Normandie pour la Paix</a>.</p>
+</div>
+<h3> Une collaboration Franco-Ivoirienne</h3>
 <p>Le  projet  ETUPO (étude de l'accès à l'eau potable et à l'assainissement)  Vallée  du  Bandama  a  été  initié  en  avril  2018  suite  à  une  première  visite  de prise de contact dans la ville de Bouaké, en Côte d’Ivoire. Dans les mois qui ont suivi le projet a  été  développé  en  liens  étroits  avec  les  partenaires  identifiés  sur  place.  Une  association relais, Urgence eau Côte d’Ivoire, a été mise en place. </p>
 
 <figure>
