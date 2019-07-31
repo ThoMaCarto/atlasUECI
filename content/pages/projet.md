@@ -24,6 +24,7 @@ Author: GUERIN Mathieu
 <img src="image/equipetech.jpg" alt="Analyse technique des points d'eau"/>
 <img src="image/terrain_Diakite.jpg" alt="Analyse technique des points d'eau"/>
 <img src="image/terrain_MOuattara.jpg" alt="Analyse technique des points d'eau"/>
+<img src="image/terrain_Diakite.jpg" alt="Analyse technique des points d'eau"/>
 <figcaption>Analyse sur le terrain</figcaption>
 </figure>
 
