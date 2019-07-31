@@ -182,32 +182,35 @@ function getColorAmmoniac(Ammoniac) {
        };  
        
  // Couleur en fonction de la norme OMS
-
-function getLayerOMS (Name,Field,minOMS,maxOMS)
-{
-	function getColorOMS (Field,minOMS,maxOMS){
-	if (Field < minOMS == true) {return('red');}
-	else if (Field <= maxOMS == true) {return('green');}
-	else if (Field > maxOMS == true) {return('red');}
+ 
+ function getColorOMS (Field,minOMS,maxOMS){
+	if (feature.properties.Field < minOMS == true) {return('red');}
+	else if (feature.properties.Field <= maxOMS == true) {return('green');}
+	else if (feature.properties.Field > maxOMS == true) {return('red');}
 	else  {return('grey');}
 	};
 	
-	var LayerOMS = L.geoJson(data,{
-		onEachFeature : oneachfeature,
-		pointToLayer: function(feature,latlng){
-			var marker =  L.circleMarker(latlng,{radius: 5,fillOpacity: 1, color: 'black', fillColor: getColorOMS,weight: 1,fillOpacity: 0.8,});
-			return marker;
-		}
-	}).on("click", cible)
-	.addTo(map);
-	controlLayers.addOverlay(LayerOMS, 'Contamination par'+ Name, '<strong>Diagnostic des points d\'eau</strong>');
-}; 
+function pointOMS (feature,latlng){
+	var marker =  L.circleMarker(latlng,{radius: 5,fillOpacity: 1, color: 'black', fillColor: getColorOMS,weight: 1,fillOpacity: 0.8,});
+	return marker;
+	
+};
+
+ 
 
 //lecture de la base de donnée
 $.getJSON(urlpointdeau,function(data){
 	
 	//transformation de la base de donnée en couche (Layer)
-	getLayerOMS(nitrite,feature.properties.nitrite,0,0.1);
+	var nitrite = LgeoJson(data,{
+		onEachFeature: oneachfeature,
+		pointToLayer: function (feature,latlng){
+			return L.circleMarker(latlng,{fillColor:getColorOMS(nitrite,0,0.1,radius:5, fillOpacity:1, color:'black',weight:1});
+		}
+	}).on("click", cible)
+	.addTo(map);
+	controlLayers.addOverlay(nitrite, "Pollution par nitrite", "<strong>Diagnostic des points d'eau</strong>");
+	
 	// création de la couche E coli
 	var Ecoli = L.geoJson(data,{
 		onEachFeature: oneachfeature,
