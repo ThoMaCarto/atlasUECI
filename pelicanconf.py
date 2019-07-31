@@ -79,7 +79,7 @@ SUBMENU_INTERNAL_PAGES = (
     ('L\'étude','pages/projet.html','pages/projet.html'),
     ('Les méthodes de diagnostic','pages/methodes-de-diagnostic.html','pages/methodes-de-diagnostic.html'),
     ('Les auteurs','pages/auteurs-de-letude.html','pages/auteurs-de-letude.html'),    
-    ('Télécharger les données', 'pages/telechargements.html', 'pages/telechargements.html'),    
+    ('Télécharger les données et rapports', 'pages/telechargements.html', 'pages/telechargements.html'),    
     
     )
     
