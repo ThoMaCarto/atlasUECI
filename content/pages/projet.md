@@ -47,6 +47,8 @@ Un projet d'<a href="http://urgenceeau.com/" alt="UE">Urgence Eau</a> soutenu pa
 <figure>
 <img src="image/dialogue1.jpg" alt="Dialogue avec les autorités villageoise"/>
 <img src="image/dialogue2.jpg" alt="Dialogue avec les autorités villageoise"/>
+<img src="image/fevrier2019_restitution.jpg" alt="Lancement dialogue 26 fevrier 2019" title="Lancement dialogue 26 fevrier 2019"/>
+<img src="image/27juin2019_restitution.jpg" alt="27 juin 2019Restitution des résultats et atelier participatif" title="27 juin 2019Restitution des résultats et atelier participatif"/>
 <figcaption>Le partage des informations recueillies</figcaption>
 </figure>
 <div>
