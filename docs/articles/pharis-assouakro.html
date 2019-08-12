@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
+    <title>Atlas Eau Potable Assainissement Côte d'Ivoire Bouaké</title>
+    <link rel="stylesheet" href="https://thomacarto.github.io/atlasUECI/static/css/style.css" />
+    <link rel="icon" type="image/x-icon" href="https://thomacarto.github.io/atlasUECI/static/images/favicon.ico">
+    
+
+    
+<!-- appelle la librairie javascript Leaflet et le fichier CSS Leaflet -->	
+	<link rel="stylesheet" href="https://thomacarto.github.io/atlasUECI/static/dist/leaflet.css"/>
+<script src="https://thomacarto.github.io/atlasUECI/static/dist/leaflet.js"></script>
+  
+	<!-- jQuery - indispensable pour utiliser les fichiers geojson -->
+	<script type="text/javascript" src="https://thomacarto.github.io/atlasUECI/static/dist/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="https://thomacarto.github.io/atlasUECI/static/dist/jquery.min.js"></script>
+	
+	
+	<!-- liens vers les fichiers permettant de créer les controles de groupes de couche dans la carte -->
+	<link rel="stylesheet" href="https://thomacarto.github.io/atlasUECI/static/dist/leaflet.groupedlayercontrol.min.css"/>
+	
+		<!-- liens vers les fichiers permettant de créer les controles de groupes de couche dans la carte -->
+<script type="text/javascript" src="https://thomacarto.github.io/atlasUECI/static/dist/leaflet.groupedlayercontrol.min.js.map"></script>
+	<script type="text/javascript" src="https://thomacarto.github.io/atlasUECI/static/dist/leaflet.groupedlayercontrol.min.js"></script>
+	
+	
+	
+</head>
+
+<body>
+<header class="header-bar">
+    <div><a class="header-nav" href="https://thomacarto.github.io/atlasUECI/index.html">
+        <img src="https://thomacarto.github.io/atlasUECI/static/images/UElogo.png" alt="Atlas Eau Potable Assainissement Côte d'Ivoire Bouaké logo">
+    </a>
+    <span class="header-title" title="L'Atlas en ligne du projet ETUPO Vallée du Bandama présente les résultats de l'étude sur l'accès à l'eau potable et à l'assainissement à Bouaké et dans les villages périphériques.">Atlas Urgence Eau Bouaké</span></div>
+<nav>
+<ul>
+<li><a href="https://thomacarto.github.io/atlasUECI/index.html"><br><img src="https://thomacarto.github.io/atlasUECI/static/images/home_icon.png"></a></li>
+
+
+
+<li><a title="La présentation de l'étude"><br>Informations</a>
+<ul class="submenu">
+<li><a href="https://thomacarto.github.io/atlasUECI/pages/projet.html">L'étude</a></li>
+<li><a href="https://thomacarto.github.io/atlasUECI/pages/methodes-de-diagnostic.html">Les méthodes de diagnostic</a></li>
+<li><a href="https://thomacarto.github.io/atlasUECI/pages/auteurs-de-letude.html">Les auteurs</a></li>
+<li><a href="https://thomacarto.github.io/atlasUECI/pages/telechargements.html">Télécharger les données et rapports</a></li>
+</ul>
+</li>
+
+<li><a href="https://thomacarto.github.io/atlasUECI/pages/vulnerabilite.html">Diagnostic<br>localités</a></li>
+<li><a href="https://thomacarto.github.io/atlasUECI/pages/analyse-des-points-deau.html">Diagnostic<br>points d'eau</a></li>
+
+
+
+<li class="selectedout"><a>Contacts<br> Institutionnels</a>
+<ul class="submenu">
+<li class="selectedout"><a href="http://urgenceeau.com/">Association<br>Urgence Eau ></a></li>
+<li class="selectedout"><a href="http://urgenceeau.com/contact/">Contacts Urgence Eau ></a></li>
+<li class="selectedout"><a href="https://www.normandie.fr/">Région Normandie ></a></li>
+<li class="selectedout"><a href="https://www.normandie.fr/normandie-pour-la-paix">Initiative Normandie pour la paix ></a></li>
+</ul>
+
+</ul>
+</nav>
+    
+</header>
+    <div id="main"> 
+    
+<div class="content">
+	<div id="map" class="map">
+		<script type="text/javascript">
+			//// création de la carte et paramétrages généraux : 
+			//centre et niveau de zoom,zoom minimum,zoom maximum, 
+			// et limites du canevas (afin que l'ordinateur ne charge pas trop de tuiles de fond de carte)
+			// les paramètres de la fonction setView (coordonnées du centre de la vue=coordonnée de la localité
+			//niveau de zoom = 14 pour un quartier et 16 pour un village) seront extraits des métadata de chaque 
+			//fiches localité.
+			var map = L.map('map');
+			map.setView([7.79790,-5.05979], 16);
+			map.setMinZoom(11);
+			map.setMaxZoom(19);
+			map.setMaxBounds([[7.5,-4.8],[7.9,-5.3]])
+				
+		</script>
+		<script type="text/javascript" >
+		// construire une variable url pour chaque base de donnée affichée sur la page
+			
+			var articlespath = 'https://thomacarto.github.io/atlasUECI/'
+			var urllocalites = "https://thomacarto.github.io/atlasUECI/doc/map/bdd/localites_v2.geojson"
+			var urlpointdeau = "https://thomacarto.github.io/atlasUECI/doc/map/bdd/pointseau_v2.geojson"
+			var urlNorthArray = '<img src="https://thomacarto.github.io/atlasUECI/static/images/compass.png" style="width:30px;">'
+			var urlwhiteshadow = 'https://thomacarto.github.io/atlasUECI/doc/map/icone/white.png'
+			var urlpuitsmoderne = 'https://thomacarto.github.io/atlasUECI/doc/map/icone/puits_moderne.png'
+			var urlpuitstradi = 'https://thomacarto.github.io/atlasUECI/doc/map/icone/puits_tradi.png'
+			var urlforage = 'https://thomacarto.github.io/atlasUECI/doc/map/icone/forage.png'
+			var urlborne = 'https://thomacarto.github.io/atlasUECI/doc/map/icone/borne.png'
+			var urlsurface = 'https://thomacarto.github.io/atlasUECI/doc/map/icone/marigot.png'
+			
+		</script>
+		<script type="text/javascript" >
+		<!-- Script rapide pour filtrer les différents tableaux de données affiché dans la fiche -->
+		var filtreTableau = "Pharis-Assouakro"
+		table.setFilter("properties.a_quartier", "=", filtreTableau );
+		
+		</script>
+	</div>
+	<div id="" class="fiche">
+		<header>
+		<span>
+	
+	<select id="filter-localites" onchange="window.location.href=this.value;">
+	<option>Voir la fiche détaillée d'une autre localité</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/affouvanssou.html">Affouvanssou</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/ahoussi-takikro.html">Ahoussi Takikro</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/akakro.html">Akakro</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/akpokro.html">Akpokro</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/andonsakassou.html">Andon Sakassou</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/angankro.html">Angankro</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/assankouadiokro.html">Assankouadiokro</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/assoumankro.html">Assoumankro</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/bamoro-gare.html">Bamaro Gare</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/bamoro.html">Bamoro</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/belleville-1.html">Belleville 1</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/belleville-2.html">Belleville 2</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/Dar-es-salam.html">Dar Es Salam</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/djekro.html">Djêkro</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/gbesserikro.html">Gbéssérikro</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/golikro.html">Golikro</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/konankro.html">Konankro Mizron</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/kouadio-miankro.html">Kouadio Miankro</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/kouakou-miankro.html">Kouakou Miankro</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/kouakro.html">Kouakro</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/kouame-assekro.html">Kouamé Assêkro</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/kouassiblekro-ngbassou.html">Kouassiblékro N’Gbassou</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/minankro.html">Minankro</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/Ndakro-nzuekro.html">N’dakro et N'Zuekro</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/ngatta-sakassou.html">N’gatta Sakassou</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/nguessankro.html">N’guessankro</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/pharis-assouakro.html">Pharis Assouakro</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/tchimou-assekro.html">Tchimou-Assêkro</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/tolakouadiokro.html">Tolakouadiokro</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/yobouekro.html">Yobouékro</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/zone-industrielle.html">Zone Industrielle – Djézoukouamékro</option>
+	</select>
+	</span>
+			 <h1>Pharis Assouakro</h1>
+			 <h4>Nord de Bouaké</h4>
+		</header>
+		<table>
+<thead>
+<tr>
+<th align="left">Informations générales</th>
+<th align="right"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Nom de la localité :</td>
+<td align="right">Pharis Assouakro</td>
+</tr>
+<tr>
+<td align="left">Population :</td>
+<td align="right">300 habitants</td>
+</tr>
+<tr>
+<td align="left">Dessertes en eau potable</td>
+<td align="right">Non raccordé au réseau SODECI</td>
+</tr>
+<tr>
+<td align="left">Gestion des excrétas</td>
+<td align="right">Assainissement autonome</td>
+</tr>
+</tbody>
+</table>
+<h2>Présentation de la localité</h2>
+<p>Le village de Pharis-Assouakro est situé à environ 6 kilomètres au nord de la ville de Bouaké. Le village ne dispose pas d’école et n’est pas alimenté par le réseau de distribution de l'eau potable géré par la SODECI. La taille de la population du village est estimée à environ 300 habitants. Le village s’étend sur deux sites. Le premier est le site originel du village. Cependant les pouvoirs publics ont demandé aux habitants de se rapprocher de la route afin de bénéficier des raccordements aux différents réseaux (eau potable et électricité). Les villageois migrent progressivement vers le nouveau site.</p>
+<p>Le type d’habitat que l’on retrouve à Pharis-Assouakro est plutôt sous un style traditionnel avec des maisons construites en banco. Les activités génératrices de revenus sont généralement axées sur l’agriculture avec une production d’anacarde comme culture de rente et le riz et l’igname comme cultures vivrières.</p>
+<h2>Socio anthropologie de la localité</h2>
+<p>Ce village est habité par une communauté appartenant au sous-groupe Baoulé pharis ou fahafouè. Il appartient au canton de Konankankro. En ce qui concerne les infrastructures, le village ne dispose d’aucune école primaire. De plus, il n’existe pas de point de collecte d’ordures ménagères ce qui pousse les habitants à jeter les ordures ménagères aux alentours du village ou dans la forêt. Il faut également noter que la majorité des villageois ne disposent pas de toilette dans leurs maisons et pratiquent la défécation à l'air libre.</p>
+<h2>État des lieux des ouvrages d’alimentation en eau potable</h2>
+<h3>Existants</h3>
+<p>Le village compte 2 points d’eau, dont 1 fonctionnel. Les enquêtes ont porté sur le seul point d’eau fonctionnel. Il est situé à environ 800 mètres de l’ancien village. Le forage non fonctionnel est situé sur le nouveau site du village. Il a été construit par l’État en 2013 à travers le programme PPU (Programme Présidentiel d'Urgence: vaste plan d'investissements pilotés par le président Alassane Ouattara après son élection en 2010). 
+Le forage fonctionnel est le premier point d’eau du village, il date de 1976. Les pannes y sont fréquentes : en moyenne 2 à 3 fois par an. La qualité de l’eau est jugée acceptable par les populations et l’analyse des paramètres physicochimique et bactériologique de l’eau n’a révélé aucune anomalie particulière. </p>
+<p><img alt="PMH" src="images/Assouakro.jpg" title="PMH"></p>
+<h3>Pratiques et modes d’approvisionnement en eau</h3>
+<p>La population de ce village s'approvisionne majoritairement à la pompe et au marigot. Les pannes récurrentes de la pompe les incitent à privilégier le marigot.</p>
+<h3>Gestion des points d’eau</h3>
+<p>La pompe est installée au sein du village, mais il n’y a pas de comité de gestion, un habitant surveille la pompe et réalise un entretien sommaire. En conséquence, la pompe est mal entretenue et il n'y a pas de caisse d'eau spécifique permettant de financer l'entretien et les réparations.</p>
+<p>L'usage des marigots est régulé par des interdits: les mercredi et vendredi les femmes sont interdites d’y aller sous peine de sanction.</p>
+<h2>Personnes ressources</h2>
+<ul>
+<li>Chef de village</li>
+<li>Présidente des femmes</li>
+</ul>
+<h2>Gestion des excréta</h2>
+<p>On observe un faible niveau d’hygiène et d’assainissement à Pharis-Assouakro. Les concessions ne disposent pas de latrines. La défécation se fait donc à l’air libre dans le village. Pour ce qui concerne la gestion des ordures ménagères, il n’existe pas un système propre au village. Les déchets ménagers sont collectés et déversés en brousse. </p>
+<h2>Desideratas des populations</h2>
+<p>Les populations demandent l’installation d’autres pompes et la réparation de la pompe endommagée. </p>
+<h2>Tensions ressenties lors des entretiens</h2>
+<h3>Tensions générales</h3>
+<p>Aucune tension signalée</p>
+<h3>Tensions autour de l'eau</h3>
+<p>Du fait de la rareté des points d’eau communautaires, des disputes éclatent dans la file d’attente, toutefois celles-ci demeurent ponctuelles et de faible ampleur.</p>
+<h3>Tensions avec les localités voisines</h3>
+<p>Aucune tension signalée.</p>
+	</div>
+</div>
+    </div>
+    <footer class="footer-bar">
+
+
+
+	<a href="http://urgenceeau.com/"><img src="https://thomacarto.github.io/atlasUECI/static/images/UElogo.png" alt="Urgence Eau logo"></a>
+	<a href="http://urgenceeau.com/urgence-eau-cote-divoire-ueci/"><img src="https://thomacarto.github.io/atlasUECI/static/images/UECIlogo.png" alt="Urgence Eau - Côte d'Ivoire logo"></a>
+	<span class="footer-text"> <a href="http://urgenceeau.com/">Urgence Eau </a><br>
+	<a href="http://urgenceeau.com/urgence-eau-cote-divoire-ueci/">Urgence Eau - Côte d'Ivoire</a></span>
+    <span class="footer-text" style="text-align: center;">Site développé par <a href='http://www.ladyss.com/thomas-maillard'>Thomas Maillard</a><br>© 2018 Urgence Eau | <a href="http://urgenceeau.com/mentions-legales/">Mentions légales</a></span>
+    <span class="footer-text" style="text-align: right;">Un projet soutenu par la <a href="https://www.normandie.fr/">Région Normandie</a><br>à travers l'initiative <a href="https://www.normandie.fr/normandie-pour-la-paix">Normandie pour la Paix.</a></span>
+    <a href="https://www.normandie.fr/"><img src="https://thomacarto.github.io/atlasUECI/static/images/logo_r_normandie-portrait-cmjn.jpg" alt="Region Normandie logo"></a>
+	<a href="https://www.normandie.fr/normandie-pour-la-paix"><img src="https://thomacarto.github.io/atlasUECI/static/images/Label_Normandie-pour-la-Paix.jpg" alt="Label Normandie pour la paix logo"></a>
+  
+    <script src="https://thomacarto.github.io/atlasUECI/static/js/script.js"></script>
+    
+<!-- liens vers les fichiers permettant de créer les controles de groupes de couche dans la carte -->
+<script type="text/javascript" src="https://thomacarto.github.io/atlasUECI/static/dist/leaflet.groupedlayercontrol.min.js.map"></script>
+	<script type="text/javascript" src="https://thomacarto.github.io/atlasUECI/static/dist/leaflet.groupedlayercontrol.min.js"></script>
+<!-- les scripts d'affichage de l'habillage de la carte -->
+<script type="text/javascript" src="https://thomacarto.github.io/atlasUECI/doc/map/map_habillage.js" ></script>
+<!-- script d'affichage des groupes de couche dans le contrôleur de couches -->
+<script type="text/javascript" src="https://thomacarto.github.io/atlasUECI/doc/map/groupecontrole.js"></script>
+<!-- script d'affichage des différentes couches -->
+<script type="text/javascript" src="https://thomacarto.github.io/atlasUECI/doc/map/localites_type.js" ></script>
+<script type="text/javascript" src="https://thomacarto.github.io/atlasUECI/doc/map/pe_type.js" ></script>
+
+
+    </footer>
+</body>
+ 
+</html>
