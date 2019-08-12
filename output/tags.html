@@ -9,11 +9,24 @@
     <link rel="stylesheet" href="http://localhost:8000/static/css/style.css" />
     <link rel="icon" type="image/x-icon" href="http://localhost:8000/static/images/favicon.ico">
     
+<!-- Magnific Popup core CSS file -->
+<link rel="stylesheet" href="http://localhost:8000/static/dist/magnific-popup/magnific-popup.css">
 
+<!-- jQuery 1.7.2+ or Zepto.js 1.0+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
+
+<!-- Magnific Popup core JS file -->
+<script type="text/javascript" src="http://localhost:8000/static/dist/magnific-popup/jquery.magnific-popup.js"></script>
     
 </head>
 
 <body>
+<script  type="text/javascript">
+	$('img').magnificPopup({
+  type: 'image'
+  // other options
+});
+</script>
 <header class="header-bar">
     <div><a class="header-nav" href="http://localhost:8000/index.html">
         <img src="http://localhost:8000/static/images/UElogo.png" alt="Atlas Eau Potable Assainissement Côte d'Ivoire Bouaké logo">
@@ -55,7 +68,7 @@
     
     <h1>Tags for Atlas Eau Potable Assainissement Côte d'Ivoire Bouaké</h1>
     <ul>
-        <li><a href="http://localhost:8000/tag/rural.html">Rural</a> (20)</li>
+        <li><a href="http://localhost:8000/tag/rural.html">Rural</a> (25)</li>
         <li><a href="http://localhost:8000/tag/urbain.html">Urbain</a> (6)</li>
         <li><a href="http://localhost:8000/tag/ville.html">Ville</a> (6)</li>
         <li><a href="http://localhost:8000/tag/vulnerabilite-faible.html">Vulnérabilité faible</a> (2)</li>
@@ -78,6 +91,8 @@
   
     <script src="http://localhost:8000/static/js/script.js"></script>
     
+	
+	
     </footer>
 </body>
  
