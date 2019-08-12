@@ -23,6 +23,12 @@
 </head>
 
 <body>
+<script  type="text/javascript">
+	$('img').magnificPopup({
+  type: 'image'
+  // other options
+});
+</script>
     {% include 'parts/header.part.html' %}
 
     <div id="main"> 
@@ -39,12 +45,7 @@
    {% block extra_js %}
     {% endblock %}
 	
-	<script  type="text/javascript">
-	$('img').magnificPopup({
-  type: 'image'
-  // other options
-});
-</script>
+	
     </footer>
 </body>
  
