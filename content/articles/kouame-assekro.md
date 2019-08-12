@@ -1,19 +1,19 @@
-layout: fiche
-title: Kouamé Assêkro / Pharis Assouakro
+template: article
+title: Kouamé Assêkro
 slug:kouame-assekro
-iddbb: Pharis-Assouakro
+iddbb: Kouamé Assèkro
 tags: Rural
 authors: BROU Yves Oscar Kouadio, SORO Doba, MAILLARD Thomas, DIAKITE A. Cheick, KOHE A. Christelle, OUATTARA Mafine, SERI A. Jonathan, N'GUESSAN Firmain Kouakou
 date: 2019-01-13
-latitude:  7.79790
-longitude: -5.05979
+latitude:  7.84551
+longitude: -5.02388
 zoom: 14
 localisation: Nord de Bouaké
 
 
 |Informations générales||
 |:--|--:|
-| Nom de la localité : | Kouamé Assêkro ou Pharis Assouakro | 
+| Nom de la localité : | Kouamé Assèkro | 
 | Population : | 800 habitants | 
 | Dessertes en eau potable | Non raccordé au réseau SODECI | 
 | Gestion des excrétas | Assainissement autonome | 
