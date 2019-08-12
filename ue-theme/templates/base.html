@@ -9,14 +9,7 @@
     <link rel="stylesheet" href="{{SITEURL}}/{{ THEME_STATIC_DIR }}/css/style.css" />
     <link rel="icon" type="image/x-icon" href="{{SITEURL}}/{{ THEME_STATIC_DIR }}/images/favicon.ico">
     
-<!-- Magnific Popup core CSS file -->
-<link rel="stylesheet" href="{{SITEURL}}/{{ THEME_STATIC_DIR }}/dist/magnific-popup/magnific-popup.css">
 
-<!-- jQuery 1.7.2+ or Zepto.js 1.0+
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
-
-<!-- Magnific Popup core JS file -->
-<script type="text/javascript" src="{{SITEURL}}/{{ THEME_STATIC_DIR }}/dist/magnific-popup/jquery.magnific-popup.js"></script>
     
     {% block extra_head %}
     {% endblock %}
@@ -44,7 +37,14 @@
     
    {% block extra_js %}
     {% endblock %}
-	
+<!-- Magnific Popup core CSS file -->
+<link rel="stylesheet" href="{{SITEURL}}/{{ THEME_STATIC_DIR }}/dist/magnific-popup/magnific-popup.css">
+
+<!-- jQuery 1.7.2+ or Zepto.js 1.0+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
+
+<!-- Magnific Popup core JS file -->
+<script type="text/javascript" src="{{SITEURL}}/{{ THEME_STATIC_DIR }}/dist/magnific-popup/jquery.magnific-popup.js"></script>	
 	
     </footer>
 </body>
