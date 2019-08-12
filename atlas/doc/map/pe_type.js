@@ -73,7 +73,7 @@ $.getJSON(urlpointdeau,function(data){
 			//caractéristique des points
 			var marker = L.circleMarker(latlng,{radius: 5,fillOpacity: 1, color: 'black', fillColor: getColorNitrates(feature.properties.nitrate),weight: 1,fillOpacity: 0.8,});
 			//caractéristiques des popup
-			marker.bindPopup('<p>Cocentration en Nitrate: ' + feature.properties.nitrate + ' UFC / 100 ml</p>');			
+			marker.bindPopup('<p>Concentration en Nitrate: ' + feature.properties.nitrate + ' mg/l</p>');			
 			//Affichage des marqueurs
 			return marker;
 		}
@@ -88,7 +88,7 @@ $.getJSON(urlpointdeau,function(data){
 			//caractéristique des points
 			var marker = L.circleMarker(latlng,{radius: 5,fillOpacity: 1, color: 'black', fillColor: getColorAmmoniac(feature.properties.ammoniac),weight: 1,fillOpacity: 0.8,});
 			//caractéristiques des popup
-			marker.bindPopup('<p>Concentration en Ammoniac: ' + feature.properties.ammoniac + ' UFC / 100 ml</p>');			
+			marker.bindPopup('<p>Concentration en Ammoniac: ' + feature.properties.ammoniac + '  mg/l</p>');			
 			//Affichage des marqueurs
 			return marker;
 		}
