@@ -1,4 +1,3 @@
-
 template: article
 title: Djétouankro
 slug: djetouankro
