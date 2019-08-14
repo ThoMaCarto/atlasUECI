@@ -102,4 +102,4 @@ Aucune tension signalée
 Du fait de la rareté des points d’eau communautaires, des disputes éclatent dans la file d’attente, toutefois celles-ci demeurent ponctuelles et de faible ampleur.
 
 ### Tensions avec les localités voisines
-Aucune tension signalée, notamment avec le village voisin de Assengoukpli qui partage ses points d'eau avec Assengoukan.
+Aucune tension signalée, notamment avec le village voisin de Assengoukpli qui partage ses points d'eau avec Assengoukan en cas de problèmes.
