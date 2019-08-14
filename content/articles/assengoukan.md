@@ -1,5 +1,5 @@
 template: article
-title: Assengoukan
+title: Assengou Kan
 slug: assengoukan
 iddbb: Assangoukan
 tags: Rural
@@ -15,7 +15,7 @@ localisation: Nord-Est de Bouaké, sur la route de Bassawa
 
 |Informations générales||
 |:--|--:|
-| Nom de la localité : | Assengoukan | 
+| Nom de la localité : | Assengou Kan (camp) | 
 | Population : | 520 habitants | 
 | Dessertes en eau potable | Non raccordé au réseau SODECI | 
 | Gestion des excrétas | Assainissement autonome | 
