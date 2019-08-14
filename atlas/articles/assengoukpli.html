@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
+    <title>Atlas Eau Potable Assainissement Côte d'Ivoire Bouaké</title>
+    <link rel="stylesheet" href="http://urgenceeau.com/atlas/static/css/style.css" />
+    <link rel="icon" type="image/x-icon" href="http://urgenceeau.com/atlas/static/images/favicon.ico">
+    
+
+    
+<!-- appelle la librairie javascript Leaflet et le fichier CSS Leaflet -->	
+	<link rel="stylesheet" href="http://urgenceeau.com/atlas/static/dist/leaflet.css"/>
+<script src="http://urgenceeau.com/atlas/static/dist/leaflet.js"></script>
+  
+	<!-- jQuery - indispensable pour utiliser les fichiers geojson -->
+	<script type="text/javascript" src="http://urgenceeau.com/atlas/static/dist/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="http://urgenceeau.com/atlas/static/dist/jquery.min.js"></script>
+	
+	
+	<!-- liens vers les fichiers permettant de créer les controles de groupes de couche dans la carte -->
+	<link rel="stylesheet" href="http://urgenceeau.com/atlas/static/dist/leaflet.groupedlayercontrol.min.css"/>
+	
+		<!-- liens vers les fichiers permettant de créer les controles de groupes de couche dans la carte -->
+<script type="text/javascript" src="http://urgenceeau.com/atlas/static/dist/leaflet.groupedlayercontrol.min.js.map"></script>
+	<script type="text/javascript" src="http://urgenceeau.com/atlas/static/dist/leaflet.groupedlayercontrol.min.js"></script>
+	
+	
+	
+</head>
+
+<body>
+<script  type="text/javascript">
+	$('img').magnificPopup({
+  type: 'image'
+  // other options
+});
+</script>
+<header class="header-bar">
+    <div><a class="header-nav" href="http://urgenceeau.com/atlas/index.html">
+        <img src="http://urgenceeau.com/atlas/static/images/UElogo.png" alt="Atlas Eau Potable Assainissement Côte d'Ivoire Bouaké logo">
+    </a>
+    <span class="header-title" title="L'Atlas en ligne du projet ETUPO Vallée du Bandama présente les résultats de l'étude sur l'accès à l'eau potable et à l'assainissement à Bouaké et dans les villages périphériques.">Atlas Urgence Eau Bouaké</span></div>
+<nav>
+<ul>
+<li><a href="http://urgenceeau.com/atlas/index.html"><br><img src="http://urgenceeau.com/atlas/static/images/home_icon.png"></a></li>
+
+
+
+<li><a title="La présentation de l'étude"><br>Informations</a>
+<ul class="submenu">
+<li><a href="http://urgenceeau.com/atlas/pages/projet.html">L'étude</a></li>
+<li><a href="http://urgenceeau.com/atlas/pages/methodes-de-diagnostic.html">Les méthodes de diagnostic</a></li>
+<li><a href="http://urgenceeau.com/atlas/pages/auteurs-de-letude.html">Les auteurs</a></li>
+<li><a href="http://urgenceeau.com/atlas/pages/telechargements.html">Télécharger les données et rapports</a></li>
+</ul>
+</li>
+
+<li><a href="http://urgenceeau.com/atlas/pages/vulnerabilite.html">Diagnostic<br>localités</a></li>
+<li><a href="http://urgenceeau.com/atlas/pages/analyse-des-points-deau.html">Diagnostic<br>points d'eau</a></li>
+
+
+
+<li class="selectedout"><a>Contacts<br> Institutionnels</a>
+<ul class="submenu">
+<li class="selectedout"><a href="http://urgenceeau.com/">Association<br>Urgence Eau ></a></li>
+<li class="selectedout"><a href="http://urgenceeau.com/contact/">Contacts Urgence Eau ></a></li>
+<li class="selectedout"><a href="https://www.normandie.fr/">Région Normandie ></a></li>
+<li class="selectedout"><a href="https://www.normandie.fr/normandie-pour-la-paix">Initiative Normandie pour la paix ></a></li>
+</ul>
+
+</ul>
+</nav>
+    
+</header>
+    <div id="main"> 
+    
+<div class="content">
+	<div id="map" class="map">
+		<script type="text/javascript">
+			//// création de la carte et paramétrages généraux : 
+			//centre et niveau de zoom,zoom minimum,zoom maximum, 
+			// et limites du canevas (afin que l'ordinateur ne charge pas trop de tuiles de fond de carte)
+			// les paramètres de la fonction setView (coordonnées du centre de la vue=coordonnée de la localité
+			//niveau de zoom = 14 pour un quartier et 16 pour un village) seront extraits des métadata de chaque 
+			//fiches localité.
+			var map = L.map('map');
+			map.setView([7.761065,-4.88945], 16);
+			map.setMinZoom(11);
+			map.setMaxZoom(19);
+			map.setMaxBounds([[7.5,-4.8],[7.9,-5.3]])
+				
+		</script>
+		<script type="text/javascript" >
+		// construire une variable url pour chaque base de donnée affichée sur la page
+			
+			var articlespath = 'http://urgenceeau.com/atlas/'
+			var urllocalites = "http://urgenceeau.com/atlas/doc/map/bdd/localites_v2.geojson"
+			var urlpointdeau = "http://urgenceeau.com/atlas/doc/map/bdd/pointseau_v2.geojson"
+			var urlNorthArray = '<img src="http://urgenceeau.com/atlas/static/images/compass.png" style="width:30px;">'
+			var urlwhiteshadow = 'http://urgenceeau.com/atlas/doc/map/icone/white.png'
+			var urlpuitsmoderne = 'http://urgenceeau.com/atlas/doc/map/icone/puits_moderne.png'
+			var urlpuitstradi = 'http://urgenceeau.com/atlas/doc/map/icone/puits_tradi.png'
+			var urlforage = 'http://urgenceeau.com/atlas/doc/map/icone/forage.png'
+			var urlborne = 'http://urgenceeau.com/atlas/doc/map/icone/borne.png'
+			var urlsurface = 'http://urgenceeau.com/atlas/doc/map/icone/marigot.png'
+			
+		</script>
+		<script type="text/javascript" >
+		<!-- Script rapide pour filtrer les différents tableaux de données affiché dans la fiche -->
+		var filtreTableau = "Assangoukpli"
+		table.setFilter("properties.a_quartier", "=", filtreTableau );
+		
+		</script>
+	</div>
+	<div id="" class="fiche">
+		<header>
+		<span>
+	
+	<select id="filter-localites" onchange="window.location.href=this.value;">
+	<option>Voir la fiche détaillée d'une autre localité</option>
+	<option value="http://urgenceeau.com/atlas/articles/affouvanssou.html">Affouvanssou</option>
+	<option value="http://urgenceeau.com/atlas/articles/ahoussi-takikro.html">Ahoussi Takikro</option>
+	<option value="http://urgenceeau.com/atlas/articles/akakro.html">Akakro</option>
+	<option value="http://urgenceeau.com/atlas/articles/akpokro.html">Akpokro</option>
+	<option value="http://urgenceeau.com/atlas/articles/andonsakassou.html">Andon Sakassou</option>
+	<option value="http://urgenceeau.com/atlas/articles/angankro.html">Angankro</option>
+	<option value="http://urgenceeau.com/atlas/articles/assankouadiokro.html">Assankouadiokro</option>
+	<option value="http://urgenceeau.com/atlas/articles/assengoukan.html">Assengou Kan</option>
+	<option value="http://urgenceeau.com/atlas/articles/assengoukpli.html">Assengou Kpli</option>
+	<option value="http://urgenceeau.com/atlas/articles/assoumankro.html">Assoumankro</option>
+	<option value="http://urgenceeau.com/atlas/articles/bamoro-gare.html">Bamaro Gare</option>
+	<option value="http://urgenceeau.com/atlas/articles/bamoro.html">Bamoro</option>
+	<option value="http://urgenceeau.com/atlas/articles/belleville-1.html">Belleville 1</option>
+	<option value="http://urgenceeau.com/atlas/articles/belleville-2.html">Belleville 2</option>
+	<option value="http://urgenceeau.com/atlas/articles/Dar-es-salam.html">Dar Es Salam</option>
+	<option value="http://urgenceeau.com/atlas/articles/djetouankro.html">Djétouankro</option>
+	<option value="http://urgenceeau.com/atlas/articles/djekro.html">Djêkro</option>
+	<option value="http://urgenceeau.com/atlas/articles/gbesserikro.html">Gbéssérikro</option>
+	<option value="http://urgenceeau.com/atlas/articles/golikro.html">Golikro</option>
+	<option value="http://urgenceeau.com/atlas/articles/konankro.html">Konankro Mizron</option>
+	<option value="http://urgenceeau.com/atlas/articles/kouadio-miankro.html">Kouadio Miankro</option>
+	<option value="http://urgenceeau.com/atlas/articles/kouakou-miankro.html">Kouakou Miankro</option>
+	<option value="http://urgenceeau.com/atlas/articles/kouakro.html">Kouakro</option>
+	<option value="http://urgenceeau.com/atlas/articles/kouame-assekro.html">Kouamé Assêkro</option>
+	<option value="http://urgenceeau.com/atlas/articles/kouassiblekro-ngbassou.html">Kouassiblékro N’Gbassou</option>
+	<option value="http://urgenceeau.com/atlas/articles/minankro.html">Minankro</option>
+	<option value="http://urgenceeau.com/atlas/articles/Ndakro-nzuekro.html">N’dakro et N'Zuekro</option>
+	<option value="http://urgenceeau.com/atlas/articles/ngatta-sakassou.html">N’gatta Sakassou</option>
+	<option value="http://urgenceeau.com/atlas/articles/nguessankro.html">N’guessankro</option>
+	<option value="http://urgenceeau.com/atlas/articles/pharis-assouakro.html">Pharis Assouakro</option>
+	<option value="http://urgenceeau.com/atlas/articles/tchimou-assekro.html">Tchimou-Assêkro</option>
+	<option value="http://urgenceeau.com/atlas/articles/tolakouadiokro.html">Tolakouadiokro</option>
+	<option value="http://urgenceeau.com/atlas/articles/yobouekro.html">Yobouékro</option>
+	<option value="http://urgenceeau.com/atlas/articles/zone-industrielle.html">Zone Industrielle – Djézoukouamékro</option>
+	</select>
+	</span>
+			 <h1>Assengou Kpli</h1>
+			 <h4>Nord-Est de Bouaké, sur la route de Bassawa</h4>
+		</header>
+		<table>
+<thead>
+<tr>
+<th align="left">Informations générales</th>
+<th align="right"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Nom de la localité :</td>
+<td align="right">Assengou Kpli</td>
+</tr>
+<tr>
+<td align="left">Population :</td>
+<td align="right">1200 habitants</td>
+</tr>
+<tr>
+<td align="left">Dessertes en eau potable</td>
+<td align="right">Non raccordé au réseau SODECI</td>
+</tr>
+<tr>
+<td align="left">Gestion des excrétas</td>
+<td align="right">Assainissement autonome</td>
+</tr>
+</tbody>
+</table>
+<h2>Présentation de la localité</h2>
+<p>Le village d’Assengoukpli est limitrophe d’Assengoukan, à environ 7 kilomètres de Bouaké en sortant du quartier Belleville 2. Il est accessible par une large route en terre battue. Il compte environ 1200 habitants et  dispose d’une école primaire, mais d'aucun centre de santé. Les habitants du village se rendent dans la ville de Bouaké notamment à Belleville pour les problèmes de santé.</p>
+<p>On y retrouve essentiellement des habitations de tous types : parpaings, terre, ciment avec des tôles ondulées. On note aussi la présence de cases en banco, mais en de faibles proportions. L'agriculture est l'activité principale : l’igname, le manioc, l’anacarde et les produits maraichers (tomate, piment, aubergine).</p>
+<p>En ce qui concerne les infrastructures, le village ne dispose pas de point de collecte d’ordures ménagères. Cette situation oblige la communauté à  déverser les ordures ménagères dans la forêt juste derrière le village. De plus, il faut noter que la majorité des villageois ne disposent pas de toilettes dans leurs maisons et vont faire leur besoin dans la forêt. On observe également des excréments d’animaux partout dans le village et en particulier à proximité des points d’eau.</p>
+<h2>Socio anthropologie de la localité</h2>
+<p>Le village est peuplé par les Baoulés fahafoués, il appartient au canton Fahafouè-Gossan . Le village est structuré en chefferie: un chef de village  assisté par des notables, un président des jeunes et une présidente des femmes. La chefferie s’occupe de l’organisation générale et du bien-être des habitants du village. En d’autres termes, la chefferie intervient dans le règlement des conflits (intracommunautaire et extracommunautaire). Elle intervient également auprès des collectivités territoriales en faisant des plaidoyers pour l’acquisition de nouvelles infrastructures éducatives, environnementales, hydraulique, etc.</p>
+<h2>État des lieux des ouvrages d’alimentation en eau potable</h2>
+<h3>Ouvrages existants</h3>
+<p>Le village n’est pas raccordé au réseau de distribution de l'eau géré par la SODECI.</p>
+<p>En ce qui concerne l’hydraulique villageoise, le village compte 3 pompes à motricité humaine (PMH) dont une seule fonctionnelle de type Vergnet HPV 60. Celle-ci a été construite par la JICA (coopération bilatérale japonaise) en 2015. 
+Le point d’eau est très bien entretenu et l’analyse des paramètres physicochimiques indique seulement une forte concentration en fluor d'origine géologique, tous les autres paramètres étant dans les normes.</p>
+<p><img alt="PMH" src="images/assengoukpli1.jpg" title="PMH"></p>
+<p>Les deux autres sont en panne. </p>
+<p>Celle de l’école et monté sur un puits de grand diamètre équipé d’une pompe ABI datant de 1978. Le puits contient de l’eau et les buses sont en bon état. Seule la pompe est abîmée.</p>
+<p><img alt="PMH en panne" src="images/assengoukpli5.jpg" title="PMH en panne"></p>
+<p>La deuxième pompe en panne est installée sur un forage. La pompe est de type Vergnet HPV 60 construite en 1998. Elle desservait la partie basse du village. Le cylindre de commande de PMH ne fonctionne plus.
+<img alt="PMH en panne" src="images/assengoukpli2.jpg" title="PMH en panne"></p>
+<p>Le marigot  du village tarit en saison sèche. Il très vulnérable à la pollution.</p>
+<p><img alt="De retour du marigot" src="images/assengoukpli3.jpg" title="De retour du marigot">
+<img alt="marigot" src="images/assengoukpli4.jpg" title="marigot"></p>
+<h3>Pratiques et modes d’approvisionnement en eau</h3>
+<p>Les villageois s'approvisionnent à la pompe pour tous leurs besoins en eau de boisson et pour les tâches ménagères. Le marigot est peu utilisé, car il est très loin des habitations. Toutefois, il constitue une solution de repli en cas de panne de la pompe.</p>
+<h3>Gestion des points d’eau</h3>
+<p>La pompe est gérée par une femme du village qui est chargé d'ouvrir le matin et de fermer le soir. Elle désigne chaque jour une famille différente qui a la charge de la gestion de la file d'attente et du recueil du prix de l'eau (10 francs par cuvette). L'argent recueilli alimente la caisse d'eau qui permet de financer les réparations de la pompe.</p>
+<h2>Personnes ressources</h2>
+<ul>
+<li>Chef de village </li>
+<li>Présidente des Femmes                                </li>
+<li>Président des jeunes</li>
+</ul>
+<h2>Gestion des excrétas</h2>
+<p>La gestion des excréta dans le village se fait de manière individuelle. La majeure partie des habitations ne disposent pas de latrines améliorées. Les quelques latrines que l’on rencontre dans le village sont principalement des latrines sèches à fosse simple. Les habitants qui ne disposent pas de latrines pratiquent la défécation à l’air libre. </p>
+<p>Pour ce qui concerne la gestion des ordures ménagères, il n’existe pas un système propre au village. Les déchets ménagers sont collectés et déversés en brousse. </p>
+<h2>Desideratas des populations</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Type d'entretien</th>
+<th align="center">Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Entretien individuel Chef de village</td>
+<td align="center">31 janvier 2019</td>
+</tr>
+<tr>
+<td align="left">Entretien individuel Président des Femmes</td>
+<td align="center">31 janvier 2019</td>
+</tr>
+<tr>
+<td align="left">Entretien individuel Présidente du comité de gestion</td>
+<td align="center">31 janvier 2019</td>
+</tr>
+<tr>
+<td align="left">Focus group hommes</td>
+<td align="center">31 janvier 2019</td>
+</tr>
+<tr>
+<td align="left">Focus group femmes</td>
+<td align="center">31 janvier 2019</td>
+</tr>
+</tbody>
+</table>
+<p>Le souhait commun des habitants est de réhabiliter les PMH en panne, et d'en construire au moins 1 en plus.</p>
+<h2>Tensions ressenties lors des entretiens</h2>
+<h3>Tensions générales</h3>
+<p>Aucune tension signalée</p>
+<h3>Tensions autour de l'eau</h3>
+<p>Du fait de la rareté des points d’eau communautaires, des disputes éclatent dans la file d’attente, toutefois celles-ci demeurent ponctuelles et de faible ampleur.</p>
+<h3>Tensions avec les localités voisines</h3>
+<p>Aucune tension signalée, notamment avec le village voisin de Assengoukan qui partage ses points d'eau avec Assengoukpli en cas de problèmes.</p>
+	</div>
+</div>
+    </div>
+    <footer class="footer-bar">
+
+
+
+	<a href="http://urgenceeau.com/"><img src="http://urgenceeau.com/atlas/static/images/UElogo.png" alt="Urgence Eau logo"></a>
+	<a href="http://urgenceeau.com/urgence-eau-cote-divoire-ueci/"><img src="http://urgenceeau.com/atlas/static/images/UECIlogo.png" alt="Urgence Eau - Côte d'Ivoire logo"></a>
+	<span class="footer-text"> <a href="http://urgenceeau.com/">Urgence Eau </a><br>
+	<a href="http://urgenceeau.com/urgence-eau-cote-divoire-ueci/">Urgence Eau - Côte d'Ivoire</a></span>
+    <span class="footer-text" style="text-align: center;">Site développé par <a href='http://www.ladyss.com/thomas-maillard'>Thomas Maillard</a><br>© 2018 Urgence Eau | <a href="http://urgenceeau.com/mentions-legales/">Mentions légales</a></span>
+    <span class="footer-text" style="text-align: right;">Un projet soutenu par la <a href="https://www.normandie.fr/">Région Normandie</a><br>à travers l'initiative <a href="https://www.normandie.fr/normandie-pour-la-paix">Normandie pour la Paix.</a></span>
+    <a href="https://www.normandie.fr/"><img src="http://urgenceeau.com/atlas/static/images/logo_r_normandie-portrait-cmjn.jpg" alt="Region Normandie logo"></a>
+	<a href="https://www.normandie.fr/normandie-pour-la-paix"><img src="http://urgenceeau.com/atlas/static/images/Label_Normandie-pour-la-Paix.jpg" alt="Label Normandie pour la paix logo"></a>
+  
+    <script src="http://urgenceeau.com/atlas/static/js/script.js"></script>
+    
+<!-- liens vers les fichiers permettant de créer les controles de groupes de couche dans la carte -->
+<script type="text/javascript" src="http://urgenceeau.com/atlas/static/dist/leaflet.groupedlayercontrol.min.js.map"></script>
+	<script type="text/javascript" src="http://urgenceeau.com/atlas/static/dist/leaflet.groupedlayercontrol.min.js"></script>
+<!-- les scripts d'affichage de l'habillage de la carte -->
+<script type="text/javascript" src="http://urgenceeau.com/atlas/doc/map/map_habillage.js" ></script>
+<!-- script d'affichage des groupes de couche dans le contrôleur de couches -->
+<script type="text/javascript" src="http://urgenceeau.com/atlas/doc/map/groupecontrole.js"></script>
+<!-- script d'affichage des différentes couches -->
+<script type="text/javascript" src="http://urgenceeau.com/atlas/doc/map/localites_type.js" ></script>
+<script type="text/javascript" src="http://urgenceeau.com/atlas/doc/map/pe_type.js" ></script>
+
+
+<!-- Magnific Popup core CSS file -->
+<link rel="stylesheet" href="http://urgenceeau.com/atlas/static/dist/magnific-popup/magnific-popup.css">
+
+<!-- jQuery 1.7.2+ or Zepto.js 1.0+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
+
+<!-- Magnific Popup core JS file -->
+<script type="text/javascript" src="http://urgenceeau.com/atlas/static/dist/magnific-popup/jquery.magnific-popup.js"></script>	
+	
+    </footer>
+</body>
+ 
+</html>
