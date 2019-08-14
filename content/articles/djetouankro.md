@@ -9,7 +9,7 @@ date: 2019-01-30
 latitude:  7.75157 
 longitude: -4.91047 
 zoom: 16
-localisation: Est de Bouaké
+localisation: Nord-Est de Bouaké, sur la route de Bassawa
 
 
 
