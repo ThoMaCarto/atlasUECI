@@ -34,38 +34,64 @@ En ce qui concerne les infrastructures, le village ne dispose pas de point de co
 
 ## Socio anthropologie de la localité 
 
-Assengou Kpli est un village habité par les baoulés fahafouè. Les 700 habitants de ce village vivent sous une autorité traditionnelle c’est-à-dire un chef de village, des notables, un président des jeunes et une présidente des femmes. En effet, le chef de village est chargé de prendre les décisions importantes pour la bonne marche du village. Celui-ci est assisté par des notables qui font office de conseillers. Les présidents de jeune et de femme ont pour rôle de mener des activités de jeunesse facilitant l’intégration communautaire et l’animation socio-culturelle du village.
-De plus le village appartient au canton Fahahouè-Gossan.
-En matière d’accès à l’eau potable, les habitants s’approvisionnent au niveau de trois PMH dont deux en panne et au niveau de plusieurs marigots. Il y a des décennies, il y avait des interdits liés à l’eau potable. En effet, les mercredis et les vendredis, il était interdit aux femmes de se rendre dans les marigots. Cet interdit social était lié à la préservation de la ressource mais aujourd’hui, vu l’insuffisance de l’eau dans la région, cette norme sociale tend à disparaitre. Désormais les habitants s’approvisionnent à tout moment sans aucune restriction.
+Le village est peuplé par les Baoulés fahafoués, il appartient au canton Fahafouè-Gossan . Le village est structuré en chefferie: un chef de village  assisté par des notables, un président des jeunes et une présidente des femmes. La chefferie s’occupe de l’organisation générale et du bien-être des habitants du village. En d’autres termes, la chefferie intervient dans le règlement des conflits (intracommunautaire et extracommunautaire). Elle intervient également auprès des collectivités territoriales en faisant des plaidoyers pour l’acquisition de nouvelles infrastructures éducatives, environnementales, hydraulique, etc.
 
-## Etat des lieux des ouvrages d’alimentation en eau potable
+## État des lieux des ouvrages d’alimentation en eau potable
 
 ### Ouvrages existants
-Le village n’est raccordé pas au réseau de la SODECI.
-En ce qui concerne l’hydraulique villageoise, le village compte 03 pompes à motricité humaine dont une seule de type Vergnet HPV 60 fonctionnelle. Cette a été construite par la JICA en 2015. Les deux autres en panne sont celle de l’école, un puits à grand diamètre équipé d’une pompe ABI datant de 1978. Le puits contient de l’eau et les buses sont en bon état.  Le forage 2 en panne de type Vergnet HPV 60 desservait la partie basse du village, construit en 1998. Le cylindre de commande de PMH ne fonctionne plus.
-Le marigot n’est pas pérenne et très vulnérable à la pollution est utilisé par une partie du village à cause de la distance par rapport au forage
-Le point d’eau est très bien entretenu et l’analyse des paramètres physicochimiques indique seulement une pollution au fluor, tous les autres paramètres étant dans les normes.
-
-## Pratiques et modes d’approvisionnement en eau
-
-Plusieurs points d’eau ont été observés dans le village. En effet les habitants du village s’approvisionnent au niveau des deux PMH qui fonctionnement et d’un marigot. L’eau des PMH est essentiellement utilisée pour les activités quotidiennes qui sont la boisson, la cuisine et toutes les activités ménagères. Il n’existe pas de véritable comité de gestion des pompes. Il y a juste une femme chargé de l’ouverture le matin et la fermeture le soir.  De plus, il n’y a pas prix forfaitaire à payer pour s’approvisionner. Par exemple, lorsque la PMH tombe en panne, le village lève une cotisation pour la réparation. Enfin, il y a des règles de bonnes conduites à observer autour de la pompe. Ces règles sont établies par le chef de village et ses notables. Par exemple, il est interdit de faire la bagarre sur l’espace des pompes sous peine d’une amende (cabri, du vin ou un poulet). Ainsi les habitants font l’effort de ne pas la bagarre autour des pompes.
+Le village n’est pas raccordé au réseau de distribution de l'eau géré par la SODECI.
 
 
-## Gestion des points d’eau
 
-Le point d’eau est géré par un comité composé d’une seule femme. Celle-ci est chargé d’ouvrir la pompe les matins et de designer une famille responsable de la gestion du jour. En effet, la gestion totale de la PMH revient à chaque famille à tour de rôle.
-La famille encaisse un montant forfaitaire (10 francs/cuvette) et le reverse dans la caisse prévue à cet effet. À la fin de chaque journée, la famille responsable de la gestion du jour, rend compte des acquis financiers aux près des deux femmes du comité de gestion. Cet argent est utilisé pour les éventuelles réparations de la PMH.
 
-Personnes ressources
+En ce qui concerne l’hydraulique villageoise, le village compte 3 pompes à motricité humaine (PMH) dont une seule fonctionnelle de type Vergnet HPV 60. Celle-ci a été construite par la JICA (coopération bilatérale japonaise) en 2015. 
+Le point d’eau est très bien entretenu et l’analyse des paramètres physicochimiques indique seulement une forte concentration en fluor d'origine géologique, tous les autres paramètres étant dans les normes.
 
-Chef de village 
-Présidente des Femmes                                
- Président des jeunes
 
-Gestion des excrétas
-Le niveau d’assainissement à Assengou Kpli est faible. En effet, l’on remarque des ordures ménagères dans le village et aux alentours.  L’absence de point de collecte d’ordures et de poubelles contribue également à l’insalubrité du village. De plus, nous constatons que les habitants défèquent à l’air libre. Ceci s’observe par la présence d’excréments au sein du village. Les animaux également, sans enclos, défèquent dans tout le village.
+![PMH](images/assengoukpli1.jpg "PMH")
 
-Desideratas des populations
+
+Les deux autres sont en panne. 
+
+
+Celle de l’école et monté sur un puits de grand diamètre équipé d’une pompe ABI datant de 1978. Le puits contient de l’eau et les buses sont en bon état. Seule la pompe est abîmée.
+
+
+![PMH en panne](images/assengoukpli5.jpg "PMH en panne")
+
+La deuxième pompe en panne est installée sur un forage. La pompe est de type Vergnet HPV 60 construite en 1998. Elle desservait la partie basse du village. Le cylindre de commande de PMH ne fonctionne plus.
+![PMH en panne](images/assengoukpli2.jpg "PMH en panne")
+
+Le marigot  du village tarit en saison sèche. Il très vulnérable à la pollution.
+
+![De retour du marigot](images/assengoukpli3.jpg "De retour du marigot")
+![marigot](images/assengoukpli4.jpg "marigot")
+
+### Pratiques et modes d’approvisionnement en eau
+
+
+Les villageois s'approvisionnent à la pompe pour tous leurs besoins en eau de boisson et pour les tâches ménagères. Le marigot est peu utilisé, car il est très loin des habitations. Toutefois, il constitue une solution de repli en cas de panne de la pompe.
+
+
+
+### Gestion des points d’eau
+
+
+La pompe est gérée par une femme du village qui est chargé d'ouvrir le matin et de fermer le soir. Elle désigne chaque jour une famille différente qui a la charge de la gestion de la file d'attente et du recueil du prix de l'eau (10 francs par cuvette). L'argent recueilli alimente la caisse d'eau qui permet de financer les réparations de la pompe.
+
+## Personnes ressources
+
+* Chef de village 
+* Présidente des Femmes                                
+* Président des jeunes
+
+## Gestion des excrétas
+La gestion des excréta dans le village se fait de manière individuelle. La majeure partie des habitations ne disposent pas de latrines améliorées. Les quelques latrines que l’on rencontre dans le village sont principalement des latrines sèches à fosse simple. Les habitants qui ne disposent pas de latrines pratiquent la défécation à l’air libre. 
+
+
+Pour ce qui concerne la gestion des ordures ménagères, il n’existe pas un système propre au village. Les déchets ménagers sont collectés et déversés en brousse. 
+
+## Desideratas des populations
 | Type d'entretien | Date | 
 | :-- | :--: | 
 | Entretien individuel Chef de village |31 janvier 2019| 
@@ -74,23 +100,16 @@ Desideratas des populations
 | Focus group hommes |31 janvier 2019| 
 | Focus group femmes |31 janvier 2019| 
 
-Le souhait commun des habitants est de réhabiliter les PMH en panne. 
-« le village s’agrandit, regarde toutes ces femmes sont enceinte. On a des problèmes d’eau, on veut réparer nos pompes en panne. Ça va vraiment nous aider ». MA
-
+Le souhait commun des habitants est de réhabiliter les PMH en panne, et d'en construire au moins 1 en plus.
 
 ## Tensions ressenties lors des entretiens
 
-Aucune tension n’a été observée lors des entretiens
-
 ### Tensions générales
-
-Il y a pas de tension générale à Assengou kpli. En dehors des conflits autour des PMH, la communauté vit en parfaite harmonie.
+Aucune tension signalée
 
 ### Tensions autour de l'eau
-De nombreuses tensions existent autour de l’eau dans le village. À Assengou kpli, il y a environ 700 habitants pour une seule PMH fonctionnelle. Ainsi, il y a de grandes affluences autour de celle-ci. Certaines femmes affirment passer toute la matinée avant d’être servi.
-
-« On est obligé de se lever très tot pour aller chercher l’eau. Même quand tu te lèves tôt tu peux rester à la pompe jusqu’à midi. On est nombreux et il y a une seule pompe qui marche. Ça nous fatigue. »
+Du fait de la rareté des points d’eau communautaires, des disputes éclatent dans la file d’attente, toutefois celles-ci demeurent ponctuelles et de faible ampleur.
 
 ### Tensions avec les localités voisines
+Aucune tension signalée, notamment avec le village voisin de Assengoukan qui partage ses points d'eau avec Assengoukpli en cas de problèmes.
 
-Les habitants d’Assengou kpli vivent en parfaite harmonie avec les villages voisins que sont Assengou kan et Yapokouakoukro.
