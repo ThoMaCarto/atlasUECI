@@ -1,0 +1,34 @@
+template: article
+title: 
+slug: 
+iddbb:
+tags: Rural
+authors: BROU Yves Oscar Kouadio, SORO Doba, MAILLARD Thomas, DIAKITE A. Cheick, KOHE A. Christelle, OUATTARA Mafine, SERI A. Jonathan, N'GUESSAN Firmain Kouakou
+date: 2019-0
+latitude:  7. 
+longitude: -4. 
+zoom: 16
+localisation: Nord-Est de Bouaké, sur la route de Bassawa
+
+
+
+
+|Informations générales||
+|:--|--:|
+| Nom de la localité : | | 
+| Population : | habitants | 
+| Dessertes en eau potable | Non raccordé au réseau SODECI | 
+| Gestion des excrétas | Assainissement autonome |
+
+ ![PMH](images/.jpg "PMH")
+
+## Tensions ressenties lors des entretiens
+
+### Tensions générales
+Aucune tension signalée
+
+### Tensions autour de l'eau
+Du fait de la rareté des points d’eau communautaires, des disputes éclatent dans la file d’attente, toutefois celles-ci demeurent ponctuelles et de faible ampleur.
+
+### Tensions avec les localités voisines
+Aucune tension signalée.
