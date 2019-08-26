@@ -66,7 +66,7 @@
 		<div style="margin:20px;">
 	
 	<select id="filter-localites" onchange="window.location.href=this.value;">
-	<option>Voir la fiche détaillée d'une autre localité</option>
+	<option><em>Voir la fiche détaillée d'une autre localité</em></option>
 	{% for article in articles | sort (attribute='title')%}
 	<option value="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</option>
 	{% endfor %}

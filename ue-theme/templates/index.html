@@ -69,7 +69,7 @@ var map = L.map('map');
 				<li><em>Sélectionner une des <strong>{{ articles|count }}</strong> localités dans la liste pour accéder à son diagnostic détaillé</em><br>
 				<span>
 					<select id="filter-localites" onchange="window.location.href=this.value;">
-					<option>Quartier ou village</option>
+					<option><em>Quartier ou village</em></option>
 					{% for article in articles | sort (attribute='title')%}
 					<option value="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</option>
 					{% endfor %}
