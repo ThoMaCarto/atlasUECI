@@ -62,7 +62,7 @@ var map = L.map('map');
 		</script>
 	</div>
 	<div class="fichelight">
-	<span>
+	<div style="margin:20px;">
 	
 	<select id="filter-localites" onchange="window.location.href=this.value;">
 	<option><em>Voir la fiche détaillée d'une localité</em></option>
@@ -70,7 +70,7 @@ var map = L.map('map');
 	<option value="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</option>
 	{% endfor %}
 	</select>
-	</span>
+	</div>
 	<h4>Synthèse des informations recueillies sur la localité sélectionnée :</h4>
 		<div id="popupstatic">
 		</div>
