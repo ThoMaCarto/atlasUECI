@@ -43,11 +43,11 @@ Le village est raccordé au réseau de la SODECI. Il dispose aussi d'une fontain
 Le village compte un équipement d'hydraulique villageoise amélioré: un forage équipé de PMH. Le forage date de 1980, mais a été abandonné pendant la crise de 2002 suite à des pannes. Cependant, il a récemment été réhabilité en 2018 par l’ambassade du Canada suite à la crise de l’eau survenue dans la zone. Depuis lors, on ne note pas de pannes sur la pompe. Toutefois, notons que la pompe est installée près du cimetière du village. Selon les leaders communautaires du village, la pompe a été installée bien avant le cimetière. Les analyses des paramètres physiques de l’eau de la pompe ont démontré que l’eau avait un pH acide (5.06). Quant aux paramètres chimiques, ils ont démontré une forte concentration en ammoniac (1 mg/l) et en nitrate (66 mg/l). Ces éléments pourraient justifier le goût de l’eau jugée salée selon les populations du village.
 
  
+![PMH](images/sessenouan4.jpg "PMH")
+![PMH](images/sessenouan5.jpg "PMH")
+![PMH](images/sessenouan6.jpg "PMH")
+![PMH](images/sessenouan7.jpg "PMH")
 
-    ![PMH](images/sessenouan4.jpg "PMH")
-	 ![PMH](images/sessenouan5.jpg "PMH")
-	  ![PMH](images/sessenouan6.jpg "PMH")
-	   ![PMH](images/sessenouan7.jpg "PMH")
 
 Les habitants s'approvisionnent aussi dans 3 marigots. Les usages de l’eau des marigots varient selon la qualité de la source. Les enquêtes ont porté sur 2 marigots dont l’un sert d’eau de boisson tandis que l’autre est utilisé pour la lessive et le bain.
 
