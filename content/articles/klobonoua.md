@@ -39,10 +39,14 @@ Les activités génératrices de revenus sont généralement axées sur l’agri
 Le village dispose de 2 pompes à motricité humaine toutes les deux fonctionnelles. Ces dernières tombent en moyenne 1 à 2 fois dans le mois. Les pannes très souvent révélées sont situées au niveau des tuyaux et du corps de la pompe. En cas de panne, les populations s’orientent vers les marigots à proximité. Les différentes PMH sont très sollicitées. Les marigots utilisés en cas de pannes dans PMH ne sont pas pérennes et étaient presque taris lors des enquêtes.
 
 **PMH 1**
+
+
  ![PMH](images/klobonoua1.jpg "PMH")
  ![PMH](images/klobonoua2.jpg "PMH")
  
 **PMH 2**
+
+
  ![PMH](images/klobonoua3.jpg "PMH")
  ![PMH](images/klobonoua4.jpg "PMH")
 
