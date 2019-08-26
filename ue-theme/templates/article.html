@@ -61,9 +61,9 @@
 		</script>
 	</div>
 	<div id="" class="fiche">
-	<header>
-	<div class="legendin">
-		<span>
+	
+	
+		<div style="margin:20px;">
 	
 	<select id="filter-localites" onchange="window.location.href=this.value;">
 	<option>Voir la fiche détaillée d'une autre localité</option>
@@ -71,20 +71,20 @@
 	<option value="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</option>
 	{% endfor %}
 	</select>
-	</span>
+	</div>
+	<div class="legendin" style="margin:20px;padding:10px;">
 			 <h1>{{ article.title }}</h1>
-			 <h4>Enquête réalisée le {{ article.date}}</h4>
-			 <p><strong> Coordonnées GPS :</strong> {{ article.latitude}}, {{ article.longitude}}</p>
 			 
+			 <p style="text-align: right;"> Coordonnées GPS : {{ article.latitude}}, {{ article.longitude}}<br>
+			 Enquête réalisée le {{ article.date|strftime ('%d %B %Y')}}</p>
 			 <h4>{{ article.localisation }}</h4>
 	</div>
-	</header>
-	<div id="" class="fiche">
-		
-		
-		
-		{{ article.content }}
+	<div>
+			 {{ article.content }}
 	</div>
+	
+	
+	
 	</div>
 </div>
 {% endblock %}
