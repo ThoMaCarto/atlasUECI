@@ -5,8 +5,8 @@ iddbb:N'Drikro
 tags: Rural
 authors: BROU Yves Oscar Kouadio, SORO Doba, MAILLARD Thomas, DIAKITE A. Cheick, KOHE A. Christelle, OUATTARA Mafine, SERI A. Jonathan, N'GUESSAN Firmain Kouakou
 date: 2019-02-05
-latitude:  7.67448
-longitude: -5.16156
+latitude:  7.71346
+longitude: -4.90322
 zoom: 16
 localisation: Est de Bouaké
 
