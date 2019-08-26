@@ -62,6 +62,7 @@
 	</div>
 	<div id="" class="fiche">
 		<header>
+		<div class="legendin">
 		<span>
 	
 	<select id="filter-localites" onchange="window.location.href=this.value;">
@@ -72,7 +73,11 @@
 	</select>
 	</span>
 			 <h1>{{ article.title }}</h1>
+			 <h4>Enquête réalisée le {{ article.date}}</h4>
+			 <p><strong> Coordonnées GPS :</strong> {{ article.latitude}}, {{ article.longitude}}</p>
+			 
 			 <h4>{{ article.localisation }}</h4>
+	</div>
 		</header>
 		{{ article.content }}
 	</div>
