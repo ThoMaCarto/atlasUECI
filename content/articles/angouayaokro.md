@@ -23,7 +23,7 @@ localisation: Ouest de Bouaké, sur la route de Béoumi, au sud de la retenu de 
 
 
 ## Présentation de la localité
-Angoua-Yaokro est un village de la Sous-préfecture de Bouaké situé à 13 km dans la direction ouest de la ville, sur l’axe Bouaké-Béoumi. Il compte plus de 1000 habitants. Angoua-Yaokro abrite une école primaire, mais pas de centre de santé. Le village est relié au réseau de la SODECI. Cependant il n’y a pas d’électricité dans le village.
+Angoua-Yaokro est un village de la Sous-préfecture de Bouaké situé à 13 km dans la direction ouest de la ville, sur l’axe Bouaké-Béoumi. Il compte plus de 1000 habitants. Angoua-Yaokro abrite une école primaire et un centre de santé (maternité). Le village est relié au réseau de la SODECI. Cependant il n’y a pas d’électricité dans le village.
 
 
 En ce qui concerne la typologie d’habitat que l’on retrouve dans ce village, elle est plutôt sous un style traditionnel avec des maisons construites en banco. On trouve aussi des maisons modernes. La majorité des habitations sont dépourvues de latrines et les habitants pratiquent la défécation à l'air libre en lisière du village.
