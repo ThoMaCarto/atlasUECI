@@ -6,7 +6,7 @@ tags: Rural
 authors: BROU Yves Oscar Kouadio, SORO Doba, MAILLARD Thomas, DIAKITE A. Cheick, KOHE A. Christelle, OUATTARA Mafine, SERI A. Jonathan, N'GUESSAN Firmain Kouakou
 date: 2019-02-05
 latitude:  7.67448
-longitude: -4.16156
+longitude: -5.16156
 zoom: 16
 localisation: Est de Bouaké
 
