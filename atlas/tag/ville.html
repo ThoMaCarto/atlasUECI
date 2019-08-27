@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="http://urgenceeau.com/atlas/static/css/style.css" />
     <link rel="icon" type="image/x-icon" href="http://urgenceeau.com/atlas/static/images/favicon.ico">
     
+	<!-- Magnific Popup core CSS file -->
+<link rel="stylesheet" href="http://urgenceeau.com/atlas/static/dist/magnific-popup/magnific-popup.css">
 
     
 	<!-- appelle la librairie javascript Leaflet et le fichier CSS Leaflet -->	
@@ -32,9 +34,11 @@
 
 <body>
 <script  type="text/javascript">
+$(document).ready(function() {
 	$('img').magnificPopup({
   type: 'image'
   // other options
+});
 });
 </script>
 <header class="header-bar">
@@ -173,8 +177,7 @@ var map = L.map('map');
 
 	<!-- appelle le fichier JS codant la carte de la page d'accueil -->	
 	<script type="text/javascript" src="http://urgenceeau.com/atlas/doc/map/map_home.js" ></script>
-<!-- Magnific Popup core CSS file -->
-<link rel="stylesheet" href="http://urgenceeau.com/atlas/static/dist/magnific-popup/magnific-popup.css">
+
 
 <!-- jQuery 1.7.2+ or Zepto.js 1.0+
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
