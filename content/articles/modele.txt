@@ -17,10 +17,10 @@ localisation: Ouest de Bouaké
 |:--|--:|
 | Nom de la localité : | | 
 | Population : | habitants | 
-| Dessertes en eau potable | Non raccordé au réseau SODECI | 
+| Dessertes en eau potable | Raccordé au réseau SODECI | 
 | Gestion des excrétas | Assainissement autonome |
 
- ![PMH](images/.jpg "PMH")
+![PMH](images/.jpg "PMH")
 
 ## Tensions ressenties lors des entretiens
 
