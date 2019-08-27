@@ -9,15 +9,21 @@
     <link rel="stylesheet" href="http://localhost:8000/static/css/style.css" />
     <link rel="icon" type="image/x-icon" href="http://localhost:8000/static/images/favicon.ico">
     
+	<!-- Magnific Popup core CSS file -->
+<link rel="stylesheet" href="http://localhost:8000/static/dist/magnific-popup.css">
 
     
 </head>
 
 <body>
 <script  type="text/javascript">
-	$('img').magnificPopup({
-  type: 'image'
+$(document).ready(function() {
+	$('.fiche img').magnificPopup({
+  type: 'image',
+  delegate: 'a',
+  gallery:{enabled:false},
   // other options
+});
 });
 </script>
 <header class="header-bar">
@@ -94,6 +100,24 @@
     <dd><a href="http://localhost:8000/articles/assoumankro.html">Assoumankro</a></dd>
     <dt>mar. 07 mai 2019</dt>
     <dd><a href="http://localhost:8000/articles/djekro.html">Djêkro</a></dd>
+    <dt>ven. 22 février 2019</dt>
+    <dd><a href="http://localhost:8000/articles/dinambo.html">Dinambo</a></dd>
+    <dt>ven. 22 février 2019</dt>
+    <dd><a href="http://localhost:8000/articles/kouame-yaokro.html">Kouamé Yaokro</a></dd>
+    <dt>ven. 22 février 2019</dt>
+    <dd><a href="http://localhost:8000/articles/tchimoukro.html">Tchimoukro</a></dd>
+    <dt>jeu. 21 février 2019</dt>
+    <dd><a href="http://localhost:8000/articles/ahougnanou.html">Ahougnanou</a></dd>
+    <dt>jeu. 21 février 2019</dt>
+    <dd><a href="http://localhost:8000/articles/lokanou.html">Lokanou</a></dd>
+    <dt>jeu. 21 février 2019</dt>
+    <dd><a href="http://localhost:8000/articles/sesseti.html">Sesseti</a></dd>
+    <dt>mer. 20 février 2019</dt>
+    <dd><a href="http://localhost:8000/articles/allokokro.html">Allokokro</a></dd>
+    <dt>mer. 20 février 2019</dt>
+    <dd><a href="http://localhost:8000/articles/kpoti-takikro.html">Kpoti Takikro</a></dd>
+    <dt>mer. 20 février 2019</dt>
+    <dd><a href="http://localhost:8000/articles/pangbabo.html">Pangbabo</a></dd>
     <dt>mar. 19 février 2019</dt>
     <dd><a href="http://localhost:8000/articles/angoua-yaokro.html">Angoua Yaokro</a></dd>
     <dt>mar. 19 février 2019</dt>
@@ -181,14 +205,13 @@
   
     <script src="http://localhost:8000/static/js/script.js"></script>
     
-<!-- Magnific Popup core CSS file -->
-<link rel="stylesheet" href="http://localhost:8000/static/dist/magnific-popup/magnific-popup.css">
+
 
 <!-- jQuery 1.7.2+ or Zepto.js 1.0+
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
 
 <!-- Magnific Popup core JS file -->
-<script type="text/javascript" src="http://localhost:8000/static/dist/magnific-popup/jquery.magnific-popup.js"></script>	
+<script type="text/javascript" src="http://localhost:8000/static/dist/jquery.magnific-popup.js"></script>	
 	
     </footer>
 </body>

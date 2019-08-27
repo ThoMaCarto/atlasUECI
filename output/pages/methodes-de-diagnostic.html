@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="http://localhost:8000/static/css/style.css" />
     <link rel="icon" type="image/x-icon" href="http://localhost:8000/static/images/favicon.ico">
     
+	<!-- Magnific Popup core CSS file -->
+<link rel="stylesheet" href="http://localhost:8000/static/dist/magnific-popup.css">
 
     
 	<!-- appelle la librairie javascript Leaflet et le fichier CSS Leaflet -->	
@@ -32,9 +34,13 @@
 
 <body>
 <script  type="text/javascript">
-	$('img').magnificPopup({
-  type: 'image'
+$(document).ready(function() {
+	$('.fiche img').magnificPopup({
+  type: 'image',
+  delegate: 'a',
+  gallery:{enabled:false},
   // other options
+});
 });
 </script>
 <header class="header-bar">
@@ -112,7 +118,7 @@ var map = L.map('map');
 	</div>
 	<div class="fiche">
 <h2>Méthodologie</h2>
-<p>L'étude préalable de l'accès à l'eau potable et à l'assainissement a été mené dans 69 localités : 8 quartiers de Bouaké et 54 villages aux alentours.  Le travail d'enquête se déroule sur deux volets:</p>
+<p>L'étude préalable de l'accès à l'eau potable et à l'assainissement a été mené dans 62 localités : 8 quartiers de Bouaké et 54 villages aux alentours.  Le travail d'enquête se déroule sur deux volets:</p>
 <ul>
 <li>
 <p>un volet technique : l'analyse de l'état des points d'eau et de la qualité de l'eau,</p>
@@ -148,11 +154,18 @@ var map = L.map('map');
 </table>
 
 <figure>
-<img src="image/equipetech.jpg" alt="Analyse technique des points d'eau"/>
+<img src="image/equipetech.jpg" alt="Analyse technique des points d'eau" title="Analyse technique des points d'eau"/>
+<img src="image/terrain_MOuattara.jpg" alt="Analyse technique des points d'eau" title="Analyse technique des points d'eau"/>
+<img src="image/sessenouan7.jpg" alt="Analyse des concentrations en polluants" title="Analyse des concentrations en polluants"/>
+<img src="image/labo1.jpg" alt="Analyse des prélèvements en laboratoire, préparation comptage E.coli" title="Analyse des prélèvements en laboratoire, préparation comptage E.coli"/>
 
-<img src="image/terrain_MOuattara.jpg" alt="Analyse technique des points d'eau"/>
+<figcaption>Les analyses techniques sur le terrain et en laboratoire</figcaption>
+</figure>
 
-<figcaption>Les analyses sur le terrain</figcaption>
+<figure>
+<img src="image/allomabo2.jpg" alt="Focus group" title="Focus group"/>
+<img src="image/ndrikro2.jpg" alt="Focus group" title="Focus group"/>
+<figcaption>Les enquêtes socioanthropologiques : entretiens individuels et focus group</figcaption>
 </figure>
 
 
@@ -221,14 +234,13 @@ le diagnostic de vulnérabilité sanitaire du point d'eau et l'analyse de la qua
 
 	<!-- appelle le fichier JS codant la carte de la page d'accueil -->	
 	<script type="text/javascript" src="http://localhost:8000/doc/map/map_home.js" ></script>
-<!-- Magnific Popup core CSS file -->
-<link rel="stylesheet" href="http://localhost:8000/static/dist/magnific-popup/magnific-popup.css">
+
 
 <!-- jQuery 1.7.2+ or Zepto.js 1.0+
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
 
 <!-- Magnific Popup core JS file -->
-<script type="text/javascript" src="http://localhost:8000/static/dist/magnific-popup/jquery.magnific-popup.js"></script>	
+<script type="text/javascript" src="http://localhost:8000/static/dist/jquery.magnific-popup.js"></script>	
 	
     </footer>
 </body>

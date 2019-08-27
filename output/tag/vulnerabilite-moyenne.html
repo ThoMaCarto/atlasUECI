@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="http://localhost:8000/static/css/style.css" />
     <link rel="icon" type="image/x-icon" href="http://localhost:8000/static/images/favicon.ico">
     
+	<!-- Magnific Popup core CSS file -->
+<link rel="stylesheet" href="http://localhost:8000/static/dist/magnific-popup.css">
 
     
 	<!-- appelle la librairie javascript Leaflet et le fichier CSS Leaflet -->	
@@ -32,9 +34,13 @@
 
 <body>
 <script  type="text/javascript">
-	$('img').magnificPopup({
-  type: 'image'
+$(document).ready(function() {
+	$('.fiche img').magnificPopup({
+  type: 'image',
+  delegate: 'a',
+  gallery:{enabled:false},
   // other options
+});
 });
 </script>
 <header class="header-bar">
@@ -123,8 +129,8 @@ var map = L.map('map');
 				<li><em>Sélectionner une des <strong>1</strong> localités dans la liste pour accéder à son diagnostic détaillé</em><br>
 				<span>
 					<select id="filter-localites" onchange="window.location.href=this.value;">
-					<option>Quartier ou village</option>
-					<option value="http://localhost:8000/articles/Ndakro-nzuekro.html">N’dakro et N'Zuekro</option>
+					<option style="color:grey;">Quartier ou village</option>
+					<option value="http://localhost:8000/articles/Ndakro-nzuekro.html" >N’dakro et N'Zuekro</option>
 					</select>
 				</span>
 				</li>
@@ -168,14 +174,13 @@ var map = L.map('map');
 
 	<!-- appelle le fichier JS codant la carte de la page d'accueil -->	
 	<script type="text/javascript" src="http://localhost:8000/doc/map/map_home.js" ></script>
-<!-- Magnific Popup core CSS file -->
-<link rel="stylesheet" href="http://localhost:8000/static/dist/magnific-popup/magnific-popup.css">
+
 
 <!-- jQuery 1.7.2+ or Zepto.js 1.0+
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
 
 <!-- Magnific Popup core JS file -->
-<script type="text/javascript" src="http://localhost:8000/static/dist/magnific-popup/jquery.magnific-popup.js"></script>	
+<script type="text/javascript" src="http://localhost:8000/static/dist/jquery.magnific-popup.js"></script>	
 	
     </footer>
 </body>
