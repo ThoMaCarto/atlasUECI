@@ -48,8 +48,8 @@ L’école du village était équipée d'une pompe, mais qui a été abandonné 
 Le village possède aussi deux marigots qui tarissent dans la saison sèche. Notre enquête autour de ces deux marigots a révélé que les points d’eau sont très vulnérables aux risques de contamination avec un score général de 10 chacun. Les marigots sont insalubres, leur environnement direct est peu entretenu : un taux important de fluor dans les marigots et une contamination à *E. coli*.
 
 
-![Marigot](images/kouame-yaokro.jpg "Marigot")
-![Marigot](images/kouame-yaokro.jpg "Marigot")
+![Marigot](images/kouame-yaokro1.jpg "Marigot")
+![Marigot](images/kouame-yaokro2.jpg "Marigot")
 
 ### Pratiques et modes d’approvisionnement en eau
 
