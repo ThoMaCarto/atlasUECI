@@ -48,7 +48,15 @@ authors: BROU Yves Oscar Kouadio, SORO Doba
 
 <img src="image/terrain_MOuattara.jpg" alt="Analyse technique des points d'eau"/>
 
+
+
 <figcaption>Les analyses sur le terrain</figcaption>
+</figure>
+
+<figure>
+<img src="image/allomabo2.jpg" alt="Focus group"/>
+<img src="image/ndrikro2.jpg" alt="Focus group"/>
+<figcaption>Les enquêtes socio-anthropologiques: entretiens individuels et focus group</figcaption>
 </figure>
 
 
