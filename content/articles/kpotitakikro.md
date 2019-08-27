@@ -48,13 +48,13 @@ Le village n’est pas raccordé au réseau de la SODECI, mais le projet de racc
 Deux types d’ouvrages hydrauliques ont été identifiés dans le village : 1 forage et d'au moins 3 puits traditionnels. Le village compte un forage équipé d’une PMH de type HPV 30 fonctionnelle. Le forage date de l’année 2001. Longtemps abandonné à cause d’une panne, il a récemment été réhabilité par un habitant du village. Depuis lors, on ne note pas de panne sur la pompe. L’enquête sanitaire au niveau de la pompe révèle une forte vulnérabilité à la pollution. La pompe est située en aval du village et à proximité d’elle plusieurs sources de contamination potentielles ont été identifiées : Douche, latrines et fosses à fumier. L’analyse de la qualité de l’eau révèle une contamination à *E. coli* dans l’eau du forage. 
 
 
-![PMH](images/kpoti-takikro.jpg "PMH")
+![PMH](images/kpoti-takikro2.jpg "PMH")
 
  
 1 puits traditionnel a été analysé et présente une pollution azotée due principalement au nitrate (concentration supérieure à 50 mg/L). Notons qu’aucune contamination à *E. coli* n’a été détectée dans le prélèvement de l’eau de puits.
 
-![Puits traditionnel](images/kpoti-takikro.jpg "Puits traditionnel")
-![Puits traditionnel](images/kpoti-takikro.jpg "Puits traditionnel")
+![Puits traditionnel](images/kpoti-takikro1.jpg "Puits traditionnel")
+![Puits traditionnel](images/kpoti-takikro3.jpg "Puits traditionnel")
 
 ### Pratiques et modes d’approvisionnement en eau
 L'eau du forage présente un goût salé et les habitants préfèrent utiliser l'eau des puits pour la boisson.
