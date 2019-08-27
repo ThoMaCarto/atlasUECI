@@ -7,7 +7,7 @@ authors: BROU Yves Oscar Kouadio, SORO Doba
 
 <div class="fiche">
 <h2>Méthodologie</h2>
-<p>L'étude préalable de l'accès à l'eau potable et à l'assainissement a été mené dans 69 localités : 8 quartiers de Bouaké et 54 villages aux alentours.  Le travail d'enquête se déroule sur deux volets:</p>
+<p>L'étude préalable de l'accès à l'eau potable et à l'assainissement a été mené dans 62 localités : 8 quartiers de Bouaké et 54 villages aux alentours.  Le travail d'enquête se déroule sur deux volets:</p>
 <ul>
 <li>
 <p>un volet technique : l'analyse de l'état des points d'eau et de la qualité de l'eau,</p>
@@ -50,13 +50,13 @@ authors: BROU Yves Oscar Kouadio, SORO Doba
 
 
 
-<figcaption>Les analyses sur le terrain</figcaption>
+<figcaption>Les analyses techniques sur le terrain</figcaption>
 </figure>
 
 <figure>
 <img src="image/allomabo2.jpg" alt="Focus group"/>
 <img src="image/ndrikro2.jpg" alt="Focus group"/>
-<figcaption>Les enquêtes socio-anthropologiques: entretiens individuels et focus group</figcaption>
+<figcaption>Les enquêtes socioanthropologiques : entretiens individuels et focus group</figcaption>
 </figure>
 
 
