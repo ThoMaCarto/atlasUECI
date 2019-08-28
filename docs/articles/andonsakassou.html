@@ -70,38 +70,6 @@ $('.fiche').find('img').magnificPopup({
         <img src="https://thomacarto.github.io/atlasUECI/static/images/UElogo.png" alt="Atlas Eau Potable Assainissement Côte d'Ivoire Bouaké logo">
     </a>
     <span class="header-title" title="L'Atlas en ligne du projet ETUPO Vallée du Bandama présente les résultats de l'étude sur l'accès à l'eau potable et à l'assainissement à Bouaké et dans les villages périphériques.">Atlas Urgence Eau Bouaké</span></div>
-<script  type="text/javascript">
-var zoomG =11;
-var latG =7.75;
-var longG =-5.038;
-
-
-function mapparamhash(hash) {
-
-if (hash == 0 == true) {
-
-return '"#"+zoomG+"/"+latG+"/"+longG';
-}
-else
-{
-	return hash;
-}
-};
-
-var d1 = document.getElementById('mapmenu1');
-ad1= '<a href="'+https://thomacarto.github.io/atlasUECI+'/pages/vulnerabilite.html'+mapparamhash(hash)+'>Diagnostic<br>localités</a>';
-d1.innerHTML=ad1;
-
-
-var d2 = document.getElementById('mapmenu2')
-d2.innerHTML="";
-d2.innerHTML +='<a href="'+https://thomacarto.github.io/atlasUECI+'/pages/analyse-des-points-deau.html'+mapparamhash(hash)+'>Diagnostic<br>points d\'eau</a>';
-
-
-
-</script>
-
-
 <nav>
 <ul>
 <li><a href="https://thomacarto.github.io/atlasUECI/index.html"><br><img src="https://thomacarto.github.io/atlasUECI/static/images/home_icon.png"></a></li>
@@ -117,11 +85,8 @@ d2.innerHTML +='<a href="'+https://thomacarto.github.io/atlasUECI+'/pages/analys
 </ul>
 </li>
 
-
-
-<li id="mapmenu1" ></li>
-<li id="mapmenu2" ></li>
-
+<li><a href="https://thomacarto.github.io/atlasUECI/pages/vulnerabilite.html">Diagnostic<br>localités</a></li>
+<li><a href="https://thomacarto.github.io/atlasUECI/pages/analyse-des-points-deau.html">Diagnostic<br>points d'eau</a></li>
 
 
 
