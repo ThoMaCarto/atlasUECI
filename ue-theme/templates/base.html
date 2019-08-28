@@ -6,7 +6,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     
     <title>{% block titre %}{{ SITENAME }}{% endblock %}</title>
-    <link rel="stylesheet" href="{{SITEURL}}/{{ THEME_STATIC_DIR }}/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="{{SITEURL}}/{{ THEME_STATIC_DIR }}/css/style.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="{{SITEURL}}/{{ THEME_STATIC_DIR }}/css/print.css" media="print"/>
+    <link rel="stylesheet" href="{{SITEURL}}/{{ THEME_STATIC_DIR }}/dist/leaflet.css" media="print"/>
     <link rel="icon" type="image/x-icon" href="{{SITEURL}}/{{ THEME_STATIC_DIR }}/images/favicon.ico">
     
 	<!-- Magnific Popup core CSS file -->
