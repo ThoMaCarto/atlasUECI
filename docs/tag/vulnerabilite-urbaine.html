@@ -34,14 +34,35 @@
 
 <body>
 <script  type="text/javascript">
+
+
 $(document).ready(function() {
-	$('.fiche img').magnificPopup({
-  type: 'image',
-  delegate: 'a',
-  gallery:{enabled:false},
+$('.fiche').find('img').magnificPopup({
+		type:'image',
+		gallery:{enabled:true},
+  		callbacks:{
+  			elementParse: function (img){ img.src=img.el.attr('src');}
+  		}
+	});
+	
+
+});
+
+
+
+//$(document).ready(function() {
+	//$('.fiche').magnificPopup({
+  //type: 'image',
+  //delegate: 'img',
+  //gallery:{enabled:true},
+  //callback:{
+  //elementParse: function (item){ item.src=item.el.attr('src');console.log(item);}
+  //}
   // other options
-});
-});
+//});
+//});
+
+
 </script>
 <header class="header-bar">
     <div><a class="header-nav" href="https://thomacarto.github.io/atlasUECI/index.html">
