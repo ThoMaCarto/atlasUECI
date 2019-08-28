@@ -71,6 +71,38 @@ $('.fiche').find('img').magnificPopup({
         <img src="http://urgenceeau.com/atlas/static/images/UElogo.png" alt="Atlas Eau Potable Assainissement Côte d'Ivoire Bouaké logo">
     </a>
     <span class="header-title" title="L'Atlas en ligne du projet ETUPO Vallée du Bandama présente les résultats de l'étude sur l'accès à l'eau potable et à l'assainissement à Bouaké et dans les villages périphériques.">Atlas Urgence Eau Bouaké</span></div>
+<script  type="text/javascript">
+var zoomG =11;
+var latG =7.75;
+var longG =-5.038;
+
+
+function mapparamhash(hash) {
+
+if (hash == 0 == true) {
+
+return '"#"+zoomG+"/"+latG+"/"+longG';
+}
+else
+{
+	return hash;
+}
+};
+
+var d1 = document.getElementById('mapmenu1');
+ad1= '<a href="'+http://urgenceeau.com/atlas+'/pages/vulnerabilite.html'+mapparamhash(hash)+'>Diagnostic<br>localités</a>';
+d1.innerHTML=ad1;
+
+
+var d2 = document.getElementById('mapmenu2')
+d2.innerHTML="";
+d2.innerHTML +='<a href="'+http://urgenceeau.com/atlas+'/pages/analyse-des-points-deau.html'+mapparamhash(hash)+'>Diagnostic<br>points d\'eau</a>';
+
+
+
+</script>
+
+
 <nav>
 <ul>
 <li><a href="http://urgenceeau.com/atlas/index.html"><br><img src="http://urgenceeau.com/atlas/static/images/home_icon.png"></a></li>
@@ -86,8 +118,11 @@ $('.fiche').find('img').magnificPopup({
 </ul>
 </li>
 
-<li><a href="http://urgenceeau.com/atlas/pages/vulnerabilite.html">Diagnostic<br>localités</a></li>
-<li><a href="http://urgenceeau.com/atlas/pages/analyse-des-points-deau.html">Diagnostic<br>points d'eau</a></li>
+
+
+<li id="mapmenu1" ></li>
+<li id="mapmenu2" ></li>
+
 
 
 
@@ -123,7 +158,7 @@ var map = L.map('map');
 	map.setMaxZoom(19);
 	map.setMaxBounds([[7.5,-4.8],[7.9,-5.3]]);
 	
-var hash = new L.hash(map);       
+var hash = new L.Hash(map);       
      
 	</script>
 	<script type="text/javascript" >

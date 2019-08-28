@@ -15,6 +15,8 @@ DEFAULT_LANG = u'fr'
 BORDER_LIMIT = '[[7.5,-4.8],[7.9,-5.3]]'
 # Les coordonnées du centroide de la carte générale
 CENTRAGE_MAP = '[7.75, -5.038]'
+CENTRAGE_LAT ='7.75'
+CENTRAGE_LONG = '-5.038'
 #Le niveau de zoom de la carte générale
 ZOOM_GENERAL = '11'
 

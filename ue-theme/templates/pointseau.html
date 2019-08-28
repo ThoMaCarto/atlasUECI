@@ -21,6 +21,9 @@
 <script type="text/javascript" src="{{SITEURL}}/{{ THEME_STATIC_DIR }}/dist/leaflet.groupedlayercontrol.min.js.map"></script>
 	<script type="text/javascript" src="{{SITEURL}}/{{ THEME_STATIC_DIR }}/dist/leaflet.groupedlayercontrol.min.js"></script>	
 	
+	<!-- librairy leaflet hash pour intégrer à l'URL les paramètres de la carte -->
+	<script type="text/javascript" src="{{SITEURL}}/{{ THEME_STATIC_DIR }}/dist/leaflet-hash.js"></script>
+	
 	
 	
 {% endblock %}
@@ -42,7 +45,9 @@ var map = L.map('map');
 	map.setView({{ CENTRAGE_MAP }},  {{ ZOOM_GENERAL }});
 	map.setMinZoom(11);
 	map.setMaxZoom(19);
-	map.setMaxBounds({{ BORDER_LIMIT }})	       
+	map.setMaxBounds({{ BORDER_LIMIT }});
+	
+var hash = new L.Hash(map); 	       
      
 	</script>
 	<script type="text/javascript" >
