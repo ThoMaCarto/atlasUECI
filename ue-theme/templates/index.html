@@ -40,7 +40,9 @@ var map = L.map('map');
 	map.setView({{ CENTRAGE_MAP }}, {{ ZOOM_GENERAL }});
 	map.setMinZoom(11);
 	map.setMaxZoom(19);
-	map.setMaxBounds({{ BORDER_LIMIT }})	       
+	map.setMaxBounds({{ BORDER_LIMIT }});
+	
+var hash = new L.hash(map);       
      
 	</script>
 	<script type="text/javascript" >

@@ -28,6 +28,8 @@
 	<script type="text/javascript" src="http://localhost:8000/static/dist/jquery-3.4.1.min.js"></script>
 	<script type="text/javascript" src="http://localhost:8000/static/dist/jquery.min.js"></script>
 	
+	<!-- librairy leaflet hash pour intégrer à l'URL les paramètres de la carte -->
+	<script type="text/javascript" src="http://localhost:8000/static/dist/leaflet-hash.js"></script>
 	
 	
 </head>
@@ -119,7 +121,9 @@ var map = L.map('map');
 	map.setView([7.75, -5.038], 11);
 	map.setMinZoom(11);
 	map.setMaxZoom(19);
-	map.setMaxBounds([[7.5,-4.8],[7.9,-5.3]])	       
+	map.setMaxBounds([[7.5,-4.8],[7.9,-5.3]]);
+	
+var hash = new L.hash(map);       
      
 	</script>
 	<script type="text/javascript" >
