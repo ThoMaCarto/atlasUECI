@@ -1,6 +1,6 @@
 template: article
 title: Kouamé Assêkro
-slug:kouame-assekro
+slug:kouameassekro
 iddbb: Kouamé Assèkro
 tags: Rural
 authors: BROU Yves Oscar Kouadio, SORO Doba, MAILLARD Thomas, DIAKITE A. Cheick, KOHE A. Christelle, OUATTARA Mafine, SERI A. Jonathan, N'GUESSAN Firmain Kouakou

@@ -1,7 +1,7 @@
 template: article
 title: N’gatta Sakassou
 iddbb: Ngatta Sakassou
-slug: ngatta-sakassou
+slug: ngattasakassou
 tags: Rural
 authors: BROU Yves Oscar Kouadio, SORO Doba, MAILLARD Thomas, DIAKITE A. Cheick, KOHE A. Christelle, OUATTARA Mafine, SERI A. Jonathan, N'GUESSAN Firmain Kouakou
 date: 2019-02-07

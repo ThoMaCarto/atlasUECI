@@ -1,6 +1,6 @@
 template: article
 title: Belleville 1
-slug: belleville-1
+slug: belleville1
 idbdd: Belleville 1
 tags: Urbain
 authors: BROU Yves Oscar Kouadio, SORO Doba, MAILLARD Thomas, DIAKITE A. Cheick, KOHE A. Christelle, OUATTARA Mafine, SERI A. Jonathan, N'GUESSAN Firmain Kouakou

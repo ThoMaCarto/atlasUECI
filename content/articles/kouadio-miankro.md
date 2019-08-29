@@ -1,6 +1,6 @@
 template: article
 title: Kouadio Miankro
-slug: kouadio-miankro
+slug: kouadiomiankro
 iddbb: Kouadio Miankro
 tags: Rural
 authors: BROU Yves Oscar Kouadio, SORO Doba, MAILLARD Thomas, DIAKITE A. Cheick, KOHE A. Christelle, OUATTARA Mafine, SERI A. Jonathan, N'GUESSAN Firmain Kouakou

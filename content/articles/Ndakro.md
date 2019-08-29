@@ -1,6 +1,6 @@
 template: article
 title: N’dakro et N'Zuekro
-slug: ndakro-nzuekro
+slug: ndakronzuekro
 iddbb:N'dakro
 tags: Urbain
 authors: BROU Yves Oscar Kouadio, SORO Doba, MAILLARD Thomas, DIAKITE A. Cheick, KOHE A. Christelle, OUATTARA Mafine, SERI A. Jonathan, N'GUESSAN Firmain Kouakou

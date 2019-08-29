@@ -1,6 +1,6 @@
 template: article
 title: Kpoti Takikro
-slug: kpoti-takikro
+slug: kpotitakikro
 iddbb: Kpoti Takikro
 tags: Rural
 authors: BROU Yves Oscar Kouadio, SORO Doba, MAILLARD Thomas, DIAKITE A. Cheick, KOHE A. Christelle, OUATTARA Mafine, SERI A. Jonathan, N'GUESSAN Firmain Kouakou
