@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
+    <title>Atlas Eau Potable Assainissement Côte d'Ivoire Bouaké</title>
+    <link rel="stylesheet" type="text/css" href="http://urgenceeau.com/atlas/static/css/style.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="http://urgenceeau.com/atlas/static/css/print.css" media="print"/>
+    <link rel="stylesheet" href="http://urgenceeau.com/atlas/static/dist/leaflet.css" media="print"/>
+    <link rel="icon" type="image/x-icon" href="http://urgenceeau.com/atlas/static/images/favicon.ico">
+    
+	<!-- Magnific Popup core CSS file -->
+<link rel="stylesheet" href="http://urgenceeau.com/atlas/static/dist/magnific-popup.css">
+
+    
+<!-- appelle la librairie javascript Leaflet et le fichier CSS Leaflet -->	
+	<link rel="stylesheet" href="http://urgenceeau.com/atlas/static/dist/leaflet.css"/>
+<script src="http://urgenceeau.com/atlas/static/dist/leaflet.js"></script>
+  
+	<!-- jQuery - indispensable pour utiliser les fichiers geojson -->
+	<script type="text/javascript" src="http://urgenceeau.com/atlas/static/dist/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="http://urgenceeau.com/atlas/static/dist/jquery.min.js"></script>
+	
+	
+	<!-- liens vers les fichiers permettant de créer les controles de groupes de couche dans la carte -->
+	<link rel="stylesheet" href="http://urgenceeau.com/atlas/static/dist/leaflet.groupedlayercontrol.min.css"/>
+	
+		<!-- liens vers les fichiers permettant de créer les controles de groupes de couche dans la carte -->
+<script type="text/javascript" src="http://urgenceeau.com/atlas/static/dist/leaflet.groupedlayercontrol.min.js.map"></script>
+	<script type="text/javascript" src="http://urgenceeau.com/atlas/static/dist/leaflet.groupedlayercontrol.min.js"></script>
+	
+	
+	
+</head>
+
+<body>
+<script  type="text/javascript">
+
+
+$(document).ready(function() {
+$('.fiche').find('img').magnificPopup({
+		type:'image',
+		gallery:{enabled:true},
+  		callbacks:{
+  			elementParse: function (img){ img.src=img.el.attr('src');}
+  		}
+	});
+	
+
+});
+
+
+
+//$(document).ready(function() {
+	//$('.fiche').magnificPopup({
+  //type: 'image',
+  //delegate: 'img',
+  //gallery:{enabled:true},
+  //callback:{
+  //elementParse: function (item){ item.src=item.el.attr('src');console.log(item);}
+  //}
+  // other options
+//});
+//});
+
+
+</script>
+<header class="header-bar">
+    <div><a class="header-nav" href="http://urgenceeau.com/atlas/index.html">
+        <img src="http://urgenceeau.com/atlas/static/images/UElogo.png" alt="Atlas Eau Potable Assainissement Côte d'Ivoire Bouaké logo">
+    </a>
+    <span class="header-title" title="L'Atlas en ligne du projet ETUPO Vallée du Bandama présente les résultats de l'étude sur l'accès à l'eau potable et à l'assainissement à Bouaké et dans les villages périphériques.">Atlas Urgence Eau Bouaké</span></div>
+<nav>
+<ul>
+<li><a href="http://urgenceeau.com/atlas/index.html"><br><img src="http://urgenceeau.com/atlas/static/images/home_icon.png"></a></li>
+
+
+
+<li><a title="La présentation de l'étude"><br>Informations</a>
+<ul class="submenu">
+<li><a href="http://urgenceeau.com/atlas/pages/projet.html">L'étude</a></li>
+<li><a href="http://urgenceeau.com/atlas/pages/methodes-de-diagnostic.html">Les méthodes de diagnostic</a></li>
+<li><a href="http://urgenceeau.com/atlas/pages/auteurs-de-letude.html">Les auteurs</a></li>
+<li><a href="http://urgenceeau.com/atlas/pages/telechargements.html">Télécharger les données et rapports</a></li>
+</ul>
+</li>
+
+<li><a href="http://urgenceeau.com/atlas/pages/vulnerabilite.html">Diagnostic<br>localités</a></li>
+<li><a href="http://urgenceeau.com/atlas/pages/analyse-des-points-deau.html">Diagnostic<br>points d'eau</a></li>
+
+
+
+<li class="selectedout"><a>Contacts<br> Institutionnels</a>
+<ul class="submenu">
+<li class="selectedout"><a href="http://urgenceeau.com/">Association<br>Urgence Eau ></a></li>
+<li class="selectedout"><a href="http://urgenceeau.com/contact/">Contacts Urgence Eau ></a></li>
+<li class="selectedout"><a href="https://www.normandie.fr/">Région Normandie ></a></li>
+<li class="selectedout"><a href="https://www.normandie.fr/normandie-pour-la-paix">Initiative Normandie pour la paix ></a></li>
+</ul>
+
+</ul>
+</nav>
+    
+</header>
+    <div id="main"> 
+    
+<div class="content">
+	<div id="map" class="map">
+		<script type="text/javascript">
+			//// création de la carte et paramétrages généraux : 
+			//centre et niveau de zoom,zoom minimum,zoom maximum, 
+			// et limites du canevas (afin que l'ordinateur ne charge pas trop de tuiles de fond de carte)
+			// les paramètres de la fonction setView (coordonnées du centre de la vue=coordonnée de la localité
+			//niveau de zoom = 14 pour un quartier et 16 pour un village) seront extraits des métadata de chaque 
+			//fiches localité.
+			var map = L.map('map');
+			map.setView([7.71844,-4.98846], 14);
+			map.setMinZoom(11);
+			map.setMaxZoom(19);
+			map.setMaxBounds([[7.5,-4.8],[7.9,-5.3]])
+				
+		</script>
+		<script type="text/javascript" >
+		// construire une variable url pour chaque base de donnée affichée sur la page
+			
+			var articlespath = 'http://urgenceeau.com/atlas/'
+			var urllocalites = "http://urgenceeau.com/atlas/doc/map/bdd/localites_v2.geojson"
+			var urlpointdeau = "http://urgenceeau.com/atlas/doc/map/bdd/pointseau_v2.geojson"
+			var urlNorthArray = '<img src="http://urgenceeau.com/atlas/static/images/compass.png" style="width:30px;">'
+			var urlwhiteshadow = 'http://urgenceeau.com/atlas/doc/map/icone/white.png'
+			var urlpuitsmoderne = 'http://urgenceeau.com/atlas/doc/map/icone/puits_moderne.png'
+			var urlpuitstradi = 'http://urgenceeau.com/atlas/doc/map/icone/puits_tradi.png'
+			var urlforage = 'http://urgenceeau.com/atlas/doc/map/icone/forage.png'
+			var urlborne = 'http://urgenceeau.com/atlas/doc/map/icone/borne.png'
+			var urlsurface = 'http://urgenceeau.com/atlas/doc/map/icone/marigot.png'
+			
+		</script>
+		<script type="text/javascript" >
+		<!-- Script rapide pour filtrer les différents tableaux de données affiché dans la fiche -->
+		var filtreTableau = ""
+		table.setFilter("properties.a_quartier", "=", filtreTableau );
+		
+		</script>
+	</div>
+	<div id="" class="fiche">
+	
+	
+		<div style="margin:20px;">
+	
+	<select id="filter-localites" onchange="window.location.href=this.value;">
+	<option  style="color:grey;">Voir la fiche détaillée d'une autre localité</option>
+	<option value="http://urgenceeau.com/atlas/articles/affouvanssou.html" >Affouvanssou</option>
+	<option value="http://urgenceeau.com/atlas/articles/affouekro.html" >Affouékro</option>
+	<option value="http://urgenceeau.com/atlas/articles/ahougnanou.html" >Ahougnanou</option>
+	<option value="http://urgenceeau.com/atlas/articles/ahoussitakikro.html" >Ahoussi Takikro</option>
+	<option value="http://urgenceeau.com/atlas/articles/akakro.html" >Akakro</option>
+	<option value="http://urgenceeau.com/atlas/articles/akpokro.html" >Akpokro</option>
+	<option value="http://urgenceeau.com/atlas/articles/allokokro.html" >Allokokro</option>
+	<option value="http://urgenceeau.com/atlas/articles/allomabo.html" >Allomabo</option>
+	<option value="http://urgenceeau.com/atlas/articles/andonsakassou.html" >Andon Sakassou</option>
+	<option value="http://urgenceeau.com/atlas/articles/angankro.html" >Angankro</option>
+	<option value="http://urgenceeau.com/atlas/articles/angouayaokro.html" >Angoua Yaokro</option>
+	<option value="http://urgenceeau.com/atlas/articles/assankouadiokro.html" >Assankouadiokro</option>
+	<option value="http://urgenceeau.com/atlas/articles/assengoukan.html" >Assengou Kan</option>
+	<option value="http://urgenceeau.com/atlas/articles/assengoukpli.html" >Assengou Kpli</option>
+	<option value="http://urgenceeau.com/atlas/articles/assieblenou.html" >Assiêblénou</option>
+	<option value="http://urgenceeau.com/atlas/articles/assoumankro.html" >Assoumankro</option>
+	<option value="http://urgenceeau.com/atlas/articles/bamorogare.html" >Bamaro Gare</option>
+	<option value="http://urgenceeau.com/atlas/articles/bamoro.html" >Bamoro</option>
+	<option value="http://urgenceeau.com/atlas/articles/belleville1.html" >Belleville 1</option>
+	<option value="http://urgenceeau.com/atlas/articles/belleville2.html" >Belleville 2</option>
+	<option value="http://urgenceeau.com/atlas/articles/bendekouassikro.html" >Bendêkouassikro</option>
+	<option value="http://urgenceeau.com/atlas/articles/bletromanbo.html" >Blétromanbo</option>
+	<option value="http://urgenceeau.com/atlas/articles/daressalam.html" >Dar Es Salam</option>
+	<option value="http://urgenceeau.com/atlas/articles/dinambo.html" >Dinambo</option>
+	<option value="http://urgenceeau.com/atlas/articles/djetouankro.html" >Djétouankro</option>
+	<option value="http://urgenceeau.com/atlas/articles/djekro.html" >Djêkro</option>
+	<option value="http://urgenceeau.com/atlas/articles/gbesserikro.html" >Gbéssérikro</option>
+	<option value="http://urgenceeau.com/atlas/articles/golikro.html" >Golikro</option>
+	<option value="http://urgenceeau.com/atlas/articles/ikilatekro.html" >Ikilatêkro</option>
+	<option value="http://urgenceeau.com/atlas/articles/kahankro.html" >Kahankro</option>
+	<option value="http://urgenceeau.com/atlas/articles/klobonoua.html" >Klôbonoua</option>
+	<option value="http://urgenceeau.com/atlas/articles/koffikro.html" >Koffikro</option>
+	<option value="http://urgenceeau.com/atlas/articles/konankro.html" >Konankro Mizron</option>
+	<option value="http://urgenceeau.com/atlas/articles/kouadiomiankro.html" >Kouadio Miankro</option>
+	<option value="http://urgenceeau.com/atlas/articles/kouakoumiankro.html" >Kouakou Miankro</option>
+	<option value="http://urgenceeau.com/atlas/articles/kouakro.html" >Kouakro</option>
+	<option value="http://urgenceeau.com/atlas/articles/kouameassekro.html" >Kouamé Assêkro</option>
+	<option value="http://urgenceeau.com/atlas/articles/kouameyaokro.html" >Kouamé Yaokro</option>
+	<option value="http://urgenceeau.com/atlas/articles/kouassiblekrongbassou.html" >Kouassiblékro N’Gbassou</option>
+	<option value="http://urgenceeau.com/atlas/articles/kpotitakikro.html" >Kpoti Takikro</option>
+	<option value="http://urgenceeau.com/atlas/articles/langbassou.html" >Langbassou</option>
+	<option value="http://urgenceeau.com/atlas/articles/lokanou.html" >Lokanou</option>
+	<option value="http://urgenceeau.com/atlas/articles/maroc.html" >Maroc</option>
+	<option value="http://urgenceeau.com/atlas/articles/minankro.html" >Minankro</option>
+	<option value="http://urgenceeau.com/atlas/articles/ndrikro.html" >N'Drikro</option>
+	<option value="http://urgenceeau.com/atlas/articles/nganblekonankro.html" >N'Ganblekonankro</option>
+	<option value="http://urgenceeau.com/atlas/articles/ndakronzuekro.html" >N’dakro et N'Zuekro</option>
+	<option value="http://urgenceeau.com/atlas/articles/ngattasakassou.html" >N’gatta Sakassou</option>
+	<option value="http://urgenceeau.com/atlas/articles/nguessankro.html" >N’guessankro</option>
+	<option value="http://urgenceeau.com/atlas/articles/pangbabo.html" >Pangbabo</option>
+	<option value="http://urgenceeau.com/atlas/articles/pharisassouakro.html" >Pharis Assouakro</option>
+	<option value="http://urgenceeau.com/atlas/articles/pitiessi.html" >Pitiéssi</option>
+	<option value="http://urgenceeau.com/atlas/articles/sessenouan.html" >Sessenouan</option>
+	<option value="http://urgenceeau.com/atlas/articles/sesseti.html" >Sesseti</option>
+	<option value="http://urgenceeau.com/atlas/articles/sinzenou.html" >Sinzénou</option>
+	<option value="http://urgenceeau.com/atlas/articles/tchimouassekro.html" >Tchimou-Assêkro</option>
+	<option value="http://urgenceeau.com/atlas/articles/tchimoukro.html" >Tchimoukro</option>
+	<option value="http://urgenceeau.com/atlas/articles/tolakouadiokro.html" >Tolakouadiokro</option>
+	<option value="http://urgenceeau.com/atlas/articles/totokro.html" >Totokro</option>
+	<option value="http://urgenceeau.com/atlas/articles/yapokouakoukro.html" >Yapokouakoukro</option>
+	<option value="http://urgenceeau.com/atlas/articles/yobouekro.html" >Yobouékro</option>
+	<option value="http://urgenceeau.com/atlas/articles/zoneindustrielle.html" >Zone Industrielle – Djézoukouamékro</option>
+	</select>
+	</div>
+	<div class="legendin" style="margin:20px;padding:10px;">
+			 <h1>Belleville 2</h1>
+			 <p style="text-align: right;"> Coordonnées GPS : 7.71844, -4.98846<br>
+			 Enquête réalisée le 08 mai 2019</p>
+			 <h4>Quartier au nord-est de Bouaké</h4>
+	</div>
+	<div>
+			 <table>
+<thead>
+<tr>
+<th align="left">Informations générales</th>
+<th align="right"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Nom de la localité :</td>
+<td align="right">Belleville 2</td>
+</tr>
+<tr>
+<td align="left">Population (RGPH 2014) :</td>
+<td align="right">6283</td>
+</tr>
+<tr>
+<td align="left">Aire :</td>
+<td align="right">2,34 km²</td>
+</tr>
+<tr>
+<td align="left">Dessertes en eau potable</td>
+<td align="right">Totalement raccordé au réseau SODECI</td>
+</tr>
+<tr>
+<td align="left">Gestion des excrétas</td>
+<td align="right">Assainissement autonome</td>
+</tr>
+</tbody>
+</table>
+<h2>Socio-Anthropologie</h2>
+<p>Le quartier de Belleville 2 constitue une extension plus récente du quartier de Belleville 1. à l’instar de son prédécesseur, il accueille une population très variée originaire de différente région de Côte d’Ivoire des des pays limitrophes (Guinée, Mali, Burkina Faso). 
+La société locale est structurée par de nombreuses associations ou chefferies créées, à l’origine, pour accueillir et faciliter l’installation des migrants. Chaque communauté dispose de sa propre organisation rassemblant des personnes de même origine. Les réunions de développement du quartier se tiennent en présence des représentants des différentes communautés. En parallèle, les femmes sont organisées en mutuelles féminines (Association cumulative d’épargne et de crédits : ACEC) dans le but de faciliter leurs activités commerciales ou d’offrir un crédit en cas de dépenses exceptionnelles (maladie, décès, etc.). Ces associations servent aussi de vitrines pour attirer les financements de bailleurs étrangers. Les associations de jeunes délaissent progressivement la structuration identitaire de leurs aînées pour s’organiser par secteur du quartier.</p>
+<h2>Configuration spatiale</h2>
+<p>Le quartier de Belleville 2 est majoritairement loti, bien que des poches d’habitat non réglementaire persistent. La majorité des habitants sont propriétaires de leur logement. Cette extension de la ville est relativement récente et la qualité du logement évolue d’installations précaires construites avec des matériaux légers vers des habitations en dur construites en parpaing. L’ensemble des habitations sont raccordées aux réseaux d’eau potable et d’électricité de la ville. La qualité du bâti est moindre par rapport à Belleville 1. Le quartier dispose des infrastructures de base telles que les écoles et centres de santé. Il ne bénéficie d’aucune voie bitumée. La totalité de ses voies est en terre battue et le quartier est très excentré et peu accessible par les transports (taxi ou transports collectifs). </p>
+<p><strong>Paysage urbain</strong>
+<img alt="Belleville2 loti" src="images/bv201.jpg" title="Belleville 2 loti"></p>
+<h2>Diagnostic des points d'eau analysés</h2>
+<p>Au même titre que Belleville 1, Belleville 2 est raccordé au réseau de la SODECI et dispose d’autres sources d’alimentation en eau :  forages et puits. Les forages identifiés dans le quartier appartiennent à des privés et font l'objet d'une activité de production et de commercialisation d’eau en sachets appelée communément « <em>Awadji</em> ». Les propriétaires de ces forages sont très réticents à accueillir les enquêteurs aussi nos enquêtes sanitaires ont exclusivement porté sur un échantillon de 20 puits familiaux construits à 80 % par des particuliers.</p>
+<h3>Forages</h3>
+<p><em>Aucun forage n’a été analysé dans le quartier</em></p>
+<h3>Puits</h3>
+<p>Les puits dans le quartier de Belleville 2 sont relativement anciens. La moyenne  d’âge des puits visités lors de notre enquête est supérieure à 13 ans. On retrouve dans le quartier tous les types de puits, mais la majorité des puits sont de type traditionnel même si la construction des puits maçonnés s’est beaucoup développée grâce aux ONG musulmanes depuis 2018. Environ 60% des puits visités sont de type traditionnel. La profondeur des puits est de 11 mètres en moyenne, mais peut atteindre 20 mètres pour les puits les plus profonds.</p>
+<p>Comme dans tous les quartiers de Bouaké, la superstructure des ouvrages est constituée généralement d’une margelle couverte d’une dalle avec une trappe pour faciliter la collecte de l’eau. Nous avons pu observer lors de nos enquêtes à Belleville 2 que l’équipement de surface n’était pas en bon état : 45% des puits visités avaient un défaut sur la margelle notamment des fissures et les ¾ des puits n’avaient pas de couvercle ou des couvercles inadaptés. L’augmentation de la profondeur et le curage des ouvrages sont les seuls travaux effectués par les propriétaires. Ceux-ci interviennent généralement quand le puits tarit.</p>
+<p>L’inspection sanitaire des puits à usage domestique dans le quartier de Belleville 2 révèle que 65% des points d’eau soit 13 puits sur 20 sont sujets à un risque de pollution élevé ou très élevé. </p>
+<table>
+<thead>
+<tr>
+<th align="center">Niveau de vulnérabilité</th>
+<th align="center">Très élevé</th>
+<th align="center">Élevé</th>
+<th align="center">Moyen</th>
+<th align="center">Faible</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Effectif des puits</td>
+<td align="center">2</td>
+<td align="center">11</td>
+<td align="center">6</td>
+<td align="center">1</td>
+</tr>
+</tbody>
+</table>
+<p>Les risques potentiels observés autour des ouvrages sont dus en grande partie à :
+* un manque d’hygiène autour des points d’eau (présence des eaux stagnantes ou d’ordures) : 88% des puits 
+* une étanchéité insuffisante des superstructures due aux fissures : 80% des puits
+* un mauvais conditionnement des puisettes et des couvercles inadaptés : 65% des puits
+* une dégradation de la dalle de couverture : 50% des puits</p>
+<p>L’analyse de la qualité des eaux de puits  indique, comme dans la plupart des quartiers à Bouaké, des eaux qui ont une légère tendance acide (pH &lt; 7). Les pH varient entre 6,04 et 7,56 avec une moyenne de 6,73. La conductivité des eaux de puits variait entre 238 et 1247 µS/cm avec une moyenne de 520.8 µS/cm. Les eaux sont très claires dans presque tous les puits visités. Seulement 5 puits avaient une turbidité supérieure à 5 UTN, la norme recommandée par OMS pour les eaux de boisson.</p>
+<p>En ce qui concerne les paramètres chimiques, les résultats d’analyse indiquent une pollution au nitrate et au fluor. Des  concentrations en nitrate supérieures à la norme recommandée de 50 mg/L pour les eaux de boisson ont été détectées dans 8 puits soit 40% dans ouvrages visités. Des concentrations de fluor ont été détectées dans presque tous les puits à valeurs relativement élevées par rapport aux autres quartiers, mais seulement 2 puits contiennent des concentrations supérieures à 1,5 mg/L.</p>
+<p>La présence de chlore libre n’a été détectée qu’au niveau d’un seul point d’eau.
+L’analyse bactériologique des échantillons d’eau relève que 80% des puits, soit 16 sur 20, sont contaminés par la bactérie <em>E. coli</em>.</p>
+<h3>Eaux de surface</h3>
+<p><em>Aucune eau de surface diagnostiquée dans le quartier</em></p>
+<h2>Pratiques et modes d’approvisionnement en eau</h2>
+<p>Dans les ménages, les femmes sont chargées de l’approvisionnement en eau, tandis que les hommes assurent le paiement des factures de la SODECI et des travaux d’entretien du puits par le puisatier.</p>
+<p>Du fait de l’irrégularité des approvisionnements aux robinets, les abonnés ont pris l’habitude de faire des réserves dans des récipients à proximité du robinet. Plus généralement, les femmes puisent l’eau de puits situés dans leur cours, chez un voisin ou à la mosquée la plus proche. Les habitants les plus riches se sont équipés de forages, mais ils s’en réservent l’usage.</p>
+<h2>Mode de gestion</h2>
+<p>L’eau des différents puits privés ou communautaires est offerte gratuitement au voisinage. Ce sont les propriétaires des points d’eau qui en assurent l’entretien. Il est très mal vu de vendre l’eau de son puits, de ne pas l’entretenir ou d’en interdire l’accès.</p>
+<h2>Personnes ressources</h2>
+<ul>
+<li>Imam de la grande mosquée de Belleville 2</li>
+<li>Président des jeunes de Belleville 2</li>
+<li>Chef du quartier de Belleville 2</li>
+<li>Présidente des femmes de Belleville 2</li>
+</ul>
+<h2>Gestion des excrétas</h2>
+<p>Le quartier de Belleville 2 ne dispose pas d’un réseau de collecte et d’évacuation des eaux usées. L’assainissement y est autonome, chaque habitation gère ses eaux usées domestiques. On retrouve tous les types d’ouvrages d’assainissement : fosses septiques, latrines sèches individuelles ou collectives. Les fosses, une fois pleines, sont vidangées par des artisans ou des entreprises privées.</p>
+<h2>Desiderata des habitants</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Type d'entretien</th>
+<th align="center">Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">03 entretiens individuel auprès de personnes ressources</td>
+<td align="center">26 Nov-09 Déc 2018</td>
+</tr>
+<tr>
+<td align="left">02 Focus group femmes</td>
+<td align="center">26 Nov-09 Déc 2018</td>
+</tr>
+<tr>
+<td align="left">02 Focus group hommes</td>
+<td align="center">26 Nov-09 Déc 2018</td>
+</tr>
+<tr>
+<td align="left">02 Focus group jeunes</td>
+<td align="center">26 Nov-09 Déc 2018</td>
+</tr>
+</tbody>
+</table>
+<p>Les entretiens individuels et collectifs menés dans le quartier indiquent que dans l’ensemble la population préfère s’approvisionner dans les puits ou les forages plutôt qu’au robinet, en raison du tarif de l’abonnement à la SODECI et du caractère imprévisible des coupures. Les femmes souhaitent qu’il y ait plus de forages et que les puits privés soient rénovés. Cela leur permettrait de disposer de sources d’eau pérenne à proximité de leur habitation. Hommes et femmes trouvent que l’eau des forages est de meilleure qualité et à meilleur goût. Le souhait des habitants de voir se multiplier les forages se heurte à la législation ivoirienne qui concède à la SODECI le monopole des forages en ville.</p>
+<h2>Tensions ressenties lors des entretiens</h2>
+<h3>Tensions générales</h3>
+<p>Aucune tension notée dans le quartier.</p>
+<h3>Tensions autour de l'eau</h3>
+<p>Aucune tension notée depuis la fin de la pénurie d’eau.</p>
+<h3>Relations avec les localités voisines</h3>
+<p>Les relations avec les quartiers voisins sont bonnes. On ne note aucun incident.</p>
+	</div>
+	
+	
+	
+	</div>
+</div>
+    </div>
+    <footer class="footer-bar">
+
+
+
+	<a href="http://urgenceeau.com/"><img src="http://urgenceeau.com/atlas/static/images/UElogo.png" alt="Urgence Eau logo"></a>
+	<a href="http://urgenceeau.com/urgence-eau-cote-divoire-ueci/"><img src="http://urgenceeau.com/atlas/static/images/UECIlogo.png" alt="Urgence Eau - Côte d'Ivoire logo"></a>
+	<span class="footer-text"> <a href="http://urgenceeau.com/">Urgence Eau </a><br>
+	<a href="http://urgenceeau.com/urgence-eau-cote-divoire-ueci/">Urgence Eau - Côte d'Ivoire</a></span>
+    <span class="footer-text" style="text-align: center;">Site développé par <a href='http://www.ladyss.com/thomas-maillard'>Thomas Maillard</a><br>© 2018 Urgence Eau | <a href="http://urgenceeau.com/mentions-legales/">Mentions légales</a></span>
+    <span class="footer-text" style="text-align: right;">Un projet soutenu par la <a href="https://www.normandie.fr/">Région Normandie</a><br>à travers l'initiative <a href="https://www.normandie.fr/normandie-pour-la-paix">Normandie pour la Paix.</a></span>
+    <a href="https://www.normandie.fr/"><img src="http://urgenceeau.com/atlas/static/images/logo_r_normandie-portrait-cmjn.jpg" alt="Region Normandie logo"></a>
+	<a href="https://www.normandie.fr/normandie-pour-la-paix"><img src="http://urgenceeau.com/atlas/static/images/Label_Normandie-pour-la-Paix.jpg" alt="Label Normandie pour la paix logo"></a>
+  
+    <script src="http://urgenceeau.com/atlas/static/js/script.js"></script>
+    
+<!-- liens vers les fichiers permettant de créer les controles de groupes de couche dans la carte -->
+<script type="text/javascript" src="http://urgenceeau.com/atlas/static/dist/leaflet.groupedlayercontrol.min.js.map"></script>
+	<script type="text/javascript" src="http://urgenceeau.com/atlas/static/dist/leaflet.groupedlayercontrol.min.js"></script>
+<!-- les scripts d'affichage de l'habillage de la carte -->
+<script type="text/javascript" src="http://urgenceeau.com/atlas/doc/map/map_habillage.js" ></script>
+<!-- script d'affichage des groupes de couche dans le contrôleur de couches -->
+<script type="text/javascript" src="http://urgenceeau.com/atlas/doc/map/groupecontrole.js"></script>
+<!-- script d'affichage des différentes couches -->
+<script type="text/javascript" src="http://urgenceeau.com/atlas/doc/map/localites_type.js" ></script>
+<script type="text/javascript" src="http://urgenceeau.com/atlas/doc/map/pe_type.js" ></script>
+
+
+
+
+<!-- jQuery 1.7.2+ or Zepto.js 1.0+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
+
+<!-- Magnific Popup core JS file -->
+<script type="text/javascript" src="http://urgenceeau.com/atlas/static/dist/jquery.magnific-popup.js"></script>	
+	
+    </footer>
+</body>
+ 
+</html>
