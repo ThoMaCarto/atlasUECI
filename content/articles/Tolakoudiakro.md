@@ -2,7 +2,7 @@ template: article
 title: Tolakouadiokro
 slug: tolakouadiokro
 iddbb: Tolakouadiokro
-tags: Urbain,Ville,Vulnérabilité urbaine
+tags: Urbain
 author: BROU Yves Oscar Kouadio, SORO Doba, MAILLARD Thomas, DIAKITE A. Cheick, KOHE A. Christelle, OUATTARA Mafine, SERI A. Jonathan
 date: 2019-05-08
 latitude: 7.73547

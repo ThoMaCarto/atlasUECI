@@ -2,10 +2,10 @@ template: article
 title: Maroc
 slug: maroc
 iddbb: Maroc
-tags: Rural
+tags: Urbain
 authors: BROU Yves Oscar Kouadio, SORO Doba, MAILLARD Thomas, DIAKITE A. Cheick, KOHE A. Christelle, OUATTARA Mafine, SERI A. Jonathan, N'GUESSAN Firmain Kouakou
 date: 2019-05-08
-latitude:  7.74310 
+latitude:  7.74310
 longitude: -5.04518
 zoom: 14
 localisation: Quartier du Nord-Ouest de Bouaké
@@ -15,10 +15,10 @@ localisation: Quartier du Nord-Ouest de Bouaké
 
 |Informations générales||
 |:--|--:|
-| Nom de la localité : | Maroc | 
+| Nom de la localité : | Maroc |
 | Population : | Pas de données |
-| Aire : | 5 km² | 
-| Dessertes en eau potable | Partiellement raccordé au réseau SODECI | 
+| Aire : | 5 km² |
+| Dessertes en eau potable | Partiellement raccordé au réseau SODECI |
 | Gestion des excrétas | Assainissement autonome |
 
 
@@ -33,7 +33,7 @@ Le quartier Maroc est l’un des nouveaux quartiers créés au cours de la crise
 
 
 
- 
+
 
 ## Diagnostic des points d'eau analysés
 L’évaluation sanitaire des points d’eau au quartier Maroc a été réalisée sur 20 puits familiaux à usage domestique dont 3 construit par des ONG musulmanes. Seules quelques habitations au niveau de Maroc 1 sont raccordées au réseau de distribution de l'eau potable de la SODECI. Les habitants du quartier Maroc ont majoritairement recours aux puits pour l’alimentation en eau dans les ménages. Presque tous les puits ayant fait l’objet de notre étude ont été construits par des particuliers à la construction de leurs maisons.
@@ -68,7 +68,7 @@ Les puits visités au quartier Maroc sont quasiment tous maçonnés avec des pou
 ![Puits construit par une ONG](images/maroc.jpg "Puits construit par une ONG")
 
 
-En ce qui concerne l’aménagement de surface, la construction récente des ouvrages fait que ceux-ci sont presque tous en bon état. 95% des puits (18 puits sur 20) ont des superstructures en bons états. L’aménagement de surface est constitué généralement d’une margelle couverte d’une dalle avec une trappe pour faciliter la collecte de l’eau. La plupart des puits visités avaient leur superstructure faite de carreaux. Il ressort de nos entretiens avec les propriétaires de puits que l’augmentation de la profondeur et le curage des ouvrages sont les seuls travaux effectués au niveau des puits. Ceux-ci interviennent généralement quand le puits tarit. 
+En ce qui concerne l’aménagement de surface, la construction récente des ouvrages fait que ceux-ci sont presque tous en bon état. 95% des puits (18 puits sur 20) ont des superstructures en bons états. L’aménagement de surface est constitué généralement d’une margelle couverte d’une dalle avec une trappe pour faciliter la collecte de l’eau. La plupart des puits visités avaient leur superstructure faite de carreaux. Il ressort de nos entretiens avec les propriétaires de puits que l’augmentation de la profondeur et le curage des ouvrages sont les seuls travaux effectués au niveau des puits. Ceux-ci interviennent généralement quand le puits tarit.
 
 
 
@@ -81,8 +81,8 @@ L’inspection sanitaire des puits à usage domestique au quartier Maroc révèl
 |Effectif des puits|1|6|11|2|
 
  Les risques potentiels observés autour des ouvrages sont dus en grande partie à :
- 
- 
+
+
 * La présente de latrines ou toilettes, des enclos et ordures à moins de 30 mètres (70% des puits)
 * L’absence de drainage des eaux résiduelles autour des ouvrages (85% puits)
 
@@ -90,7 +90,7 @@ L’inspection sanitaire des puits à usage domestique au quartier Maroc révèl
 L’analyse de la qualité des eaux de puits au quartier Maroc montre également que les eaux ont légère acidité (pH < 7). Les pH varient entre 6,14 et 6,96 avec une moyenne de 6,49. La conductivité des eaux de puits variait entre 64.5 et 1135 µS/Cm avec une moyenne de 100 µS/Cm. La turbidité était dans la majorité des puits inférieure à 5 UTN, la norme recommandée par OMS pour les eaux de boisson. 75% avaient une eau claire et limpide lors des analyses effectuées sur le terrain.
 
 
-L’analyse des paramètres chimiques n’a révélé aucune anomalie au niveau des échantillons d’eau au quartier Maroc. 
+L’analyse des paramètres chimiques n’a révélé aucune anomalie au niveau des échantillons d’eau au quartier Maroc.
 
 
 
@@ -101,7 +101,7 @@ L’analyse bactériologique des échantillons d’eau prélevés au quartier Ma
 
 
 ## Pratiques et modes d’approvisionnement en eau
-Partiellement raccordée à la SODECI, la population utilise très majoritairement l'eau des puits. Les entretiens ménages montrent que l'eau est traitée lors du stockage. 
+Partiellement raccordée à la SODECI, la population utilise très majoritairement l'eau des puits. Les entretiens ménages montrent que l'eau est traitée lors du stockage.
 
 ## Mode de gestion
 
@@ -109,7 +109,7 @@ Les puits existent dans la majorité des ménages et la gestion revient aux prop
 
 
 
-## Personnes ressources 
+## Personnes ressources
 
 
 * Responsable Comité Communale de Développement de Quartier (CCDQ) - Maroc
@@ -123,15 +123,15 @@ Le quartier Maroc à l’instar de presque tous les quartiers de Bouaké ne disp
 
 
 ## Desiderata des habitants
- | Type d'entretien | Date | 
- | :-- | :--: | 
+ | Type d'entretien | Date |
+ | :-- | :--: |
  | 14 Entretiens individuels | 12-25 Novembre 2018|
  | 05 Focus femmes | 12-25 Novembre 2018|
  | 05 Focus hommes | 12-25 Novembre 2018|
  | 04 Focus jeunes : | 12-25 Novembre 2018|
 
 
-La population est globalement satisfaite de la qualité de l'eau des puits, sa principale source d'eau potable. Toutefois, les femmes insistent particulièrement sur les la fatigue et les douleurs musculo-squelettiques qu'engendre l'utilisation des puits. Situés sur une butte, les puits sont très profonds et remonter la puisette est éreintant. Elles aimeraient que leurs habitations soient raccordées au réseau de distribution de l'eau potable de la SODECI. 
+La population est globalement satisfaite de la qualité de l'eau des puits, sa principale source d'eau potable. Toutefois, les femmes insistent particulièrement sur les la fatigue et les douleurs musculo-squelettiques qu'engendre l'utilisation des puits. Situés sur une butte, les puits sont très profonds et remonter la puisette est éreintant. Elles aimeraient que leurs habitations soient raccordées au réseau de distribution de l'eau potable de la SODECI.
 
 
 Les hommes tendent à privilégier des sources d'eau de qualité, mais meilleur marché que la SODECI. Ils préfèreraient donc que des forages collectifs indépendants du réseau de la SODECI soient construits, car ils estiment que l'eau y est moins chère, mais de très bonne qualité. Notons que ce voeu se heurte à la législation ivoirienne qui attribue le monopole de l'exploitation des forages en ville à la SODECI.
