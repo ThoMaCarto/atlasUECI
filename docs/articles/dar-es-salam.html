@@ -116,7 +116,7 @@ $('.fiche').find('img').magnificPopup({
 			//niveau de zoom = 14 pour un quartier et 16 pour un village) seront extraits des métadata de chaque 
 			//fiches localité.
 			var map = L.map('map');
-			map.setView([7.69440,-5.19193], 16);
+			map.setView([7.716765,-5.03242], 15);
 			map.setMinZoom(11);
 			map.setMaxZoom(19);
 			map.setMaxBounds([[7.5,-4.8],[7.9,-5.3]])
@@ -139,7 +139,7 @@ $('.fiche').find('img').magnificPopup({
 		</script>
 		<script type="text/javascript" >
 		<!-- Script rapide pour filtrer les différents tableaux de données affiché dans la fiche -->
-		var filtreTableau = "Assieblenou"
+		var filtreTableau = ""
 		table.setFilter("properties.a_quartier", "=", filtreTableau );
 		
 		</script>
@@ -214,10 +214,10 @@ $('.fiche').find('img').magnificPopup({
 	</select>
 	</div>
 	<div class="legendin" style="margin:20px;padding:10px;">
-			 <h1>Assiêblénou</h1>
-			 <p style="text-align: right;"> Coordonnées GPS : 7.69440, -5.19193<br>
-			 Enquête réalisée le 19 février 2019</p>
-			 <h4>Ouest de Bouaké</h4>
+			 <h1>Dar Es Salam</h1>
+			 <p style="text-align: right;"> Coordonnées GPS : 7.716765, -5.03242<br>
+			 Enquête réalisée le 28 mai 2019</p>
+			 <h4>Quartier au nord de Bouaké</h4>
 	</div>
 	<div>
 			 <table>
@@ -230,15 +230,19 @@ $('.fiche').find('img').magnificPopup({
 <tbody>
 <tr>
 <td align="left">Nom de la localité :</td>
-<td align="right">Assiêblénou</td>
+<td align="right">Dar Es Salam</td>
 </tr>
 <tr>
-<td align="left">Population :</td>
-<td align="right">1000 habitants</td>
+<td align="left">Population (RGPH 2014) :</td>
+<td align="right">93968 habitants</td>
+</tr>
+<tr>
+<td align="left">Aire :</td>
+<td align="right">7,29 km²</td>
 </tr>
 <tr>
 <td align="left">Dessertes en eau potable</td>
-<td align="right">Raccordé au réseau SODECI</td>
+<td align="right">Totalement raccordé au réseau SODECI</td>
 </tr>
 <tr>
 <td align="left">Gestion des excrétas</td>
@@ -246,26 +250,79 @@ $('.fiche').find('img').magnificPopup({
 </tr>
 </tbody>
 </table>
-<h2>Présentation de la localité</h2>
-<p>Assièblénou est un village de la Sous-préfecture de Bouaké situé à 10 km dans la direction sur l’axe Bouaké-Béoumi. Il compte plus de 1000 habitants. Assièblénou abrite une école primaire, mais pas de centre de santé. Le village est relié au réseau de la SODECI. Cependant il n’y a pas d’électricité dans le village.</p>
-<p>En ce qui concerne la typologie d’habitat que l’on retrouve dans ce village, elle est plutôt sous un style traditionnel avec des maisons construites en banco. On trouve aussi des maisons modernes. La majorité des habitations est dépourvues de latrines et les habitants pratiquent la défécation à l'air libre en lisière du village.</p>
-<p>Les activités génératrices de revenus sont généralement axées sur l’agriculture avec une production d’anacarde comme culture de rente et le riz, l’igname, etc. comme cultures vivrières</p>
-<h2>État des lieux des ouvrages d’alimentation en eau potable</h2>
-<h3>Ouvrages existants</h3>
-<p>Le village est raccordé au réseau de la SODECI.</p>
-<p><img alt="Robinet de la SODECI" src="images/assieblenou1.jpg" title="Robinet de la SODECI"></p>
-<p>En complément, le village compte un forage équipé de PMH. Le forage est assez récent et date de septembre 2018. Il a été offert par le conseil régional de Bouaké. Depuis lors, on ne note pas de pannes sur la pompe. Toutefois, notons que la pompe est éloignée du village. Elle est située de l’autre côté de la grande route hors du village, ce qui peut selon les leaders communautaires du village, être dangereux pour les enfants qui doivent traverser la route pour aller puiser de l’eau. L’eau est gratuite. Mais la pompe est très peu fréquentée à cause de la distance. Les populations préfèrent se rabattre sur l’eau du robinet. Seuls ceux qui ne disposent pas d’eau courante sont obligés de parcourir cette distance pour se procurer de l’eau à la pompe.
-L’enquête sanitaire réalisée au niveau du forage indique que ce point d’eau ne présente pas de risque pour la santé des populations. Les analyses de la qualité de l’eau révèlent l’absence d’une pollution azotée dans les échantillons d’eau. Les paramètres microbiologiques ont révélé la présence de <em>E. coli</em> dans l’eau du forage (24 UFC/100mL).</p>
-<p><img alt="PMH" src="images/assieblenou2.jpg" title="PMH"></p>
-<h3>Gestion des points d’eau</h3>
-<p>Il n’existe pas de comité de gestion de la pompe.</p>
+<h2>Socio-Anthropologie</h2>
+<p>Le quartier de Dar-Es-Salam estun des plus ancien quartier de la ville. Il est  né des migrations consécutives à l’essor industriel de la ville depuis le début du XXe siècle et à la prospérité de ce nœud ferroviaire et commercial en Afrique de l’Ouest jusque dans les années 1980. Il accueille une population originaire du nord du pays (population Mandé) et des pays limitrophes (Guinée, Burkina Faso, Mali). Cette population est majoritairement de confession musulmane. De ce fait,  il y a une forte densité de mosquée équipés de points d’eau et une forte implication des ONG musulmanes dans la construction de puits et forage  à usage collectif depuis la crise de l’eau en 2018.</p>
+<p>Les différentes crises économiques et socio-politiques qui se sont succédé depuis les trente dernières années ont fortement affaiblis l’emploi industriel. Aujourd'hui, la population tire majoritairement ses revenues de petites activités commerciales dans le marché du quartier pour les femmes et au marché central pour les hommes. </p>
+<h2>Configuration spatiale</h2>
+<p>Dar-Es-Salam est un des quartiers les plus dense de l’agglomération de Bouaké avec près de 13 000 habitants au kilomètre carré. C’est un vaste quartier loti selon un plan orthogonal classique. Les habitations sont raccordées au réseau d’eau potable et d’électricité. Il est subdivisé en 4 sous-quartiers dont la qualité du bâti est relativement homogène. Dar-Es-Salam I, II et IV présentent un habitat de standing moyen : logements sur un ou deux niveaux construits en parpaing ; tandis que Dar-Es-Salam III présente un habitat de standing bas car des logements précaires en matériaux léger persistent et certains ne sont pas directement raccordés aux réseaux, mais utilisent un raccordement collectif.</p>
+<p>Le quartier est pourvu en services de base : centres de santé et écoles.</p>
+<p>Le quartier est traversé par la route A3 qui permet de rejoindre le nord du pays et le Burkina Faso. Cette axe principal très emprunté de 4 voies est bitumé. Cependant, la voirie secondaire n’est pas revêtue et n’a pas de réseau de drainage des eaux de pluie, ce qui occasionne des problèmes d’érosion dans certaines rues. Les habitants déplorent aussi la faiblesse de la déserte du quartier par les taxis et transports collectifs. </p>
+<h2>Diagnostic des points d'eau analysés</h2>
+<p>Les enquêtes sanitaires ont porté sur un échantillon de 30 points d’eau dont 7 forages, 2 puits équipés de pompe à motricité humaine, 8 puits maçonnés et 13 puits traditionnels. À l’instar du reste de la ville, de nombreuses habitation du quartier sont équipés de points d’eau, mais c’est le quartier qui dispose du plus grand nombre de forages.</p>
+<h3>Forages</h3>
+<p>Les forages diagnostiqués ont été construits en 2018 lors de la pénurie d’eau. Ce sont des donateurs étrangers d’ONG confessionnelles musulmanes qui ont financé les forages des mosquées du quartier. Les particuliers ont financés eux-mêmes des forages dans leur logement. Ils sont tous équipés d’une pompe alimentant un réservoir. Les profondeurs de captage varient entre 55 mètres et 120 mètres.</p>
+<p>L’inspection sanitaire autour de ces points d’eau n’a révélée aucune vulnérabilité des ouvrages par rapport aux risques de pollution en surface. Cependant, l’analyse de la qualité de l’eau des forages révèle que 5 d’entre eux ont une concentration en nitrate supérieure à 50 mg/l, des concentrations en fluor relativement élevées avec 1 forage dont la concentration est supérieure à 1,5 mg/l. </p>
+<p>Bien que ce soit des ouvrages par nature peu vulnérables aux contaminations, la présence d' <em>E. coli</em> a été détectée dans 3 forages. </p>
+<h3>Puits</h3>
+<p>Le quartier est équipé de deux types de puits :</p>
+<ul>
+<li>Des puits familiaux construits il y a 25 ans en moyenne dont la superstructure est en mauvais état (fissures sur la margelle, couvercle abîmé). </li>
+<li>Des puits construits en 2018 par des ONG musulmanes en bon état. 2 d’entre eux sont équipés d’une pompe à motricité humaine, mais en l’absence de collecte de fond (l’eau est offerte gratuitement aux voisinage), les pompes ne sont pas toujours entretenus. En conséquence, l’une d’elle était en panne lors de notre passage.</li>
+</ul>
+<p>Dans l’ensemble, ces puits mesurent entre 5 et 16 mètres de profondeur (13 mètres en moyenne) et nécessiteraient d’être approfondis pour assurer un approvisionnement toute l’année.</p>
+<p>La superstructure des ouvrages est constituée généralement d’une margelle couverte d’une dalle avec une trappe pour faciliter la collecte de l’eau. Nous avons pu observer lors de nos enquêtes dans le quartier que l’équipement de surface n’était pas en bon état :</p>
+<ul>
+<li>fissures sur la margelle (32% des puits)</li>
+<li>des couvercles inexistants ou mal adaptés (40 % des puits).</li>
+</ul>
+<p>Lorsqu’ils constate le tarissement du puits en saison sèche, certains propriétaires engage des travaux de curage ou d’approfondissement de leur puits.</p>
+<p>L’inspection sanitaire autour de tous ses points d’eau à Dar Es Salam révèle qu’environ 37% des points d’eau soit 10 puits sur 27 ont une vulnérabilité élevée ou très élevée. </p>
+<table>
+<thead>
+<tr>
+<th align="center">Niveau de vulnérabilité</th>
+<th align="center">Très élevé</th>
+<th align="center">Élevé</th>
+<th align="center">Moyen</th>
+<th align="center">Faible</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Effectif des puits</td>
+<td align="center">2</td>
+<td align="center">8</td>
+<td align="center">11</td>
+<td align="center">6</td>
+</tr>
+</tbody>
+</table>
+<p>Les risques potentiels observés autour des ouvrages dans le quartier sont dus en grande partie à :</p>
+<ul>
+<li>un mauvais conditionnement du dispositif d’exhaure : 74% des puits</li>
+<li>un manque d’hygiène autour du point d’eau (présence d’eaux stagnantes) : 56% des puits </li>
+<li>une étanchéité insuffisante de la superstructure due à des fissures ou à un couvercle inadapté : 41% des puits</li>
+<li>La présence de latrines à proximité immédiate : 30% des puits</li>
+</ul>
+<p>L’analyse de la qualité des eaux de puits indique comme dans la plupart des quartiers à Bouaké des eaux qui ont une tendance légèrement acide (pH &lt; 7). Les pH varient entre 5,65 et 7,7 avec une moyenne de 6,35. La conductivité des eaux de puits variait entre 215,5 et 584,1 µS/cm avec une moyenne de 322 µS/cm. Quant à la turbidité, les eaux sont très claires dans presque tous les puits visités. Seulement 4 puits avaient une turbidité supérieure à 5 UTN, la norme recommandée par OMS pour les eaux de boisson.</p>
+<p>En ce qui concerne les paramètres chimiques, les résultats d’analyse indiquent une pollution aux composés azotés notamment au nitrate et à l’ammoniac. En effet, des  concentrations en nitrate supérieures à la norme recommandée de 50 mg/L pour les eaux de boisson ont été détectées dans tous les puits visités dans le quartier de Dar Es Salam. Quant à l’ammoniac, plus de la moitié des puits soit 52% des puits sont sujets à une forte concentration en ammoniac (valeurs supérieures à 1,5 mg/L). Des concentrations de fluor ont été détectées dans presque tous les puits à valeurs relativement élevées par rapport aux autres quartiers mais aucun n’a de concentrations supérieures à 1,5 mg/L. Le chlore libre n’a été détecté qu’au niveau d’un seul point d’eau.</p>
+<p>L’analyse bactériologique des échantillons d’eau relève que 83% soit environ 19 puits sur les 23 à Dar Es Salam sont contaminés par la bactérie <em>E coli</em>.</p>
+<h3>Eaux de surface</h3>
+<p><em>Aucun approvisionnement dans des eaux de surface n’a été identifié dans le quartier</em></p>
+<h2>Pratiques et modes d’approvisionnement en eau</h2>
+<p>Dar-Es-Salam est totalement raccordé au réseau de la SODECI, toutefois, les habitants signalent régulièrement des coupures liés au sous-dimensionnement des conduites ou à des travaux ponctuels d’entretien, de réparation ou d’amélioration du réseau. La SODECI assure en effet de nombreux travaux de rénovation et de remise à niveau du réseau. En cas de coupure, les  habitants s’approvisionnent dans les puits et forages du quartier. C’est le quartier le mieux équipé en forage de la ville. Lors de la crise de 2018, certains propriétaire de forage ont commercialisé leur eau, si cette pratique était tolérée en période de crise, elle est aujourd’hui interdite.</p>
+<h2>Mode de gestion</h2>
+<p>A Dar Es Salam, les puits existent dans la majorité des ménages et la gestion revient aux propriétaire. Les puits situés sur l’espace public existent également. Ce sont soit des points d’eau de mosquée gérés par un comité interne et distribuant l’eau à l’ensemble des habitants sans distinction confessionnelle, soit des puits privés financés par des ONG confessionnelles musulmanes. Ils sont situés à l’extérieur du logement de leur propriétaire afin de profiter au voisinage, mais sont gérés et entretenus par le particulier qui en est le propriétaire.</p>
 <h2>Personnes ressources</h2>
 <ul>
-<li>Chef de village</li>
+<li>Coordinateur des Imams de Dar es Salam 1</li>
+<li>Président des jeunes de Dar Es Salam 1</li>
+<li>Présidente des femmes de Dar Es Salam 1</li>
+<li>Présidente des femmes de Dar Es Salam 2</li>
 </ul>
 <h2>Gestion des excrétas</h2>
-<p>L’évacuation des selles dans le village se fait à partir de différents types de latrines. Nous avons des latrines à fosses septiques avec ou sans chasse d’eau et des latrines à fosse directe. Néanmoins, comme dans plusieurs villages, la défécation en brousse se fait toujours.</p>
-<h2>Desideratas des populations</h2>
+<p>Le quartier de Dar Es Salam ne dispose pas d’un réseau de drainage des eaux usées. L’assainissement y est autonome, chaque habitation gère ses eaux usées domestiques. On retrouve tous des types d’ouvrages d’assainissement : fosses septiques, latrines sèches individuelles ou collectives. Les fosses, une fois pleines sont vidangées par des artisans ou des entreprises privées.</p>
+<h2>Desiderata des habitants</h2>
 <table>
 <thead>
 <tr>
@@ -275,35 +332,31 @@ L’enquête sanitaire réalisée au niveau du forage indique que ce point d’e
 </thead>
 <tbody>
 <tr>
-<td align="left">Entretien individuel Chef de village</td>
-<td align="center">19 Fevrier 2019</td>
+<td align="left">4 entretiens individuel auprès de personnes ressources</td>
+<td align="center">26 Nov-09 Déc 2018</td>
 </tr>
 <tr>
-<td align="left">Entretien individuel Président des Femmes</td>
-<td align="center">19 Fevrier 2019</td>
+<td align="left">2 Focus group femmes</td>
+<td align="center">10-21 Déc 2019</td>
 </tr>
 <tr>
-<td align="left">Entretien individuel Présidente du comité de gestion</td>
-<td align="center">19 Fevrier 2019</td>
+<td align="left">2 Focus group hommes</td>
+<td align="center">10-21 Déc 2019</td>
 </tr>
 <tr>
-<td align="left">Focus group hommes</td>
-<td align="center">19 Fevrier 2019</td>
-</tr>
-<tr>
-<td align="left">Focus group femmes</td>
-<td align="center">19 Fevrier 2019</td>
+<td align="left">1 Focus group jeunes</td>
+<td align="center">10-21 Déc 2019</td>
 </tr>
 </tbody>
 </table>
-<p>Les habitants souhaiteraient avoir une nouvelle pompe à proximité des habitations.</p>
+<p>Les entretiens individuels et collectifs menés dans le quartier indiquent que si laes habitations sont raccordées au réseau d’eau potable de la SODECI, l’irrégularité des approvisionnements incite les habitants à se tourner vers des sources alternatives : puits et forages. Globalement la population perçoit l’eau des puits comme une eau de bonne qualité et est attachée à disposer d’un puits dans son logement. Cependant, les femmes du quartier prennent progressivement conscience de la qualité moindre de l’eau des puits. Certaines la réservent donc aux tâches ménagères, tandis que l’eau du robinet et des forages est préférée pour la boisson. Si la SODECI rénove le réseau pour améliorer la qualité de la desserte dans le quartier, les habitants demeurent méfiants et souhaiteraient voir se renforcer les points d’eaux alternatifs. Les hommes en particuliers souhaiteraient que les puits soient rénovés ou équipés de pompes, car l’eau y est moins chère que l’abonnement à la SODECI. Ils souhaiteraient aussi que de nouveaux forages à usage collectif soient construits. Toutefois, la législation ivoirienne interdit la construction de forage en ville.  </p>
 <h2>Tensions ressenties lors des entretiens</h2>
 <h3>Tensions générales</h3>
-<p>Aucune tension signalée</p>
+<p>Aucune tension n’a été relevée lors de notre passage.</p>
 <h3>Tensions autour de l'eau</h3>
-<p>Du fait de la rareté des points d’eau communautaires, des disputes éclatent dans la file d’attente, toutefois celles-ci demeurent ponctuelles et de faible ampleur.</p>
-<h3>Tensions avec les localités voisines</h3>
-<p>Aucune tension signalée.</p>
+<p>Les principaux récits de tensions autour de l’approvisionnement en eau concernent la période de pénurie de 2018. De nombreuses querelles éclataient alors dans la fil d’attente des citernes affrétées en urgence par l’office national de l’eau potable (ONEP). Ces disputes concernaient le respect de l’ordre de passage et la quantité des rations accordées à chacun.</p>
+<h3>Relations avec les localités voisines</h3>
+<p>Les relations avec les quartiers voisins sont bonnes. On ne note aucun incident.</p>
 	</div>
 	
 	
