@@ -5,8 +5,8 @@ iddbb: Kahankro
 tags: Rural
 authors: BROU Yves Oscar Kouadio, SORO Doba, MAILLARD Thomas, DIAKITE A. Cheick, KOHE A. Christelle, OUATTARA Mafine, SERI A. Jonathan, N'GUESSAN Firmain Kouakou
 date: 2019-02-01
-latitude:  7.76010 
-longitude: -4.9234
+latitude:  7.73823
+longitude: -4.95679
 zoom: 16
 localisation: Nord-Est de Bouaké, sur la route de Bassawa
 
