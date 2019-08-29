@@ -7,7 +7,7 @@ map.getPane('marker2').style.zIndex = 600;
 
 function creatAlias(prop){
 	switch(prop) {
-		case 'Quartier':return 'Nom';
+		case 'a_quartier':return 'Nom';
 		case 'EAU_SODECI' :return 'Raccordement au réseau de distribution de la SODECI';
 		case 'Pompes_fon' :return 'Pompes fonctionnelles';
 		case 'Pompes N F' :return 'Pompes en panne';
