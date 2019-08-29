@@ -151,6 +151,8 @@ $.getJSON(urllocalites,function(data)
 	+ '<br>Points d\'eau analysés : <b>' + feature.properties.Nombre_de_points_deau_diagnostiqués+'</b>'
 	+ '<br>Points d\'eau conformes aux normes OMS : <b>' + feature.properties.Points_deau_diagnostiqués_conformes_aux_normes_OMS+'</b>'
 	+ '<br>Type de voie d\'accès : <b>' + feature.properties.route+'</b>'
+	+'<br><strong>Diagnostic détaillé : </strong> <a href="'+ articlespath + feature.properties.link_1 +'" style="text-transform: capitalize;">'
+		+ feature.properties.a_quartier +'</a>'
 	)}
 });
 //vulnLocalites.beforeAdd = function (map) {legendVuln.addTo(map);};
