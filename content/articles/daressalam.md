@@ -1,6 +1,6 @@
 template: article
 title: Dar Es Salam
-slug: Dar-es-salam
+slug: dar-es-salam
 idbdd: Dar Es Salam
 tags: Urbain,Ville,Vulnérabilité faible
 authors: BROU Yves Oscar Kouadio, SORO Doba, MAILLARD Thomas, DIAKITE A. Cheick, KOHE A. Christelle, OUATTARA Mafine, SERI A. Jonathan, N'GUESSAN Firmain Kouakou
