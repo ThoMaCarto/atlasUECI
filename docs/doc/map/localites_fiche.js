@@ -253,7 +253,7 @@ vulnLocalites.on("click", cible);
 controlLayers.addOverlay(vulnLocalites, "Niveau de Vulnérabilité","<strong>Diagnostic des localités</strong>");
 
 
-var routeAcces= L.geoJson(data,{style: function(feature){return { pane : 'marker2',color : getColorRoute(feature.properties.Type de ro), weight : 1, fillColor : getColorRoute(feature.properties.route), fillOpacity : .5 };},
+var routeAcces= L.geoJson(data,{style: function(feature){return { pane : 'marker2',color : getColorRoute(feature.properties.route), weight : 1, fillColor : getColorRoute(feature.properties.route), fillOpacity : .5 };},
 	onEachFeature: oneachfeature,
 });
 routeAcces.beforeAdd = function (map) {legendLoc.remove(map);};
