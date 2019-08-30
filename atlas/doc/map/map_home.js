@@ -144,13 +144,13 @@ $.getJSON(urlAggloBouake,function(data)
 // création d’une couche geoJson qui appelle le fichier « localites.geojson »
 $.getJSON(urllocalites,function(data)
 {
-	var vulnLocalites= L.geoJson(data,{style: function(feature){return { color : getColorVuln(feature.properties.PointsEau,feature.properties.Nombre de,feature.properties.EAU_SODECI,feature.properties.Pompes_fon), weight : 1, fillColor : getColorVuln(feature.properties.PointsEau,feature.properties.Nombre de,feature.properties.EAU_SODECI,feature.properties.Pompes_fon), fillOpacity : .5 };},
+	var vulnLocalites= L.geoJson(data,{style: function(feature){return { color : getColorVuln(feature.properties.pointseau,feature.properties.nombre de,feature.properties.eau_sodeci,feature.properties.pompes_fon), weight : 1, fillColor : getColorVuln(feature.properties.pointseau,feature.properties.nombre de,feature.properties.eau_sodeci,feature.properties.pompes_fon), fillOpacity : .5 };},
 	onEachFeature : function(feature, layer ) {layer.bindPopup(
 	'Nom de la localité : <b>' + feature.properties.a_quartier+'</b>'
-	+ '<br>Population : <b>' + feature.properties.Population+'</b>'
-	+ '<br>Points d\'eau analysés : <b>' + feature.properties.Nombre de+'</b>'
-	+ '<br>Points d\'eau conformes aux normes OMS : <b>' + feature.properties.PointsEau+'</b>'
-	+ '<br>Type de voie d\'accès : <b>' + feature.properties.Type de ro+'</b>'
+	+ '<br>Population : <b>' + feature.properties.population+'</b>'
+	+ '<br>Points d\'eau analysés : <b>' + feature.properties.nombre de+'</b>'
+	+ '<br>Points d\'eau conformes aux normes OMS : <b>' + feature.properties.pointseau+'</b>'
+	+ '<br>Type de voie d\'accès : <b>' + feature.properties.type de ro+'</b>'
 	+'<br><strong>Diagnostic détaillé : </strong> <a href="'+ articlespath + feature.properties.link_1 +'" style="text-transform: capitalize;">'
 		+ feature.properties.a_quartier +'</a>'
 	)}
