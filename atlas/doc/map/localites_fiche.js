@@ -242,7 +242,7 @@ controlLayers.addOverlay(localites, "Localités","<strong>Diagnostic des localit
 
 
 // création d’une couche geoJson qui appelle le fichier « localites.geojson » pour créer carte en fonction des vulnérabilités
-var vulnLocalites= L.geoJson(data,{style: function(feature){return { pane : 'marker2',color : getColorVuln(feature.properties.Points_deau_diagnostiqués_conformes_aux_normes_OMS,feature.properties.Nombre_de_points_deau_diagnostiqués,feature.properties.EAU_SODECI,feature.properties.Pompes_Fonctionnelles), weight : 1, fillColor : getColorVuln(feature.properties.Points_deau_diagnostiqués_conformes_aux_normes_OMS,feature.properties.Nombre_de_points_deau_diagnostiqués,feature.properties.EAU_SODECI,feature.properties.Pompes_Fonctionnelles), fillOpacity : .5 };},
+var vulnLocalites= L.geoJson(data,{style: function(feature){return { color : getColorVuln(feature.properties.PointsEau,feature.properties.Nombre de,feature.properties.EAU_SODECI,feature.properties.Pompes_fon), weight : 1, fillColor : getColorVuln(feature.properties.PointsEau,feature.properties.Nombre de,feature.properties.EAU_SODECI,feature.properties.Pompes_fon), fillOpacity : .5 };},
 	onEachFeature: oneachfeature,
 });
 vulnLocalites.beforeAdd = function (map) {legendLoc.remove(map);};
@@ -253,7 +253,7 @@ vulnLocalites.on("click", cible);
 controlLayers.addOverlay(vulnLocalites, "Niveau de Vulnérabilité","<strong>Diagnostic des localités</strong>");
 
 
-var routeAcces= L.geoJson(data,{style: function(feature){return { pane : 'marker2',color : getColorRoute(feature.properties.route), weight : 1, fillColor : getColorRoute(feature.properties.route), fillOpacity : .5 };},
+var routeAcces= L.geoJson(data,{style: function(feature){return { pane : 'marker2',color : getColorRoute(feature.properties.Type de ro), weight : 1, fillColor : getColorRoute(feature.properties.Type de ro), fillOpacity : .5 };},
 	onEachFeature: oneachfeature,
 });
 routeAcces.beforeAdd = function (map) {legendLoc.remove(map);};

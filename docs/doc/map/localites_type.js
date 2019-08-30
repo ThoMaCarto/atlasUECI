@@ -80,13 +80,16 @@ localites.addTo(map);
 controlLayers.addOverlay(localites, "Localités","<strong>Diagnostic des localités</strong>");
 
 // création d’une couche geoJson qui appelle le fichier « localites.geojson » pour créer carte en fonction des vulnérabilités
-var vulnLocalites= L.geoJson(data,{style: function(feature){
-	return { color : getColorVuln(feature.properties.Points_deau_diagnostiqués_conformes_aux_normes_OMS,feature.properties.Nombre_de_points_deau_diagnostiqués,feature.properties.EAU_SODECI,feature.properties.Pompes_Fonctionnelles), weight : 1, fillColor : getColorVuln(feature.properties.Points_deau_diagnostiqués_conformes_aux_normes_OMS,feature.properties.Nombre_de_points_deau_diagnostiqués,feature.properties.EAU_SODECI,feature.properties.Pompes_Fonctionnelles), fillOpacity : .5 };},
+var vulnLocalites= L.geoJson(data,{style: function(feature){return { color : getColorVuln(feature.properties.PointsEau,feature.properties.Nombre de,feature.properties.EAU_SODECI,feature.properties.Pompes_fon), weight : 1, fillColor : getColorVuln(feature.properties.PointsEau,feature.properties.Nombre de,feature.properties.EAU_SODECI,feature.properties.Pompes_fon), fillOpacity : .5 };},
 
 		onEachFeature : 
-		function(feature, layer ) {layer.bindPopup('<b><u>Nom de la localité</u></b><br>' + feature.properties.a_quartier 
-		+'<br><strong>Niveau de Vulnérabilité : </strong>'+ colorToVulnLevel(getColorVuln(feature.properties.Points_deau_diagnostiqués_conformes_aux_normes_OMS,feature.properties.Nombre_de_points_deau_diagnostiqués,feature.properties.EAU_SODECI,feature.properties.Pompes_Fonctionnelles))
-		+'<br><strong>Diagnostic détaillé : </strong> <a href="'+ articlespath + feature.properties.link_1 +'" style="text-transform: capitalize;">'
+		function(feature, layer ) {layer.bindPopup(
+	'Nom de la localité : <b>' + feature.properties.a_quartier+'</b>'
+	+ '<br>Population : <b>' + feature.properties.Population+'</b>'
+	+ '<br>Points d\'eau analysés : <b>' + feature.properties.Nombre de+'</b>'
+	+ '<br>Points d\'eau conformes aux normes OMS : <b>' + feature.properties.PointsEau+'</b>'
+	+ '<br>Type de voie d\'accès : <b>' + feature.properties.Type de ro+'</b>'
+	+'<br><strong>Diagnostic détaillé : </strong> <a href="'+ articlespath + feature.properties.link_1 +'" style="text-transform: capitalize;">'
 		+ feature.properties.a_quartier +'</a>')},
 });	
 
