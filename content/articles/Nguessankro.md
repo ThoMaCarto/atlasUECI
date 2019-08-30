@@ -5,8 +5,8 @@ slug: nguessankro
 tags: Rural
 authors: BROU Yves Oscar Kouadio, SORO Doba, MAILLARD Thomas, DIAKITE A. Cheick, KOHE A. Christelle, OUATTARA Mafine, SERI A. Jonathan, N'GUESSAN Firmain Kouakou
 date: 2019-01-22
-latitude: 7.68446
-longitude: -5.03996
+latitude: 7.80520
+longitude: -5.04480
 zoom: 16
 localisation: Nord de Bouaké
 
