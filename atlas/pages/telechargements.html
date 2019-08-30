@@ -128,13 +128,18 @@ $('.fiche').find('img').magnificPopup({
 	<h2>Télécharger  les données de l'étude</h2>
 	<p>Les données de l'étude ETUPO Vallée du Bandama sont librement téléchargeables et utilisables sous condition de mentionner leurs auteurs :
 	<br>© Urgence Eau (2018-2019) et © Urgence Eaux - Côte d'Ivoire (2018-2019).
-	<br>Elle sont fournies sous deux formats de base de données géographiques.</p>
+	<br>Elle sont fournies sous deux formats de base de données géographiques et sous forme de tableur sans les informations géographiques.</p>
 	<!--<div id="dataLoc"style="border:1px solid red;"></div>
 	<div id="dataPE"></div>-->
 	<table>
 	<tr><th colspan="3">Les données de l'étude</th></tr>
-	<tr><td>Données par localités</td><!--<td><button id="download-csvLoc">Download CSV</button></td>--><td><button><a href="http://urgenceeau.com/atlas/doc/map/bdd/localites_v2.geojson" download="UECI_localites">Download GEOJSON</a></button></td><td><button><a href="http://urgenceeau.com/atlas/doc/map/bdd/localites_v2.zip" download="UECI_localites">Download shape (.zip)</a></button></td></tr>
-	<tr><td>Données par points d'eau</td><!--<td><button id="download-csvPE">Download CSV</button></td>--><td><button><a href="http://urgenceeau.com/atlas/doc/map/bdd/pointseau_v2.geojson" download="UECI_PointsEau">Download GEOJSON</a></button></td><td><button><a href="http://urgenceeau.com/atlas/doc/map/bdd/pointseau_v4.zip" download="UECI_PointsEau">Download shape (.zip)</a></button></td></tr>
+	<tr><td>Données par localités</td><!--<td><button id="download-csvLoc">Download CSV</button></td>--><td><button><a href="http://urgenceeau.com/atlas/doc/map/bdd/localites_v2.geojson" download="UECI_localites">Download GEOJSON</a></button></td><td><button><a href="http://urgenceeau.com/atlas/doc/map/bdd/localites_v2.zip" download="UECI_localites">Download shape (.zip)</a></button></td>
+	<td><button><a href="http://urgenceeau.com/atlas/doc/map/bdd/localites_v2_urgenceeau.xlsx">Download Spreadsheet (.xlsx)</a></button></td>
+	</tr>
+	
+	<tr><td>Données par points d'eau</td><!--<td><button id="download-csvPE">Download CSV</button></td>--><td><button><a href="http://urgenceeau.com/atlas/doc/map/bdd/pointseau_v2.geojson" download="UECI_PointsEau">Download GEOJSON</a></button></td><td><button><a href="http://urgenceeau.com/atlas/doc/map/bdd/pointseau_v4.zip" download="UECI_PointsEau">Download shape (.zip)</a></button></td>
+	<td><button><a href="http://urgenceeau.com/atlas/doc/map/bdd/pointseau_v4_urgenceeau.xlsx">Download Spreadsheet (.xlsx)</a></button></td>
+	</tr>
 	</table>
 	<h2> Télécharger les rapports</h2>
 	
