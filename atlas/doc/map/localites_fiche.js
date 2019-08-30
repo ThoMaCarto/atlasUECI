@@ -243,7 +243,7 @@ controlLayers.addOverlay(localites, "Localités","<strong>Diagnostic des localit
 
 
 // création d’une couche geoJson qui appelle le fichier « localites.geojson » pour créer carte en fonction des vulnérabilités
-var vulnLocalites= L.geoJson(data,{style: function(feature){return { color : getColorVuln(feature.properties.conforme,feature.properties.analyse,feature.properties.eau_sodeci,feature.properties.pompes_fon), weight : 1, fillColor : getColorVuln(feature.properties.conforme,feature.properties.analyse,feature.properties.eau_sodeci,feature.properties.pompes_fon), fillOpacity : .5 };},
+var vulnLocalites= L.geoJson(data,{style: function(feature){return {  pane : 'marker2', color : getColorVuln(feature.properties.conforme,feature.properties.analyse,feature.properties.eau_sodeci,feature.properties.pompes_fon), weight : 1, fillColor : getColorVuln(feature.properties.conforme,feature.properties.analyse,feature.properties.eau_sodeci,feature.properties.pompes_fon), fillOpacity : .5 };},
 	onEachFeature: oneachfeature,
 });
 vulnLocalites.beforeAdd = function (map) {legendLoc.remove(map);};
@@ -254,7 +254,7 @@ vulnLocalites.on("click", cible);
 controlLayers.addOverlay(vulnLocalites, "Niveau de Vulnérabilité","<strong>Diagnostic des localités</strong>");
 
 
-var routeAcces= L.geoJson(data,{style: function(feature){return { pane : 'marker2',color : getColorRoute(feature.properties.route), weight : 1, fillColor : getColorRoute(feature.properties.route), fillOpacity : .5 };},
+var routeAcces= L.geoJson(data,{style: function(feature){return { pane : 'marker2', color : getColorRoute(feature.properties.route), weight : 1, fillColor : getColorRoute(feature.properties.route), fillOpacity : .5 };},
 	onEachFeature: oneachfeature,
 });
 routeAcces.beforeAdd = function (map) {legendLoc.remove(map);};
