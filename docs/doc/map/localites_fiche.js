@@ -8,38 +8,38 @@ map.getPane('marker2').style.zIndex = 600;
 function creatAlias(prop){
 	switch(prop) {
 		case 'a_quartier':return 'Nom';
-		case 'EAU_SODECI' :return 'Raccordement au réseau de distribution de la SODECI';
-		case 'Pompes_fon' :return 'Pompes fonctionnelles';
-		case 'Pompes N F' :return 'Pompes en panne';
-		case 'Forage' :return 'Forage';
-		case 'Puits' :return 'Puits';
-		case 'Eau de sur' :return 'Mare/marigot/rivière';
-		case 'Pompes Ré' :return 'Pompes à réparer';
-		case 'Nombre de' :return 'Points d\'eau analysés';
-		case 'PointsEau' :return 'Points d\'eau conformes aux nomes OMS';
-		case 'Puits diag' :return 'Points d\'eau de vulnérabilité faible';
-		case 'Puits di_1' :return 'Points d\'eau de vulnérabilité moyenne';
-		case 'Puits di_2' :return 'Points d\'eau de vulnérabilité élevée';
-		case 'Puits di_3' :return 'Points d\'eau de vulnérabilité très élevée';
-		case 'Points d_1' :return 'Points d\'eau publics analysés';
-		case 'Points d_2' :return 'Points d\'eau privés analysés';
-		case "Comité de" :return 'Nombre de Comité de gestion';
-		case 'Nombre d_1' :return 'Membre dans le comité';
-		case 'Nombre d_2' :return 'Femmes dans le comité';
-		case 'Population' :return 'Population';
-		case 'Qualité d' :return 'Type d\'habitat';
-		case 'Equipement' :return 'École';
-		case 'Equipemen_1' :return 'Centre de santé';
-		case 'Activités' :return 'Activité économique principale';
-		case 'Type d’a' :return 'Type d’assainissement';
-		case "Défécati" :return 'Défécation à l’air libre';
-		case 'Type de ro' :return 'Type de voie d\'accès';
-		case 'Désiderat' :return 'Désiderata principal  des femmes';
-		case 'Désidera_1' :return 'Désiderata principaldes hommes';
-		case 'Personnes' :return 'Personnes ressources';
+		case 'eau_sodeci' :return 'Raccordement au réseau de distribution de la SODECI';
+		case 'pompes_fon' :return 'Pompes fonctionnelles';
+		case 'pompes N F' :return 'Pompes en panne';
+		case 'forage' :return 'Forage';
+		case 'puits' :return 'Puits';
+		case 'eau de sur' :return 'Mare/marigot/rivière';
+		case 'pompes Ré' :return 'Pompes à réparer';
+		case 'nombre de' :return 'Points d\'eau analysés';
+		case 'pointsEau' :return 'Points d\'eau conformes aux nomes OMS';
+		case 'puits diag' :return 'Points d\'eau de vulnérabilité faible';
+		case 'puits di_1' :return 'Points d\'eau de vulnérabilité moyenne';
+		case 'puits di_2' :return 'Points d\'eau de vulnérabilité élevée';
+		case 'puits di_3' :return 'Points d\'eau de vulnérabilité très élevée';
+		case 'points d_1' :return 'Points d\'eau publics analysés';
+		case 'points d_2' :return 'Points d\'eau privés analysés';
+		case "comité de" :return 'Nombre de Comité de gestion';
+		case 'nombre d_1' :return 'Membre dans le comité';
+		case 'nombre d_2' :return 'Femmes dans le comité';
+		case 'population' :return 'Population';
+		case 'qualité d' :return 'Type d\'habitat';
+		case 'equipement' :return 'École';
+		case 'equipemen_1' :return 'Centre de santé';
+		case 'activités' :return 'Activité économique principale';
+		case 'type d’a' :return 'Type d’assainissement';
+		case "défécati" :return 'Défécation à l’air libre';
+		case 'type de ro' :return 'Type de voie d\'accès';
+		case 'désiderat' :return 'Désiderata principal  des femmes';
+		case 'désidera_1' :return 'Désiderata principaldes hommes';
+		case 'personnes' :return 'Personnes ressources';
 		case 'tensions i' :return 'Tensions internes';
 		case 'tension av' :return 'Tension avec le voisinages';
-		case 'Dates des' :return 'Dates des enquêtes';
+		case 'dates des' :return 'Dates des enquêtes';
 		
 		
 	}
@@ -242,7 +242,7 @@ controlLayers.addOverlay(localites, "Localités","<strong>Diagnostic des localit
 
 
 // création d’une couche geoJson qui appelle le fichier « localites.geojson » pour créer carte en fonction des vulnérabilités
-var vulnLocalites= L.geoJson(data,{style: function(feature){return { color : getColorVuln(feature.properties.PointsEau,feature.properties.Nombre de,feature.properties.EAU_SODECI,feature.properties.Pompes_fon), weight : 1, fillColor : getColorVuln(feature.properties.PointsEau,feature.properties.Nombre de,feature.properties.EAU_SODECI,feature.properties.Pompes_fon), fillOpacity : .5 };},
+var vulnLocalites= L.geoJson(data,{style: function(feature){return { color : getColorVuln(feature.properties.pointseau,feature.properties.nombre de,feature.properties.eau_sodeci,feature.properties.pompes_fon), weight : 1, fillColor : getColorVuln(feature.properties.pointseau,feature.properties.nombre de,feature.properties.eau_sodeci,feature.properties.pompes_fon), fillOpacity : .5 };},
 	onEachFeature: oneachfeature,
 });
 vulnLocalites.beforeAdd = function (map) {legendLoc.remove(map);};
