@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
+    <title>Atlas Eau Potable Assainissement Côte d'Ivoire Bouaké</title>
+    <link rel="stylesheet" type="text/css" href="https://thomacarto.github.io/atlasUECI/static/css/style.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="https://thomacarto.github.io/atlasUECI/static/css/print.css" media="print"/>
+    <link rel="stylesheet" href="https://thomacarto.github.io/atlasUECI/static/dist/leaflet.css" media="print"/>
+    <link rel="icon" type="image/x-icon" href="https://thomacarto.github.io/atlasUECI/static/images/favicon.ico">
+    
+	<!-- Magnific Popup core CSS file -->
+<link rel="stylesheet" href="https://thomacarto.github.io/atlasUECI/static/dist/magnific-popup.css">
+
+    
+<!-- appelle la librairie javascript Leaflet et le fichier CSS Leaflet -->	
+	<link rel="stylesheet" href="https://thomacarto.github.io/atlasUECI/static/dist/leaflet.css"/>
+<script src="https://thomacarto.github.io/atlasUECI/static/dist/leaflet.js"></script>
+  
+	<!-- jQuery - indispensable pour utiliser les fichiers geojson -->
+	<script type="text/javascript" src="https://thomacarto.github.io/atlasUECI/static/dist/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="https://thomacarto.github.io/atlasUECI/static/dist/jquery.min.js"></script>
+	
+	
+	<!-- liens vers les fichiers permettant de créer les controles de groupes de couche dans la carte -->
+	<link rel="stylesheet" href="https://thomacarto.github.io/atlasUECI/static/dist/leaflet.groupedlayercontrol.min.css"/>
+	
+		<!-- liens vers les fichiers permettant de créer les controles de groupes de couche dans la carte -->
+<script type="text/javascript" src="https://thomacarto.github.io/atlasUECI/static/dist/leaflet.groupedlayercontrol.min.js.map"></script>
+	<script type="text/javascript" src="https://thomacarto.github.io/atlasUECI/static/dist/leaflet.groupedlayercontrol.min.js"></script>
+	
+	
+	
+</head>
+
+<body>
+<script  type="text/javascript">
+
+
+$(document).ready(function() {
+$('.fiche').find('img').magnificPopup({
+		type:'image',
+		gallery:{enabled:true},
+  		callbacks:{
+  			elementParse: function (img){ img.src=img.el.attr('src');}
+  		}
+	});
+	
+
+});
+
+
+
+//$(document).ready(function() {
+	//$('.fiche').magnificPopup({
+  //type: 'image',
+  //delegate: 'img',
+  //gallery:{enabled:true},
+  //callback:{
+  //elementParse: function (item){ item.src=item.el.attr('src');console.log(item);}
+  //}
+  // other options
+//});
+//});
+
+
+</script>
+<header class="header-bar">
+    <div><a class="header-nav" href="https://thomacarto.github.io/atlasUECI/index.html">
+        <img src="https://thomacarto.github.io/atlasUECI/static/images/UElogo.png" alt="Atlas Eau Potable Assainissement Côte d'Ivoire Bouaké logo">
+    </a>
+    <span class="header-title" title="L'Atlas en ligne du projet ETUPO Vallée du Bandama présente les résultats de l'étude sur l'accès à l'eau potable et à l'assainissement à Bouaké et dans les villages périphériques.">Atlas Urgence Eau Bouaké</span></div>
+<nav>
+<ul>
+<li><a href="https://thomacarto.github.io/atlasUECI/index.html"><br><img src="https://thomacarto.github.io/atlasUECI/static/images/home_icon.png"></a></li>
+
+
+
+<li><a title="La présentation de l'étude"><br>Informations</a>
+<ul class="submenu">
+<li><a href="https://thomacarto.github.io/atlasUECI/pages/projet.html">L'étude</a></li>
+<li><a href="https://thomacarto.github.io/atlasUECI/pages/methodes-de-diagnostic.html">Les méthodes de diagnostic</a></li>
+<li><a href="https://thomacarto.github.io/atlasUECI/pages/auteurs-de-letude.html">Les auteurs</a></li>
+<li><a href="https://thomacarto.github.io/atlasUECI/pages/telechargements.html">Télécharger les données et rapports</a></li>
+</ul>
+</li>
+
+<li><a href="https://thomacarto.github.io/atlasUECI/pages/vulnerabilite.html">Diagnostic<br>localités</a></li>
+<li><a href="https://thomacarto.github.io/atlasUECI/pages/analyse-des-points-deau.html">Diagnostic<br>points d'eau</a></li>
+
+
+
+<li class="selectedout"><a>Contacts<br> Institutionnels</a>
+<ul class="submenu">
+<li class="selectedout"><a href="http://urgenceeau.com/">Association<br>Urgence Eau ></a></li>
+<li class="selectedout"><a href="http://urgenceeau.com/contact/">Contacts Urgence Eau ></a></li>
+<li class="selectedout"><a href="https://www.normandie.fr/">Région Normandie ></a></li>
+<li class="selectedout"><a href="https://www.normandie.fr/normandie-pour-la-paix">Initiative Normandie pour la paix ></a></li>
+</ul>
+
+</ul>
+</nav>
+    
+</header>
+    <div id="main"> 
+    
+<div class="content">
+	<div id="map" class="map">
+		<script type="text/javascript">
+			//// création de la carte et paramétrages généraux : 
+			//centre et niveau de zoom,zoom minimum,zoom maximum, 
+			// et limites du canevas (afin que l'ordinateur ne charge pas trop de tuiles de fond de carte)
+			// les paramètres de la fonction setView (coordonnées du centre de la vue=coordonnée de la localité
+			//niveau de zoom = 14 pour un quartier et 16 pour un village) seront extraits des métadata de chaque 
+			//fiches localité.
+			var map = L.map('map');
+			map.setView([7.66739,-5.06888], 15);
+			map.setMinZoom(11);
+			map.setMaxZoom(19);
+			map.setMaxBounds([[7.5,-4.8],[7.9,-5.3]])
+				
+		</script>
+		<script type="text/javascript" >
+		// construire une variable url pour chaque base de donnée affichée sur la page
+			
+			var articlespath = 'https://thomacarto.github.io/atlasUECI/'
+			var urllocalites = "https://thomacarto.github.io/atlasUECI/doc/map/bdd/localites_v2.geojson"
+			var urlpointdeau = "https://thomacarto.github.io/atlasUECI/doc/map/bdd/pointseau_v2.geojson"
+			var urlNorthArray = '<img src="https://thomacarto.github.io/atlasUECI/static/images/compass.png" style="width:30px;">'
+			var urlwhiteshadow = 'https://thomacarto.github.io/atlasUECI/doc/map/icone/white.png'
+			var urlpuitsmoderne = 'https://thomacarto.github.io/atlasUECI/doc/map/icone/puits_moderne.png'
+			var urlpuitstradi = 'https://thomacarto.github.io/atlasUECI/doc/map/icone/puits_tradi.png'
+			var urlforage = 'https://thomacarto.github.io/atlasUECI/doc/map/icone/forage.png'
+			var urlborne = 'https://thomacarto.github.io/atlasUECI/doc/map/icone/borne.png'
+			var urlsurface = 'https://thomacarto.github.io/atlasUECI/doc/map/icone/marigot.png'
+			
+		</script>
+		<script type="text/javascript" >
+		<!-- Script rapide pour filtrer les différents tableaux de données affiché dans la fiche -->
+		var filtreTableau = "N'dakro"
+		table.setFilter("properties.a_quartier", "=", filtreTableau );
+		
+		</script>
+	</div>
+	<div id="" class="fiche">
+	
+	
+		<div style="margin:20px;">
+	
+	<select id="filter-localites" onchange="window.location.href=this.value;">
+	<option  style="color:grey;">Voir la fiche détaillée d'une autre localité</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/affouvanssou.html" >Affouvanssou</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/affouekro.html" >Affouékro</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/ahougnanou.html" >Ahougnanou</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/ahoussitakikro.html" >Ahoussi Takikro</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/akakro.html" >Akakro</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/akpokro.html" >Akpokro</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/allokokro.html" >Allokokro</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/allomabo.html" >Allomabo</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/andonsakassou.html" >Andon Sakassou</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/angankro.html" >Angankro</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/angouayaokro.html" >Angoua Yaokro</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/assankouadiokro.html" >Assankouadiokro</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/assengoukan.html" >Assengou Kan</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/assengoukpli.html" >Assengou Kpli</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/assieblenou.html" >Assiêblénou</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/assoumankro.html" >Assoumankro</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/bamorogare.html" >Bamaro Gare</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/bamoro.html" >Bamoro</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/belleville1.html" >Belleville 1</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/belleville2.html" >Belleville 2</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/bendekouassikro.html" >Bendêkouassikro</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/bletromanbo.html" >Blétromanbo</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/daressalam.html" >Dar Es Salam</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/dinambo.html" >Dinambo</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/djetouankro.html" >Djétouankro</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/djekro.html" >Djêkro</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/gbesserikro.html" >Gbéssérikro</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/golikro.html" >Golikro</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/ikilatekro.html" >Ikilatêkro</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/kahankro.html" >Kahankro</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/klobonoua.html" >Klôbonoua</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/koffikro.html" >Koffikro</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/konankro.html" >Konankro Mizron</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/kouadio-miankro.html" >Kouadio Miankro</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/kouakoumiankro.html" >Kouakou Miankro</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/kouakro.html" >Kouakro</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/kouameassekro.html" >Kouamé Assêkro</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/kouameyaokro.html" >Kouamé Yaokro</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/kouassiblekro-ngbassou.html" >Kouassiblékro N’Gbassou</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/kpotitakikro.html" >Kpoti Takikro</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/langbassou.html" >Langbassou</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/lokanou.html" >Lokanou</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/maroc.html" >Maroc</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/minankro.html" >Minankro</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/n-drikro.html" >N'Drikro</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/n-ganblekonankro.html" >N'Ganblekonankro</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/n-dakro-n-zuekro.html" >N’dakro et N'Zuekro</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/ngattasakassou.html" >N’gatta Sakassou</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/nguessankro.html" >N’guessankro</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/pangbabo.html" >Pangbabo</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/pharis-assouakro.html" >Pharis Assouakro</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/pitiessi.html" >Pitiéssi</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/sessenouan.html" >Sessenouan</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/sesseti.html" >Sesseti</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/sinzenou.html" >Sinzénou</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/tchimou-assekro.html" >Tchimou-Assêkro</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/tchimoukro.html" >Tchimoukro</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/tolakouadiokro.html" >Tolakouadiokro</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/totokro.html" >Totokro</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/yapo-kouakoukro.html" >Yapokouakoukro</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/yobouekro.html" >Yobouékro</option>
+	<option value="https://thomacarto.github.io/atlasUECI/articles/zoneindustrielle.html" >Zone Industrielle – Djézoukouamékro</option>
+	</select>
+	</div>
+	<div class="legendin" style="margin:20px;padding:10px;">
+			 <h1>N’dakro et N'Zuekro</h1>
+			 <p style="text-align: right;"> Coordonnées GPS : 7.66739, -5.06888<br>
+			 Enquête réalisée le 18 mai 2019</p>
+			 <h4>Quartier au sud-ouest de Bouaké</h4>
+	</div>
+	<div>
+			 <table>
+<thead>
+<tr>
+<th align="left">Informations générales</th>
+<th align="right"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Nom de la localité :</td>
+<td align="right">N’dakro</td>
+</tr>
+<tr>
+<td align="left">Population (RGPH 2014) :</td>
+<td align="right">5411</td>
+</tr>
+<tr>
+<td align="left">Aire :</td>
+<td align="right">3,67 km²</td>
+</tr>
+<tr>
+<td align="left">Dessertes en eau potable</td>
+<td align="right">Partiellement raccordé au réseau SODECI</td>
+</tr>
+<tr>
+<td align="left">Gestion des excrétas</td>
+<td align="right">Assainissement autonome</td>
+</tr>
+</tbody>
+</table>
+<h2>Socio-Anthropologie</h2>
+<p>N’Dakro était à l’origine un village intégré à la la ville au cours de son expansion. La population Baoulé Akan d’origine a progressivement accueilli des migrants venus du nord du pays, ainsi que de nombreux étudiants en raison de la proximité avec le campus universitaire et de la modicité des loyers. La population est de confession chrétienne et musulmane. </p>
+<h2>Configuration spatiale</h2>
+<p>N’dakro est un quartier majoritairement loti de standing bas, mais englobe des poches plus récentes de zones non loties. La qualité de l’habitat est très hétérogène : habitat villageois précaire construit en matériaux légers ou parcelles rassemblant plusieurs chambres autour d’une cour collective ou logement de standing élevé construit par des fonctionnaires. Le tissu urbain est hétérogène. Les parcelles de la partie lotie forment un plan en damier et sont en partie raccordées aux réseaux d'eau potable et d'électricité. C’est un quartier qui dispose des infrastructures de base : centres de santé et écoles. Dans les zones non loties, le plan est moins régulier, et les habitations ne sont pas raccordées aux réseaux.
+La voirie principale est secondaire n’est pas bitumé de ce fait les leaders associatifs du quartier ont entrepris des démarches auprès des autorités afin que la route principale soit revêtue. Le réseau viaire ne dispose d’aucune infrastructure de drainage des eaux de pluie, en conséquence,  certaines zones souffrent d’importants problèmes d'érosion. </p>
+<h2>Diagnostic des points d'eau analysés</h2>
+<p>Les enquêtes sanitaires réalisées dans le quartier de N’dakro ont porté sur un échantillon de 26  points d’eau dont 20 à N’dakro centre et 6 dans le village voisin de N’zuékro qui dispose d’une borne-fontaine de la SODECI. </p>
+<h3>Forages</h3>
+<p><em>Aucun forage n’a été enquêté dans le quartier</em></p>
+<p>À N’zuékro, 2 bornes-fontaines ont été installées par la SODECI, mais une seule était fonctionnelle lors de notre enquête dans le village. L’eau y est payante à raison de 25 FCFA la cuvette et les bornes ne sont accessibles qu’à certaines heures de la journée. L’évaluation sanitaire et les analyses de la qualité de l’eau au niveau de la borne-fontaine n’ont révélé aucun problème.</p>
+<h3>Puits</h3>
+<p>La majeure partie de N’dakro n’étant pas raccordé au réseau de la SODECI, les habitants s’approvisionnent aux nombreux puits du quartier. Ces puits sont en majorité construits par des particuliers pour leurs habitations (75 % des puits analysés). Les autres ouvrages ont été réalisés par des ONG musulmanes. Toutefois, ces puits sont récents puisque 60 % d’entre eux ont été construits depuis moins de 3 ans (depuis 2015).</p>
+<p>On rencontre des puits de tous types : traditionnel ou maçonné. La profondeur moyenne des  puits est de 8 mètres, mais dans les zones de bas-fonds,les puits captent les eaux de surface à 2 m de profondeur. La grande majorité de la superstructure des puits visités (environ 92%) est en bon état notamment au niveau de la margelle et du couvercle et seul 9 puits sur 24 tarissent au plus fort de la saison sèche (entre février et mars).</p>
+<p>Les puits construits récemment présentent une vulnérabilité faible aux pollutions et contaminations. En effet, seulement 4 puits sur les 24 ayant fait l’objet de notre enquête présentent un degré de vulnérabilité élevée ou très élevé.</p>
+<table>
+<thead>
+<tr>
+<th align="center">Niveau de vulnérabilité</th>
+<th align="center">Très élevé</th>
+<th align="center">Élevé</th>
+<th align="center">Moyen</th>
+<th align="center">Faible</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Effectif des puits</td>
+<td align="center">1</td>
+<td align="center">3</td>
+<td align="center">12</td>
+<td align="center">9</td>
+</tr>
+</tbody>
+</table>
+<p>Les risques potentiels observés autour des ouvrages à N’dakro sont dus en grande partie à :</p>
+<ul>
+<li>un mauvais conditionnement du dispositif d’exhaure notamment les puisettes : 75% des puits</li>
+<li>l’absence ou l’insuffisance de drainage autour des puits (présence des eaux stagnantes) : 79% des puits sont concernés</li>
+<li>La présence de latrines à proximité immédiate : 8% des puits</li>
+</ul>
+<p>L’analyse de la qualité des eaux de puits indique, comme dans la plupart des quartiers de Bouaké, des eaux qui ont une tendance acide (pH &lt; 7). Les pH varient entre 4,86 et 6,31 avec une moyenne de 5,81. La conductivité des eaux de puits variait entre 37,4 et 415 µS/cm avec une moyenne de 209,54 µS/cm. Les eaux sont claires dans presque tous les puits visités. Seuls 4 puits sur 24 avaient une turbidité supérieure à 5 UTN, la norme recommandée par OMS pour les eaux de boisson.</p>
+<p>En ce qui concerne les paramètres chimiques, les résultats d’analyse indiquent une pollution aux composés azotés (nitrate et ammoniac) et au fluor. En effet, des  concentrations en nitrate supérieures à la norme recommandée de 50 mg/L pour les eaux de boisson ont été détectées dans le tiers des puits visités dans la zone. Quant à l’ammoniac, des valeurs supérieures à 1,5 mg/L ont été détectées dans 2 puits. Des concentrations relativement élevées de fluor ont été détectées dans de nombreux puits, mais 1 seul avait  une concentration supérieure à 1,5 mg/L. Le chlore libre n’a été détecté qu’au niveau d’un seul point d’eau.</p>
+<p>L’analyse bactériologique des échantillons d’eau relève que 80% soit environ 19 puits sur les 24 sont contaminés par la bactérie <em>E. coli</em>.</p>
+<h3>Eaux de surface</h3>
+<p>Le marigot visité se situe dans le village de N’zuékro dans un bas-fond servant à la riziculture et au maraîchage. Il est très vulnérable, car non protégé par les habitants du village. Aucune pollution de composés azotés n’a été détectée au niveau du marigot, mais celui-ci est contaminé par <em>E. coli</em>.</p>
+<h2>Pratiques et modes d’approvisionnement en eau</h2>
+<p>À N’Dakro les habitants utilisent généralement l’eau des puits. Pendant les périodes de pénuries, la population s’approvisionnait au niveau du marigot (Nzuékro) et a été ravitaillée par des citernes affrétées par l’Office National de l’Eau Potable (ONEP). Les plus riches louent ou utilisent leurs véhicules pour faire venir l’eau d’autres quartiers. La SODECI a implanté un forage dans le quartier, mais seules les maisons mitoyennes en profitent.</p>
+<h2>Mode de gestion</h2>
+<p>La pénurie d’eau de 2018 à fortement affecté les quartiers de N’Dakro et N’Zuékro en raison du faible niveau de vie de sa population. Les femmes et les étudiants étaient contraints de faire de longs trajets pour s’approvisionner. En conséquence de nombreux ménages ont creusé des puits dans leur cour. À l’instar d’autres quartiers, des ONG musulmanes ont financé la construction de puits. Ces puits sont entretenus par leurs propriétaires, mais ils n’hésitent pas à offrir leur eau à leurs voisins. Le marigot de N’Zuekro est accessible à tous et est utilisé pour la plupart pour la lessive et autres activités du ménage. L’entretien des abords du marigot est sous la responsabilité des notables de N’zuékro. Ils délèguent les jeunes du village pour qu’ils nettoient et désherbent les alentours, cependant l’entretien n’est plus effectué en raison de dissensions entre les jeunes et les autorités villageoises.</p>
+<h2>Personnes ressources</h2>
+<ul>
+<li>Vice-présidente femme</li>
+<li>Chef de la communauté Attié du Gbêkê </li>
+<li>Imam mosquée terminus</li>
+<li>Président de l’association de N’Dakro Village</li>
+<li>Président des jeunes de N’Zuékro</li>
+<li>Responsable du CCDQ de N’Zuékro</li>
+</ul>
+<h2>Gestion des excrétas</h2>
+<p>Dans le quartier de N’dakro et dans le village de N’zuékro il n’y a pas de réseau de collecte et d’évacuation des eaux usées. L’assainissement y est autonome, chaque habitation gère ses eaux usées domestiques. On retrouve tous des types d’ouvrages d’assainissement : fosses septiques, latrines sèches individuelles ou collectives. Les fosses, une fois pleines sont vidangées par des artisans ou des entreprises privées.</p>
+<p>La défécation à ciel ouvert a été observée dans le village.</p>
+<h2>Desiderata des habitants</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Type d'entretien</th>
+<th align="center">Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">08 entretiens individuels auprès de personnes ressources</td>
+<td align="center">26 Nov-09 Déc 2018</td>
+</tr>
+<tr>
+<td align="left">02 Focus group femmes</td>
+<td align="center">10-21 Déc 2019</td>
+</tr>
+<tr>
+<td align="left">02 Focus group hommes</td>
+<td align="center">10-21 Déc 2019</td>
+</tr>
+</tbody>
+</table>
+<p>Les entretiens individuels et collectifs menés dans le quartier révèlent une forte distinction entre les desiderata des femmes et ceux des hommes. Les femmes souhaiteraient être raccordées au réseau d’eau potable de la ville géré par la SODECI, tandis que les hommes préfèrent utiliser l’eau des bornes-fontaines et des puits. Ces divergences s’expliquent par la répartition des rôles dans les ménages. En effet, les femmes sont chargées de l’approvisionnement en eau du ménage, la présence d’un robinet dans leur logement leur évite de perdre du temps en trajet et de se fatiguer à puiser l’eau des puits ou du marigot. Les hommes sont souvent chargés de payer les factures et ils préfèrent donc les sources d’approvisionnement bon marché ou gratuites.</p>
+<h2>Tensions ressenties lors des entretiens</h2>
+<h3>Tensions générales</h3>
+<p>Les entretiens n’ont révélé aucun cas de tension dans la communauté. </p>
+<h3>Tensions autour de l'eau</h3>
+<p>Les principaux récits de tensions autour de l’approvisionnement en eau concernent la période de pénurie de 2018. De nombreuses querelles éclataient alors dans la file d’attente des citernes affrétées en urgence par l’office national de l’eau potable (ONEP). Ces disputes concernaient le respect de l’ordre de passage et la quantité des rations accordées à chacun.</p>
+<h3>Relations avec les localités voisines</h3>
+<p>Les relations sont bonnes avec les autres quartiers. Aucun incident n’a été signalé. </p>
+	</div>
+	
+	
+	
+	</div>
+</div>
+    </div>
+    <footer class="footer-bar">
+
+
+
+	<a href="http://urgenceeau.com/"><img src="https://thomacarto.github.io/atlasUECI/static/images/UElogo.png" alt="Urgence Eau logo"></a>
+	<a href="http://urgenceeau.com/urgence-eau-cote-divoire-ueci/"><img src="https://thomacarto.github.io/atlasUECI/static/images/UECIlogo.png" alt="Urgence Eau - Côte d'Ivoire logo"></a>
+	<span class="footer-text"> <a href="http://urgenceeau.com/">Urgence Eau </a><br>
+	<a href="http://urgenceeau.com/urgence-eau-cote-divoire-ueci/">Urgence Eau - Côte d'Ivoire</a></span>
+    <span class="footer-text" style="text-align: center;">Site développé par <a href='http://www.ladyss.com/thomas-maillard'>Thomas Maillard</a><br>© 2018 Urgence Eau | <a href="http://urgenceeau.com/mentions-legales/">Mentions légales</a></span>
+    <span class="footer-text" style="text-align: right;">Un projet soutenu par la <a href="https://www.normandie.fr/">Région Normandie</a><br>à travers l'initiative <a href="https://www.normandie.fr/normandie-pour-la-paix">Normandie pour la Paix.</a></span>
+    <a href="https://www.normandie.fr/"><img src="https://thomacarto.github.io/atlasUECI/static/images/logo_r_normandie-portrait-cmjn.jpg" alt="Region Normandie logo"></a>
+	<a href="https://www.normandie.fr/normandie-pour-la-paix"><img src="https://thomacarto.github.io/atlasUECI/static/images/Label_Normandie-pour-la-Paix.jpg" alt="Label Normandie pour la paix logo"></a>
+  
+    <script src="https://thomacarto.github.io/atlasUECI/static/js/script.js"></script>
+    
+<!-- liens vers les fichiers permettant de créer les controles de groupes de couche dans la carte -->
+<script type="text/javascript" src="https://thomacarto.github.io/atlasUECI/static/dist/leaflet.groupedlayercontrol.min.js.map"></script>
+	<script type="text/javascript" src="https://thomacarto.github.io/atlasUECI/static/dist/leaflet.groupedlayercontrol.min.js"></script>
+<!-- les scripts d'affichage de l'habillage de la carte -->
+<script type="text/javascript" src="https://thomacarto.github.io/atlasUECI/doc/map/map_habillage.js" ></script>
+<!-- script d'affichage des groupes de couche dans le contrôleur de couches -->
+<script type="text/javascript" src="https://thomacarto.github.io/atlasUECI/doc/map/groupecontrole.js"></script>
+<!-- script d'affichage des différentes couches -->
+<script type="text/javascript" src="https://thomacarto.github.io/atlasUECI/doc/map/localites_type.js" ></script>
+<script type="text/javascript" src="https://thomacarto.github.io/atlasUECI/doc/map/pe_type.js" ></script>
+
+
+
+
+<!-- jQuery 1.7.2+ or Zepto.js 1.0+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
+
+<!-- Magnific Popup core JS file -->
+<script type="text/javascript" src="https://thomacarto.github.io/atlasUECI/static/dist/jquery.magnific-popup.js"></script>	
+	
+    </footer>
+</body>
+ 
+</html>
