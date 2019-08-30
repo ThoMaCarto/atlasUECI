@@ -1,6 +1,6 @@
 template: article
 title: Tchimou-Assêkro
-slug: tchimouassekro
+slug: tchimou-assekro
 iddbb: Tchimou-Assêkro
 tags: Rural
 authors: BROU Yves Oscar Kouadio, SORO Doba, MAILLARD Thomas, DIAKITE A. Cheick, KOHE A. Christelle, OUATTARA Mafine, SERI A. Jonathan, N'GUESSAN Firmain Kouakou

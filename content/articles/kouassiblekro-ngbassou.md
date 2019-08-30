@@ -1,6 +1,6 @@
 template: article
 title: Kouassiblékro N’Gbassou
-slug: kouassiblekrongbassou
+slug: kouassiblekro-ngbassou
 iddbb: Kouassiblékro N’Gbassou
 tags: Rural
 authors: BROU Yves Oscar Kouadio, SORO Doba, MAILLARD Thomas, DIAKITE A. Cheick, KOHE A. Christelle, OUATTARA Mafine, SERI A. Jonathan, N'GUESSAN Firmain Kouakou
