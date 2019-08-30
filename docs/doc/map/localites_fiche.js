@@ -70,9 +70,9 @@ function oneachfeature(feature, layer){
                         	 && prop !== 'a__sous_pr'
                         	 && prop !== 'a_sous_qua'
                         	 && prop !== 'id'
-                        	 && prop !== 'Pompes Réhab'
-                        	 && prop !== 'Points d_1'
-                        	 && prop !== 'Points d_2') 
+                        	 && prop !== 'pompesrep'
+                        	 && prop !== 'public'
+                        	 && prop !== 'prive') 
                         		{
                         			tableNew += '<tr><td style="max-width:150px;"><strong>'+creatAlias(prop)+" : </strong></td><td>"+feature.properties[prop]+"</td></tr>" ;
                         			}
