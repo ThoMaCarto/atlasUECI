@@ -14,7 +14,7 @@ function creatAlias(prop){
 		case 'forage' :return 'Forage';
 		case 'puits' :return 'Puits';
 		case 'eausurf' :return 'Mare/marigot/rivière';
-		case 'pomperp' :return 'Pompes à réparer';
+		case 'pomperep' :return 'Pompes à réparer';
 		case 'analyse' :return 'Points d\'eau analysés';
 		case 'conforme' :return 'Points d\'eau conformes aux nomes OMS';
 		case 'vulnfaible' :return 'Points d\'eau de vulnérabilité faible';
@@ -61,7 +61,8 @@ function oneachfeature(feature, layer){
                         	
                         	 if (feature.properties[prop] !== 'nd' 
                         	 && feature.properties[prop] !== null 
-                        	 && prop !== 'slug' 
+                        	 && prop !== 'slug'
+							 && prop !== 'ogc_fid'
                         	 && prop !== 'field_36' 
                         	 && prop !== 'link'
                         	 && prop !== 'link_1'
@@ -70,7 +71,7 @@ function oneachfeature(feature, layer){
                         	 && prop !== 'a__sous_pr'
                         	 && prop !== 'a_sous_qua'
                         	 && prop !== 'id'
-                        	 && prop !== 'pompesrep'
+                        	 && prop !== 'pomperep'
                         	 && prop !== 'public'
                         	 && prop !== 'prive') 
                         		{
