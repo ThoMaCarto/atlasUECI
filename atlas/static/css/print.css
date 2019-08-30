@@ -9,11 +9,11 @@ table,img,a{page-break-inside:avoid;}
 p,table{page-break-before:avoid !important!;}
 
 .content a:link, .content a:visited, .content a{font-weight: bold;text-decoration: underline;text-align: left;color: black;}
-.fiche a[href^=http]:after{content:" <"attr(href)">";}
+.fiche a[href^=http]:after,.fichelight a[href^=http]:after{content:" <"attr(href)">";}
 .content img[title]:after{content:" <br>"attr(title)"";}
 
-.fiche p {display:block;text-align: justify;}
-.fiche img{
+.fiche p,.fichelight p  {display:block;text-align: justify;}
+.fiche img,.fichelight img{
 	display: inline-grid;
 max-width:240pt;
 max-height: 240pt;
@@ -97,7 +97,7 @@ width:99%;
 }
 
 
-.map{
+.map,.mapall{
 	page-break-after: auto;
 	width: 19cm;
 	height: 15cm;
