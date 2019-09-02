@@ -55,7 +55,7 @@ $.getJSON(urlpointdeau,function(data){
 			//caractéristique des points
 			var marker = L.circleMarker(latlng,{radius: 5,fillOpacity: 1, color: 'black', fillColor: getColorEcoli(feature.properties.ecoli),weight: 1,fillOpacity: 0.8,});
 			//caractéristiques des popup
-			marker.bindPopup('<p>Comptage <em>E. coli</em>: ' + feature.properties.ecoli + ' UFC / 100 ml</p>');			
+			marker.bindPopup(feature.properties.Quartier+'<br><p>Comptage <em>E. coli</em>: ' + feature.properties.ecoli + ' UFC / 100 ml</p>');			
 			//Affichage des marqueurs
 			return marker;
 		}

@@ -29,7 +29,7 @@
 
 
 {% block content %}
-
+<!--
 <script type="text/javascript" >
 		// construire une variable url pour chaque base de donnée affichée sur la page
 			var urllocalites = "{{ SITEURL }}/{{DOC_STATIC_DIR}}/map/bdd/localites_v2.json";
@@ -41,7 +41,7 @@
 		
 			
 		</script>
-		
+-->		
 		
 
 <section id="nomap" >
@@ -68,10 +68,11 @@
 	<li>Bref rapport sur l'accès à l'<b>eau potable</b> en <b>milieu rural</b> dans la région de Gbêkê : <button><a href="{{ SITEURL }}/{{DOC_STATIC_DIR}}/map/bdd/Rapport village pour Region.pdf">Download pdf</a></button></li>
 	</ul>
 
-<!-- <p  class="block">Les tableaux ci-dessous permettent de visualiser, filtrer et télécharger sous différents format les bases de données de l'étude.</p>
+<!--
+ <p  class="block">Les tableaux ci-dessous permettent de visualiser, filtrer et télécharger sous différents format les bases de données de l'étude.</p>
 
 	<h4 class="block">Données par localités</h4>
-	<div id="localites-table"  class="block"></div>
+	<div id="dataLoc"  class="block"></div>
 	
      
 <div class="table-controls" style="display:block;margin:auto;">
@@ -119,7 +120,7 @@
 
 	
 	
-	<div id="ptseau-table"  class="block"></div>
+	<div id="dataPE"  class="block"></div>
 	
      
 <div class="table-controls" style="display:block;margin:auto;">
@@ -139,7 +140,8 @@
 
 <!-- appelle le fichier JS codant les tableaux -->	
 
-<!-- <script type="text/javascript" src="{{SITEURL}}/{{DOC_STATIC_DIR}}/map/complexe-table.js"></script>-->	
+<!--
+<script type="text/javascript" src="{{SITEURL}}/{{DOC_STATIC_DIR}}/map/complexe-table.js"></script>-->	
 
 
 {% endblock %}

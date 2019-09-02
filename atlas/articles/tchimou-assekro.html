@@ -19,17 +19,23 @@
 	<link rel="stylesheet" href="http://urgenceeau.com/atlas/static/dist/leaflet.css"/>
 <script src="http://urgenceeau.com/atlas/static/dist/leaflet.js"></script>
   
-	<!-- jQuery - indispensable pour utiliser les fichiers geojson -->
-	<script type="text/javascript" src="http://urgenceeau.com/atlas/static/dist/jquery-3.4.1.min.js"></script>
+	<!-- jQuery - indispensable pour utiliser les fichiers geojson  -->
 	<script type="text/javascript" src="http://urgenceeau.com/atlas/static/dist/jquery.min.js"></script>
 	
 	
-	<!-- liens vers les fichiers permettant de créer les controles de groupes de couche dans la carte -->
-	<link rel="stylesheet" href="http://urgenceeau.com/atlas/static/dist/leaflet.groupedlayercontrol.min.css"/>
 	
-		<!-- liens vers les fichiers permettant de créer les controles de groupes de couche dans la carte -->
+	<!-- liens vers les fichiers permettant de créer les controles de groupes de couche dans la carte
+	<link rel="stylesheet" href="http://urgenceeau.com/atlas/static/dist/leaflet.groupedlayercontrol.min.css"/> -->
+	
+		<!-- liens vers les fichiers permettant de créer les controles de groupes de couche dans la carte
 <script type="text/javascript" src="http://urgenceeau.com/atlas/static/dist/leaflet.groupedlayercontrol.min.js.map"></script>
-	<script type="text/javascript" src="http://urgenceeau.com/atlas/static/dist/leaflet.groupedlayercontrol.min.js"></script>
+	<script type="text/javascript" src="http://urgenceeau.com/atlas/static/dist/leaflet.groupedlayercontrol.min.js"></script> -->
+	
+	<!-- liens vers les fichiers de la librairy tabulator permettant d'afficher les tableaux de données -->
+<link rel="stylesheet" href="http://urgenceeau.com/atlas/static/dist/tabulator.min.css">
+<script type="text/javascript" src="http://urgenceeau.com/atlas/static/dist/tabulator.min.js"></script>
+<link href="dist/css/tabulator.min.css" rel="stylesheet">
+<script type="text/javascript" src="dist/tabulator.min.js"></script>
 	
 	
 	
@@ -137,12 +143,7 @@ $('.fiche').find('img').magnificPopup({
 			var urlsurface = 'http://urgenceeau.com/atlas/doc/map/icone/marigot.png'
 			
 		</script>
-		<script type="text/javascript" >
-		<!-- Script rapide pour filtrer les différents tableaux de données affiché dans la fiche -->
-		var filtreTableau = "Tchimou-Assêkro"
-		table.setFilter("properties.a_quartier", "=", filtreTableau );
 		
-		</script>
 	</div>
 	<div id="" class="fiche">
 	
@@ -221,6 +222,21 @@ $('.fiche').find('img').magnificPopup({
 			 Enquête réalisée le 12 février 2019</p>
 			 <h4>Nord de Bouaké</h4>
 	</div>
+	
+	<div>
+	
+	
+	<div id="dataPE" class="tablehidden2"></div>
+	<div class="table-controls" style="display:block;margin:auto;">
+      <button id="download-csv">télécharger les résultats d'analyse des points d'eau de la localité</button>
+      
+     
+</div>
+	
+	
+	
+	
+		
 	<div>
 			 <table>
 <thead>
@@ -317,6 +333,134 @@ Les activités génératrices de revenus sont généralement axées sur l’agri
 <script type="text/javascript" src="http://urgenceeau.com/atlas/doc/map/localites_type.js" ></script>
 <script type="text/javascript" src="http://urgenceeau.com/atlas/doc/map/pe_type.js" ></script>
 
+
+<!--<script type="text/javascript" src="http://urgenceeau.com/atlas/doc/map/complexe-table.js"></script>-->
+
+<script type="text/javascript" >
+		// construire une variable url pour chaque base de donnée affichée sur la page
+			
+			var urlpointdeau2 = "http://urgenceeau.com/atlas/doc/map/bdd/pointseau_v2.json";
+			
+			var filtreTableau = "Tchimou-Assêkro"
+		
+		
+		var table = new Tabulator("#dataPE", {
+	ajaxURL:urlpointdeau2,
+	//ajaxConfig:"POST",
+	//ajaxContentType:"json",
+	
+	//data:tabledata,           //load row data from array
+	height: 350,
+	 dataTree:true,
+	//layout:"fitColumns",      //fit columns to width of table
+	//responsiveLayout:"hide",  //hide columns that dont fit on the table
+	//tooltips:true,            //show tool tips on cells
+	//addRowPos:"top",          //when adding a new row, add it to the top of the table
+	history:true,             //allow undo and redo actions on the table
+	//pagination:"local",       //paginate the data
+	//paginationSize:10,         //allow 7 rows per page of data
+	//movableColumns:true,      //allow column order to be changed
+	//resizableRows:true,       //allow row order to be changed
+	initialSort:[             //set the initial sort order of the data
+		{column:"properties.Quartier", dir:"asc"},
+	],
+	 //autoColumns:true,
+		 columns:[                 //define the table columns
+		{title:"Localité", field:"properties.Quartier",frozen:true},	 	
+	 	{title:"Id", field:"properties.ID",frozen:true,width:50,},
+		{title:"Zone", field:"properties.Zone",headerFilter:true, visible:false},
+		
+		{
+			title:"Description du point d'eau",
+			columns: [
+		{title:"Responsable de la construction",field:"properties.Responsabl"},
+{title:"Construction",field:"properties.construct"},
+{title:"Type",field:"properties.Type"},
+{title:"Profondeur (m)",field:"properties.Profondeur"},
+{title:"Niveau de la nappe",field:"properties.LvlWater"},
+{title:"Margelle",field:"properties.Margelle", visible:false},
+{title:"Dalle anti-bourbier",field:"properties.Dalle", visible:false},
+{title:"Trottoir",field:"properties.Trottoir", visible:false},
+{title:"Clôture",field:"properties.Cloture", visible:false},
+{title:"Canal de drainage",field:"properties.Canal", visible:false},
+{title:"Couvercle adapté",field:"properties.Couvercle", visible:false},
+{title:"État de la superstructure",field:"properties.Superstruct"},
+{title:"Type d'exhaure",field:"properties.Exhaure", visible:false},
+{title:"Disponibilité de l'eau en saison sèche",field:"properties.Disponibil"},
+{title:"Mois de tarissement",field:"properties.tarissmt"},
+{title:"Entretien",field:"properties.Entretien"},
+{title:"Type d'entretien",field:"properties.typEntreti"},
+{title:"Fréquence des pannes (par an)",field:"properties.FreqPanne"},
+{title:"Type de panne",field:"properties.TypPanne"},
+{title:"Pièce défaillante sur la pompe",field:"properties.piecePanne"},
+{title:"Responsable de l'entretien",field:"properties.Responsa_1"},
+{title:"Variation du niveau de la nappe",field:"properties.Variation"},
+{title:"Accès",field:"properties.acces"},
+{title:"Coût de l'accès",field:"properties.tarif"},
+]
+},
+
+{
+			title:"Diagnostic sanitaire du point d'eau",
+			columns: [
+{title:"Niveau de vulnérabilité",field:"properties.niveau2",formatter:"star"},
+{title:"Source de pollution à proximité",field:"properties.polluti"},
+{title:"type de source de pollution",field:"properties.descrPollu"},
+{title:"Absence de Clôture",field:"properties.cloture2"},
+{title:"Déficience du canal de draînage",field:"properties.canal2"},
+{title:"Présence d'eau stagnante",field:"properties.stagn2"},
+{title:"Dalle inférieur à la norme",field:"properties.Dalle2"},
+{title:"Fissure sur la superstructure",field:"properties.fissur2"},
+{title:"Absence de couvercle approprié",field:"properties.Couvercle2"},
+{title:"Insuffisance d'étanchéité",field:"properties.etanch2"},
+{title:"Défaut d'hygiène aux alentours",field:"properties.hygien2"},
+{title:"Défaut d'hygiène du système d'exhaure",field:"properties.entreti2"},
+
+]
+},
+
+{title:"Analyse de la qualité de l'eau",
+			columns: [
+
+//{title:"Couleur de l'eau",field:"properties.Couleur"},
+{title:"Description de l'aspect",field:"properties.descrcolor"},
+//{title:"Goût",field:"properties.Gôut"},
+{title:"Description du goût",field:"properties.descrgout"},
+//{title:"Odeur",field:"properties.Odeur"},
+{title:"Description de l'odeur",field:"properties.descrodeur"},
+{title:"pH",field:"properties.pH"},
+{title:"Conductivité (µS/cm)",field:"properties.Conductivi"},
+{title:"Turbidité (UTN)",field:"properties.tub"},
+{title:"Température (°C)",field:"properties.temp"},
+
+{title:"Chlore libre (mg/l)",field:"properties.chlorelib"},
+{title:"Chlore total (mg/l)",field:"properties.chloretot"},
+{title:"Ammoniac (mg/l)",field:"properties.ammoniac"},
+{title:"Nitrates (mg/l)",field:"properties.nitrate"},
+{title:"Nitrite (mg/l)",field:"properties.nitrite"},
+{title:"Arsenic (mg/l)",field:"properties.arsenic"},
+{title:"Fluor (mg/l)",field:"properties.fluor"},
+{title:"E. Coli (UFC/100ml)",field:"properties.ecoli"},
+
+]
+},
+
+{title:"Commentaires",field:"properties.remarqu", visible:false},
+
+		
+		//{title:"Localité", field:"geometry.type"},
+		{title:"Coordonnées géographiques", field:"geometry.coordinates",},
+		
+	],
+	
+});
+table.setFilter("properties.Quartier", "=", filtreTableau );
+		
+	$("#download-csv").click(function(){
+    table.download("csv", "points-eau"+filtreTableau+".csv");
+});	
+			
+		</script>
 
 
 

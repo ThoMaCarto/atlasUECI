@@ -1,6 +1,6 @@
 @page{margin:2cm 2cm;}
 
-nav,select,.leaflet-control-zoom{display: none;height: 0;width: O;}
+nav,select,.leaflet-control-zoom,button{display: none;height: 0;width: O;}
 
 /*body {line-height:1.5;}*/
 
@@ -777,4 +777,4 @@ svg.leaflet-image-layer.leaflet-interactive path {
 	border-right-color: #fff;
 	}
 
-
+.tablehidden{display: none;}
