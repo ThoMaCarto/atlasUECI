@@ -1,6 +1,6 @@
 template: article
 title: Ahoussi Takikro
-iddbb: Ahoussi-Takikro
+iddbb: Ahossi Takikro
 slug: ahossitakikro
 tags: Rural
 authors: BROU Yves Oscar Kouadio, SORO Doba, MAILLARD Thomas, DIAKITE A. Cheick, KOHE A. Christelle, OUATTARA Mafine, SERI A. Jonathan, N'GUESSAN Firmain Kouakou

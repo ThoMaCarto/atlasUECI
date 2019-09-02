@@ -2,6 +2,7 @@ date: 2019-05-10
 template: article
 title: Zone Industrielle – Djézoukouamékro
 slug: zoneindustrielle
+iddbb: Zone industrielle
 tags: Urbain
 authors: BROU Yves Oscar Kouadio, SORO Doba, MAILLARD Thomas, DIAKITE A. Cheick, KOHE A. Christelle, OUATTARA Mafine, SERI A. Jonathan, N'GUESSAN Firmain Kouakou
 latitude: 7.70400
