@@ -1,7 +1,7 @@
 template: article
 title: N'Drikro
 slug: n-drikro
-iddbb:N'Drikro
+iddbb:N'drikro
 tags: Rural
 authors: BROU Yves Oscar Kouadio, SORO Doba, MAILLARD Thomas, DIAKITE A. Cheick, KOHE A. Christelle, OUATTARA Mafine, SERI A. Jonathan, N'GUESSAN Firmain Kouakou
 date: 2019-02-05
