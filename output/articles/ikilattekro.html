@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
+    <title>Atlas Eau Potable Assainissement Côte d'Ivoire Bouaké</title>
+    <link rel="stylesheet" type="text/css" href="http://localhost:8000/static/css/style.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="http://localhost:8000/static/css/print.css" media="print"/>
+    <link rel="stylesheet" href="http://localhost:8000/static/dist/leaflet.css" media="print"/>
+    <link rel="icon" type="image/x-icon" href="http://localhost:8000/static/images/favicon.ico">
+    
+	<!-- Magnific Popup core CSS file -->
+<link rel="stylesheet" href="http://localhost:8000/static/dist/magnific-popup.css">
+
+    
+<!-- appelle la librairie javascript Leaflet et le fichier CSS Leaflet -->	
+	<link rel="stylesheet" href="http://localhost:8000/static/dist/leaflet.css"/>
+<script src="http://localhost:8000/static/dist/leaflet.js"></script>
+  
+	<!-- jQuery - indispensable pour utiliser les fichiers geojson -->
+	<script type="text/javascript" src="http://localhost:8000/static/dist/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="http://localhost:8000/static/dist/jquery.min.js"></script>
+	
+	
+	<!-- liens vers les fichiers permettant de créer les controles de groupes de couche dans la carte -->
+	<link rel="stylesheet" href="http://localhost:8000/static/dist/leaflet.groupedlayercontrol.min.css"/>
+	
+		<!-- liens vers les fichiers permettant de créer les controles de groupes de couche dans la carte -->
+<script type="text/javascript" src="http://localhost:8000/static/dist/leaflet.groupedlayercontrol.min.js.map"></script>
+	<script type="text/javascript" src="http://localhost:8000/static/dist/leaflet.groupedlayercontrol.min.js"></script>
+	
+	
+	
+</head>
+
+<body>
+<script  type="text/javascript">
+
+
+$(document).ready(function() {
+$('.fiche').find('img').magnificPopup({
+		type:'image',
+		gallery:{enabled:true},
+  		callbacks:{
+  			elementParse: function (img){ img.src=img.el.attr('src');}
+  		}
+	});
+	
+
+});
+
+
+
+//$(document).ready(function() {
+	//$('.fiche').magnificPopup({
+  //type: 'image',
+  //delegate: 'img',
+  //gallery:{enabled:true},
+  //callback:{
+  //elementParse: function (item){ item.src=item.el.attr('src');console.log(item);}
+  //}
+  // other options
+//});
+//});
+
+
+</script>
+<header class="header-bar">
+    <div><a class="header-nav" href="http://localhost:8000/index.html">
+        <img src="http://localhost:8000/static/images/UElogo.png" alt="Atlas Eau Potable Assainissement Côte d'Ivoire Bouaké logo">
+    </a>
+    <span class="header-title" title="L'Atlas en ligne du projet ETUPO Vallée du Bandama présente les résultats de l'étude sur l'accès à l'eau potable et à l'assainissement à Bouaké et dans les villages périphériques.">Atlas Urgence Eau Bouaké</span></div>
+<nav>
+<ul>
+<li><a href="http://localhost:8000/index.html"><br><img src="http://localhost:8000/static/images/home_icon.png"></a></li>
+
+
+
+<li><a title="La présentation de l'étude"><br>Informations</a>
+<ul class="submenu">
+<li><a href="http://localhost:8000/pages/projet.html">L'étude</a></li>
+<li><a href="http://localhost:8000/pages/methodes-de-diagnostic.html">Les méthodes de diagnostic</a></li>
+<li><a href="http://localhost:8000/pages/auteurs-de-letude.html">Les auteurs</a></li>
+<li><a href="http://localhost:8000/pages/telechargements.html">Télécharger les données et rapports</a></li>
+</ul>
+</li>
+
+<li><a href="http://localhost:8000/pages/vulnerabilite.html">Diagnostic<br>localités</a></li>
+<li><a href="http://localhost:8000/pages/analyse-des-points-deau.html">Diagnostic<br>points d'eau</a></li>
+
+
+
+<li class="selectedout"><a>Contacts<br> Institutionnels</a>
+<ul class="submenu">
+<li class="selectedout"><a href="http://urgenceeau.com/">Association<br>Urgence Eau ></a></li>
+<li class="selectedout"><a href="http://urgenceeau.com/contact/">Contacts Urgence Eau ></a></li>
+<li class="selectedout"><a href="https://www.normandie.fr/">Région Normandie ></a></li>
+<li class="selectedout"><a href="https://www.normandie.fr/normandie-pour-la-paix">Initiative Normandie pour la paix ></a></li>
+</ul>
+
+</ul>
+</nav>
+    
+</header>
+    <div id="main"> 
+    
+<div class="content">
+	<div id="map" class="map">
+		<script type="text/javascript">
+			//// création de la carte et paramétrages généraux : 
+			//centre et niveau de zoom,zoom minimum,zoom maximum, 
+			// et limites du canevas (afin que l'ordinateur ne charge pas trop de tuiles de fond de carte)
+			// les paramètres de la fonction setView (coordonnées du centre de la vue=coordonnée de la localité
+			//niveau de zoom = 14 pour un quartier et 16 pour un village) seront extraits des métadata de chaque 
+			//fiches localité.
+			var map = L.map('map');
+			map.setView([7.63450,-5.14226], 16);
+			map.setMinZoom(11);
+			map.setMaxZoom(19);
+			map.setMaxBounds([[7.5,-4.8],[7.9,-5.3]])
+				
+		</script>
+		<script type="text/javascript" >
+		// construire une variable url pour chaque base de donnée affichée sur la page
+			
+			var articlespath = 'http://localhost:8000/'
+			var urllocalites = "http://localhost:8000/doc/map/bdd/localites_v2.geojson"
+			var urlpointdeau = "http://localhost:8000/doc/map/bdd/pointseau_v2.geojson"
+			var urlNorthArray = '<img src="http://localhost:8000/static/images/compass.png" style="width:30px;">'
+			var urlwhiteshadow = 'http://localhost:8000/doc/map/icone/white.png'
+			var urlpuitsmoderne = 'http://localhost:8000/doc/map/icone/puits_moderne.png'
+			var urlpuitstradi = 'http://localhost:8000/doc/map/icone/puits_tradi.png'
+			var urlforage = 'http://localhost:8000/doc/map/icone/forage.png'
+			var urlborne = 'http://localhost:8000/doc/map/icone/borne.png'
+			var urlsurface = 'http://localhost:8000/doc/map/icone/marigot.png'
+			
+		</script>
+		<script type="text/javascript" >
+		<!-- Script rapide pour filtrer les différents tableaux de données affiché dans la fiche -->
+		var filtreTableau = "Iki Lattekro"
+		table.setFilter("properties.a_quartier", "=", filtreTableau );
+		
+		</script>
+	</div>
+	<div id="" class="fiche">
+	
+	
+		<div style="margin:20px;">
+	
+	<select id="filter-localites" onchange="window.location.href=this.value;">
+	<option  style="color:grey;">Voir la fiche détaillée d'une autre localité</option>
+	<option value="http://localhost:8000/articles/affouvanssou.html" >Affouvanssou</option>
+	<option value="http://localhost:8000/articles/affouekro.html" >Affouékro</option>
+	<option value="http://localhost:8000/articles/ahougnanou.html" >Ahougnanou</option>
+	<option value="http://localhost:8000/articles/ahossitakikro.html" >Ahoussi Takikro</option>
+	<option value="http://localhost:8000/articles/akakro.html" >Akakro</option>
+	<option value="http://localhost:8000/articles/akpokro.html" >Akpokro</option>
+	<option value="http://localhost:8000/articles/allokokro.html" >Allokokro</option>
+	<option value="http://localhost:8000/articles/allomanbo.html" >Allomabo</option>
+	<option value="http://localhost:8000/articles/andonsakassou.html" >Andon Sakassou</option>
+	<option value="http://localhost:8000/articles/angankro.html" >Angankro</option>
+	<option value="http://localhost:8000/articles/angouayaokro.html" >Angoua Yaokro</option>
+	<option value="http://localhost:8000/articles/assankouadiokro.html" >Assankouadiokro</option>
+	<option value="http://localhost:8000/articles/assangoukan.html" >Assengou Kan</option>
+	<option value="http://localhost:8000/articles/assengoukpli.html" >Assengou Kpli</option>
+	<option value="http://localhost:8000/articles/assieblenou.html" >Assiêblénou</option>
+	<option value="http://localhost:8000/articles/assoumankro.html" >Assoumankro</option>
+	<option value="http://localhost:8000/articles/bamorogare.html" >Bamaro Gare</option>
+	<option value="http://localhost:8000/articles/bamoro.html" >Bamoro</option>
+	<option value="http://localhost:8000/articles/belleville1.html" >Belleville 1</option>
+	<option value="http://localhost:8000/articles/belleville2.html" >Belleville 2</option>
+	<option value="http://localhost:8000/articles/bendekouassikro.html" >Bendêkouassikro</option>
+	<option value="http://localhost:8000/articles/bletromambo.html" >Blétromanbo</option>
+	<option value="http://localhost:8000/articles/daressalam.html" >Dar Es Salam</option>
+	<option value="http://localhost:8000/articles/dinambo.html" >Dinambo</option>
+	<option value="http://localhost:8000/articles/djetouankro.html" >Djétouankro</option>
+	<option value="http://localhost:8000/articles/djekro.html" >Djêkro</option>
+	<option value="http://localhost:8000/articles/gbesserikro.html" >Gbéssérikro</option>
+	<option value="http://localhost:8000/articles/golikro.html" >Golikro</option>
+	<option value="http://localhost:8000/articles/ikilattekro.html" >Ikilatêkro</option>
+	<option value="http://localhost:8000/articles/kahankro.html" >Kahankro</option>
+	<option value="http://localhost:8000/articles/klobonoua.html" >Klôbonoua</option>
+	<option value="http://localhost:8000/articles/koffikro.html" >Koffikro</option>
+	<option value="http://localhost:8000/articles/konankro.html" >Konankro Mizron</option>
+	<option value="http://localhost:8000/articles/kouadio-miankro.html" >Kouadio Miankro</option>
+	<option value="http://localhost:8000/articles/kouakoumiankro.html" >Kouakou Miankro</option>
+	<option value="http://localhost:8000/articles/kouakro.html" >Kouakro</option>
+	<option value="http://localhost:8000/articles/kouameassekro.html" >Kouamé Assêkro</option>
+	<option value="http://localhost:8000/articles/kouameyaokro.html" >Kouamé Yaokro</option>
+	<option value="http://localhost:8000/articles/kouassiblekro-ngbassou.html" >Kouassiblékro N’Gbassou</option>
+	<option value="http://localhost:8000/articles/kpotitakikro.html" >Kpoti Takikro</option>
+	<option value="http://localhost:8000/articles/langbassou.html" >Langbassou</option>
+	<option value="http://localhost:8000/articles/lokanou.html" >Lokanou</option>
+	<option value="http://localhost:8000/articles/maroc.html" >Maroc</option>
+	<option value="http://localhost:8000/articles/minankro.html" >Minankro</option>
+	<option value="http://localhost:8000/articles/n-drikro.html" >N'Drikro</option>
+	<option value="http://localhost:8000/articles/n-ganblekonankro.html" >N'Ganblekonankro</option>
+	<option value="http://localhost:8000/articles/n-dakro-n-zuekro.html" >N’dakro et N'Zuekro</option>
+	<option value="http://localhost:8000/articles/ngattasakassou.html" >N’gatta Sakassou</option>
+	<option value="http://localhost:8000/articles/nguessankro.html" >N’guessankro</option>
+	<option value="http://localhost:8000/articles/pangbabo.html" >Pangbabo</option>
+	<option value="http://localhost:8000/articles/pharis-assouakro.html" >Pharis Assouakro</option>
+	<option value="http://localhost:8000/articles/pitiessi.html" >Pitiéssi</option>
+	<option value="http://localhost:8000/articles/sessenouan.html" >Sessenouan</option>
+	<option value="http://localhost:8000/articles/sesseti.html" >Sesseti</option>
+	<option value="http://localhost:8000/articles/sinzenou.html" >Sinzénou</option>
+	<option value="http://localhost:8000/articles/tchimou-assekro.html" >Tchimou-Assêkro</option>
+	<option value="http://localhost:8000/articles/tchimoukro.html" >Tchimoukro</option>
+	<option value="http://localhost:8000/articles/tolakouadiokro.html" >Tolakouadiokro</option>
+	<option value="http://localhost:8000/articles/totokro.html" >Totokro</option>
+	<option value="http://localhost:8000/articles/yapo-kouakoukro.html" >Yapokouakoukro</option>
+	<option value="http://localhost:8000/articles/yobouekro.html" >Yobouékro</option>
+	<option value="http://localhost:8000/articles/zoneindustrielle.html" >Zone Industrielle – Djézoukouamékro</option>
+	</select>
+	</div>
+	<div class="legendin" style="margin:20px;padding:10px;">
+			 <h1>Ikilatêkro</h1>
+			 <p style="text-align: right;"> Coordonnées GPS : 7.63450, -5.14226<br>
+			 Enquête réalisée le 14 février 2019</p>
+			 <h4>Ouest de Bouaké, sur la route de Sakassou</h4>
+	</div>
+	<div>
+			 <table>
+<thead>
+<tr>
+<th align="left">Informations générales</th>
+<th align="right"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Nom de la localité :</td>
+<td align="right">Ikilatêkro</td>
+</tr>
+<tr>
+<td align="left">Population :</td>
+<td align="right">600 habitants</td>
+</tr>
+<tr>
+<td align="left">Dessertes en eau potable</td>
+<td align="right">Raccordé au réseau SODECI</td>
+</tr>
+<tr>
+<td align="left">Gestion des excrétas</td>
+<td align="right">Assainissement autonome</td>
+</tr>
+</tbody>
+</table>
+<h2>Présentation de la localité</h2>
+<p>Ikilatêkro est un grand village de la Sous-préfecture de Bouaké situé à l’ouest à 10 kilomètres de Bouaké. Ce village fait partie du canton Dôhoun dont le chef-lieu de canton est le village de Bendêkouassikro. Il est peuplé de plus de 600 habitants composés de Baoulés provenant de Walêbo et de personnes venues d'autres régions de la Côte d'Ivoire et des pays limitrophes. </p>
+<p>Ce village dispose d’une école primaire, mais pas de centre de santé. Le village est relié au réseau électrique et à celui de la SODECI. </p>
+<p>En ce qui concerne la typologie d’habitat que l’on retrouve à Ikilatêkro, elle est plutôt sous un style moderne avec des maisons construites en briques en terre battue. Toutefois, les habitants déplacent progressivement le village vers la route.</p>
+<p>Les activités génératrices de revenus sont généralement axées sur l’agriculture avec une production d’anacarde comme culture de rente et le riz, l’igname, etc. comme cultures vivrières</p>
+<h2>État des lieux des ouvrages d’alimentation en eau potable</h2>
+<h3>Ouvrages existants</h3>
+<p>Le village est raccordé au réseau de la SODECI.</p>
+<p>On a recensé 2 puits privés dans le village. En cas de coupure d’eau, les populations partent s’approvisionner dans ces puits ou les marigots autour du village.</p>
+<p><img alt="Puit" src="images/ikilatekro1.jpg" title="Puit">
+<img alt="Puit" src="images/ikilatekro2.jpg" title="Puit"></p>
+<p>Le puits enquêté est un puits traditionnel disposant d’une margelle, d’un trottoir et d’une dalle. Cependant le couvercle n’est pas adapté. C’est une vieille feuille de tôle qui est utilisée comme couverture du puits. La puisette utilisée pour recueillir de l’eau est mal entretenue. Après usage, elle est mise par terre et réutilisée après.</p>
+<p>Quant au marigot proche du village, on observe un manque d’entretien.Le marigot est envahi de broussailles. Cette eau est utilisée, en plus des usages domestiques, pour l’arrosage des cultures maraîchères.</p>
+<p>L’enquête sanitaire que ces points d’eau présentent un risque pour la santé des populations. Les analyses de la qualité de l’eau révèlent la présence d’une pollution azotée dans les échantillons d’eau. Les différents tests physico-chimiques indiquent la présence de nitrate en des concentrations relativement élevées (66 mg/l) au-delà du seuil admissible pour l’eau de boisson. L’analyse bactériologique des eaux a aussi révélé la présence de <em>E. coli</em> dans l’eau du puits (83) et du marigot (7). </p>
+<h3>Gestion des points d’eau</h3>
+<p>Ces points d’eau ne sont pas gérés de façon communautaire. Les différents propriétaires régulent l’approvisionnement dans leurs puits.</p>
+<h2>Personnes ressources</h2>
+<div class="highlight"><pre><span></span><span class="err">•</span> <span class="n">Chef</span> <span class="n">de</span> <span class="n">village</span>
+<span class="err">•</span> <span class="n">Pr</span><span class="err">é</span><span class="n">sidente</span> <span class="n">des</span> <span class="n">femmes</span>
+<span class="err">•</span> <span class="n">Pr</span><span class="err">é</span><span class="n">sident</span> <span class="n">des</span> <span class="n">jeunes</span> <span class="n">du</span> <span class="n">village</span>
+</pre></div>
+
+
+<h2>Gestion des excrétas</h2>
+<p>Nous avons pu observer lors de notre passage dans le village, plusieurs types de latrines notamment les latrines avec des fosses septiques, les latrines à fosses simples. Néanmoins la défécation en brousse se fait toujours dans le village.</p>
+<h2>Desideratas des populations</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Type d'entretien</th>
+<th align="center">Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Entretien individuel Chef de village</td>
+<td align="center">18 février 2019</td>
+</tr>
+<tr>
+<td align="left">Entretien individuel Présidente des Femmes</td>
+<td align="center">18 février 2019</td>
+</tr>
+<tr>
+<td align="left">Focus group hommes</td>
+<td align="center">18 février 2019</td>
+</tr>
+<tr>
+<td align="left">Focus group femmes</td>
+<td align="center">18 février 2019</td>
+</tr>
+</tbody>
+</table>
+<p>Les habitants demandent une PMH, car ils estiment que l’irrégularité de l’approvisionnement par la SODECI cause des désagréments. Une PMH apparait ici comme une source de secours qui pourrait être utilisée en cas de coupure d’eau courante.  </p>
+<h2>Tensions ressenties lors des entretiens</h2>
+<h3>Tensions générales</h3>
+<p>Aucune tension relevée</p>
+<h3>Tensions autour de l'eau</h3>
+<p>Aucune tension relevée</p>
+<h3>Tensions avec les localités voisines</h3>
+<p>Aucune tension relevée</p>
+	</div>
+	
+	
+	
+	</div>
+</div>
+    </div>
+    <footer class="footer-bar">
+
+
+
+	<a href="http://urgenceeau.com/"><img src="http://localhost:8000/static/images/UElogo.png" alt="Urgence Eau logo"></a>
+	<a href="http://urgenceeau.com/urgence-eau-cote-divoire-ueci/"><img src="http://localhost:8000/static/images/UECIlogo.png" alt="Urgence Eau - Côte d'Ivoire logo"></a>
+	<span class="footer-text"> <a href="http://urgenceeau.com/">Urgence Eau </a><br>
+	<a href="http://urgenceeau.com/urgence-eau-cote-divoire-ueci/">Urgence Eau - Côte d'Ivoire</a></span>
+    <span class="footer-text" style="text-align: center;">Site développé par <a href='http://www.ladyss.com/thomas-maillard'>Thomas Maillard</a><br>© 2018 Urgence Eau | <a href="http://urgenceeau.com/mentions-legales/">Mentions légales</a></span>
+    <span class="footer-text" style="text-align: right;">Un projet soutenu par la <a href="https://www.normandie.fr/">Région Normandie</a><br>à travers l'initiative <a href="https://www.normandie.fr/normandie-pour-la-paix">Normandie pour la Paix.</a></span>
+    <a href="https://www.normandie.fr/"><img src="http://localhost:8000/static/images/logo_r_normandie-portrait-cmjn.jpg" alt="Region Normandie logo"></a>
+	<a href="https://www.normandie.fr/normandie-pour-la-paix"><img src="http://localhost:8000/static/images/Label_Normandie-pour-la-Paix.jpg" alt="Label Normandie pour la paix logo"></a>
+  
+    <script src="http://localhost:8000/static/js/script.js"></script>
+    
+<!-- liens vers les fichiers permettant de créer les controles de groupes de couche dans la carte -->
+<script type="text/javascript" src="http://localhost:8000/static/dist/leaflet.groupedlayercontrol.min.js.map"></script>
+	<script type="text/javascript" src="http://localhost:8000/static/dist/leaflet.groupedlayercontrol.min.js"></script>
+<!-- les scripts d'affichage de l'habillage de la carte -->
+<script type="text/javascript" src="http://localhost:8000/doc/map/map_habillage.js" ></script>
+<!-- script d'affichage des groupes de couche dans le contrôleur de couches -->
+<script type="text/javascript" src="http://localhost:8000/doc/map/groupecontrole.js"></script>
+<!-- script d'affichage des différentes couches -->
+<script type="text/javascript" src="http://localhost:8000/doc/map/localites_type.js" ></script>
+<script type="text/javascript" src="http://localhost:8000/doc/map/pe_type.js" ></script>
+
+
+
+
+<!-- jQuery 1.7.2+ or Zepto.js 1.0+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
+
+<!-- Magnific Popup core JS file -->
+<script type="text/javascript" src="http://localhost:8000/static/dist/jquery.magnific-popup.js"></script>	
+	
+    </footer>
+</body>
+ 
+</html>

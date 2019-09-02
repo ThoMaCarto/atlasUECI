@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
+    <title>Atlas Eau Potable Assainissement Côte d'Ivoire Bouaké</title>
+    <link rel="stylesheet" type="text/css" href="http://localhost:8000/static/css/style.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="http://localhost:8000/static/css/print.css" media="print"/>
+    <link rel="stylesheet" href="http://localhost:8000/static/dist/leaflet.css" media="print"/>
+    <link rel="icon" type="image/x-icon" href="http://localhost:8000/static/images/favicon.ico">
+    
+	<!-- Magnific Popup core CSS file -->
+<link rel="stylesheet" href="http://localhost:8000/static/dist/magnific-popup.css">
+
+    
+	<!-- appelle la librairie javascript Leaflet et le fichier CSS Leaflet -->	
+	<link rel="stylesheet" href="http://localhost:8000/static/dist/leaflet.css"/>
+<script type="text/javascript" src="http://localhost:8000/static/dist/leaflet.js"></script>
+	
+	<!-- fichier permettant d'afficher les markercluster -->
+	
+	<link rel="stylesheet" href="http://localhost:8000/static/dist/MarkerCluster.css" />
+	<link rel="stylesheet" href="http://localhost:8000/static/dist/MarkerCluster.Default.css" />
+	<script type="text/javascript" src="http://localhost:8000/static/dist/leaflet.markercluster.js"></script>
+
+	
+	<!-- jQuery - indispensable pour utiliser les fichiers geojson -->
+	<script type="text/javascript" src="http://localhost:8000/static/dist/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="http://localhost:8000/static/dist/jquery.min.js"></script>
+	
+	
+	
+</head>
+
+<body>
+<script  type="text/javascript">
+
+
+$(document).ready(function() {
+$('.fiche').find('img').magnificPopup({
+		type:'image',
+		gallery:{enabled:true},
+  		callbacks:{
+  			elementParse: function (img){ img.src=img.el.attr('src');}
+  		}
+	});
+	
+
+});
+
+
+
+//$(document).ready(function() {
+	//$('.fiche').magnificPopup({
+  //type: 'image',
+  //delegate: 'img',
+  //gallery:{enabled:true},
+  //callback:{
+  //elementParse: function (item){ item.src=item.el.attr('src');console.log(item);}
+  //}
+  // other options
+//});
+//});
+
+
+</script>
+<header class="header-bar">
+    <div><a class="header-nav" href="http://localhost:8000/index.html">
+        <img src="http://localhost:8000/static/images/UElogo.png" alt="Atlas Eau Potable Assainissement Côte d'Ivoire Bouaké logo">
+    </a>
+    <span class="header-title" title="L'Atlas en ligne du projet ETUPO Vallée du Bandama présente les résultats de l'étude sur l'accès à l'eau potable et à l'assainissement à Bouaké et dans les villages périphériques.">Atlas Urgence Eau Bouaké</span></div>
+<nav>
+<ul>
+<li><a href="http://localhost:8000/index.html"><br><img src="http://localhost:8000/static/images/home_icon.png"></a></li>
+
+
+
+<li><a title="La présentation de l'étude"><br>Informations</a>
+<ul class="submenu">
+<li><a href="http://localhost:8000/pages/projet.html">L'étude</a></li>
+<li class="selected"><a href="http://localhost:8000/pages/methodes-de-diagnostic.html">Les méthodes de diagnostic</a></li>
+<li><a href="http://localhost:8000/pages/auteurs-de-letude.html">Les auteurs</a></li>
+<li><a href="http://localhost:8000/pages/telechargements.html">Télécharger les données et rapports</a></li>
+</ul>
+</li>
+
+<li><a href="http://localhost:8000/pages/vulnerabilite.html">Diagnostic<br>localités</a></li>
+<li><a href="http://localhost:8000/pages/analyse-des-points-deau.html">Diagnostic<br>points d'eau</a></li>
+
+
+
+<li class="selectedout"><a>Contacts<br> Institutionnels</a>
+<ul class="submenu">
+<li class="selectedout"><a href="http://urgenceeau.com/">Association<br>Urgence Eau ></a></li>
+<li class="selectedout"><a href="http://urgenceeau.com/contact/">Contacts Urgence Eau ></a></li>
+<li class="selectedout"><a href="https://www.normandie.fr/">Région Normandie ></a></li>
+<li class="selectedout"><a href="https://www.normandie.fr/normandie-pour-la-paix">Initiative Normandie pour la paix ></a></li>
+</ul>
+
+</ul>
+</nav>
+    
+</header>
+    <div id="main"> 
+    
+<section class="content">
+	<div class="map" id="map" title="Cliquer sur une localité pour accéder à son diagnostic">
+	<script type="text/javascript">
+	////Carte de la page d'accueil
+  
+
+//// création de la carte et paramétrages généraux : 
+//centre et niveau de zoom,zoom minimum,zoom maximum, 
+// et limites du canevas (afin que l'ordinateur ne charge pas trop de tuiles de fond de carte)
+// les paramètres de la fonction setView (coordonnées du centre de la vue=coordonnée de la localité
+//niveau de zoom = 14 pour un quartier et 16 pour un village) seront extraits des métadata de chaque 
+//fiches localité.
+var map = L.map('map');
+	map.setView([7.75, -5.038], 11);
+	map.setMinZoom(11);
+	map.setMaxZoom(19);
+	map.setMaxBounds([[7.5,-4.8],[7.9,-5.3]])	       
+     
+	</script>
+	<script type="text/javascript" >
+		// construire une variable url pour chaque fichiers annexes affichée sur la page
+			var urllocalites = "http://localhost:8000/doc/map/bdd/localites_v2.geojson"
+			var urlAggloBouake = "http://localhost:8000/doc/map/bdd/agglo_bouake.geojson"
+			var urlpointdeau = "http://localhost:8000/doc/map/bdd/pointseau_v2.geojson"
+			var urlNorthArray = '<img src="http://localhost:8000/static/images/compass.png" style="width:30px;">'
+			var urlwhiteshadow = 'http://localhost:8000/doc/map/icone/white.png'
+			var urlpuitsmoderne = 'http://localhost:8000/doc/map/icone/puits_moderne.png'
+			var urlpuitstradi = 'http://localhost:8000/doc/map/icone/puits_tradi.png'
+			var urlforage = 'http://localhost:8000/doc/map/icone/forage.png'
+			var urlborne = 'http://localhost:8000/doc/map/icone/borne.png'
+			var urlsurface = 'http://localhost:8000/doc/map/icone/marigot.png'
+			var articlespath = 'http://localhost:8000/'
+		</script>
+	</div>
+	<div class="fiche">
+<h2>Méthodologie</h2>
+<p>L'étude préalable de l'accès à l'eau potable et à l'assainissement a été mené dans 62 localités : 8 quartiers de Bouaké et 54 villages aux alentours.  Le travail d'enquête se déroule sur deux volets:</p>
+<ul>
+<li>
+<p>un volet technique : l'analyse de l'état des points d'eau et de la qualité de l'eau,</p>
+</li>
+<li>
+<p>un volet socioanthropologique : le recueil des avis, desiderata et l'analyse des rapports à l'eau et des modes de gestion des points d'eau.</p>
+</li>
+</ul>
+<h3>Echantillonnage</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Milieu</th>
+<th align="left">Localités</th>
+<th align="left">Volet technique</th>
+<th align="left">Volet socio-<br>anthropologique</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Urbain</td>
+<td align="left">8 quartiers</td>
+<td align="left">177 points d'eau</td>
+<td align="left">450 entretiens</td>
+</tr>
+<tr>
+<td align="left">Rural</td>
+<td align="left">54 villages</td>
+<td align="left">94 points d'eau</td>
+<td align="left">216 entretiens</td>
+</tr>
+</tbody>
+</table>
+
+<figure>
+<img src="image/equipetech.jpg" alt="Analyse technique des points d'eau" title="Analyse technique des points d'eau"/>
+<img src="image/terrain_MOuattara.jpg" alt="Analyse technique des points d'eau" title="Analyse technique des points d'eau"/>
+<img src="image/sessenouan7.jpg" alt="Analyse des concentrations en polluants" title="Analyse des concentrations en polluants"/>
+<img src="image/labo1.jpg" alt="Analyse des prélèvements en laboratoire, préparation comptage E.coli" title="Analyse des prélèvements en laboratoire, préparation comptage E.coli"/>
+
+<figcaption>Les analyses techniques sur le terrain et en laboratoire</figcaption>
+</figure>
+
+<figure>
+<img src="image/allomabo2.jpg" alt="Focus group" title="Focus group"/>
+<img src="image/ndrikro2.jpg" alt="Focus group" title="Focus group"/>
+<figcaption>Les enquêtes socioanthropologiques : entretiens individuels et focus group</figcaption>
+</figure>
+
+
+
+<h3>Analyse technique des points d'eau</h3>
+<p>L'analyse technique des points d'eau menée sous la direction de l'ingénieur Brou Yves Oscar Kouadio se décompose en deux parties : 
+le diagnostic de vulnérabilité sanitaire du point d'eau et l'analyse de la qualité de l'eau.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Diagnostic</th>
+<th align="left">Paramètres observés</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>Informations générales sur le point d'eau</strong></td>
+<td align="left">Date de construction, coordonnées géographique, emplacement, type de point d'eau, profondeur, niveau statique, description de la superstructure, type d'exhaure,tarrissement, droit d'accès, état du matériel de pompage ou d'exhaure manuel</td>
+</tr>
+<tr>
+<td align="left"><strong>Diagnostic de vulnérabilité sanitaire :</strong> Analyse de l'état général du point d'eau</td>
+<td align="left">Etat de la sperstructure (margelle, dalle anti-bourbier,trottoir, clôture, couvercle, canal de draînage, étanchéité), propreté des outils d'exhaure, de transport et de stockage de l'eau, source de pollution visible dans un rayon de 30 mètres</td>
+</tr>
+<tr>
+<td align="left"><strong>Diagnostic de la qualité de l'eau :</strong> Analyse organoleptique, physicochimique et bactériologique de l'eau</td>
+<td align="left">Couleur, Goût, Odeur, pH, Conductivité, turbidité, température, concentration de certains éléments chimiques (chlore libre, chlore total, ammoniac, nitrate, nitrite, arsenic, fluor), Comptage des bactéries <em>Echerichya Coli</em></td>
+</tr>
+</tbody>
+</table>
+
+
+<h3>Etude socioanthropologique</h3>
+<p>L'étude socioanthropologie menée sous la direction du docteur Soro Doba, s'appuie sur une vaste enquête ménage complété par de nombreux entretiens avec des personnes ressources (responsables communautaires et religieux) et des focus group auprès de certaines catégories de la population (femmes, hommes, jeunes). Elle aborde quatre thèmes:</p>
+<ul>
+<li>
+<p><strong>Les usages de l'eau des ménages:</strong> usage des points d'eau, perception de la qualité de l'eau, désidérata concernant les équipements en eau.</p>
+</li>
+<li>
+<p><strong>L'assainissement dans les ménages:</strong> équipements d'assainissement, pratique d'évacuation des eaux usées et pratiques de défécation.</p>
+</li>
+<li>
+<p><strong>Mode de gestion des points d'eau:</strong> type d'organisation, mode de fonctionnement, problèmes rencontrés, tension autour de l'eau.</p>
+</li>
+<li>
+<p><strong>Niveau d'équipement de la localité:</strong> type d'équipement d'assainissement, état des pompes, types de points d'eau.</p>
+</li>
+</ul>
+</div>
+</section>
+    </div>
+    <footer class="footer-bar">
+
+
+
+	<a href="http://urgenceeau.com/"><img src="http://localhost:8000/static/images/UElogo.png" alt="Urgence Eau logo"></a>
+	<a href="http://urgenceeau.com/urgence-eau-cote-divoire-ueci/"><img src="http://localhost:8000/static/images/UECIlogo.png" alt="Urgence Eau - Côte d'Ivoire logo"></a>
+	<span class="footer-text"> <a href="http://urgenceeau.com/">Urgence Eau </a><br>
+	<a href="http://urgenceeau.com/urgence-eau-cote-divoire-ueci/">Urgence Eau - Côte d'Ivoire</a></span>
+    <span class="footer-text" style="text-align: center;">Site développé par <a href='http://www.ladyss.com/thomas-maillard'>Thomas Maillard</a><br>© 2018 Urgence Eau | <a href="http://urgenceeau.com/mentions-legales/">Mentions légales</a></span>
+    <span class="footer-text" style="text-align: right;">Un projet soutenu par la <a href="https://www.normandie.fr/">Région Normandie</a><br>à travers l'initiative <a href="https://www.normandie.fr/normandie-pour-la-paix">Normandie pour la Paix.</a></span>
+    <a href="https://www.normandie.fr/"><img src="http://localhost:8000/static/images/logo_r_normandie-portrait-cmjn.jpg" alt="Region Normandie logo"></a>
+	<a href="https://www.normandie.fr/normandie-pour-la-paix"><img src="http://localhost:8000/static/images/Label_Normandie-pour-la-Paix.jpg" alt="Label Normandie pour la paix logo"></a>
+  
+    <script src="http://localhost:8000/static/js/script.js"></script>
+    
+
+	<!-- appelle le fichier JS codant la carte de la page d'accueil -->	
+	<script type="text/javascript" src="http://localhost:8000/doc/map/map_home.js" ></script>
+
+
+<!-- jQuery 1.7.2+ or Zepto.js 1.0+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
+
+<!-- Magnific Popup core JS file -->
+<script type="text/javascript" src="http://localhost:8000/static/dist/jquery.magnific-popup.js"></script>	
+	
+    </footer>
+</body>
+ 
+</html>

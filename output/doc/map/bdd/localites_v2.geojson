@@ -1,0 +1,5952 @@
+{
+	"type": "FeatureCollection",
+	"name": "localites_v2",
+	"crs": {
+		"type": "name",
+		"properties": {
+			"name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+		}
+	},
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"ogc_fid": 1.0,
+				"row id": 199.0,
+				"a_quartier": "Assengoukpli",
+				"a_sous_qua": "null",
+				"id": null,
+				"eau_sodeci": "0",
+				"pompes_fon": "1",
+				"pompesnf": "2",
+				"forage": "0",
+				"puits": "0",
+				"eausurf": "1",
+				"pomperep": "2",
+				"analyse": "2",
+				"conforme": "1",
+				"vulnfaible": "1",
+				"vulnmoyen": "0",
+				"vulnfor": "0",
+				"vulnxfor": "1",
+				"public": "2",
+				"prive": "0",
+				"cgpe": "1",
+				"cgpenb": "1",
+				"cgpef": "1",
+				"population": "1200",
+				"habitat": "Villageois et Bas standing",
+				"ecole": "Oui",
+				"sante": "Non",
+				"activites": "Agriculture",
+				"assainiss": "Assainissement autonome",
+				"dal": "Oui",
+				"route": "Terre battue",
+				"desiderh": "Réhabilter les PMH",
+				"desiderf": "Réhabilité les PMH existantes, Construire 2 nouvelles PMH",
+				"pressource": "Chef de village \nPrésidente des Femmes                                \n Président des jeunes\n",
+				"tensint": "Disputes de femmes dans les points d'eau",
+				"tensvois": "Aucune tension",
+				"date": "31-janv.-19",
+				"link_1": "articles/assengoukpli.html"
+			},
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+							[
+								-4.883860489165767,
+								7.757505753586748
+							],
+							[
+								-4.885174737182526,
+								7.75627741684942
+							],
+							[
+								-4.887119455112807,
+								7.757363264063339
+							],
+							[
+								-4.887896848565219,
+								7.756450145051493
+							],
+							[
+								-4.888565780237242,
+								7.758133909846592
+							],
+							[
+								-4.891248222705192,
+								7.759155564741017
+							],
+							[
+								-4.891056693271612,
+								7.760418972595039
+							],
+							[
+								-4.889703382350446,
+								7.762329999106441
+							],
+							[
+								-4.886249718936573,
+								7.761147909525249
+							],
+							[
+								-4.883860489165767,
+								7.757505753586748
+							]
+						]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"ogc_fid": 2.0,
+				"row id": 214.0,
+				"a_quartier": "Yapo-kouakoukro",
+				"a_sous_qua": "Yapo-kouakoukro",
+				"id": "214",
+				"eau_sodeci": "0",
+				"pompes_fon": "1",
+				"pompesnf": "2",
+				"forage": "0",
+				"puits": "1",
+				"eausurf": "1",
+				"pomperep": "2",
+				"analyse": "2",
+				"conforme": "0",
+				"vulnfaible": "1",
+				"vulnmoyen": "0",
+				"vulnfor": "0",
+				"vulnxfor": "1",
+				"public": "1",
+				"prive": "0",
+				"cgpe": "1",
+				"cgpenb": "3",
+				"cgpef": "0",
+				"population": "500",
+				"habitat": "Villageois et Bas standing",
+				"ecole": "Oui",
+				"sante": "Non",
+				"activites": "Agriculture",
+				"assainiss": "Assainissement autonome",
+				"dal": "Oui",
+				"route": "Terre battue",
+				"desiderh": "Réhabilitation des forages",
+				"desiderf": "Réhabilitation des forages, Une PMH",
+				"pressource": "Chef de village \nPrésidente des Femmes                                \n Président des jeunes\n",
+				"tensint": "Disputes de femmes dans les points d'eau",
+				"tensvois": "Aucune tension",
+				"date": "05-févr.-19",
+				"link_1": "articles/yapo-kouakoukro.html"
+			},
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+							[
+								-4.893899838033747,
+								7.726995246665747
+							],
+							[
+								-4.895573005109843,
+								7.726158663127698
+							],
+							[
+								-4.897516150503963,
+								7.725294944046154
+							],
+							[
+								-4.899391303473273,
+								7.727240328946607
+							],
+							[
+								-4.900020417049923,
+								7.729936793442575
+							],
+							[
+								-4.898634948746094,
+								7.731823036328514
+							],
+							[
+								-4.893329093108316,
+								7.731753363196994
+							],
+							[
+								-4.893987064754989,
+								7.729481321348891
+							],
+							[
+								-4.893237845842769,
+								7.728050069387634
+							],
+							[
+								-4.893899838033747,
+								7.726995246665747
+							]
+						]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"ogc_fid": 3.0,
+				"row id": 264.0,
+				"a_quartier": "Lokanou",
+				"a_sous_qua": "Lokanou",
+				"id": "264",
+				"eau_sodeci": "0",
+				"pompes_fon": "1",
+				"pompesnf": "0",
+				"forage": "0",
+				"puits": "2",
+				"eausurf": "1",
+				"pomperep": "0",
+				"analyse": "1",
+				"conforme": "0",
+				"vulnfaible": "1",
+				"vulnmoyen": "0",
+				"vulnfor": "0",
+				"vulnxfor": "0",
+				"public": "1",
+				"prive": "0",
+				"cgpe": "1",
+				"cgpenb": "1",
+				"cgpef": "1",
+				"population": "600",
+				"habitat": "Villageois et Bas standing",
+				"ecole": "Oui",
+				"sante": "Non",
+				"activites": "Agriculture",
+				"assainiss": "Assainissement autonome",
+				"dal": "Oui",
+				"route": "Terre battue",
+				"desiderh": "PMH",
+				"desiderf": "PMH",
+				"pressource": "Chef de village \nPrésidente des Femmes                                \n Président des jeunes\n",
+				"tensint": "Disputes de femmes dans les points d'eau",
+				"tensvois": "Aucune tension",
+				"date": "21-févr.-19",
+				"link_1": "articles/lokanou.html"
+			},
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+							[
+								-5.125145926612594,
+								7.718680844110756
+							],
+							[
+								-5.124337046403244,
+								7.72104926536402
+							],
+							[
+								-5.12319266261,
+								7.722257847116587
+							],
+							[
+								-5.122372313184343,
+								7.721471835947037
+							],
+							[
+								-5.122698644017512,
+								7.719167744978566
+							],
+							[
+								-5.123687738926219,
+								7.717997868106905
+							],
+							[
+								-5.125145926612594,
+								7.718680844110756
+							]
+						]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"ogc_fid": 4.0,
+				"row id": 257.0,
+				"a_quartier": "Angoua Yaokro",
+				"a_sous_qua": "Angoua Yaokro",
+				"id": "257",
+				"eau_sodeci": "1",
+				"pompes_fon": "0",
+				"pompesnf": "0",
+				"forage": "0",
+				"puits": "0",
+				"eausurf": "1",
+				"pomperep": "0",
+				"analyse": "1",
+				"conforme": "0",
+				"vulnfaible": "1",
+				"vulnmoyen": "0",
+				"vulnfor": "0",
+				"vulnxfor": "0",
+				"public": "1",
+				"prive": "0",
+				"cgpe": "0",
+				"cgpenb": "0",
+				"cgpef": "0",
+				"population": "2000",
+				"habitat": "Villageois et Bas standing",
+				"ecole": "Oui",
+				"sante": "Oui",
+				"activites": "Agriculture",
+				"assainiss": "Assainissement autonome",
+				"dal": "Oui",
+				"route": "Terre battue",
+				"desiderh": "SODECI amélioré",
+				"desiderf": "Amélioration de la qualité de l’eau de SODECI",
+				"pressource": "Chef de village \nPrésidente des Femmes     Président du Comité de Gestion des pompes                           \n Président des jeunes\n",
+				"tensint": "Disputes de femmes dans les points d'eau",
+				"tensvois": "Aucune tension",
+				"date": "19-févr.-19",
+				"link_1": "articles/angouayaokro.html"
+			},
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+							[
+								-5.215974766019156,
+								7.692489070695661
+							],
+							[
+								-5.215828263898556,
+								7.695637018144948
+							],
+							[
+								-5.21331739575726,
+								7.700008044357515
+							],
+							[
+								-5.211958642178666,
+								7.699042370236358
+							],
+							[
+								-5.210049206823437,
+								7.693648824210234
+							],
+							[
+								-5.2112859176162,
+								7.692397781849698
+							],
+							[
+								-5.215974766019156,
+								7.692489070695661
+							]
+						]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"ogc_fid": 5.0,
+				"row id": 270.0,
+				"a_quartier": "Tchimoukro",
+				"a_sous_qua": "Tchimoukro",
+				"id": "270",
+				"eau_sodeci": "1",
+				"pompes_fon": "0",
+				"pompesnf": "1",
+				"forage": "0",
+				"puits": "0",
+				"eausurf": "1",
+				"pomperep": "1",
+				"analyse": "1",
+				"conforme": "0",
+				"vulnfaible": "0",
+				"vulnmoyen": "0",
+				"vulnfor": "0",
+				"vulnxfor": "1",
+				"public": "1",
+				"prive": "0",
+				"cgpe": "1",
+				"cgpenb": "1",
+				"cgpef": "0",
+				"population": "500",
+				"habitat": "Villageois et Bas standing",
+				"ecole": "Oui",
+				"sante": "Non",
+				"activites": "Agriculture",
+				"assainiss": "Assainissement autonome",
+				"dal": "Oui",
+				"route": "Terre battue",
+				"desiderh": "Réhabilitation des PMH en panne",
+				"desiderf": "Réhabilitation des PMH en panne, Construction de nouvelles PMH",
+				"pressource": "Chef de village \nPrésidente des Femmes                                \n Président du comité de gestion\n",
+				"tensint": "Disputes de femmes dans les points d'eau",
+				"tensvois": "Aucune tension",
+				"date": "22-févr.-19",
+				"link_1": "articles/tchimoukro.html"
+			},
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+							[
+								-5.235832672022203,
+								7.696288642953768
+							],
+							[
+								-5.236812139371389,
+								7.698296390357798
+							],
+							[
+								-5.233984281405668,
+								7.699165052330382
+							],
+							[
+								-5.231900163024277,
+								7.697871154858103
+							],
+							[
+								-5.23147079247873,
+								7.69636617606411
+							],
+							[
+								-5.233940410358318,
+								7.696015419607876
+							],
+							[
+								-5.235832672022203,
+								7.696288642953768
+							]
+						]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"ogc_fid": 6.0,
+				"row id": 206.0,
+				"a_quartier": "Angankro",
+				"a_sous_qua": "Angankro",
+				"id": "206",
+				"eau_sodeci": "0",
+				"pompes_fon": "1",
+				"pompesnf": "1",
+				"forage": "0",
+				"puits": "1",
+				"eausurf": "2",
+				"pomperep": "0",
+				"analyse": "1",
+				"conforme": "0",
+				"vulnfaible": "0",
+				"vulnmoyen": "1",
+				"vulnfor": "0",
+				"vulnxfor": "0",
+				"public": "1",
+				"prive": "0",
+				"cgpe": "1",
+				"cgpenb": "2",
+				"cgpef": "1",
+				"population": "450",
+				"habitat": "Villageois et Bas standing",
+				"ecole": "Non",
+				"sante": "Non",
+				"activites": "Agriculture",
+				"assainiss": "Assainissement autonome",
+				"dal": "Oui",
+				"route": "Piste",
+				"desiderh": "Réparation de pompes",
+				"desiderf": "Réparation de pompes, 1 PMH",
+				"pressource": "Chef de village \nPrésidente des Femmes     Président du Comité de Gestion des pompes                           \n Président des jeunes\n",
+				"tensint": "Disputes de femmes dans les points d'eau",
+				"tensvois": "Aucune tension",
+				"date": "23-janv.-19",
+				"link_1": "articles/angankro.html"
+			},
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+							[
+								-5.055786105756376,
+								7.780506138877325
+							],
+							[
+								-5.057580799392865,
+								7.782953319858553
+							],
+							[
+								-5.056675464433923,
+								7.784859227909044
+							],
+							[
+								-5.054815945531116,
+								7.784376793046621
+							],
+							[
+								-5.053285066702709,
+								7.783390139022693
+							],
+							[
+								-5.052785602886559,
+								7.781217646600594
+							],
+							[
+								-5.052723851506477,
+								7.77944475832955
+							],
+							[
+								-5.055786105756376,
+								7.780506138877325
+							]
+						]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"ogc_fid": 7.0,
+				"row id": 203.0,
+				"a_quartier": "Affouekro",
+				"a_sous_qua": "null",
+				"id": "23",
+				"eau_sodeci": "0",
+				"pompes_fon": "2",
+				"pompesnf": "1",
+				"forage": "1",
+				"puits": "0",
+				"eausurf": "1",
+				"pomperep": "1",
+				"analyse": "1",
+				"conforme": "0",
+				"vulnfaible": "1",
+				"vulnmoyen": "0",
+				"vulnfor": "0",
+				"vulnxfor": "0",
+				"public": "1",
+				"prive": "0",
+				"cgpe": "1",
+				"cgpenb": "1",
+				"cgpef": "1",
+				"population": "1200",
+				"habitat": "Villageois et Bas standing",
+				"ecole": "Oui",
+				"sante": "Non",
+				"activites": "Agriculture",
+				"assainiss": "Assainissement autonome",
+				"dal": "Oui",
+				"route": "Terre battue",
+				"desiderh": "Rehabilité le HVA et les PMH",
+				"desiderf": "Réhabilité le HVA, les PMH existantes, Construire 2 nouvelles PMH",
+				"pressource": "Chef de village \nPrésidente des Femmes \nPrésidente du comité de gestion Président des jeunes\n",
+				"tensint": "Disputes de femmes dans les points d'eau",
+				"tensvois": "Aucune tension",
+				"date": "30-janv.-19",
+				"link_1": "articles/affouekro.html"
+			},
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+							[
+								-4.923351151720906,
+								7.758720033828816
+							],
+							[
+								-4.924872303762544,
+								7.759427356950816
+							],
+							[
+								-4.926168285661543,
+								7.76096879255551
+							],
+							[
+								-4.926380768145186,
+								7.762592329991174
+							],
+							[
+								-4.921192831815081,
+								7.763679597174455
+							],
+							[
+								-4.920893976768316,
+								7.758951637357881
+							],
+							[
+								-4.922072514836938,
+								7.758352560978628
+							],
+							[
+								-4.923351151720906,
+								7.758720033828816
+							]
+						]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"ogc_fid": 8.0,
+				"row id": 262.0,
+				"a_quartier": "Allokokro",
+				"a_sous_qua": "Allokokro",
+				"id": "198",
+				"eau_sodeci": "0",
+				"pompes_fon": "1",
+				"pompesnf": "0",
+				"forage": "1",
+				"puits": "0",
+				"eausurf": "1",
+				"pomperep": "0",
+				"analyse": "1",
+				"conforme": "1",
+				"vulnfaible": "1",
+				"vulnmoyen": "0",
+				"vulnfor": "0",
+				"vulnxfor": "0",
+				"public": "1",
+				"prive": "0",
+				"cgpe": "0",
+				"cgpenb": "0",
+				"cgpef": "0",
+				"population": "1000",
+				"habitat": "Villageois,Bas et moyen standing",
+				"ecole": "Oui",
+				"sante": "Non",
+				"activites": "Agriculture",
+				"assainiss": "Assainissement autonome",
+				"dal": "Non",
+				"route": "Bitume",
+				"desiderh": "HVA",
+				"desiderf": "HVA",
+				"pressource": "Chef de village Porte,   Cadre village\nPrésidente des Femmes \n\n",
+				"tensint": "Disputes de femmes dans les points d'eau",
+				"tensvois": "En conflit avec l'état pour la délocalisation à cause de l'aéroport",
+				"date": "01-févr.-19",
+				"link_1": "articles/allokokro.html"
+			},
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+							[
+								-5.093045909035973,
+								7.734785021277761
+							],
+							[
+								-5.088119079666946,
+								7.736181395377004
+							],
+							[
+								-5.084569537379435,
+								7.735955015945547
+							],
+							[
+								-5.079624381114686,
+								7.734705939256039
+							],
+							[
+								-5.07733384712521,
+								7.73308620362261
+							],
+							[
+								-5.078581581102305,
+								7.730780325747856
+							],
+							[
+								-5.080662968910611,
+								7.731702459586979
+							],
+							[
+								-5.082164729734325,
+								7.733546727265225
+							],
+							[
+								-5.084193424180395,
+								7.734521554466583
+							],
+							[
+								-5.091491454850023,
+								7.730991099196799
+							],
+							[
+								-5.093045909035973,
+								7.734785021277761
+							]
+						]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"ogc_fid": 9.0,
+				"row id": 256.0,
+				"a_quartier": "Assieblenou",
+				"a_sous_qua": "Assieblenou",
+				"id": "199",
+				"eau_sodeci": "1",
+				"pompes_fon": "1",
+				"pompesnf": "0",
+				"forage": "0",
+				"puits": "1",
+				"eausurf": "1",
+				"pomperep": "0",
+				"analyse": "1",
+				"conforme": "0",
+				"vulnfaible": "1",
+				"vulnmoyen": "0",
+				"vulnfor": "0",
+				"vulnxfor": "0",
+				"public": "1",
+				"prive": "0",
+				"cgpe": "0",
+				"cgpenb": "0",
+				"cgpef": "0",
+				"population": "1000",
+				"habitat": "Villageois et Bas standing",
+				"ecole": "Oui",
+				"sante": "Non",
+				"activites": "Agriculture",
+				"assainiss": "Assainissement autonome",
+				"dal": "Oui",
+				"route": "Terre battue",
+				"desiderh": "Construire un PMH dans le village car les autres sont loin",
+				"desiderf": "Construire un PMH dans le village car les autres sont loin",
+				"pressource": "Chef de village \nPrésidente des Femmes                                \n Président des jeunes\n",
+				"tensint": "Disputes de femmes dans les points d'eau",
+				"tensvois": "Aucune tension",
+				"date": "31-janv.-19",
+				"link_1": "articles/assieblenou.html"
+			},
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+							[
+								-5.190374425381473,
+								7.690329548877793
+							],
+							[
+								-5.194092803915438,
+								7.690692701222925
+							],
+							[
+								-5.193123804688805,
+								7.694378128642293
+							],
+							[
+								-5.191714837479387,
+								7.694699689273278
+							],
+							[
+								-5.189917212935004,
+								7.693657264823337
+							],
+							[
+								-5.190374425381473,
+								7.690329548877793
+							]
+						]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"ogc_fid": 10.0,
+				"row id": 224.0,
+				"a_quartier": "Bamoro gare",
+				"a_sous_qua": "Bamoro gare",
+				"id": "224",
+				"eau_sodeci": "0",
+				"pompes_fon": "0",
+				"pompesnf": "0",
+				"forage": "1",
+				"puits": "1",
+				"eausurf": "0",
+				"pomperep": "1",
+				"analyse": "1",
+				"conforme": "0",
+				"vulnfaible": "0",
+				"vulnmoyen": "0",
+				"vulnfor": "1",
+				"vulnxfor": "0",
+				"public": "1",
+				"prive": "0",
+				"cgpe": "1",
+				"cgpenb": "1",
+				"cgpef": "0",
+				"population": "900",
+				"habitat": "Villageois et Bas standing",
+				"ecole": "Non",
+				"sante": "Non",
+				"activites": "Agrculture, Commerce",
+				"assainiss": "Assainissement autonome",
+				"dal": "Non",
+				"route": "Bitume",
+				"desiderh": "Rehabilité stion s à B",
+				"desiderf": "Réhabilitation des puits à pompes, Formation du comité de gestion",
+				"pressource": "Artisan réparateur\nChef de village                            \n Président des jeunes\n",
+				"tensint": "Disputes de femmes dans les points d'eau",
+				"tensvois": "Aucune tension",
+				"date": "08-févr.-19",
+				"link_1": "articles/bamorogare.html"
+			},
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+							[
+								-5.076968660399393,
+								7.824725474400255
+							],
+							[
+								-5.076727188257926,
+								7.825705860912067
+							],
+							[
+								-5.076044817595295,
+								7.826239409992382
+							],
+							[
+								-5.074808057822972,
+								7.826062473233367
+							],
+							[
+								-5.073810415759798,
+								7.822748522732011
+							],
+							[
+								-5.075384044134939,
+								7.818572388765297
+							],
+							[
+								-5.076355651299741,
+								7.815957075355164
+							],
+							[
+								-5.077048403940188,
+								7.816205587696881
+							],
+							[
+								-5.076241237222468,
+								7.823109622215128
+							],
+							[
+								-5.076968660399393,
+								7.824725474400255
+							]
+						]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"ogc_fid": 11.0,
+				"row id": 234.0,
+				"a_quartier": "Akpokro",
+				"a_sous_qua": "Akpokro",
+				"id": "234",
+				"eau_sodeci": "0",
+				"pompes_fon": "2",
+				"pompesnf": "2",
+				"forage": "0",
+				"puits": "0",
+				"eausurf": "2",
+				"pomperep": "2",
+				"analyse": "1",
+				"conforme": "1",
+				"vulnfaible": "1",
+				"vulnmoyen": "0",
+				"vulnfor": "0",
+				"vulnxfor": "0",
+				"public": "1",
+				"prive": "0",
+				"cgpe": "1",
+				"cgpenb": "3",
+				"cgpef": "1",
+				"population": "300",
+				"habitat": "Villageois et Bas standing",
+				"ecole": "Oui",
+				"sante": "Non",
+				"activites": "Agriculture",
+				"assainiss": "Assainissement autonome",
+				"dal": "Oui",
+				"route": "Terre battue",
+				"desiderh": "Réhabilitation des  2 PMH en panne",
+				"desiderf": "Réhabilitation des  2 PMH en panne, HVA",
+				"pressource": "Chef de village \nPrésidente des Femmes \nPrésidente du comité de gestion Président des jeunes\n",
+				"tensint": "Disputes de femmes dans les points d'eau",
+				"tensvois": "Aucune tension",
+				"date": "11-févr.-19",
+				"link_1": "articles/akpokro.html"
+			},
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+							[
+								-5.058719009457185,
+								7.849482082221574
+							],
+							[
+								-5.059812782032916,
+								7.849972920449879
+							],
+							[
+								-5.060393424887556,
+								7.851082787475162
+							],
+							[
+								-5.059799693790554,
+								7.851833932952517
+							],
+							[
+								-5.058137363967731,
+								7.851869296614154
+							],
+							[
+								-5.05776712523834,
+								7.851255212915004
+							],
+							[
+								-5.057237806236502,
+								7.850620990878054
+							],
+							[
+								-5.057246439372185,
+								7.849714565349739
+							],
+							[
+								-5.058719009457185,
+								7.849482082221574
+							]
+						]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"ogc_fid": 12.0,
+				"row id": 246.0,
+				"a_quartier": "Pitiéssi",
+				"a_sous_qua": "Pitiessi",
+				"id": "246",
+				"eau_sodeci": "1",
+				"pompes_fon": "1",
+				"pompesnf": "0",
+				"forage": "1",
+				"puits": "5",
+				"eausurf": "1",
+				"pomperep": "0",
+				"analyse": "1",
+				"conforme": "0",
+				"vulnfaible": "1",
+				"vulnmoyen": "0",
+				"vulnfor": "0",
+				"vulnxfor": "0",
+				"public": "1",
+				"prive": "0",
+				"cgpe": "1",
+				"cgpenb": "1",
+				"cgpef": "1",
+				"population": "500",
+				"habitat": "Villageois et Bas standing",
+				"ecole": "Non",
+				"sante": "Non",
+				"activites": "Agriculture",
+				"assainiss": "Assainissement autonome",
+				"dal": "Oui",
+				"route": "Terre battue",
+				"desiderh": "PMH",
+				"desiderf": "PMH",
+				"pressource": "Chef de village \nPrésidente des Femmes                                \n Président des jeunes\n",
+				"tensint": "Aucune tension",
+				"tensvois": "Aucune tension",
+				"date": "14-févr.-19",
+				"link_1": "articles/pitiessi.html"
+			},
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+							[
+								-5.13542642591981,
+								7.643560311670733
+							],
+							[
+								-5.139019438218488,
+								7.639909917967739
+							],
+							[
+								-5.141266842289779,
+								7.640733136308891
+							],
+							[
+								-5.142733777917551,
+								7.641681825070552
+							],
+							[
+								-5.138092288763036,
+								7.644270897027177
+							],
+							[
+								-5.13542642591981,
+								7.643560311670733
+							]
+						]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"ogc_fid": 13.0,
+				"row id": 228.0,
+				"a_quartier": "Konankro",
+				"a_sous_qua": "Konankro",
+				"id": "228",
+				"eau_sodeci": "1",
+				"pompes_fon": "4",
+				"pompesnf": "2",
+				"forage": "1",
+				"puits": "1",
+				"eausurf": "1",
+				"pomperep": "2",
+				"analyse": "2",
+				"conforme": "0",
+				"vulnfaible": "2",
+				"vulnmoyen": "0",
+				"vulnfor": "0",
+				"vulnxfor": "0",
+				"public": "2",
+				"prive": "0",
+				"cgpe": "1",
+				"cgpenb": "1",
+				"cgpef": "1",
+				"population": "2000",
+				"habitat": "Villageois et Bas standing",
+				"ecole": "Oui",
+				"sante": "Non",
+				"activites": "Agriculture",
+				"assainiss": "Assainissement autonome",
+				"dal": "Oui",
+				"route": "Terre battue",
+				"desiderh": "Reparation des PMH",
+				"desiderf": "Réparation 2 PMH",
+				"pressource": "Chef de village \nPrésidente des Femmes                                \n Président des jeunes\n",
+				"tensint": "Disputes de femmes dans les points d'eau",
+				"tensvois": "Aucune tension",
+				"date": "07-févr.-19",
+				"link_1": "articles/konankro.html"
+			},
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+							[
+								-5.079663294603086,
+								7.830701784158813
+							],
+							[
+								-5.083414400261262,
+								7.832146262553934
+							],
+							[
+								-5.081473915069229,
+								7.83454434596758
+							],
+							[
+								-5.078855541853887,
+								7.837380548991078
+							],
+							[
+								-5.077602359820172,
+								7.835082699078881
+							],
+							[
+								-5.077877346549941,
+								7.833265105690388
+							],
+							[
+								-5.07856437851593,
+								7.832725933490804
+							],
+							[
+								-5.078446098263938,
+								7.831409353793781
+							],
+							[
+								-5.079663294603086,
+								7.830701784158813
+							]
+						]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"ogc_fid": 14.0,
+				"row id": 198.0,
+				"a_quartier": "Allomanbo",
+				"a_sous_qua": "null",
+				"id": "262",
+				"eau_sodeci": "0",
+				"pompes_fon": "1",
+				"pompesnf": "0",
+				"forage": "0",
+				"puits": "0",
+				"eausurf": "1",
+				"pomperep": "0",
+				"analyse": "1",
+				"conforme": "0",
+				"vulnfaible": "1",
+				"vulnmoyen": "0",
+				"vulnfor": "0",
+				"vulnxfor": "0",
+				"public": "1",
+				"prive": "0",
+				"cgpe": "1",
+				"cgpenb": "7",
+				"cgpef": "1",
+				"population": "700",
+				"habitat": "Villageois et Bas standing",
+				"ecole": "Oui",
+				"sante": "Non",
+				"activites": "Agriculture",
+				"assainiss": "Assainissement autonome",
+				"dal": "Oui",
+				"route": "Terre battue",
+				"desiderh": "Réhabilitation des forages",
+				"desiderf": "Réhabilitation des forages, Une PMH",
+				"pressource": "Chef de village \nPrésidente des Femmes \n Président des jeunes\n",
+				"tensint": "Disputes de femmes dans les points d'eau",
+				"tensvois": "Aucune tension",
+				"date": "20-févr.-19",
+				"link_1": "articles/allomanbo.html"
+			},
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+							[
+								-4.890972209816266,
+								7.771264700802418
+							],
+							[
+								-4.891964134237292,
+								7.771867946134585
+							],
+							[
+								-4.892123419515239,
+								7.773383009418212
+							],
+							[
+								-4.889347530226881,
+								7.77399373079666
+							],
+							[
+								-4.888853782399897,
+								7.771952721355362
+							],
+							[
+								-4.890972209816266,
+								7.771264700802418
+							]
+						]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"ogc_fid": 15.0,
+				"row id": 267.0,
+				"a_quartier": "Dinambo",
+				"a_sous_qua": "Dinambo",
+				"id": "124",
+				"eau_sodeci": "0",
+				"pompes_fon": "0",
+				"pompesnf": "0",
+				"forage": "0",
+				"puits": "0",
+				"eausurf": "1",
+				"pomperep": "0",
+				"analyse": "1",
+				"conforme": "0",
+				"vulnfaible": "0",
+				"vulnmoyen": "0",
+				"vulnfor": "0",
+				"vulnxfor": "1",
+				"public": "1",
+				"prive": "0",
+				"cgpe": "0",
+				"cgpenb": "0",
+				"cgpef": "0",
+				"population": "300",
+				"habitat": "Villageois et Bas standing",
+				"ecole": "Non",
+				"sante": "Non",
+				"activites": "Agriture",
+				"assainiss": "Assainissement autonome",
+				"dal": "Oui",
+				"route": "Terre battue",
+				"desiderh": "PMH",
+				"desiderf": "PMH",
+				"pressource": "Chef de village \nPrésidente des Femmes                                \n Président des jeunes\n",
+				"tensint": "Disputes de femmes dans les points d'eau",
+				"tensvois": "Aucune tension",
+				"date": "10-21 décembre 2019",
+				"link_1": "articles/dinambo.html"
+			},
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+							[
+								-5.104914585385274,
+								7.713080660096045
+							],
+							[
+								-5.106984785529051,
+								7.715013365039297
+							],
+							[
+								-5.105942798607076,
+								7.717028966151066
+							],
+							[
+								-5.104007151454882,
+								7.717966475374829
+							],
+							[
+								-5.10213909190917,
+								7.716082723300352
+							],
+							[
+								-5.103047774741961,
+								7.71423487068855
+							],
+							[
+								-5.104914585385274,
+								7.713080660096045
+							]
+						]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"ogc_fid": 16.0,
+				"row id": 259.0,
+				"a_quartier": "Pangbabo",
+				"a_sous_qua": "Pangbabo",
+				"id": "259",
+				"eau_sodeci": "0",
+				"pompes_fon": "2",
+				"pompesnf": "0",
+				"forage": "0",
+				"puits": "0",
+				"eausurf": "2",
+				"pomperep": "0",
+				"analyse": "2",
+				"conforme": "0",
+				"vulnfaible": "0",
+				"vulnmoyen": "0",
+				"vulnfor": "2",
+				"vulnxfor": "0",
+				"public": "2",
+				"prive": "0",
+				"cgpe": "1",
+				"cgpenb": "1",
+				"cgpef": "1",
+				"population": "3000",
+				"habitat": "Villageois et Bas standing",
+				"ecole": "Oui",
+				"sante": "Non",
+				"activites": "Agriculture",
+				"assainiss": "Assainissement autonome",
+				"dal": "Oui",
+				"route": "Piste",
+				"desiderh": "PMH",
+				"desiderf": "PMH",
+				"pressource": "Chef de village \nPorte parole du chef                               \n Président des jeunes Présidente des femmes\n",
+				"tensint": "Disputes de femmes dans les points d'eau",
+				"tensvois": "Aucune tension",
+				"date": "20-févr.-19",
+				"link_1": "articles/pangbabo.html"
+			},
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+							[
+								-5.076579678030597,
+								7.774112110442716
+							],
+							[
+								-5.078387023117157,
+								7.774620067606692
+							],
+							[
+								-5.080901498304407,
+								7.775737318326669
+							],
+							[
+								-5.083288209454766,
+								7.777923023696848
+							],
+							[
+								-5.081366988886777,
+								7.780283268408691
+							],
+							[
+								-5.079807499190554,
+								7.783411174571459
+							],
+							[
+								-5.078627456787236,
+								7.783706528533218
+							],
+							[
+								-5.077788782758319,
+								7.782155216105647
+							],
+							[
+								-5.078070182460463,
+								7.781056050796272
+							],
+							[
+								-5.076037716508983,
+								7.780258300973662
+							],
+							[
+								-5.075178720153615,
+								7.778463371411762
+							],
+							[
+								-5.075152130261256,
+								7.777013269781192
+							],
+							[
+								-5.076579678030597,
+								7.774112110442716
+							]
+						]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"ogc_fid": 17.0,
+				"row id": 207.0,
+				"a_quartier": "Pharis-Assouakro",
+				"a_sous_qua": "Pharis-Assouakro",
+				"id": "207",
+				"eau_sodeci": "0",
+				"pompes_fon": "1",
+				"pompesnf": "1",
+				"forage": "0",
+				"puits": "0",
+				"eausurf": "1",
+				"pomperep": "0",
+				"analyse": "1",
+				"conforme": "0",
+				"vulnfaible": "1",
+				"vulnmoyen": "0",
+				"vulnfor": "0",
+				"vulnxfor": "0",
+				"public": "1",
+				"prive": "0",
+				"cgpe": "0",
+				"cgpenb": "0",
+				"cgpef": "0",
+				"population": "300",
+				"habitat": "Villageois et Bas standing",
+				"ecole": "Non",
+				"sante": "Non",
+				"activites": "Agriculture",
+				"assainiss": "Assainissement autonome",
+				"dal": "Oui",
+				"route": "Bitume",
+				"desiderh": "PMH, réparation de PMH",
+				"desiderf": "Réparation de pompes",
+				"pressource": "Chef de village, Présidente des femmes",
+				"tensint": "Disputes de femmes dans les points d'eau",
+				"tensvois": "Aucune tension",
+				"date": "14-janv.-19",
+				"link_1": "articles/pharis-assouakro.html"
+			},
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+							[
+								-5.062206706221872,
+								7.794455574676505
+							],
+							[
+								-5.062351063328807,
+								7.797147122274573
+							],
+							[
+								-5.059183924009491,
+								7.798907913314303
+							],
+							[
+								-5.057987658924211,
+								7.797979695928073
+							],
+							[
+								-5.059019673975648,
+								7.795455055037537
+							],
+							[
+								-5.062206706221872,
+								7.794455574676505
+							]
+						]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"ogc_fid": 18.0,
+				"row id": 202.0,
+				"a_quartier": "Andonsakassou",
+				"a_sous_qua": "null",
+				"id": "202",
+				"eau_sodeci": "0",
+				"pompes_fon": "1",
+				"pompesnf": "1",
+				"forage": "0",
+				"puits": "2",
+				"eausurf": "1",
+				"pomperep": "1",
+				"analyse": "2",
+				"conforme": "0",
+				"vulnfaible": "1",
+				"vulnmoyen": "0",
+				"vulnfor": "0",
+				"vulnxfor": "1",
+				"public": "1",
+				"prive": "0",
+				"cgpe": "1",
+				"cgpenb": "3",
+				"cgpef": "2",
+				"population": "800",
+				"habitat": "Villageois et Bas standing",
+				"ecole": "Oui",
+				"sante": "Non",
+				"activites": "Agriculture",
+				"assainiss": "Assainissement autonome",
+				"dal": "Oui",
+				"route": "Terre battue",
+				"desiderh": "Reparatioé  la pompeÈA",
+				"desiderf": "Réparation de la pompe, installation d’une deuxième pompe",
+				"pressource": "Chef de village \nPrésidente des Femmes \n Président des jeunes\n",
+				"tensint": "Disputes de femmes dans les points d'eau",
+				"tensvois": "Aucune tension",
+				"date": "28-janv.-19",
+				"link_1": "articles/andonsakassou.html"
+			},
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+							[
+								-5.013217596280041,
+								7.754729554447493
+							],
+							[
+								-5.014555189478825,
+								7.75467161249623
+							],
+							[
+								-5.015500892608793,
+								7.755660963462964
+							],
+							[
+								-5.015151709914651,
+								7.756839455055694
+							],
+							[
+								-5.013987767600844,
+								7.758090693043036
+							],
+							[
+								-5.012489191871819,
+								7.758439875737177
+							],
+							[
+								-5.011470742347239,
+								7.7580033973695
+							],
+							[
+								-5.012241854130135,
+								7.756446624524784
+							],
+							[
+								-5.012591036824277,
+								7.755340879326668
+							],
+							[
+								-5.013217596280041,
+								7.754729554447493
+							]
+						]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"ogc_fid": 19.0,
+				"row id": 201.0,
+				"a_quartier": "Kouakoumiankro",
+				"a_sous_qua": "null",
+				"id": "201",
+				"eau_sodeci": "0",
+				"pompes_fon": "0",
+				"pompesnf": "1",
+				"forage": "0",
+				"puits": "8",
+				"eausurf": "2",
+				"pomperep": "1",
+				"analyse": "2",
+				"conforme": "0",
+				"vulnfaible": "0",
+				"vulnmoyen": "1",
+				"vulnfor": "1",
+				"vulnxfor": "0",
+				"public": "2",
+				"prive": "0",
+				"cgpe": "1",
+				"cgpenb": "7",
+				"cgpef": "7",
+				"population": "600",
+				"habitat": "Villageois et Bas standing",
+				"ecole": "Non",
+				"sante": "Non",
+				"activites": "Agriculture",
+				"assainiss": "Assainissement autonome",
+				"dal": "Oui",
+				"route": "Terre battue",
+				"desiderh": "PMH, PMH",
+				"desiderf": "HVA",
+				"pressource": "Chef de village \nPrésidente des Femmes                                \n Président des jeunes\n",
+				"tensint": "Disputes de femmes dans les points d'eau",
+				"tensvois": "Aucune tension",
+				"date": "22-janv.-19",
+				"link_1": "articles/kouakoumiankro.html"
+			},
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+							[
+								-5.047689548524264,
+								7.8112570624581398
+							],
+							[
+								-5.048168416681527,
+								7.810840034550644
+							],
+							[
+								-5.048714724612502,
+								7.812829925956832
+							],
+							[
+								-5.047096472088116,
+								7.81350355573512
+							],
+							[
+								-5.046819212924819,
+								7.812388294125799
+							],
+							[
+								-5.04716404309921,
+								7.811519207023642
+							],
+							[
+								-5.047689548524264,
+								7.8112570624581398
+							]
+						]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"ogc_fid": 20.0,
+				"row id": 263.0,
+				"a_quartier": "Sesseti",
+				"a_sous_qua": "Sesseti",
+				"id": "263",
+				"eau_sodeci": "0",
+				"pompes_fon": "0",
+				"pompesnf": "0",
+				"forage": "0",
+				"puits": "0",
+				"eausurf": "1",
+				"pomperep": "0",
+				"analyse": "1",
+				"conforme": "0",
+				"vulnfaible": "0",
+				"vulnmoyen": "0",
+				"vulnfor": "0",
+				"vulnxfor": "1",
+				"public": "1",
+				"prive": "0",
+				"cgpe": "0",
+				"cgpenb": "0",
+				"cgpef": "0",
+				"population": "200",
+				"habitat": "Villageois et Bas standing",
+				"ecole": "Non",
+				"sante": "Non",
+				"activites": "Agriculture",
+				"assainiss": "Assainissement autonome",
+				"dal": "Oui",
+				"route": "Piste",
+				"desiderh": "PMH",
+				"desiderf": "PMH",
+				"pressource": "Chef de village \nPrésidente des Femmes                                \n Président des jeunes\n",
+				"tensint": "Disputes de femmes dans les points d'eau",
+				"tensvois": "Aucune tension",
+				"date": "21-févr.-19",
+				"link_1": "articles/sesseti.html"
+			},
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+							[
+								-5.122908862696112,
+								7.690109387555576
+							],
+							[
+								-5.126430625466477,
+								7.691635858902891
+							],
+							[
+								-5.125706096983007,
+								7.694671487265705
+							],
+							[
+								-5.124250356251319,
+								7.695217388943973
+							],
+							[
+								-5.1223644370461,
+								7.694494488749674
+							],
+							[
+								-5.121403088417695,
+								7.691711372851493
+							],
+							[
+								-5.122908862696112,
+								7.690109387555576
+							]
+						]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"ogc_fid": 21.0,
+				"row id": 238.0,
+				"a_quartier": "Ahougnanou",
+				"a_sous_qua": "Ahougnanou",
+				"id": null,
+				"eau_sodeci": "0",
+				"pompes_fon": "1",
+				"pompesnf": "0",
+				"forage": "0",
+				"puits": "0",
+				"eausurf": "1",
+				"pomperep": "0",
+				"analyse": "2",
+				"conforme": "1",
+				"vulnfaible": "1",
+				"vulnmoyen": "0",
+				"vulnfor": "0",
+				"vulnxfor": "1",
+				"public": "2",
+				"prive": "0",
+				"cgpe": "1",
+				"cgpenb": "1",
+				"cgpef": "1",
+				"population": "600",
+				"habitat": "Villageois et Bas standing",
+				"ecole": "Non",
+				"sante": "Non",
+				"activites": "Agriculture",
+				"assainiss": "Assainissement autonome",
+				"dal": "Oui",
+				"route": "Terre battue",
+				"desiderh": "PMH",
+				"desiderf": "PMH",
+				"pressource": "Chef de village \nPrésidente des Femmes \n",
+				"tensint": "Disputes de femmes dans les points d'eau",
+				"tensvois": "Aucune tension",
+				"date": "21-févr.-19",
+				"link_1": "articles/ahougnanou.html"
+			},
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+							[
+								-5.113095103636677,
+								7.714257344498148
+							],
+							[
+								-5.112984519206006,
+								7.715234404925721
+							],
+							[
+								-5.112680263972247,
+								7.716186950922089
+							],
+							[
+								-5.111904973333189,
+								7.71634952523618
+							],
+							[
+								-5.111195658515257,
+								7.715213502692788
+							],
+							[
+								-5.11179533159914,
+								7.714458595996538
+							],
+							[
+								-5.111970275648376,
+								7.713865848192179
+							],
+							[
+								-5.112734977064142,
+								7.713334819971943
+							],
+							[
+								-5.113273829447095,
+								7.713742467894248
+							],
+							[
+								-5.113095103636677,
+								7.714257344498148
+							]
+						]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"ogc_fid": 22.0,
+				"row id": 209.0,
+				"a_quartier": "Akakro",
+				"a_sous_qua": "Akakro",
+				"id": "209",
+				"eau_sodeci": "0",
+				"pompes_fon": "1",
+				"pompesnf": "3",
+				"forage": "0",
+				"puits": "0",
+				"eausurf": "1",
+				"pomperep": "0",
+				"analyse": "2",
+				"conforme": "1",
+				"vulnfaible": "1",
+				"vulnmoyen": "0",
+				"vulnfor": "0",
+				"vulnxfor": "1",
+				"public": "2",
+				"prive": "0",
+				"cgpe": "1",
+				"cgpenb": "3",
+				"cgpef": "2",
+				"population": "800",
+				"habitat": "Villageois et Bas standing",
+				"ecole": "Oui",
+				"sante": "Non",
+				"activites": "Agriculture",
+				"assainiss": "Assainissement autonome",
+				"dal": "Oui",
+				"route": "Terre battue",
+				"desiderh": "Réparation de 2 PMH",
+				"desiderf": "Réparation de 2 PMH, Forage",
+				"pressource": "Chef de village \nPrésidente des Femmes \nSécrétaire des femmes",
+				"tensint": "Disputes de femmes dans les points d'eau",
+				"tensvois": "Aucune tension",
+				"date": "23-janv.-19",
+				"link_1": "articles/akakro.html"
+			},
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+							[
+								-5.017994069992524,
+								7.829578783278814
+							],
+							[
+								-5.013261965517186,
+								7.83204742933604
+							],
+							[
+								-5.010232864098627,
+								7.830357935664019
+							],
+							[
+								-5.011387950354179,
+								7.827978810850781
+							],
+							[
+								-5.01425890169816,
+								7.825693903889448
+							],
+							[
+								-5.015046933880916,
+								7.821327189484615
+							],
+							[
+								-5.016439270038987,
+								7.819458263338206
+							],
+							[
+								-5.019735778686079,
+								7.820889960730372
+							],
+							[
+								-5.022533774120221,
+								7.822914829634086
+							],
+							[
+								-5.020044652654631,
+								7.826113601188911
+							],
+							[
+								-5.017994069992524,
+								7.829578783278814
+							]
+						]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"ogc_fid": 23.0,
+				"row id": 210.0,
+				"a_quartier": "Assoumankro",
+				"a_sous_qua": "Assoumankro",
+				"id": "210",
+				"eau_sodeci": "0",
+				"pompes_fon": "2",
+				"pompesnf": "1",
+				"forage": "0",
+				"puits": "0",
+				"eausurf": "2",
+				"pomperep": "0",
+				"analyse": "2",
+				"conforme": "2",
+				"vulnfaible": "2",
+				"vulnmoyen": "0",
+				"vulnfor": "0",
+				"vulnxfor": "0",
+				"public": "2",
+				"prive": "0",
+				"cgpe": "1",
+				"cgpenb": "6",
+				"cgpef": "2",
+				"population": "400",
+				"habitat": "Villageois et Bas standing",
+				"ecole": "Oui",
+				"sante": "Non",
+				"activites": "Agriculture",
+				"assainiss": "Assainissement autonome",
+				"dal": "Oui",
+				"route": "Bitume",
+				"desiderh": "Réparation PHM",
+				"desiderf": "Réparation PHM",
+				"pressource": "Chef de village \nPrésidente des Femmes                                \n Président des jeunes\n",
+				"tensint": "Disputes de femmes dans les points d'eau",
+				"tensvois": "Aucune tension",
+				"date": "24-janv.-19",
+				"link_1": "articles/assoumankro.html"
+			},
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+							[
+								-5.027905568651216,
+								7.843867081451401
+							],
+							[
+								-5.028210071431791,
+								7.844167540790913
+							],
+							[
+								-5.030122390147255,
+								7.843481757749523
+							],
+							[
+								-5.031395045848327,
+								7.846240603007289
+							],
+							[
+								-5.030301880067959,
+								7.847172544853767
+							],
+							[
+								-5.028568366676705,
+								7.847967947360965
+							],
+							[
+								-5.027492062401067,
+								7.848159310623381
+							],
+							[
+								-5.026127942796585,
+								7.844772956436548
+							],
+							[
+								-5.025789924820071,
+								7.844119992876006
+							],
+							[
+								-5.026620761106073,
+								7.843940973737643
+							],
+							[
+								-5.027905568651216,
+								7.843867081451401
+							]
+						]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"ogc_fid": 24.0,
+				"row id": 216.0,
+				"a_quartier": "Bamoro",
+				"a_sous_qua": "Bamoro",
+				"id": "216",
+				"eau_sodeci": "0",
+				"pompes_fon": "0",
+				"pompesnf": "7",
+				"forage": "2",
+				"puits": "0",
+				"eausurf": "2",
+				"pomperep": "7",
+				"analyse": "4",
+				"conforme": "3",
+				"vulnfaible": "4",
+				"vulnmoyen": "0",
+				"vulnfor": "0",
+				"vulnxfor": "0",
+				"public": "4",
+				"prive": "0",
+				"cgpe": "1",
+				"cgpenb": "1",
+				"cgpef": "1",
+				"population": "2000",
+				"habitat": "Villageois et Bas standing",
+				"ecole": "Oui",
+				"sante": "Oui",
+				"activites": "Agriculture, Commerce",
+				"assainiss": "Assainissement autonome",
+				"dal": "Non",
+				"route": "Bitume",
+				"desiderh": "Réhabilitations des PMH",
+				"desiderf": "Réhabilitations des PMH, Formation de comité de gestion, Connecter le village au réseau hydraulique de la SODECI",
+				"pressource": "Artisan réparateur\nChef de village                            \n Président des jeunes\n",
+				"tensint": "Disputes de femmes dans les points d'eau",
+				"tensvois": "Aucune tension",
+				"date": "06-févr.-19",
+				"link_1": "articles/bamoro.html"
+			},
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+							[
+								-5.041452410942958,
+								7.829311731706666
+							],
+							[
+								-5.044245788347705,
+								7.829489309499308
+							],
+							[
+								-5.04648144349541,
+								7.830034860188856
+							],
+							[
+								-5.04839816454673,
+								7.830614487173447
+							],
+							[
+								-5.049050244904395,
+								7.830785740600713
+							],
+							[
+								-5.049023898223277,
+								7.831450994298937
+							],
+							[
+								-5.047850063272324,
+								7.832460310528756
+							],
+							[
+								-5.047235804072094,
+								7.833394090940518
+							],
+							[
+								-5.045595103509813,
+								7.834655774669689
+							],
+							[
+								-5.044647154912479,
+								7.834990777952764
+							],
+							[
+								-5.043447930399034,
+								7.83481736483466
+							],
+							[
+								-5.04303188483131,
+								7.834961266852886
+							],
+							[
+								-5.041535015094194,
+								7.834602336478686
+							],
+							[
+								-5.0406112003748488,
+								7.832324676898732
+							],
+							[
+								-5.041725036235152,
+								7.830541324676425
+							],
+							[
+								-5.041452410942958,
+								7.829311731706666
+							]
+						]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"ogc_fid": 25.0,
+				"row id": 243.0,
+				"a_quartier": "Bendêkouassikro",
+				"a_sous_qua": "Bendêkro",
+				"id": "223",
+				"eau_sodeci": "1",
+				"pompes_fon": "1",
+				"pompesnf": "2",
+				"forage": "1",
+				"puits": "0",
+				"eausurf": "4",
+				"pomperep": "2",
+				"analyse": "4",
+				"conforme": "1",
+				"vulnfaible": "3",
+				"vulnmoyen": "1",
+				"vulnfor": "0",
+				"vulnxfor": "0",
+				"public": "4",
+				"prive": "0",
+				"cgpe": "0",
+				"cgpenb": "0",
+				"cgpef": "0",
+				"population": "2000",
+				"habitat": "Villageois et Bas standing",
+				"ecole": "Oui",
+				"sante": "Oui",
+				"activites": "Agriculture",
+				"assainiss": "Assainissement autonome",
+				"dal": "Oui",
+				"route": null,
+				"desiderh": "Réhabilitation des PMH en panne ou démontées",
+				"desiderf": "Réhabilitation des PMH en panne ou démontées, Construction d’un forage",
+				"pressource": "Chef de village                            \nPrésidente des femmes\n",
+				"tensint": "Disputes de femmes dans les points d'eau",
+				"tensvois": "Aucune tension",
+				"date": "06-févr.-19",
+				"link_1": "articles/bendekouassikro.html"
+			},
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+							[
+								-5.13396598895115,
+								7.657257100286089
+							],
+							[
+								-5.132262570652936,
+								7.659835512298287
+							],
+							[
+								-5.129822177544224,
+								7.658799980267466
+							],
+							[
+								-5.128944531219268,
+								7.657167622613153
+							],
+							[
+								-5.12414140485427,
+								7.655014128911322
+							],
+							[
+								-5.127154717638435,
+								7.651996358529391
+							],
+							[
+								-5.131201260953556,
+								7.648256677945345
+							],
+							[
+								-5.134432647016964,
+								7.645115049476594
+							],
+							[
+								-5.137054026462486,
+								7.647818929648511
+							],
+							[
+								-5.13396598895115,
+								7.657257100286089
+							]
+						]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"ogc_fid": 26.0,
+				"row id": 250.0,
+				"a_quartier": "Bletromambo",
+				"a_sous_qua": "Bletromambo",
+				"id": "243",
+				"eau_sodeci": "0",
+				"pompes_fon": "0",
+				"pompesnf": "0",
+				"forage": "1",
+				"puits": "0",
+				"eausurf": "2",
+				"pomperep": "1",
+				"analyse": "2",
+				"conforme": "0",
+				"vulnfaible": "2",
+				"vulnmoyen": "0",
+				"vulnfor": "0",
+				"vulnxfor": "0",
+				"public": "2",
+				"prive": "0",
+				"cgpe": "0",
+				"cgpenb": "0",
+				"cgpef": "0",
+				"population": "500",
+				"habitat": "Villageois et Bas standing",
+				"ecole": "Non",
+				"sante": "Non",
+				"activites": "Agriculture",
+				"assainiss": "Assainissement autonome",
+				"dal": "Oui",
+				"route": null,
+				"desiderh": "PMH",
+				"desiderf": "PMH",
+				"pressource": "Chef de village \nPrésidente des Femmes                                \n Président des jeunes\n",
+				"tensint": "Disputes de femmes dans les points d'eau",
+				"tensvois": "Aucune tension",
+				"date": "14-févr.-19",
+				"link_1": "articles/bletromambo.html"
+			},
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+							[
+								-5.169932639382235,
+								7.651767291158556
+							],
+							[
+								-5.169314952722805,
+								7.652167901201694
+							],
+							[
+								-5.167678638437336,
+								7.652476356373783
+							],
+							[
+								-5.166473429585265,
+								7.650717868706979
+							],
+							[
+								-5.167008666183377,
+								7.649225253454984
+							],
+							[
+								-5.167655314351585,
+								7.64878141201222
+							],
+							[
+								-5.169724332576935,
+								7.649455546818499
+							],
+							[
+								-5.169932639382235,
+								7.651767291158556
+							]
+						]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"ogc_fid": 27.0,
+				"row id": 220.0,
+				"a_quartier": "Djêkro",
+				"a_sous_qua": "Djekro",
+				"id": "267",
+				"eau_sodeci": "0",
+				"pompes_fon": "1",
+				"pompesnf": "0",
+				"forage": "0",
+				"puits": "0",
+				"eausurf": "1",
+				"pomperep": "0",
+				"analyse": "2",
+				"conforme": "1",
+				"vulnfaible": "1",
+				"vulnmoyen": "0",
+				"vulnfor": "0",
+				"vulnxfor": "1",
+				"public": "1",
+				"prive": "0",
+				"cgpe": "1",
+				"cgpenb": "1",
+				"cgpef": "1",
+				"population": "800",
+				"habitat": "Villageois et Bas standing",
+				"ecole": "Non",
+				"sante": "Non",
+				"activites": "Agriculture",
+				"assainiss": "Assainissement autonome",
+				"dal": "Oui",
+				"route": "Terre battue",
+				"desiderh": "Une nouvelle PMH",
+				"desiderf": "Une nouvelle PMH",
+				"pressource": "Chef de village \nPrésidente des Femmes                                \n Président des jeunes\n",
+				"tensint": "Disputes de femmes dans les points d'eau",
+				"tensvois": "Aucune tension",
+				"date": "22-févr.-19",
+				"link_1": "articles/djekro.html"
+			},
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+							[
+								-5.041535015094194,
+								7.834602336478686
+							],
+							[
+								-5.04303188483131,
+								7.834961266852886
+							],
+							[
+								-5.043447930399034,
+								7.83481736483466
+							],
+							[
+								-5.042908043082877,
+								7.836056759144546
+							],
+							[
+								-5.042517931087295,
+								7.837184746851378
+							],
+							[
+								-5.040335443119516,
+								7.836338232350654
+							],
+							[
+								-5.039751396408893,
+								7.835142334055356
+							],
+							[
+								-5.040736208876268,
+								7.834748106334177
+							],
+							[
+								-5.041535015094194,
+								7.834602336478686
+							]
+						]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"ogc_fid": 28.0,
+				"row id": 204.0,
+				"a_quartier": "Djetouankro",
+				"a_sous_qua": "null",
+				"id": "220",
+				"eau_sodeci": "1",
+				"pompes_fon": "1",
+				"pompesnf": "1",
+				"forage": "1",
+				"puits": "0",
+				"eausurf": "1",
+				"pomperep": "1",
+				"analyse": "2",
+				"conforme": "0",
+				"vulnfaible": "0",
+				"vulnmoyen": "0",
+				"vulnfor": "0",
+				"vulnxfor": "2",
+				"public": "2",
+				"prive": "0",
+				"cgpe": "1",
+				"cgpenb": "5",
+				"cgpef": "5",
+				"population": "400",
+				"habitat": "Villageois et Bas standing",
+				"ecole": "Oui",
+				"sante": "Non",
+				"activites": "Agriculture",
+				"assainiss": "Assainissement autonome",
+				"dal": "Oui",
+				"route": "Terre battue",
+				"desiderh": "L’eau de SODECI",
+				"desiderf": "Obtenir l’eau de SODECI régulièrement, Réhabiliter et aménager les PMH, Obtenir une nouvelle PMH",
+				"pressource": "Chef de village \nPrésidente des Femmes                                \n Président des jeunes\n",
+				"tensint": "Disputes de femmes dans les points d'eau",
+				"tensvois": "Aucune tension",
+				"date": "06-févr.-19",
+				"link_1": "articles/djetouankro.html"
+			},
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+							[
+								-4.909334742962375,
+								7.748065347231773
+							],
+							[
+								-4.911692616266728,
+								7.749749525315885
+							],
+							[
+								-4.913733567906958,
+								7.753360099518465
+							],
+							[
+								-4.911360857965301,
+								7.754575779546693
+							],
+							[
+								-4.908935198043163,
+								7.75191730599045
+							],
+							[
+								-4.906758566888743,
+								7.751138552379702
+							],
+							[
+								-4.905948882516274,
+								7.748763857283247
+							],
+							[
+								-4.909334742962375,
+								7.748065347231773
+							]
+						]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"ogc_fid": 29.0,
+				"row id": 223.0,
+				"a_quartier": "Gbesserikro",
+				"a_sous_qua": "Gbesserikro",
+				"id": "204",
+				"eau_sodeci": "0",
+				"pompes_fon": "2",
+				"pompesnf": "1",
+				"forage": "0",
+				"puits": "1",
+				"eausurf": "1",
+				"pomperep": "1",
+				"analyse": "2",
+				"conforme": "1",
+				"vulnfaible": "2",
+				"vulnmoyen": "0",
+				"vulnfor": "0",
+				"vulnxfor": "0",
+				"public": "1",
+				"prive": "1",
+				"cgpe": "1",
+				"cgpenb": "3",
+				"cgpef": "2",
+				"population": "600",
+				"habitat": "Villageois et Bas standing",
+				"ecole": "Oui",
+				"sante": "Non",
+				"activites": "Agriculture",
+				"assainiss": "Assainissement autonome",
+				"dal": "Oui",
+				"route": null,
+				"desiderh": "Construction de PMH",
+				"desiderf": "Construction de PMH",
+				"pressource": "Chef de village \nPrésidente des Femmes                                \n Président des jeunes\n",
+				"tensint": "Disputes de femmes dans les points d'eau",
+				"tensvois": "Aucune tension",
+				"date": "30-janv.-19",
+				"link_1": "articles/gbesserikro.html"
+			},
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+							[
+								-5.040335443119516,
+								7.836338232350654
+							],
+							[
+								-5.042517931087295,
+								7.837184746851378
+							],
+							[
+								-5.043251860482331,
+								7.837900870650687
+							],
+							[
+								-5.04371624247669,
+								7.840587267483541
+							],
+							[
+								-5.045022228439154,
+								7.841773357560093
+							],
+							[
+								-5.043760952432438,
+								7.84362544025182
+							],
+							[
+								-5.041977245255382,
+								7.841951142870594
+							],
+							[
+								-5.040959420778568,
+								7.841302134906099
+							],
+							[
+								-5.039921186031673,
+								7.839090271874733
+							],
+							[
+								-5.039837350758756,
+								7.837181796356637
+							],
+							[
+								-5.040335443119516,
+								7.836338232350654
+							]
+						]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"ogc_fid": 30.0,
+				"row id": 190.0,
+				"a_quartier": "Golikro",
+				"a_sous_qua": "Golikro",
+				"id": "190",
+				"eau_sodeci": "1",
+				"pompes_fon": "1",
+				"pompesnf": "2",
+				"forage": "1",
+				"puits": "4",
+				"eausurf": "3",
+				"pomperep": "2",
+				"analyse": "4",
+				"conforme": "1",
+				"vulnfaible": "1",
+				"vulnmoyen": "1",
+				"vulnfor": "1",
+				"vulnxfor": "1",
+				"public": "4",
+				"prive": "0",
+				"cgpe": "0",
+				"cgpenb": "0",
+				"cgpef": "0",
+				"population": "1000",
+				"habitat": "Villageois et Bas standing",
+				"ecole": "Oui",
+				"sante": "Oui",
+				"activites": "Agriculture",
+				"assainiss": "Assainissement autonome",
+				"dal": "Oui",
+				"route": "Terre battue",
+				"desiderh": "HVA",
+				"desiderf": "HVA",
+				"pressource": "Chef de village \nPrésidente des Femmes                                \n Président de la mutuelle",
+				"tensint": "Disputes de femmes dans les points d'eau",
+				"tensvois": "Quelques  tensions liées à l'exploitation de la pompe de l'école",
+				"date": "18-janv.-19",
+				"link_1": "articles/golikro.html"
+			},
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+							[
+								-5.009906694863062,
+								7.765067072286411
+							],
+							[
+								-5.012292776606365,
+								7.765823634790385
+							],
+							[
+								-5.015697307874248,
+								7.768297012207223
+							],
+							[
+								-5.015727481623009,
+								7.771812685194745
+							],
+							[
+								-5.014809829668159,
+								7.774519741259961
+							],
+							[
+								-5.012409170837746,
+								7.77600813003619
+							],
+							[
+								-5.010081286210133,
+								7.7750478776273
+							],
+							[
+								-5.009324723706159,
+								7.77341835838797
+							],
+							[
+								-5.009237428032624,
+								7.772079824727093
+							],
+							[
+								-5.009819399189527,
+								7.770712192508372
+							],
+							[
+								-5.010692355924881,
+								7.769082673269042
+							],
+							[
+								-5.010314074672895,
+								7.767365858356178
+							],
+							[
+								-5.009644807842456,
+								7.766900281430656
+							],
+							[
+								-5.009906694863062,
+								7.765067072286411
+							]
+						]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"ogc_fid": 31.0,
+				"row id": 247.0,
+				"a_quartier": "Iki Lattekro",
+				"a_sous_qua": "Iki Lattekro",
+				"id": "247",
+				"eau_sodeci": "1",
+				"pompes_fon": "0",
+				"pompesnf": "0",
+				"forage": "0",
+				"puits": "2",
+				"eausurf": "1",
+				"pomperep": "0",
+				"analyse": "2",
+				"conforme": "0",
+				"vulnfaible": "1",
+				"vulnmoyen": "0",
+				"vulnfor": "0",
+				"vulnxfor": "1",
+				"public": "2",
+				"prive": "0",
+				"cgpe": "0",
+				"cgpenb": "0",
+				"cgpef": "0",
+				"population": "600",
+				"habitat": "Villageois et Bas standing",
+				"ecole": "Oui",
+				"sante": "Non",
+				"activites": "Agriculture",
+				"assainiss": "Assainissement autonome",
+				"dal": "Oui",
+				"route": "Terre battue",
+				"desiderh": "PMH",
+				"desiderf": "PMH",
+				"pressource": "Chef de village \nPrésidente des Femmes                                \n Président des jeunes\n",
+				"tensint": "Disputes de femmes dans les points d'eau",
+				"tensvois": "Aucune tension",
+				"date": "18-févr.-19",
+				"link_1": "articles/ikilattekro.html"
+			},
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+							[
+								-5.144072440672472,
+								7.636496234166904
+							],
+							[
+								-5.141807544104586,
+								7.635757794669651
+							],
+							[
+								-5.140162690054218,
+								7.634187697385387
+							],
+							[
+								-5.140396978445948,
+								7.629747740557158
+							],
+							[
+								-5.143440962815905,
+								7.63142248869767
+							],
+							[
+								-5.144049188739572,
+								7.631811933003478
+							],
+							[
+								-5.144485292654802,
+								7.634591622877839
+							],
+							[
+								-5.144072440672472,
+								7.636496234166904
+							]
+						]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"ogc_fid": 32.0,
+				"row id": 253.0,
+				"a_quartier": "Klobonoua",
+				"a_sous_qua": "Klobonoua",
+				"id": "114",
+				"eau_sodeci": "0",
+				"pompes_fon": "2",
+				"pompesnf": "1",
+				"forage": "0",
+				"puits": "2",
+				"eausurf": "2",
+				"pomperep": "1",
+				"analyse": "3",
+				"conforme": "1",
+				"vulnfaible": "2",
+				"vulnmoyen": "0",
+				"vulnfor": "0",
+				"vulnxfor": "1",
+				"public": "3",
+				"prive": "0",
+				"cgpe": "1",
+				"cgpenb": "1",
+				"cgpef": "1",
+				"population": "800",
+				"habitat": "Villageois et Bas standing",
+				"ecole": "Oui",
+				"sante": "Non",
+				"activites": "Agriculture",
+				"assainiss": "Assainissement autonome",
+				"dal": "Oui",
+				"route": "Terre battue",
+				"desiderh": "Soutien financier pour les éventuelles pannes",
+				"desiderf": "Aucun",
+				"pressource": "Chef de village \nPrésidente du CGPE                               \n Président des jeunes\n",
+				"tensint": "Disputes de femmes dans les points d'eau",
+				"tensvois": "Aucune tension",
+				"date": "26 Nov-09 Déc 2018",
+				"link_1": "articles/klobonoua.html"
+			},
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+							[
+								-5.159579319501486,
+								7.67244842948282
+							],
+							[
+								-5.162167571671507,
+								7.671747956959942
+							],
+							[
+								-5.164062013513598,
+								7.672346370762634
+							],
+							[
+								-5.166047732643271,
+								7.675235346741903
+							],
+							[
+								-5.165167207666445,
+								7.676913258252866
+							],
+							[
+								-5.159033229160451,
+								7.677640328215306
+							],
+							[
+								-5.158498262265651,
+								7.6767793299638999
+							],
+							[
+								-5.159579319501486,
+								7.67244842948282
+							]
+						]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"ogc_fid": 33.0,
+				"row id": 227.0,
+				"a_quartier": "Kouakro",
+				"a_sous_qua": "Adjegbrinti",
+				"id": null,
+				"eau_sodeci": "0",
+				"pompes_fon": "1",
+				"pompesnf": "1",
+				"forage": "1",
+				"puits": "0",
+				"eausurf": "1",
+				"pomperep": "1",
+				"analyse": "3",
+				"conforme": "0",
+				"vulnfaible": "1",
+				"vulnmoyen": "2",
+				"vulnfor": "0",
+				"vulnxfor": "0",
+				"public": "3",
+				"prive": "0",
+				"cgpe": "1",
+				"cgpenb": "14",
+				"cgpef": "1",
+				"population": "1700",
+				"habitat": "Villageois et Bas standing",
+				"ecole": "Non",
+				"sante": "Non",
+				"activites": "Agriculture",
+				"assainiss": "Assainissement autonome",
+				"dal": "Oui",
+				"route": "Terre battue",
+				"desiderh": "HVA",
+				"desiderf": "Une pompe à l’école, un château",
+				"pressource": "Chef de village \nPrésidente des Femmes                                \n Président des jeunes\n",
+				"tensint": "Disputes de femmes dans les points d'eau",
+				"tensvois": "Aucune tension",
+				"date": "07-févr.-19",
+				"link_1": "articles/kouakro.html"
+			},
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+							[
+								-5.073461539590033,
+								7.836829768223606
+							],
+							[
+								-5.074870570077416,
+								7.836814580997977
+							],
+							[
+								-5.076023395065566,
+								7.835949491003021
+							],
+							[
+								-5.077602359820172,
+								7.835082699078881
+							],
+							[
+								-5.078855541853887,
+								7.837380548991078
+							],
+							[
+								-5.077715448434135,
+								7.839347451140763
+							],
+							[
+								-5.075926034078759,
+								7.839159914377422
+							],
+							[
+								-5.074939948607633,
+								7.840400668243415
+							],
+							[
+								-5.074036360524272,
+								7.840575308538366
+							],
+							[
+								-5.073452998937246,
+								7.840765964063294
+							],
+							[
+								-5.07292532712215,
+								7.841048495342815
+							],
+							[
+								-5.073461539590033,
+								7.836829768223606
+							]
+						]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"ogc_fid": 34.0,
+				"row id": 268.0,
+				"a_quartier": "Kouamé Yaokro",
+				"a_sous_qua": "KOUAME YAOKRO",
+				"id": "268",
+				"eau_sodeci": "1",
+				"pompes_fon": "0",
+				"pompesnf": "1",
+				"forage": "0",
+				"puits": "0",
+				"eausurf": "2",
+				"pomperep": "1",
+				"analyse": "2",
+				"conforme": "0",
+				"vulnfaible": "0",
+				"vulnmoyen": "0",
+				"vulnfor": "0",
+				"vulnxfor": "2",
+				"public": "2",
+				"prive": "0",
+				"cgpe": "0",
+				"cgpenb": "0",
+				"cgpef": "0",
+				"population": "400",
+				"habitat": "Villageois et Bas standing",
+				"ecole": "Non",
+				"sante": "Non",
+				"activites": "Agriculture",
+				"assainiss": "Assainissement autonome",
+				"dal": "Oui",
+				"route": "Terre battue",
+				"desiderh": "2 autres PMH",
+				"desiderf": "Construction de 2 PMH supplémentaires",
+				"pressource": "Chef de village \nPrésidente des Femmes                                \n Président des jeunes\n",
+				"tensint": "Disputes de femmes dans les points d'eau",
+				"tensvois": "Aucune tension",
+				"date": "22-févr.-19",
+				"link_1": "articles/kouameyaokro.html"
+			},
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+							[
+								-5.201677222608732,
+								7.689399487751803
+							],
+							[
+								-5.203858112673252,
+								7.68877820727832
+							],
+							[
+								-5.204305387153392,
+								7.689733097421815
+							],
+							[
+								-5.203467802832604,
+								7.690211292408352
+							],
+							[
+								-5.20119018236933,
+								7.694155744806488
+							],
+							[
+								-5.198244024263562,
+								7.697869853958703
+							],
+							[
+								-5.197041878531104,
+								7.698114818633542
+							],
+							[
+								-5.19817060884426,
+								7.694403163233987
+							],
+							[
+								-5.196616912123084,
+								7.694272422614276
+							],
+							[
+								-5.196436455434374,
+								7.692640797033365
+							],
+							[
+								-5.198956016525863,
+								7.691118171070869
+							],
+							[
+								-5.201044674014607,
+								7.691971747049586
+							],
+							[
+								-5.201677222608732,
+								7.689399487751803
+							]
+						]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"ogc_fid": 35.0,
+				"row id": 194.0,
+				"a_quartier": "Kouassiblekro-Ngbassou",
+				"a_sous_qua": "Kouassiblekro-n'gbasso",
+				"id": "194",
+				"eau_sodeci": "0",
+				"pompes_fon": "0",
+				"pompesnf": "0",
+				"forage": "0",
+				"puits": "0",
+				"eausurf": "3",
+				"pomperep": "0",
+				"analyse": "3",
+				"conforme": "0",
+				"vulnfaible": "0",
+				"vulnmoyen": "0",
+				"vulnfor": "0",
+				"vulnxfor": "3",
+				"public": "1",
+				"prive": "0",
+				"cgpe": "0",
+				"cgpenb": "0",
+				"cgpef": "0",
+				"population": "100",
+				"habitat": "Villageois et Bas standing",
+				"ecole": "Non",
+				"sante": "Non",
+				"activites": "Agriculture",
+				"assainiss": "Assainissement autonome",
+				"dal": "Oui",
+				"route": "Piste",
+				"desiderh": "PMH",
+				"desiderf": "PMH",
+				"pressource": "Chef de village                            \n Président des jeunes\n",
+				"tensint": "Disputes de femmes dans les points d'eau",
+				"tensvois": "Aucune tension",
+				"date": "18-janv.-19",
+				"link_1": "articles/kouassiblekro-ngbassou.html"
+			},
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+							[
+								-4.989243150397561,
+								7.792662505559322
+							],
+							[
+								-4.990334765862745,
+								7.791162428764757
+							],
+							[
+								-4.993524804271048,
+								7.790198966277257
+							],
+							[
+								-4.997817539934587,
+								7.791145680848138
+							],
+							[
+								-4.998651451294264,
+								7.793556274027662
+							],
+							[
+								-5.001419262411689,
+								7.796572336724241
+							],
+							[
+								-5.001977591227281,
+								7.800050312285788
+							],
+							[
+								-4.999135548482769,
+								7.801848688492602
+							],
+							[
+								-4.996730217138299,
+								7.799476881967991
+							],
+							[
+								-4.993184289320154,
+								7.797841037089469
+							],
+							[
+								-4.988955534845594,
+								7.796348947391778
+							],
+							[
+								-4.989243150397561,
+								7.792662505559322
+							]
+						]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"ogc_fid": 36.0,
+				"row id": 187.0,
+				"a_quartier": "Minankro",
+				"a_sous_qua": "Kongouekro",
+				"id": "187",
+				"eau_sodeci": "1",
+				"pompes_fon": "1",
+				"pompesnf": "1",
+				"forage": "1",
+				"puits": "0",
+				"eausurf": "1",
+				"pomperep": "1",
+				"analyse": "5",
+				"conforme": "2",
+				"vulnfaible": "3",
+				"vulnmoyen": "0",
+				"vulnfor": "2",
+				"vulnxfor": "0",
+				"public": "5",
+				"prive": "0",
+				"cgpe": "1",
+				"cgpenb": "10",
+				"cgpef": "10",
+				"population": "1800",
+				"habitat": "Villageois et Bas standing",
+				"ecole": "Oui",
+				"sante": "Non",
+				"activites": "Agriculture",
+				"assainiss": "Assainissement autonome",
+				"dal": "Oui",
+				"route": "Bitume",
+				"desiderh": "Reparattion des PMH",
+				"desiderf": "Forage",
+				"pressource": "Chef de village Minakro \nPrésidente des Femmes \nPrésidente du comité de gestion\n",
+				"tensint": "Disputes de femmes dans les points d'eau",
+				"tensvois": "Aucune tension",
+				"date": "15-janv.-19",
+				"link_1": "articles/minankro.html"
+			},
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+							[
+								-5.038468250114712,
+								7.761911111070109
+							],
+							[
+								-5.036219221238943,
+								7.760510653895675
+							],
+							[
+								-5.038877047629878,
+								7.759454287938618
+							],
+							[
+								-5.038294405478022,
+								7.757684915690088
+							],
+							[
+								-5.036863580734018,
+								7.756575703738335
+							],
+							[
+								-5.037527260085496,
+								7.75619268890162
+							],
+							[
+								-5.038292900896818,
+								7.756056621487475
+							],
+							[
+								-5.03939774010603,
+								7.756980499212237
+							],
+							[
+								-5.03961508817572,
+								7.758650131984607
+							],
+							[
+								-5.040744813483623,
+								7.759237839965213
+							],
+							[
+								-5.041257070104363,
+								7.760012061665617
+							],
+							[
+								-5.040851662619835,
+								7.761882424764638
+							],
+							[
+								-5.038468250114712,
+								7.761911111070109
+							]
+						]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"ogc_fid": 37.0,
+				"row id": 240.0,
+				"a_quartier": "N'Ganblekonankro",
+				"a_sous_qua": "Nganblekonankro",
+				"id": "240",
+				"eau_sodeci": "1",
+				"pompes_fon": "0",
+				"pompesnf": "1",
+				"forage": "0",
+				"puits": "14",
+				"eausurf": "2",
+				"pomperep": "1",
+				"analyse": "3",
+				"conforme": "0",
+				"vulnfaible": "3",
+				"vulnmoyen": "0",
+				"vulnfor": "0",
+				"vulnxfor": "0",
+				"public": "3",
+				"prive": "0",
+				"cgpe": "1",
+				"cgpenb": "1",
+				"cgpef": "1",
+				"population": "1200",
+				"habitat": "Villageois et Bas standing",
+				"ecole": "Oui",
+				"sante": "Non",
+				"activites": "Agriculture",
+				"assainiss": "Assainissement autonome",
+				"dal": "Oui",
+				"route": "Terre battue",
+				"desiderh": "Raccorder le village au réseau de la SODECI",
+				"desiderf": "Raccorder le village au réseau de la SODECI, PMH",
+				"pressource": "Chef de village \n                               \n Président des jeunes\n",
+				"tensint": "Disputes de femmes dans les points d'eau",
+				"tensvois": "Aucune tension",
+				"date": "14-févr.-19",
+				"link_1": "articles/n-ganblekonankro.html"
+			},
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+							[
+								-5.101171032834219,
+								7.682466716633107
+							],
+							[
+								-5.100515100242073,
+								7.682538378823368
+							],
+							[
+								-5.099225333862651,
+								7.681434664814627
+							],
+							[
+								-5.098384408107843,
+								7.680852551596517
+							],
+							[
+								-5.101896534032885,
+								7.677922935050762
+							],
+							[
+								-5.102667998991559,
+								7.678933204616206
+							],
+							[
+								-5.102982690229656,
+								7.679654000317552
+							],
+							[
+								-5.101822400807637,
+								7.681161214029872
+							],
+							[
+								-5.101171032834219,
+								7.682466716633107
+							]
+						]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"ogc_fid": 38.0,
+				"row id": 255.0,
+				"a_quartier": "Sessenouan",
+				"a_sous_qua": "Bonikro",
+				"id": "255",
+				"eau_sodeci": "1",
+				"pompes_fon": "1",
+				"pompesnf": "0",
+				"forage": "0",
+				"puits": "0",
+				"eausurf": "2",
+				"pomperep": "0",
+				"analyse": "2",
+				"conforme": "1",
+				"vulnfaible": "2",
+				"vulnmoyen": "0",
+				"vulnfor": "0",
+				"vulnxfor": "0",
+				"public": "2",
+				"prive": "0",
+				"cgpe": "0",
+				"cgpenb": "0",
+				"cgpef": "0",
+				"population": "650",
+				"habitat": "Villageois et Bas standing",
+				"ecole": "Oui",
+				"sante": "Non",
+				"activites": "Agriculture",
+				"assainiss": "Assainissement autonome",
+				"dal": "Oui",
+				"route": "Terre battue",
+				"desiderh": "HVA",
+				"desiderf": "HVA",
+				"pressource": "Chef de village \nPrésidente des Femmes                                \n Président des jeunes\n",
+				"tensint": "Disputes de femmes dans les points d'eau",
+				"tensvois": "Aucune tension",
+				"date": "19-févr.-19",
+				"link_1": "articles/sessenouan.html"
+			},
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+							[
+								-5.14765990493471,
+								7.688304888372021
+							],
+							[
+								-5.148783563211376,
+								7.68984239969426
+							],
+							[
+								-5.148061936536264,
+								7.692532420300553
+							],
+							[
+								-5.14424579944222,
+								7.693226345355127
+							],
+							[
+								-5.140618844258294,
+								7.692752759610386
+							],
+							[
+								-5.140564112500136,
+								7.687961027158169
+							],
+							[
+								-5.144028535642748,
+								7.687871899154425
+							],
+							[
+								-5.14765990493471,
+								7.688304888372021
+							]
+						]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"ogc_fid": 39.0,
+				"row id": 237.0,
+				"a_quartier": "Ahossi Takikro",
+				"a_sous_qua": "Takikro",
+				"id": "237",
+				"eau_sodeci": "0",
+				"pompes_fon": "1",
+				"pompesnf": "1",
+				"forage": "0",
+				"puits": "0",
+				"eausurf": "4",
+				"pomperep": "1",
+				"analyse": "1",
+				"conforme": "0",
+				"vulnfaible": "1",
+				"vulnmoyen": "0",
+				"vulnfor": "0",
+				"vulnxfor": "0",
+				"public": "1",
+				"prive": "0",
+				"cgpe": "0",
+				"cgpenb": "0",
+				"cgpef": "0",
+				"population": "500",
+				"habitat": "Villageois et Bas standing",
+				"ecole": "Non",
+				"sante": "Oui",
+				"activites": "Agriculture",
+				"assainiss": "Assainissement autonome",
+				"dal": "Oui",
+				"route": "Terre battue",
+				"desiderh": "Rehabilité le HVA",
+				"desiderf": "Réhabilitation de la PMH en panne, Construction d’une nouvelle PMH",
+				"pressource": "Chef de village \nPrésidente des Femmes \n Président des jeunes\n",
+				"tensint": "Disputes de femmes dans les points d'eau",
+				"tensvois": "Aucune tension",
+				"date": "12-févr.-19",
+				"link_1": "articles/ahossitakikro.html"
+			},
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+							[
+								-5.033523028713859,
+								7.858279072433475
+							],
+							[
+								-5.032299582428094,
+								7.859455628117431
+							],
+							[
+								-5.030696186157472,
+								7.859942135941546
+							],
+							[
+								-5.027912785120657,
+								7.859509026070862
+							],
+							[
+								-5.030741706870452,
+								7.856393756959388
+							],
+							[
+								-5.033523028713859,
+								7.858279072433475
+							]
+						]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"ogc_fid": 40.0,
+				"row id": 236.0,
+				"a_quartier": "Tchimou-Assêkro",
+				"a_sous_qua": "Tchimou-Assêkro",
+				"id": "236",
+				"eau_sodeci": "0",
+				"pompes_fon": "1",
+				"pompesnf": "1",
+				"forage": "0",
+				"puits": "0",
+				"eausurf": "1",
+				"pomperep": "1",
+				"analyse": "2",
+				"conforme": "2",
+				"vulnfaible": "2",
+				"vulnmoyen": "0",
+				"vulnfor": "0",
+				"vulnxfor": "0",
+				"public": "2",
+				"prive": "0",
+				"cgpe": "1",
+				"cgpenb": "1",
+				"cgpef": "1",
+				"population": "500",
+				"habitat": "Villageois et Bas standing",
+				"ecole": "Oui",
+				"sante": "Non",
+				"activites": "Agriculture",
+				"assainiss": "Assainissement autonome",
+				"dal": "Oui",
+				"route": "Terre battue",
+				"desiderh": "Rehabilité s MH enLT",
+				"desiderf": "Réhabilitation des  2 PMH en panne, Construction de nouvelles PMH",
+				"pressource": "Chef de village \nPrésidente des femmes                                \n Président des jeunes\n",
+				"tensint": "Disputes de femmes dans les points d'eau",
+				"tensvois": "Aucune tension",
+				"date": "11-févr.-19",
+				"link_1": "articles/tchimou-assekro.html"
+			},
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+							[
+								-5.063395501314156,
+								7.838397176014277
+							],
+							[
+								-5.064325518402216,
+								7.839404996531083
+							],
+							[
+								-5.064446583676072,
+								7.840645342131846
+							],
+							[
+								-5.063548631525689,
+								7.841772461547793
+							],
+							[
+								-5.061371962711283,
+								7.843930856037106
+							],
+							[
+								-5.057625620626977,
+								7.843154466307687
+							],
+							[
+								-5.057554125489385,
+								7.841833879739609
+							],
+							[
+								-5.058465185655032,
+								7.840650064733293
+							],
+							[
+								-5.059942537699749,
+								7.839353202844866
+							],
+							[
+								-5.061724921545679,
+								7.838981290875292
+							],
+							[
+								-5.063395501314156,
+								7.838397176014277
+							]
+						]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"ogc_fid": 41.0,
+				"row id": 233.0,
+				"a_quartier": "Yobouekro",
+				"a_sous_qua": "Yobouekro",
+				"id": "233",
+				"eau_sodeci": "0",
+				"pompes_fon": "3",
+				"pompesnf": "0",
+				"forage": "0",
+				"puits": "0",
+				"eausurf": "1",
+				"pomperep": "0",
+				"analyse": "2",
+				"conforme": "1",
+				"vulnfaible": "2",
+				"vulnmoyen": "0",
+				"vulnfor": "0",
+				"vulnxfor": "0",
+				"public": "2",
+				"prive": "0",
+				"cgpe": "1",
+				"cgpenb": "10",
+				"cgpef": "3",
+				"population": "800",
+				"habitat": "Villageois et Bas standing",
+				"ecole": "Oui",
+				"sante": "Non",
+				"activites": "Agriculture",
+				"assainiss": "Assainissement autonome",
+				"dal": "Oui",
+				"route": "Terre battue",
+				"desiderh": "HVA",
+				"desiderf": "HVA",
+				"pressource": "Chef de village \nPrésidente des Femmes                                \n Président des jeunes\n",
+				"tensint": "Disputes de femmes dans les points d'eau",
+				"tensvois": "Aucune tension",
+				"date": "11-févr.-19",
+				"link_1": "articles/yobouekro.html"
+			},
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+							[
+								-5.053935419088514,
+								7.843012420307881
+							],
+							[
+								-5.055577519949377,
+								7.843222618544114
+							],
+							[
+								-5.056073413351769,
+								7.843813551976819
+							],
+							[
+								-5.055928238214732,
+								7.844669157072625
+							],
+							[
+								-5.05551370907471,
+								7.845698185634684
+							],
+							[
+								-5.054833123856599,
+								7.846540717041081
+							],
+							[
+								-5.053483916403813,
+								7.847029092209296
+							],
+							[
+								-5.051566019833936,
+								7.844660454959086
+							],
+							[
+								-5.052367386078447,
+								7.843472708620508
+							],
+							[
+								-5.053593174086233,
+								7.843051649340811
+							],
+							[
+								-5.053935419088514,
+								7.843012420307881
+							]
+						]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"ogc_fid": 42.0,
+				"row id": 237.0,
+				"a_quartier": "Kpoti Takikro",
+				"a_sous_qua": "Takikro",
+				"id": null,
+				"eau_sodeci": "0",
+				"pompes_fon": "1",
+				"pompesnf": "0",
+				"forage": "1",
+				"puits": "5",
+				"eausurf": "0",
+				"pomperep": "0",
+				"analyse": "2",
+				"conforme": "1",
+				"vulnfaible": "1",
+				"vulnmoyen": "1",
+				"vulnfor": "0",
+				"vulnxfor": "0",
+				"public": "2",
+				"prive": "0",
+				"cgpe": "1",
+				"cgpenb": "1",
+				"cgpef": "1",
+				"population": "600",
+				"habitat": "Villageois et Bas standing",
+				"ecole": "Oui",
+				"sante": "Non",
+				"activites": "Agriculture",
+				"assainiss": "Assainissement autonome",
+				"dal": "Oui",
+				"route": "Piste",
+				"desiderh": "HVA",
+				"desiderf": "Construction d’un château (HVA), raccordement SODECI",
+				"pressource": "Chef de village \nPrésidente des Femmes                                \n Président des jeunes\n",
+				"tensint": "Disputes de femmes dans les points d'eau",
+				"tensvois": "Aucune tension",
+				"date": "20-févr.-19",
+				"link_1": "articles/kpotitakikro.html"
+			},
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+							[
+								-5.097008192580735,
+								7.752600993018119
+							],
+							[
+								-5.097697145071507,
+								7.754084573077118
+							],
+							[
+								-5.097103649271223,
+								7.755279746278322
+							],
+							[
+								-5.095455487337607,
+								7.755977192948556
+							],
+							[
+								-5.0927987160431,
+								7.755130709924268
+							],
+							[
+								-5.092051716448725,
+								7.751408389836916
+							],
+							[
+								-5.094620965445906,
+								7.751282003136725
+							],
+							[
+								-5.097008192580735,
+								7.752600993018119
+							]
+						]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"ogc_fid": 43.0,
+				"row id": null,
+				"a_quartier": "Assankouadiokro",
+				"a_sous_qua": null,
+				"id": null,
+				"eau_sodeci": "0",
+				"pompes_fon": "1",
+				"pompesnf": "2",
+				"forage": "0",
+				"puits": "0",
+				"eausurf": "1",
+				"pomperep": "2",
+				"analyse": "1",
+				"conforme": "0",
+				"vulnfaible": "0",
+				"vulnmoyen": "1",
+				"vulnfor": "0",
+				"vulnxfor": "0",
+				"public": "1",
+				"prive": "0",
+				"cgpe": "1",
+				"cgpenb": "7",
+				"cgpef": "6",
+				"population": "750",
+				"habitat": "Villageois et Bas standing",
+				"ecole": "Non",
+				"sante": "Non",
+				"activites": "Agriculture",
+				"assainiss": "Assainissement autonome",
+				"dal": "Oui",
+				"route": "Terre battue",
+				"desiderh": "Raccordement SODECI",
+				"desiderf": "Raccordement SODECI",
+				"pressource": "Chef de village \nPrésidente des Femmes                                \n Président des jeunes\n",
+				"tensint": "Disputes de femmes dans les points d'eau",
+				"tensvois": "Aucune tension",
+				"date": "22-janv.-19",
+				"link_1": "articles/assankouadiokro.html"
+			},
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+							[
+								-5.04913570127307,
+								7.830407234186203
+							],
+							[
+								-5.048860878133857,
+								7.830686940546521
+							],
+							[
+								-5.047899224273057,
+								7.830436647075902
+							],
+							[
+								-5.046513752248801,
+								7.83000385741323
+							],
+							[
+								-5.046344770087107,
+								7.826537338270469
+							],
+							[
+								-5.047372290650702,
+								7.823626030006952
+							],
+							[
+								-5.049124344945035,
+								7.823151789746833
+							],
+							[
+								-5.049862052016333,
+								7.823191309768509
+							],
+							[
+								-5.049404619121711,
+								7.827482752582125
+							],
+							[
+								-5.04913570127307,
+								7.830407234186203
+							]
+						]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"ogc_fid": 44.0,
+				"row id": null,
+				"a_quartier": "Nguéssankro",
+				"a_sous_qua": null,
+				"id": null,
+				"eau_sodeci": "0",
+				"pompes_fon": "1",
+				"pompesnf": "2",
+				"forage": "0",
+				"puits": "0",
+				"eausurf": "1",
+				"pomperep": "2",
+				"analyse": "3",
+				"conforme": "1",
+				"vulnfaible": "0",
+				"vulnmoyen": "1",
+				"vulnfor": "0",
+				"vulnxfor": "2",
+				"public": "3",
+				"prive": "0",
+				"cgpe": "1",
+				"cgpenb": "8",
+				"cgpef": "7",
+				"population": "1300",
+				"habitat": "Villageois et Bas standing",
+				"ecole": "Oui",
+				"sante": "Non",
+				"activites": "Agriculture",
+				"assainiss": "Assainissement autonome",
+				"dal": "Oui",
+				"route": "Bitume",
+				"desiderh": "HVA",
+				"desiderf": "HVA, SODECI",
+				"pressource": "Chef de village \nPrésidente des Femmes                                \n Président des jeunes\n",
+				"tensint": "Disputes de femmes dans les points d'eau",
+				"tensvois": "Aucune tension",
+				"date": "22-janv.-19",
+				"link_1": "articles/nguessankro.html"
+			},
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+							[
+								-5.042345525594818,
+								7.807078610815769
+							],
+							[
+								-5.043085049678584,
+								7.804288588136018
+							],
+							[
+								-5.044732171501522,
+								7.80159940964951
+							],
+							[
+								-5.045706998702854,
+								7.801969171691403
+							],
+							[
+								-5.046480137517702,
+								7.804725579640071
+							],
+							[
+								-5.047992800416321,
+								7.805162571144128
+							],
+							[
+								-5.048060029878481,
+								7.806137398345487
+							],
+							[
+								-5.047051587946071,
+								7.807145840277927
+							],
+							[
+								-5.046513752248786,
+								7.80771729070631
+							],
+							[
+								-5.0442615652664,
+								7.807986208554962
+							],
+							[
+								-5.042345525594818,
+								7.807078610815769
+							]
+						]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"ogc_fid": 45.0,
+				"row id": null,
+				"a_quartier": "Ngatta Sakassou",
+				"a_sous_qua": null,
+				"id": null,
+				"eau_sodeci": "0",
+				"pompes_fon": "3",
+				"pompesnf": "2",
+				"forage": "0",
+				"puits": "1",
+				"eausurf": "1",
+				"pomperep": "1",
+				"analyse": "1",
+				"conforme": "1",
+				"vulnfaible": "1",
+				"vulnmoyen": "0",
+				"vulnfor": "0",
+				"vulnxfor": "0",
+				"public": "1",
+				"prive": "0",
+				"cgpe": "1",
+				"cgpenb": "2",
+				"cgpef": "2",
+				"population": "700",
+				"habitat": "Villageois et Bas standing",
+				"ecole": "Oui",
+				"sante": "Non",
+				"activites": "Agriculture",
+				"assainiss": "Assainissement autonome",
+				"dal": "Oui",
+				"route": "Terre battue",
+				"desiderh": null,
+				"desiderf": "Réparation de pompes",
+				"pressource": "Chef de village \nPrésidente des Femmes                                \n Président des jeunes\n",
+				"tensint": "Disputes de femmes dans les points d'eau",
+				"tensvois": "Aucune tension",
+				"date": "08-févr.-19",
+				"link_1": "articles/ngattasakassou.html"
+			},
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+							[
+								-5.063926182948422,
+								7.827583596775355
+							],
+							[
+								-5.062917741016011,
+								7.826642384305079
+							],
+							[
+								-5.06281689682277,
+								7.82519695086858
+							],
+							[
+								-5.063590035637618,
+								7.824188508936139
+							],
+							[
+								-5.064497633376786,
+								7.823953205818567
+							],
+							[
+								-5.065640534233518,
+								7.823919591087488
+							],
+							[
+								-5.06685066455241,
+								7.824524656246948
+							],
+							[
+								-5.067085967669972,
+								7.825802016028038
+							],
+							[
+								-5.066817049821331,
+								7.826743228498317
+							],
+							[
+								-5.065640534233519,
+								7.827449137851025
+							],
+							[
+								-5.063926182948422,
+								7.827583596775355
+							]
+						]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"ogc_fid": 46.0,
+				"row id": null,
+				"a_quartier": "Assangoukan",
+				"a_sous_qua": null,
+				"id": "256",
+				"eau_sodeci": "0",
+				"pompes_fon": "1",
+				"pompesnf": "1",
+				"forage": "1",
+				"puits": "0",
+				"eausurf": "1",
+				"pomperep": "1",
+				"analyse": "2",
+				"conforme": "1",
+				"vulnfaible": "0",
+				"vulnmoyen": "1",
+				"vulnfor": "0",
+				"vulnxfor": "1",
+				"public": "2",
+				"prive": "0",
+				"cgpe": "1",
+				"cgpenb": "8",
+				"cgpef": "2",
+				"population": "520",
+				"habitat": "Villageois et Bas standing",
+				"ecole": "Non",
+				"sante": "Non",
+				"activites": "Agriculture",
+				"assainiss": "Assainissement autonome",
+				"dal": "Oui",
+				"route": "Terre battue",
+				"desiderh": "PMH",
+				"desiderf": "PMH",
+				"pressource": "Chef de village \nPrésidente des Femmes                                \n Président des jeunes\n",
+				"tensint": "Disputes de femmes dans les points d'eau",
+				"tensvois": "Aucune tension",
+				"date": "19-févr.-19",
+				"link_1": "articles/assangoukan.html"
+			},
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+							[
+								-4.888726204556815,
+								7.758001103437177
+							],
+							[
+								-4.887852221548718,
+								7.755748916454729
+							],
+							[
+								-4.888390057246007,
+								7.755211080757427
+							],
+							[
+								-4.890003564337878,
+								7.754706859791204
+							],
+							[
+								-4.892087677664878,
+								7.754975777639854
+							],
+							[
+								-4.892322980782444,
+								7.756286752152027
+							],
+							[
+								-4.891180079925702,
+								7.758875086445287
+							],
+							[
+								-4.888726204556815,
+								7.758001103437177
+							]
+						]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"ogc_fid": 47.0,
+				"row id": null,
+				"a_quartier": "N'Drikro",
+				"a_sous_qua": null,
+				"id": null,
+				"eau_sodeci": "0",
+				"pompes_fon": "1",
+				"pompesnf": "0",
+				"forage": "0",
+				"puits": "1",
+				"eausurf": "0",
+				"pomperep": "0",
+				"analyse": "1",
+				"conforme": "1",
+				"vulnfaible": "1",
+				"vulnmoyen": "0",
+				"vulnfor": "0",
+				"vulnxfor": "0",
+				"public": "1",
+				"prive": "0",
+				"cgpe": "0",
+				"cgpenb": "0",
+				"cgpef": "0",
+				"population": "400",
+				"habitat": "Villageois et Bas standing",
+				"ecole": "Non",
+				"sante": "Non",
+				"activites": "Agriculture",
+				"assainiss": "Assainissement autonome",
+				"dal": "Oui",
+				"route": "Nouvelle PMH",
+				"desiderh": "Nouvelle  PMH",
+				"desiderf": "Nouvelles PMH, Réhabilitation de la PMH en panne",
+				"pressource": "Chef de village \nPrésidente des Femmes                                \n Président des jeunes\n",
+				"tensint": "Disputes de femmes dans les points d'eau",
+				"tensvois": "Aucune tension",
+				"date": "05-févr.-19",
+				"link_1": "articles/n-drikro.html"
+			},
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+							[
+								-4.901802334947162,
+								7.712873326960486
+							],
+							[
+								-4.902709932686339,
+								7.712066573414535
+							],
+							[
+								-4.903331805211329,
+								7.711713618738181
+							],
+							[
+								-4.904760431282256,
+								7.7117640408348
+							],
+							[
+								-4.905399111172787,
+								7.712369105994267
+							],
+							[
+								-4.905735258483594,
+								7.713360740561161
+							],
+							[
+								-4.905752065849136,
+								7.714604485611172
+							],
+							[
+								-4.905348689076169,
+								7.71562973490915
+							],
+							[
+								-4.904104944026186,
+								7.71579780856456
+							],
+							[
+								-4.902810776879582,
+								7.715276780232798
+							],
+							[
+								-4.901919986505944,
+								7.714604485611174
+							],
+							[
+								-4.901802334947162,
+								7.712873326960486
+							]
+						]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"ogc_fid": 48.0,
+				"row id": null,
+				"a_quartier": "Sinzenou",
+				"a_sous_qua": null,
+				"id": null,
+				"eau_sodeci": "0",
+				"pompes_fon": "2",
+				"pompesnf": "1",
+				"forage": "0",
+				"puits": "0",
+				"eausurf": "1",
+				"pomperep": "1",
+				"analyse": "1",
+				"conforme": "1",
+				"vulnfaible": "1",
+				"vulnmoyen": "0",
+				"vulnfor": "0",
+				"vulnxfor": "0",
+				"public": "1",
+				"prive": "0",
+				"cgpe": "0",
+				"cgpenb": "0",
+				"cgpef": "0",
+				"population": "500",
+				"habitat": "Villageois et Bas standing",
+				"ecole": "Oui",
+				"sante": "Non",
+				"activites": "Agriculture",
+				"assainiss": "Assainissement autonome",
+				"dal": "Oui",
+				"route": "Terre battue",
+				"desiderh": "PMH",
+				"desiderf": "PMH",
+				"pressource": "Chef de village \nPrésidente des Femmes                                \n Président des jeunes\n",
+				"tensint": "Disputes de femmes dans les points d'eau",
+				"tensvois": "Aucune tension",
+				"date": "05-févr.-19",
+				"link_1": "articles/sinzenou.html"
+			},
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+							[
+								-4.889993356643035,
+								7.725329354229109
+							],
+							[
+								-4.890611700997244,
+								7.724252707588837
+							],
+							[
+								-4.892081178168425,
+								7.72466008739867
+							],
+							[
+								-4.893303317597921,
+								7.725642163725944
+							],
+							[
+								-4.893594303176373,
+								7.726267782719614
+							],
+							[
+								-4.892932310985396,
+								7.727540844625341
+							],
+							[
+								-4.89222667095765,
+								7.72748264750965
+							],
+							[
+								-4.889993356643035,
+								7.725329354229109
+							]
+						]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"ogc_fid": 49.0,
+				"row id": null,
+				"a_quartier": "Kahankro",
+				"a_sous_qua": null,
+				"id": null,
+				"eau_sodeci": "1",
+				"pompes_fon": "1",
+				"pompesnf": "2",
+				"forage": "0",
+				"puits": "3",
+				"eausurf": "1",
+				"pomperep": "2",
+				"analyse": "2",
+				"conforme": "0",
+				"vulnfaible": "0",
+				"vulnmoyen": "0",
+				"vulnfor": "0",
+				"vulnxfor": "2",
+				"public": "2",
+				"prive": "0",
+				"cgpe": "1",
+				"cgpenb": "1",
+				"cgpef": "1",
+				"population": "5000",
+				"habitat": "Villageois et Bas,moyen standing",
+				"ecole": "Oui",
+				"sante": "Oui",
+				"activites": "Agriculture",
+				"assainiss": "Assainissement autonome",
+				"dal": "Oui",
+				"route": "Terre battue",
+				"desiderh": "Réhabiliter les PMH en panne",
+				"desiderf": "Réhabiliter les PMH en panne, Construire une nouvelle PMH",
+				"pressource": "Chef de village \nPrésidente des Femmes                                \n Président des jeunes\n",
+				"tensint": "Disputes de femmes dans les points d'eau",
+				"tensvois": "Aucune tension",
+				"date": "01-févr.-19",
+				"link_1": "articles/kahankro.html"
+			},
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+							[
+								-4.953815131265118,
+								7.740773397227949
+							],
+							[
+								-4.952603902550584,
+								7.740559650984203
+							],
+							[
+								-4.951891415071445,
+								7.736997213588436
+							],
+							[
+								-4.951677668827702,
+								7.733719771184327
+							],
+							[
+								-4.951891415071441,
+								7.729943587544814
+							],
+							[
+								-4.954812613735904,
+								7.730157333788559
+							],
+							[
+								-4.956950076173316,
+								7.731368562503116
+							],
+							[
+								-4.96008502108152,
+								7.733007283705168
+							],
+							[
+								-4.961509996039793,
+								7.735287243638456
+							],
+							[
+								-4.961652493535624,
+								7.738849681034226
+							],
+							[
+								-4.953815131265118,
+								7.740773397227949
+							]
+						]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"ogc_fid": 50.0,
+				"row id": null,
+				"a_quartier": "Totokro",
+				"a_sous_qua": null,
+				"id": null,
+				"eau_sodeci": "1",
+				"pompes_fon": "0",
+				"pompesnf": "0",
+				"forage": "0",
+				"puits": "0",
+				"eausurf": "1",
+				"pomperep": "0",
+				"analyse": "0",
+				"conforme": "0",
+				"vulnfaible": "0",
+				"vulnmoyen": "0",
+				"vulnfor": "0",
+				"vulnxfor": "0",
+				"public": "0",
+				"prive": "0",
+				"cgpe": "0",
+				"cgpenb": "0",
+				"cgpef": "0",
+				"population": "400",
+				"habitat": "Villageois et Bas standing",
+				"ecole": "Oui",
+				"sante": "Non",
+				"activites": "Agriculture",
+				"assainiss": "Assainissement autonome",
+				"dal": "Oui",
+				"route": "Terre battue",
+				"desiderh": "PMH",
+				"desiderf": "PMH",
+				"pressource": "Chef de village \nPrésidente des Femmes                                \n Président des jeunes\n",
+				"tensint": "Disputes de femmes dans les points d'eau",
+				"tensvois": "Aucune tension",
+				"date": "18-févr.-19",
+				"link_1": "articles/totokro.html"
+			},
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+							[
+								-5.140952868757786,
+								7.637512413172085
+							],
+							[
+								-5.140751455843827,
+								7.63711316073126
+							],
+							[
+								-5.141389263404698,
+								7.635782316567716
+							],
+							[
+								-5.143369823725309,
+								7.636481010270352
+							],
+							[
+								-5.143604805458263,
+								7.636946805437475
+							],
+							[
+								-5.140952868757786,
+								7.637512413172085
+							]
+						]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"ogc_fid": 51.0,
+				"row id": null,
+				"a_quartier": "Kouamé Assèkro",
+				"a_sous_qua": null,
+				"id": null,
+				"eau_sodeci": "0",
+				"pompes_fon": "2",
+				"pompesnf": "1",
+				"forage": "0",
+				"puits": "0",
+				"eausurf": "1",
+				"pomperep": "1",
+				"analyse": "1",
+				"conforme": "1",
+				"vulnfaible": "1",
+				"vulnmoyen": "0",
+				"vulnfor": "0",
+				"vulnxfor": "0",
+				"public": "1",
+				"prive": "0",
+				"cgpe": "0",
+				"cgpenb": "0",
+				"cgpef": "0",
+				"population": "600",
+				"habitat": "Villageois et Bas standing",
+				"ecole": "Oui",
+				"sante": "Non",
+				"activites": "Agriculture",
+				"assainiss": "Assainissement autonome",
+				"dal": "Oui",
+				"route": "Terre battue",
+				"desiderh": "PMH",
+				"desiderf": "PMH",
+				"pressource": "Chef de village \nPrésidente des Femmes                                \n Président des jeunes\n",
+				"tensint": "Disputes de femmes dans les points d'eau",
+				"tensvois": "Aucune tension",
+				"date": "12-févr.-19",
+				"link_1": "articles/kouameassekro.html"
+			},
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+							[
+								-5.026901947080342,
+								7.846957146802412
+							],
+							[
+								-5.024988228494776,
+								7.848186852483822
+							],
+							[
+								-5.023669314334452,
+								7.846521625167973
+							],
+							[
+								-5.023669314334452,
+								7.846521625167973
+							],
+							[
+								-5.023229676281008,
+								7.844856391182409
+							],
+							[
+								-5.025608893981985,
+								7.844139057564359
+							],
+							[
+								-5.026074393097394,
+								7.844805153107863
+							],
+							[
+								-5.026901947080342,
+								7.846957146802412
+							]
+						]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"ogc_fid": 52.0,
+				"row id": null,
+				"a_quartier": "Affouvanssou",
+				"a_sous_qua": null,
+				"id": "50",
+				"eau_sodeci": "1",
+				"pompes_fon": "3",
+				"pompesnf": "1",
+				"forage": "0",
+				"puits": "0",
+				"eausurf": "2",
+				"pomperep": "1",
+				"analyse": "1",
+				"conforme": "0",
+				"vulnfaible": "1",
+				"vulnmoyen": "0",
+				"vulnfor": "0",
+				"vulnxfor": "0",
+				"public": "1",
+				"prive": "0",
+				"cgpe": "0",
+				"cgpenb": "0",
+				"cgpef": "0",
+				"population": "2000",
+				"habitat": "Villageois et Bas standing",
+				"ecole": "Oui",
+				"sante": "Non",
+				"activites": "Agriculture",
+				"assainiss": "Assainissement autonome",
+				"dal": "Oui",
+				"route": "Terre battue",
+				"desiderh": "Réhabilitation des PMH en panne, Construction dune nouvelle  PMH",
+				"desiderf": "Réhabilitation des PMH en panne, Construction d'une nouvelle PMH",
+				"pressource": "Chef de village \nPrésidente des Femmes \n Président des jeunes\n",
+				"tensint": "Disputes de femmes dans les points d'eau",
+				"tensvois": "Aucune tension",
+				"date": "12-févr.-19",
+				"link_1": "articles/affouvanssou.html"
+			},
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+							[
+								-4.958887354106672,
+								7.864403255623112
+							],
+							[
+								-4.958990798354538,
+								7.862481913925027
+							],
+							[
+								-4.957956355875847,
+								7.860509327191888
+							],
+							[
+								-4.959508019593882,
+								7.857870657552231
+							],
+							[
+								-4.963050985083389,
+								7.857588856890686
+							],
+							[
+								-4.966025007209623,
+								7.862046408569777
+							],
+							[
+								-4.9632837346411,
+								7.864633816028874
+							],
+							[
+								-4.961525182427328,
+								7.86545358532253
+							],
+							[
+								-4.958887354106672,
+								7.864403255623112
+							]
+						]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"ogc_fid": 53.0,
+				"row id": null,
+				"a_quartier": "Kouadio-miankro",
+				"a_sous_qua": null,
+				"id": null,
+				"eau_sodeci": "1",
+				"pompes_fon": "0",
+				"pompesnf": "2",
+				"forage": "0",
+				"puits": "2",
+				"eausurf": "1",
+				"pomperep": "2",
+				"analyse": "2",
+				"conforme": "0",
+				"vulnfaible": "2",
+				"vulnmoyen": "0",
+				"vulnfor": "0",
+				"vulnxfor": "0",
+				"public": "2",
+				"prive": "0",
+				"cgpe": "0",
+				"cgpenb": "0",
+				"cgpef": "0",
+				"population": "900",
+				"habitat": "Villageois et Bas standing",
+				"ecole": "Non",
+				"sante": "Non",
+				"activites": "Agriculture",
+				"assainiss": "Assainissement autonome",
+				"dal": "Oui",
+				"route": "Terre battue",
+				"desiderh": "Reparattion de PMH",
+				"desiderf": "Réparation de 2 PMH",
+				"pressource": "Chef de village \nPrésidente des Femmes                                \n Président des jeunes\n",
+				"tensint": "Disputes de femmes dans les points d'eau",
+				"tensvois": "Aucune tension",
+				"date": "28-janv.-19",
+				"link_1": "articles/kouadio-miankro.html"
+			},
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+							[
+								-5.007510638211437,
+								7.768631023414004
+							],
+							[
+								-5.002748449633154,
+								7.769082673269042
+							],
+							[
+								-5.003417716463593,
+								7.766405605947289
+							],
+							[
+								-5.006356670805953,
+								7.765241663633482
+							],
+							[
+								-5.008917343896327,
+								7.764979776612876
+							],
+							[
+								-5.009412019379694,
+								7.765910930463921
+							],
+							[
+								-5.008830048222792,
+								7.767598646818939
+							],
+							[
+								-5.007510638211437,
+								7.768631023414004
+							]
+						]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"ogc_fid": 54.0,
+				"row id": 85.0,
+				"a_quartier": "Belleville 1",
+				"a_sous_qua": "Belleville",
+				"id": "85",
+				"eau_sodeci": "1",
+				"pompes_fon": "nd",
+				"pompesnf": "nd",
+				"forage": "nd",
+				"puits": "nd",
+				"eausurf": "0",
+				"pomperep": "nd",
+				"analyse": "17",
+				"conforme": "3",
+				"vulnfaible": "1",
+				"vulnmoyen": "6",
+				"vulnfor": "7",
+				"vulnxfor": "3",
+				"public": "0",
+				"prive": "0",
+				"cgpe": "nd",
+				"cgpenb": "nd",
+				"cgpef": "nd",
+				"population": "39379",
+				"habitat": "Bas, moyen standing",
+				"ecole": "Oui",
+				"sante": "Oui",
+				"activites": "Commerce, Agricultures, Publice, PME",
+				"assainiss": "Assainissement autonome",
+				"dal": "Non",
+				"route": "Bitume",
+				"desiderh": "Forage, \nPuits amélioré\nEau de SODECI (Améliorée et accessible à tous)\n",
+				"desiderf": "Forage\nSODECI (Améliorée et accessible à tous)\n",
+				"pressource": "Imam de la grande mosquée de Belleville 1\nPrésidente des femmes de Belleville 1\nPrésident des jeunes de Belleville 1\nVice-président des jeunes et Responsable du CCDQ de Belleville 1\n",
+				"tensint": "Disputes de femmes autour des points d'eau communautaires",
+				"tensvois": "Aucune tension",
+				"date": "12-25 Novembre 2018",
+				"link_1": "articles/belleville1.html"
+			},
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+							[
+								-5.007015761654126,
+								7.698670496510529
+							],
+							[
+								-5.014581057660591,
+								7.699546212161244
+							],
+							[
+								-5.014595851054734,
+								7.700154882898543
+							],
+							[
+								-5.013529553229247,
+								7.701393398174265
+							],
+							[
+								-5.011596598048482,
+								7.702360090598909
+							],
+							[
+								-5.005348246912391,
+								7.70920574694714
+							],
+							[
+								-5.003677738446036,
+								7.70957307662459
+							],
+							[
+								-5.001422895723548,
+								7.709950398503854
+							],
+							[
+								-5.000669721407086,
+								7.710132632394478
+							],
+							[
+								-4.998390330172882,
+								7.710992474031417
+							],
+							[
+								-4.995912107199403,
+								7.711922193701955
+							],
+							[
+								-4.993889757429165,
+								7.712649657648083
+							],
+							[
+								-4.991867407658926,
+								7.711573011007813
+							],
+							[
+								-4.990514324719126,
+								7.710772800667072
+							],
+							[
+								-4.988668806813805,
+								7.710025435047938
+							],
+							[
+								-4.991820698107801,
+								7.706176579394548
+							],
+							[
+								-4.996512679520845,
+								7.706052587866065
+							],
+							[
+								-4.99791069986975,
+								7.705182696625326
+							],
+							[
+								-5.004927657097988,
+								7.703212442373749
+							],
+							[
+								-5.006027296617979,
+								7.700227978551692
+							],
+							[
+								-5.006487272819419,
+								7.700344127351922
+							],
+							[
+								-5.007015761654126,
+								7.698670496510529
+							]
+						]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"ogc_fid": 55.0,
+				"row id": 122.0,
+				"a_quartier": "Belleville 2",
+				"a_sous_qua": "null",
+				"id": "122",
+				"eau_sodeci": "1",
+				"pompes_fon": "nd",
+				"pompesnf": "nd",
+				"forage": "nd",
+				"puits": "nd",
+				"eausurf": "0",
+				"pomperep": "nd",
+				"analyse": "20",
+				"conforme": "2",
+				"vulnfaible": "1",
+				"vulnmoyen": "6",
+				"vulnfor": "11",
+				"vulnxfor": "2",
+				"public": "0",
+				"prive": "0",
+				"cgpe": "nd",
+				"cgpenb": "nd",
+				"cgpef": "nd",
+				"population": "6283",
+				"habitat": "Bas, moyen standing",
+				"ecole": "Oui",
+				"sante": "Oui",
+				"activites": "Commerce, Agricultures, Publice, PME",
+				"assainiss": "Assainissement autonome",
+				"dal": "Non",
+				"route": "Bitume",
+				"desiderh": "Forage, Puits ameliorés, SODECI ameliorée",
+				"desiderf": "Forage\nSODECI (Améliorée et accessible à tous)\n",
+				"pressource": "Imam de la grande mosquée de Belleville 2\nPrésident des jeunes de Belleville 2\nChef du quartier de Belleville 2\nPrésidente des femmes de Belleville 2\n",
+				"tensint": "Disputes de femmes autour des points d'eau communautaires",
+				"tensvois": "Aucune tension",
+				"date": "26 Nov-09 Déc 2018",
+				"link_1": "articles/belleville2.html"
+			},
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+							[
+								-4.986098535483876,
+								7.709024344010386
+							],
+							[
+								-4.990485854793655,
+								7.710933959037859
+							],
+							[
+								-4.991692816311856,
+								7.711645757402426
+							],
+							[
+								-4.99386065887132,
+								7.712722404042696
+							],
+							[
+								-4.996188543498932,
+								7.711936742980877
+							],
+							[
+								-4.9980363019221,
+								7.711209279034748
+							],
+							[
+								-5.000698819964931,
+								7.710205378789091
+							],
+							[
+								-5.001440833189982,
+								7.710059885999865
+							],
+							[
+								-5.003425370671057,
+								7.70992639150956
+							],
+							[
+								-5.005063603641704,
+								7.709463365564039
+							],
+							[
+								-5.00114857216434,
+								7.713716640472867
+							],
+							[
+								-5.00686704396979,
+								7.718554406872688
+							],
+							[
+								-5.00663141818027,
+								7.722579450599978
+							],
+							[
+								-5.005456177950966,
+								7.726544433902277
+							],
+							[
+								-5.00398103516631,
+								7.730380565478697
+							],
+							[
+								-5.004959807644743,
+								7.736193642537415
+							],
+							[
+								-5.005166357962141,
+								7.739128355662383
+							],
+							[
+								-5.004278013839262,
+								7.741491814982663
+							],
+							[
+								-5.000622552952569,
+								7.739467013507173
+							],
+							[
+								-4.985954583089442,
+								7.729842245426283
+							],
+							[
+								-4.986370917938315,
+								7.727631385805854
+							],
+							[
+								-4.977659133352976,
+								7.719406602376573
+							],
+							[
+								-4.986098535483876,
+								7.709024344010386
+							]
+						]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"ogc_fid": 56.0,
+				"row id": 124.0,
+				"a_quartier": "Dar Es Salam",
+				"a_sous_qua": "Dar-es 1",
+				"id": "250",
+				"eau_sodeci": "1",
+				"pompes_fon": "nd",
+				"pompesnf": "nd",
+				"forage": "nd",
+				"puits": "nd",
+				"eausurf": "0",
+				"pomperep": "nd",
+				"analyse": "30",
+				"conforme": "1",
+				"vulnfaible": "6",
+				"vulnmoyen": "11",
+				"vulnfor": "8",
+				"vulnxfor": "2",
+				"public": "0",
+				"prive": "0",
+				"cgpe": "nd",
+				"cgpenb": "nd",
+				"cgpef": "nd",
+				"population": "93968",
+				"habitat": "Villageois et Bas standing",
+				"ecole": "Oui",
+				"sante": "Oui",
+				"activites": "Commerce",
+				"assainiss": "Assainissement autonome",
+				"dal": "Non",
+				"route": "Bitume, mais le quartier a des route dégradées à l'intérieur",
+				"desiderh": "SODECI (amélioré)\nForage \nPuit amélioré\n",
+				"desiderf": "SODECI (amélioré)\nForage \nPuit amélioré\n",
+				"pressource": "Coordinateur des Imams de Dar es Salam 1\n Président des jeunes de Dar Es Salam 1\n Présidente des femmes de Dar Es Salam 1\n Présidente des femmes de Dar Es Salam 2\n",
+				"tensint": "Dispute de voisinage,  disputes de femmes autour de points d'eau communautaires",
+				"tensvois": "Aucune tension",
+				"date": "15-févr.-19",
+				"link_1": "articles/daressalam.html"
+			},
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+							[
+								-5.028569890656553,
+								7.711334442839804
+							],
+							[
+								-5.031550997077124,
+								7.707675633462332
+							],
+							[
+								-5.035225661615409,
+								7.707893655258295
+							],
+							[
+								-5.039473991394252,
+								7.710894898554554
+							],
+							[
+								-5.039745442349096,
+								7.715435224547588
+							],
+							[
+								-5.038656230339067,
+								7.717548533391763
+							],
+							[
+								-5.042631012123273,
+								7.721287295178621
+							],
+							[
+								-5.03915797915906,
+								7.7234385060436
+							],
+							[
+								-5.037897062164891,
+								7.724960710915584
+							],
+							[
+								-5.034418726068511,
+								7.728050504010655
+							],
+							[
+								-5.030605167345247,
+								7.730137330015841
+							],
+							[
+								-5.025577854047516,
+								7.731195209763608
+							],
+							[
+								-5.022630207990709,
+								7.72974027443325
+							],
+							[
+								-5.020101874143504,
+								7.729934921717992
+							],
+							[
+								-5.021142043864903,
+								7.725736998419126
+							],
+							[
+								-5.020295403119749,
+								7.723213179272579
+							],
+							[
+								-5.019350754039228,
+								7.722074715050025
+							],
+							[
+								-5.017769331848899,
+								7.718352512652705
+							],
+							[
+								-5.018936576784378,
+								7.717467312261956
+							],
+							[
+								-5.019610397118343,
+								7.716899453390404
+							],
+							[
+								-5.019857050686843,
+								7.713956785510431
+							],
+							[
+								-5.025571341091294,
+								7.712650997157882
+							],
+							[
+								-5.026706588054267,
+								7.7116060738717
+							],
+							[
+								-5.028569890656553,
+								7.711334442839804
+							]
+						]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"ogc_fid": 57.0,
+				"row id": 42.0,
+				"a_quartier": "Tolakouadiokro",
+				"a_sous_qua": "Dares-extension",
+				"id": "42",
+				"eau_sodeci": "1",
+				"pompes_fon": "nd",
+				"pompesnf": "nd",
+				"forage": "nd",
+				"puits": "nd",
+				"eausurf": "0",
+				"pomperep": "nd",
+				"analyse": "19",
+				"conforme": "3",
+				"vulnfaible": "4",
+				"vulnmoyen": "7",
+				"vulnfor": "7",
+				"vulnxfor": "1",
+				"public": "0",
+				"prive": "0",
+				"cgpe": "nd",
+				"cgpenb": "nd",
+				"cgpef": "nd",
+				"population": "16490",
+				"habitat": "Bas standing, Moyen standing",
+				"ecole": "Oui",
+				"sante": "Oui",
+				"activites": "Commerce",
+				"assainiss": "Assainissement autonome",
+				"dal": "Non",
+				"route": "Bitume",
+				"desiderh": "Forage, PMH\nEau de SODECI (Améliorée et accessible à tous)\n",
+				"desiderf": "Forage\nPuits amélioré\nSODECI (Améliorée et accessible à tous)\n",
+				"pressource": "Chef central Tolakouadiokro, secteur Tchad\nChef Dares Extension\nChef de Tolakouadiokro Village\nIman de la grande mosquée de Tolakouadiokro\nPrésident des jeunes de Tolakouadiokro Village\nChef central Tolla Tchad\nChef Tolla Village\nImam Tolla Tchad\nPré",
+				"tensint": "Disputes de femmes dans les points d'eau",
+				"tensvois": "Aucune tension",
+				"date": "31 Octobre- 11 Novembre 2018",
+				"link_1": "articles/tolakouadiokro.html"
+			},
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+							[
+								-5.0451327483894,
+								7.73200839216671
+							],
+							[
+								-5.044473303447481,
+								7.732008392166714
+							],
+							[
+								-5.043693959425219,
+								7.732907635269314
+							],
+							[
+								-5.04291461540295,
+								7.733567080211221
+							],
+							[
+								-5.040576583336155,
+								7.733627029751402
+							],
+							[
+								-5.039437542072842,
+								7.733387231590701
+							],
+							[
+								-5.037399257706916,
+								7.733627029751401
+							],
+							[
+								-5.036979610925697,
+								7.733207382970185
+							],
+							[
+								-5.036080367823083,
+								7.734406373773654
+							],
+							[
+								-5.033142840354546,
+								7.732188240787233
+							],
+							[
+								-5.031823950470713,
+								7.730209905961496
+							],
+							[
+								-5.034701528399076,
+								7.728171621595594
+							],
+							[
+								-5.037164037693521,
+								7.725663675116875
+							],
+							[
+								-5.03999027993502,
+								7.723258348288724
+							],
+							[
+								-5.041729160888793,
+								7.722151787681777
+							],
+							[
+								-5.043214363103824,
+								7.722296566658581
+							],
+							[
+								-5.044353404367135,
+								7.721517222636321
+							],
+							[
+								-5.052866239071883,
+								7.724634598725351
+							],
+							[
+								-5.053046087692405,
+								7.726073387689516
+							],
+							[
+								-5.052386642750489,
+								7.727092529872472
+							],
+							[
+								-5.052506541830837,
+								7.727931823434897
+							],
+							[
+								-5.053465734473625,
+								7.728711167457158
+							],
+							[
+								-5.057755655332856,
+								7.733984158747548
+							],
+							[
+								-5.057717197658624,
+								7.737388237084875
+							],
+							[
+								-5.052986138152229,
+								7.737463800322508
+							],
+							[
+								-5.047830477697242,
+								7.733507130671051
+							],
+							[
+								-5.047710578616894,
+								7.733627029751396
+							],
+							[
+								-5.045852142871489,
+								7.732128291247054
+							],
+							[
+								-5.045672294250966,
+								7.732368089407751
+							],
+							[
+								-5.0451327483894,
+								7.73200839216671
+							]
+						]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"ogc_fid": 58.0,
+				"row id": 3.0,
+				"a_quartier": "Zone Industrielle",
+				"a_sous_qua": "Djezoukouamekro",
+				"id": "3",
+				"eau_sodeci": "1",
+				"pompes_fon": "nd",
+				"pompesnf": "nd",
+				"forage": "nd",
+				"puits": "nd",
+				"eausurf": "2",
+				"pomperep": "nd",
+				"analyse": "32",
+				"conforme": "6",
+				"vulnfaible": "0",
+				"vulnmoyen": "4",
+				"vulnfor": "14",
+				"vulnxfor": "11",
+				"public": "0",
+				"prive": "0",
+				"cgpe": "nd",
+				"cgpenb": "nd",
+				"cgpef": "nd",
+				"population": "48787",
+				"habitat": "Haut, Moyen et Bas standing",
+				"ecole": "Oui",
+				"sante": "Oui",
+				"activites": "Commerce, Agriculture, PME",
+				"assainiss": "Assainissement autonome",
+				"dal": "Non",
+				"route": "Bitume",
+				"desiderh": "Eau de SODECI (Améliorée)\nForage, PMH\nPuits amélioré\nEau de marigot\n",
+				"desiderf": "Puits amélioré, PMH,\nSODECI\n",
+				"pressource": "Le chef central des communautés Baoulé de Djézoukouamekro\nPrésidente des femmes de la Zone Industrielle\nPrésident des jeunes de la Zone Industrielle\nLes imams de la mosquée centrale et de la mosquée de Zone extension\n",
+				"tensint": "Dispute de voisinage,  disputes de femmes autour de points d'eau communautaires et des citernes de l'ONEP pendant la pénurie d'eau",
+				"tensvois": "Aucune tension",
+				"date": "15-28 Octobre 2018",
+				"link_1": "articles/zoneindustrielle.html"
+			},
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+							[
+								-5.061407892298331,
+								7.696418373386388
+							],
+							[
+								-5.064663495786826,
+								7.696703127369199
+							],
+							[
+								-5.06699057288083,
+								7.695834796673846
+							],
+							[
+								-5.068649149520782,
+								7.696600436345626
+							],
+							[
+								-5.070106829556509,
+								7.697494641190594
+							],
+							[
+								-5.071814580489654,
+								7.698328495816518
+							],
+							[
+								-5.075343458513938,
+								7.698232178928178
+							],
+							[
+								-5.075435210736348,
+								7.699776500369797
+							],
+							[
+								-5.074314726254128,
+								7.701591722235928
+							],
+							[
+								-5.069094433487424,
+								7.701757453146637
+							],
+							[
+								-5.068153528976796,
+								7.705157465708568
+							],
+							[
+								-5.066917442461835,
+								7.709366742325735
+							],
+							[
+								-5.066297702007933,
+								7.711444829817253
+							],
+							[
+								-5.063206799272414,
+								7.714299472299357
+							],
+							[
+								-5.060761469688956,
+								7.714780431923885
+							],
+							[
+								-5.059239443113253,
+								7.710512312599456
+							],
+							[
+								-5.051970599169987,
+								7.708585988326798
+							],
+							[
+								-5.049517756280816,
+								7.70886213095455
+							],
+							[
+								-5.0469915802473,
+								7.715910530762679
+							],
+							[
+								-5.045520633818509,
+								7.713813490322108
+							],
+							[
+								-5.03994733656908,
+								7.710690710378025
+							],
+							[
+								-5.040382515384178,
+								7.70938069190469
+							],
+							[
+								-5.041181541104923,
+								7.709306914798167
+							],
+							[
+								-5.042049496516268,
+								7.705959532592493
+							],
+							[
+								-5.043106274495369,
+								7.704470039360437
+							],
+							[
+								-5.043308288028678,
+								7.7028397186781298
+							],
+							[
+								-5.040947736410025,
+								7.698081582385906
+							],
+							[
+								-5.044260049685523,
+								7.699073088050994
+							],
+							[
+								-5.056715394296567,
+								7.697850978101287
+							],
+							[
+								-5.061407892298331,
+								7.696418373386388
+							]
+						]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"ogc_fid": 59.0,
+				"row id": 114.0,
+				"a_quartier": "Koffikro",
+				"a_sous_qua": "Koffikro",
+				"id": "253",
+				"eau_sodeci": "0,5",
+				"pompes_fon": "nd",
+				"pompesnf": "nd",
+				"forage": "nd",
+				"puits": "nd",
+				"eausurf": "0",
+				"pomperep": "nd",
+				"analyse": "13",
+				"conforme": "0",
+				"vulnfaible": "1",
+				"vulnmoyen": "4",
+				"vulnfor": "4",
+				"vulnxfor": "4",
+				"public": "0",
+				"prive": "0",
+				"cgpe": "nd",
+				"cgpenb": "nd",
+				"cgpef": "nd",
+				"population": "nd",
+				"habitat": "Moyen et Bas standing",
+				"ecole": "Oui",
+				"sante": "Oui",
+				"activites": "Agriculture",
+				"assainiss": "Assainissement autonome",
+				"dal": "Non",
+				"route": "Terre battue",
+				"desiderh": "Forage, PMH, Puits améliorés",
+				"desiderf": "Forage, PMH",
+				"pressource": "Chef du village de Koffikro\nPrésidente des femmes\nPrésident des jeunes de Koffikro\n\n",
+				"tensint": "Disputes de femmes dans les points d'eau",
+				"tensvois": "Insécurité provoquant des mécontentements",
+				"date": "15-févr.-19",
+				"link_1": "articles/koffikro.html"
+			},
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+							[
+								-5.009738810131331,
+								7.67909751713953
+							],
+							[
+								-5.01489618420967,
+								7.68476435802294
+							],
+							[
+								-5.012421846931059,
+								7.686621046775779
+							],
+							[
+								-5.009030121159818,
+								7.682557148015717
+							],
+							[
+								-5.009738810131331,
+								7.67909751713953
+							]
+						]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"ogc_fid": 60.0,
+				"row id": 53.0,
+				"a_quartier": "Maroc",
+				"a_sous_qua": "Maroc 1",
+				"id": "53",
+				"eau_sodeci": "0,5",
+				"pompes_fon": "nd",
+				"pompesnf": "nd",
+				"forage": "nd",
+				"puits": "nd",
+				"eausurf": "0",
+				"pomperep": "nd",
+				"analyse": "19",
+				"conforme": "10",
+				"vulnfaible": "2",
+				"vulnmoyen": "11",
+				"vulnfor": "6",
+				"vulnxfor": "1",
+				"public": "0",
+				"prive": "0",
+				"cgpe": "nd",
+				"cgpenb": "nd",
+				"cgpef": "nd",
+				"population": "nd",
+				"habitat": "Villageois et Bas standing",
+				"ecole": "Oui",
+				"sante": "Oui",
+				"activites": "Commerce, PME",
+				"assainiss": "Assainissement autonome",
+				"dal": "Non",
+				"route": "Bitume",
+				"desiderh": "Forage, formation de traitement d'eau de puits",
+				"desiderf": "Forage",
+				"pressource": "Responsable Comité Communale de Développement de Quartier (CCDQ) - Maroc\nImam de la grande mosquée du Maroc\nPrésidente des femmes Maroc 1\nChef de quartier Maroc 2\n",
+				"tensint": "Disputes de femmes dans les points d'eau communautaires",
+				"tensvois": "Aucune tension",
+				"date": "12-25 Novembre 2018",
+				"link_1": "articles/maroc.html"
+			},
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+							[
+								-5.050201603624942,
+								7.738072155717957
+							],
+							[
+								-5.049004531443049,
+								7.739599025201642
+							],
+							[
+								-5.048858153007461,
+								7.742142198629886
+							],
+							[
+								-5.049556816793147,
+								7.745078942600241
+							],
+							[
+								-5.041363421050939,
+								7.748059881548212
+							],
+							[
+								-5.039534960075624,
+								7.748269704938815
+							],
+							[
+								-5.037077028928479,
+								7.747910007697773
+							],
+							[
+								-5.033270233127412,
+								7.737508762477644
+							],
+							[
+								-5.03569818950447,
+								7.737718585868255
+							],
+							[
+								-5.035758139044646,
+								7.736879292305816
+							],
+							[
+								-5.037376776629351,
+								7.736819342765653
+							],
+							[
+								-5.037406751399438,
+								7.736459645524604
+							],
+							[
+								-5.037766448640483,
+								7.736489620294687
+							],
+							[
+								-5.038515817892661,
+								7.735440503341654
+							],
+							[
+								-5.039475010535451,
+								7.735050831330527
+							],
+							[
+								-5.041093648120155,
+								7.735140755640788
+							],
+							[
+								-5.044316783114879,
+								7.735131761996766
+							],
+							[
+								-5.046522037006984,
+								7.734831304787353
+							],
+							[
+								-5.047792373204211,
+								7.735213150784226
+							],
+							[
+								-5.050201603624942,
+								7.738072155717957
+							]
+						]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"ogc_fid": 61.0,
+				"row id": 177.0,
+				"a_quartier": "N’dakro-N’zuékro",
+				"a_sous_qua": "N’dakro-N’zuékro",
+				"id": "172",
+				"eau_sodeci": "0,5",
+				"pompes_fon": "nd",
+				"pompesnf": "nd",
+				"forage": "nd",
+				"puits": "nd",
+				"eausurf": "1",
+				"pomperep": "nd",
+				"analyse": "26",
+				"conforme": "4",
+				"vulnfaible": "9",
+				"vulnmoyen": "12",
+				"vulnfor": "3",
+				"vulnxfor": "1",
+				"public": "0",
+				"prive": "0",
+				"cgpe": "nd",
+				"cgpenb": "nd",
+				"cgpef": "nd",
+				"population": "5411",
+				"habitat": "Villageois et Bas standing",
+				"ecole": "Oui",
+				"sante": "Oui",
+				"activites": "Agriculture, PME, Commerce",
+				"assainiss": "Assainissement autonome",
+				"dal": "Non",
+				"route": "Terre battue",
+				"desiderh": "SODECI (amélioré)\nForage \nPuit amélioré\n",
+				"desiderf": "SODECI (amélioré)\nForage \nPuit amélioré\n",
+				"pressource": "Vice-présidente femme\nChef de la communauté Attié du Gbêkê \nImam mosquée terminus\nPrésident de l’association de N’Dakro Village\nPrésident des jeunes de N’Zuékro\nResponsable du CCDQ de N’Zuékro\n",
+				"tensint": "Disputes de femmes dans les points d'eau",
+				"tensvois": "Aucune tension",
+				"date": "26 Nov-09 Déc 2018",
+				"link_1": "articles/n-dakro-n-zuekro.html"
+			},
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+							[
+								-5.08081312405879,
+								7.66492663928962
+							],
+							[
+								-5.08443714504681,
+								7.667259539121787
+							],
+							[
+								-5.081501232223445,
+								7.670370776570732
+							],
+							[
+								-5.079385613739047,
+								7.670668987679055
+							],
+							[
+								-5.077002729750929,
+								7.672058377375095
+							],
+							[
+								-5.074460317063021,
+								7.670532935595533
+							],
+							[
+								-5.075286628881067,
+								7.671048906275189
+							],
+							[
+								-5.061316081050505,
+								7.676826761388491
+							],
+							[
+								-5.06011306566732,
+								7.673671123232777
+							],
+							[
+								-5.066959983347884,
+								7.666840870159103
+							],
+							[
+								-5.068425259055624,
+								7.6660526384542
+							],
+							[
+								-5.069341674495468,
+								7.664407770913047
+							],
+							[
+								-5.073063907793594,
+								7.66351366604715
+							],
+							[
+								-5.073500861885315,
+								7.666507786376028
+							],
+							[
+								-5.07397207802782,
+								7.665861704867135
+							],
+							[
+								-5.075706053861873,
+								7.664768191915939
+							],
+							[
+								-5.08081312405879,
+								7.66492663928962
+							]
+						]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"ogc_fid": 62.0,
+				"row id": null,
+				"a_quartier": "Langbassou",
+				"a_sous_qua": null,
+				"id": null,
+				"eau_sodeci": "0",
+				"pompes_fon": "0",
+				"pompesnf": "1",
+				"forage": "1",
+				"puits": "0",
+				"eausurf": "1",
+				"pomperep": "1",
+				"analyse": "1",
+				"conforme": "1",
+				"vulnfaible": "1",
+				"vulnmoyen": "0",
+				"vulnfor": "0",
+				"vulnxfor": "0",
+				"public": "1",
+				"prive": "0",
+				"cgpe": "1",
+				"cgpenb": "1",
+				"cgpef": "1",
+				"population": "1500",
+				"habitat": "Villageois et Bas standing",
+				"ecole": "Oui",
+				"sante": "Oui",
+				"activites": "Agriculture",
+				"assainiss": "Assainissement autonome",
+				"dal": "Oui",
+				"route": "Terre battue",
+				"desiderh": "Réparation des Forages",
+				"desiderf": "Réparation des forage et nouvelle PMH",
+				"pressource": "Chef de Village",
+				"tensint": "Dispute de femmes dans les points d'eau",
+				"tensvois": "Aucune tension",
+				"date": "01/02/2019",
+				"link_1": "articles/langbassou.html"
+			},
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+							[
+								-4.867789338347317,
+								7.795795149370888
+							],
+							[
+								-4.866319861176137,
+								7.798574061645101
+							],
+							[
+								-4.866043424876609,
+								7.798879596502474
+							],
+							[
+								-4.86582518569277,
+								7.799156032802004
+							],
+							[
+								-4.865636045066776,
+								7.79930152559123
+							],
+							[
+								-4.865345059488325,
+								7.799432469101533
+							],
+							[
+								-4.864966778236337,
+								7.799505215496145
+							],
+							[
+								-4.864632144821118,
+								7.799534314053991
+							],
+							[
+								-4.864181117174518,
+								7.7994761169383
+							],
+							[
+								-4.863540948901925,
+								7.799199680638772
+							],
+							[
+								-4.861445852737074,
+								7.798152132556346
+							],
+							[
+								-4.863831934480377,
+								7.795766050813043
+							],
+							[
+								-4.865403256604015,
+								7.794602108499237
+							],
+							[
+								-4.867134620795802,
+								7.79518407965614
+							],
+							[
+								-4.867789338347317,
+								7.795795149370888
+							]
+						]
+					]
+				]
+			}
+		}
+	]
+}

@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
+    <title>Atlas Eau Potable Assainissement Côte d'Ivoire Bouaké</title>
+    <link rel="stylesheet" type="text/css" href="http://localhost:8000/static/css/style.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="http://localhost:8000/static/css/print.css" media="print"/>
+    <link rel="stylesheet" href="http://localhost:8000/static/dist/leaflet.css" media="print"/>
+    <link rel="icon" type="image/x-icon" href="http://localhost:8000/static/images/favicon.ico">
+    
+	<!-- Magnific Popup core CSS file -->
+<link rel="stylesheet" href="http://localhost:8000/static/dist/magnific-popup.css">
+
+    
+<!-- appelle la librairie javascript Leaflet et le fichier CSS Leaflet -->	
+	<link rel="stylesheet" href="http://localhost:8000/static/dist/leaflet.css"/>
+<script src="http://localhost:8000/static/dist/leaflet.js"></script>
+  
+	<!-- jQuery - indispensable pour utiliser les fichiers geojson -->
+	<script type="text/javascript" src="http://localhost:8000/static/dist/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="http://localhost:8000/static/dist/jquery.min.js"></script>
+	
+	
+	<!-- liens vers les fichiers permettant de créer les controles de groupes de couche dans la carte -->
+	<link rel="stylesheet" href="http://localhost:8000/static/dist/leaflet.groupedlayercontrol.min.css"/>
+	
+		<!-- liens vers les fichiers permettant de créer les controles de groupes de couche dans la carte -->
+<script type="text/javascript" src="http://localhost:8000/static/dist/leaflet.groupedlayercontrol.min.js.map"></script>
+	<script type="text/javascript" src="http://localhost:8000/static/dist/leaflet.groupedlayercontrol.min.js"></script>
+	
+	
+	
+</head>
+
+<body>
+<script  type="text/javascript">
+
+
+$(document).ready(function() {
+$('.fiche').find('img').magnificPopup({
+		type:'image',
+		gallery:{enabled:true},
+  		callbacks:{
+  			elementParse: function (img){ img.src=img.el.attr('src');}
+  		}
+	});
+	
+
+});
+
+
+
+//$(document).ready(function() {
+	//$('.fiche').magnificPopup({
+  //type: 'image',
+  //delegate: 'img',
+  //gallery:{enabled:true},
+  //callback:{
+  //elementParse: function (item){ item.src=item.el.attr('src');console.log(item);}
+  //}
+  // other options
+//});
+//});
+
+
+</script>
+<header class="header-bar">
+    <div><a class="header-nav" href="http://localhost:8000/index.html">
+        <img src="http://localhost:8000/static/images/UElogo.png" alt="Atlas Eau Potable Assainissement Côte d'Ivoire Bouaké logo">
+    </a>
+    <span class="header-title" title="L'Atlas en ligne du projet ETUPO Vallée du Bandama présente les résultats de l'étude sur l'accès à l'eau potable et à l'assainissement à Bouaké et dans les villages périphériques.">Atlas Urgence Eau Bouaké</span></div>
+<nav>
+<ul>
+<li><a href="http://localhost:8000/index.html"><br><img src="http://localhost:8000/static/images/home_icon.png"></a></li>
+
+
+
+<li><a title="La présentation de l'étude"><br>Informations</a>
+<ul class="submenu">
+<li><a href="http://localhost:8000/pages/projet.html">L'étude</a></li>
+<li><a href="http://localhost:8000/pages/methodes-de-diagnostic.html">Les méthodes de diagnostic</a></li>
+<li><a href="http://localhost:8000/pages/auteurs-de-letude.html">Les auteurs</a></li>
+<li><a href="http://localhost:8000/pages/telechargements.html">Télécharger les données et rapports</a></li>
+</ul>
+</li>
+
+<li><a href="http://localhost:8000/pages/vulnerabilite.html">Diagnostic<br>localités</a></li>
+<li><a href="http://localhost:8000/pages/analyse-des-points-deau.html">Diagnostic<br>points d'eau</a></li>
+
+
+
+<li class="selectedout"><a>Contacts<br> Institutionnels</a>
+<ul class="submenu">
+<li class="selectedout"><a href="http://urgenceeau.com/">Association<br>Urgence Eau ></a></li>
+<li class="selectedout"><a href="http://urgenceeau.com/contact/">Contacts Urgence Eau ></a></li>
+<li class="selectedout"><a href="https://www.normandie.fr/">Région Normandie ></a></li>
+<li class="selectedout"><a href="https://www.normandie.fr/normandie-pour-la-paix">Initiative Normandie pour la paix ></a></li>
+</ul>
+
+</ul>
+</nav>
+    
+</header>
+    <div id="main"> 
+    
+<div class="content">
+	<div id="map" class="map">
+		<script type="text/javascript">
+			//// création de la carte et paramétrages généraux : 
+			//centre et niveau de zoom,zoom minimum,zoom maximum, 
+			// et limites du canevas (afin que l'ordinateur ne charge pas trop de tuiles de fond de carte)
+			// les paramètres de la fonction setView (coordonnées du centre de la vue=coordonnée de la localité
+			//niveau de zoom = 14 pour un quartier et 16 pour un village) seront extraits des métadata de chaque 
+			//fiches localité.
+			var map = L.map('map');
+			map.setView([7.74310,-5.04518], 14);
+			map.setMinZoom(11);
+			map.setMaxZoom(19);
+			map.setMaxBounds([[7.5,-4.8],[7.9,-5.3]])
+				
+		</script>
+		<script type="text/javascript" >
+		// construire une variable url pour chaque base de donnée affichée sur la page
+			
+			var articlespath = 'http://localhost:8000/'
+			var urllocalites = "http://localhost:8000/doc/map/bdd/localites_v2.geojson"
+			var urlpointdeau = "http://localhost:8000/doc/map/bdd/pointseau_v2.geojson"
+			var urlNorthArray = '<img src="http://localhost:8000/static/images/compass.png" style="width:30px;">'
+			var urlwhiteshadow = 'http://localhost:8000/doc/map/icone/white.png'
+			var urlpuitsmoderne = 'http://localhost:8000/doc/map/icone/puits_moderne.png'
+			var urlpuitstradi = 'http://localhost:8000/doc/map/icone/puits_tradi.png'
+			var urlforage = 'http://localhost:8000/doc/map/icone/forage.png'
+			var urlborne = 'http://localhost:8000/doc/map/icone/borne.png'
+			var urlsurface = 'http://localhost:8000/doc/map/icone/marigot.png'
+			
+		</script>
+		<script type="text/javascript" >
+		<!-- Script rapide pour filtrer les différents tableaux de données affiché dans la fiche -->
+		var filtreTableau = "Maroc"
+		table.setFilter("properties.a_quartier", "=", filtreTableau );
+		
+		</script>
+	</div>
+	<div id="" class="fiche">
+	
+	
+		<div style="margin:20px;">
+	
+	<select id="filter-localites" onchange="window.location.href=this.value;">
+	<option  style="color:grey;">Voir la fiche détaillée d'une autre localité</option>
+	<option value="http://localhost:8000/articles/affouvanssou.html" >Affouvanssou</option>
+	<option value="http://localhost:8000/articles/affouekro.html" >Affouékro</option>
+	<option value="http://localhost:8000/articles/ahougnanou.html" >Ahougnanou</option>
+	<option value="http://localhost:8000/articles/ahossitakikro.html" >Ahoussi Takikro</option>
+	<option value="http://localhost:8000/articles/akakro.html" >Akakro</option>
+	<option value="http://localhost:8000/articles/akpokro.html" >Akpokro</option>
+	<option value="http://localhost:8000/articles/allokokro.html" >Allokokro</option>
+	<option value="http://localhost:8000/articles/allomanbo.html" >Allomabo</option>
+	<option value="http://localhost:8000/articles/andonsakassou.html" >Andon Sakassou</option>
+	<option value="http://localhost:8000/articles/angankro.html" >Angankro</option>
+	<option value="http://localhost:8000/articles/angouayaokro.html" >Angoua Yaokro</option>
+	<option value="http://localhost:8000/articles/assankouadiokro.html" >Assankouadiokro</option>
+	<option value="http://localhost:8000/articles/assangoukan.html" >Assengou Kan</option>
+	<option value="http://localhost:8000/articles/assengoukpli.html" >Assengou Kpli</option>
+	<option value="http://localhost:8000/articles/assieblenou.html" >Assiêblénou</option>
+	<option value="http://localhost:8000/articles/assoumankro.html" >Assoumankro</option>
+	<option value="http://localhost:8000/articles/bamorogare.html" >Bamaro Gare</option>
+	<option value="http://localhost:8000/articles/bamoro.html" >Bamoro</option>
+	<option value="http://localhost:8000/articles/belleville1.html" >Belleville 1</option>
+	<option value="http://localhost:8000/articles/belleville2.html" >Belleville 2</option>
+	<option value="http://localhost:8000/articles/bendekouassikro.html" >Bendêkouassikro</option>
+	<option value="http://localhost:8000/articles/bletromambo.html" >Blétromanbo</option>
+	<option value="http://localhost:8000/articles/daressalam.html" >Dar Es Salam</option>
+	<option value="http://localhost:8000/articles/dinambo.html" >Dinambo</option>
+	<option value="http://localhost:8000/articles/djetouankro.html" >Djétouankro</option>
+	<option value="http://localhost:8000/articles/djekro.html" >Djêkro</option>
+	<option value="http://localhost:8000/articles/gbesserikro.html" >Gbéssérikro</option>
+	<option value="http://localhost:8000/articles/golikro.html" >Golikro</option>
+	<option value="http://localhost:8000/articles/ikilattekro.html" >Ikilatêkro</option>
+	<option value="http://localhost:8000/articles/kahankro.html" >Kahankro</option>
+	<option value="http://localhost:8000/articles/klobonoua.html" >Klôbonoua</option>
+	<option value="http://localhost:8000/articles/koffikro.html" >Koffikro</option>
+	<option value="http://localhost:8000/articles/konankro.html" >Konankro Mizron</option>
+	<option value="http://localhost:8000/articles/kouadio-miankro.html" >Kouadio Miankro</option>
+	<option value="http://localhost:8000/articles/kouakoumiankro.html" >Kouakou Miankro</option>
+	<option value="http://localhost:8000/articles/kouakro.html" >Kouakro</option>
+	<option value="http://localhost:8000/articles/kouameassekro.html" >Kouamé Assêkro</option>
+	<option value="http://localhost:8000/articles/kouameyaokro.html" >Kouamé Yaokro</option>
+	<option value="http://localhost:8000/articles/kouassiblekro-ngbassou.html" >Kouassiblékro N’Gbassou</option>
+	<option value="http://localhost:8000/articles/kpotitakikro.html" >Kpoti Takikro</option>
+	<option value="http://localhost:8000/articles/langbassou.html" >Langbassou</option>
+	<option value="http://localhost:8000/articles/lokanou.html" >Lokanou</option>
+	<option value="http://localhost:8000/articles/maroc.html" >Maroc</option>
+	<option value="http://localhost:8000/articles/minankro.html" >Minankro</option>
+	<option value="http://localhost:8000/articles/n-drikro.html" >N'Drikro</option>
+	<option value="http://localhost:8000/articles/n-ganblekonankro.html" >N'Ganblekonankro</option>
+	<option value="http://localhost:8000/articles/n-dakro-n-zuekro.html" >N’dakro et N'Zuekro</option>
+	<option value="http://localhost:8000/articles/ngattasakassou.html" >N’gatta Sakassou</option>
+	<option value="http://localhost:8000/articles/nguessankro.html" >N’guessankro</option>
+	<option value="http://localhost:8000/articles/pangbabo.html" >Pangbabo</option>
+	<option value="http://localhost:8000/articles/pharis-assouakro.html" >Pharis Assouakro</option>
+	<option value="http://localhost:8000/articles/pitiessi.html" >Pitiéssi</option>
+	<option value="http://localhost:8000/articles/sessenouan.html" >Sessenouan</option>
+	<option value="http://localhost:8000/articles/sesseti.html" >Sesseti</option>
+	<option value="http://localhost:8000/articles/sinzenou.html" >Sinzénou</option>
+	<option value="http://localhost:8000/articles/tchimou-assekro.html" >Tchimou-Assêkro</option>
+	<option value="http://localhost:8000/articles/tchimoukro.html" >Tchimoukro</option>
+	<option value="http://localhost:8000/articles/tolakouadiokro.html" >Tolakouadiokro</option>
+	<option value="http://localhost:8000/articles/totokro.html" >Totokro</option>
+	<option value="http://localhost:8000/articles/yapo-kouakoukro.html" >Yapokouakoukro</option>
+	<option value="http://localhost:8000/articles/yobouekro.html" >Yobouékro</option>
+	<option value="http://localhost:8000/articles/zoneindustrielle.html" >Zone Industrielle – Djézoukouamékro</option>
+	</select>
+	</div>
+	<div class="legendin" style="margin:20px;padding:10px;">
+			 <h1>Maroc</h1>
+			 <p style="text-align: right;"> Coordonnées GPS : 7.74310, -5.04518<br>
+			 Enquête réalisée le 08 mai 2019</p>
+			 <h4>Quartier du Nord-Ouest de Bouaké</h4>
+	</div>
+	<div>
+			 <table>
+<thead>
+<tr>
+<th align="left">Informations générales</th>
+<th align="right"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Nom de la localité :</td>
+<td align="right">Maroc</td>
+</tr>
+<tr>
+<td align="left">Population :</td>
+<td align="right">Pas de données</td>
+</tr>
+<tr>
+<td align="left">Aire :</td>
+<td align="right">5 km²</td>
+</tr>
+<tr>
+<td align="left">Dessertes en eau potable</td>
+<td align="right">Partiellement raccordé au réseau SODECI</td>
+</tr>
+<tr>
+<td align="left">Gestion des excrétas</td>
+<td align="right">Assainissement autonome</td>
+</tr>
+</tbody>
+</table>
+<h2>Socio-Anthropologie</h2>
+<p>Créé en 2004 peu après la crise sociopolitique de 2002, ce quartier est une extension des quartiers de  Kotiakro  et de Dar Es Salam. Il est composé plusieurs sous-quartiers: Maroc 1, 2, 3 et 4. Il accueille une population originaire du nord du pays (population Mandé) et des pays limitrophes (Guinée, Burkina Faso, Mali). Cette population est majoritairement de confession musulmane. De ce fait,  il y a une forte densité de mosquées équipées de points d’eau et une forte implication des ONG musulmanes dans la construction de puits et forage  à usage collectif depuis la crise de l’eau en 2018.</p>
+<h2>Configuration spatiale</h2>
+<p>Le quartier Maroc est l’un des nouveaux quartiers créés au cours de la crise ivoirienne de 2002. Les premiers habitants ont commencé à s’installer à partir de 2004. Le quartier est subdivisé en quatre sous-quartiers à savoir Maroc 1, 2,3 et 4. Il est délimité par les quartiers de Tolakouadiokro et Gonfréville et l’aéroport de Bouaké. Le quartier Maroc est loti et on y trouve des habitations de tous les standings. Les rues du quartier ne sont pas encore bitumées, mais il est connecté au réseau électrique et partiellement au réseau de distribution de la SODECI. La pose des conduites d’eau a été réalisée en 2010, mais il n’est pas encore raccordé au château d'eau.</p>
+<h2>Diagnostic des points d'eau analysés</h2>
+<p>L’évaluation sanitaire des points d’eau au quartier Maroc a été réalisée sur 20 puits familiaux à usage domestique dont 3 construit par des ONG musulmanes. Seules quelques habitations au niveau de Maroc 1 sont raccordées au réseau de distribution de l'eau potable de la SODECI. Les habitants du quartier Maroc ont majoritairement recours aux puits pour l’alimentation en eau dans les ménages. Presque tous les puits ayant fait l’objet de notre étude ont été construits par des particuliers à la construction de leurs maisons.</p>
+<h3>Forages</h3>
+<p><em>Aucun forage diagnostiqué dans le quartier</em></p>
+<h3>Puits</h3>
+<p>La plupart des puits au quartier Maroc sont très récents. En effet, ceux ayant fait l’objet de notre enquête ont une moyenne d’âge de 5 ans. Seuls quatre points d’eau ont plus de 10 ans. Tous les autres puits ont moins de 6 ans avec une forte augmentation des constructions ces trois dernières années. 50% des puits visités ont été construits il y a moins de 3 ans pour faire face aux difficultés d’approvisionnement en eau des populations de ces dernières années.</p>
+<p>Les puits visités au quartier Maroc sont quasiment tous maçonnés avec des poulies ou des treuils comme système d’exhaure (19 puits sur 20). Ils sont relativement profonds, ils peuvent atteindre plus de 20 m avec une profondeur moyenne de 14,5 m pour l’ensemble des puits visités. Les résultats d’enquête révèlent que 2 puits tarissent au cours de l’année. Mais les puits sont généralement pérennes, 90% des puits familiaux (18 puits sur 20) ont de l’eau toute l’année.</p>
+<p><strong>Puits maçonné en construction</strong></p>
+<p><img alt="maçonnage d'un puits en construction" src="images/maroc.jpg" title="maçonnage d'un puits en construction"></p>
+<p><strong>Puits dans la cours d'une habitation</strong></p>
+<p><img alt="Puits dans une habitation" src="images/maroc.jpg" title="Puits dans une habitation"></p>
+<p><strong>Puits construit par une ONG musulmane</strong></p>
+<p><img alt="Puits construit par une ONG" src="images/maroc.jpg" title="Puits construit par une ONG"></p>
+<p>En ce qui concerne l’aménagement de surface, la construction récente des ouvrages fait que ceux-ci sont presque tous en bon état. 95% des puits (18 puits sur 20) ont des superstructures en bons états. L’aménagement de surface est constitué généralement d’une margelle couverte d’une dalle avec une trappe pour faciliter la collecte de l’eau. La plupart des puits visités avaient leur superstructure faite de carreaux. Il ressort de nos entretiens avec les propriétaires de puits que l’augmentation de la profondeur et le curage des ouvrages sont les seuls travaux effectués au niveau des puits. Ceux-ci interviennent généralement quand le puits tarit.</p>
+<p>L’inspection sanitaire des puits à usage domestique au quartier Maroc révèle qu’environ 35% des points d’eau soit 7 puits sur les 20 ont une vulnérabilité élevée par rapport aux risques de pollution potentiels.</p>
+<table>
+<thead>
+<tr>
+<th align="center">Niveau de vulnérabilité</th>
+<th align="center">Très élevé</th>
+<th align="center">Élevé</th>
+<th align="center">Moyen</th>
+<th align="center">Faible</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Effectif des puits</td>
+<td align="center">1</td>
+<td align="center">6</td>
+<td align="center">11</td>
+<td align="center">2</td>
+</tr>
+</tbody>
+</table>
+<p>Les risques potentiels observés autour des ouvrages sont dus en grande partie à :</p>
+<ul>
+<li>La présente de latrines ou toilettes, des enclos et ordures à moins de 30 mètres (70% des puits)</li>
+<li>L’absence de drainage des eaux résiduelles autour des ouvrages (85% puits)</li>
+</ul>
+<p>L’analyse de la qualité des eaux de puits au quartier Maroc montre également que les eaux ont légère acidité (pH &lt; 7). Les pH varient entre 6,14 et 6,96 avec une moyenne de 6,49. La conductivité des eaux de puits variait entre 64.5 et 1135 µS/Cm avec une moyenne de 100 µS/Cm. La turbidité était dans la majorité des puits inférieure à 5 UTN, la norme recommandée par OMS pour les eaux de boisson. 75% avaient une eau claire et limpide lors des analyses effectuées sur le terrain.</p>
+<p>L’analyse des paramètres chimiques n’a révélé aucune anomalie au niveau des échantillons d’eau au quartier Maroc.</p>
+<p>L’analyse bactériologique des échantillons d’eau prélevés au quartier Maroc relève cependant que 40% points d’eau soit environ 8 puits sur les 20 sont contaminés par la bactérie <em>E. coli</em>. La présente de <em>E. coli</em> dans les eaux indique une source contamination fécale d’origine humaine ou animale à moins de 30 mètres. Le puits est contaminé par le ruissellement d'eaux souillées ou bien par de mauvaises pratiques d'hygiène lors de l'exhaure (puisette, mains ou chaussures souillées). Les puits étant relativement profonds, la présence de <em>E. coli</em> peut s’expliquer par l’introduction de puisettes souillées dans les ouvrages, car celles-ci sont souvent déposées à même le sol par les usagers après la collecte de l’eau.</p>
+<h3>Eaux de surface</h3>
+<p><em>Aucune eau de surface diagnostiquée dans le quartier</em></p>
+<h2>Pratiques et modes d’approvisionnement en eau</h2>
+<p>Partiellement raccordée à la SODECI, la population utilise très majoritairement l'eau des puits. Les entretiens ménages montrent que l'eau est traitée lors du stockage.</p>
+<h2>Mode de gestion</h2>
+<p>Les puits existent dans la majorité des ménages et la gestion revient aux propriétaires. En effet, avoir un puits et offrir son eau au voisin est considérée comme une obligation sociale. Les puits situés sur l’espace public existent également. Ce sont soit des points d’eau de mosquée gérés par un comité interne et distribuant l’eau à l’ensemble des habitants sans distinction confessionnelle, soit des puits privés financés par des ONG confessionnelles musulmanes et confiés au propriétaire de l'habitation la plus proche. Ils sont situés à l’extérieur du logement de leur propriétaire afin de profiter au voisinage, mais sont gérés et entretenus par le propriétaire.</p>
+<h2>Personnes ressources</h2>
+<ul>
+<li>Responsable Comité Communale de Développement de Quartier (CCDQ) - Maroc</li>
+<li>Imam de la grande mosquée du Maroc</li>
+<li>Présidente des femmes Maroc 1</li>
+<li>Chef de quartier Maroc 2</li>
+</ul>
+<h2>Gestion des excrétas</h2>
+<p>Le quartier Maroc à l’instar de presque tous les quartiers de Bouaké ne dispose pas d’un réseau de drainage des eaux usées. L’assainissement y est autonome, chaque habitation gère ses eaux usées domestiques. On retrouve tous des types d’ouvrages d’assainissement : fosses septiques, latrines sèches individuelles ou collectives. Les fosses, une fois pleine sont vidangées par des artisans ou des entreprises privées.</p>
+<h2>Desiderata des habitants</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Type d'entretien</th>
+<th align="center">Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">14 Entretiens individuels</td>
+<td align="center">12-25 Novembre 2018</td>
+</tr>
+<tr>
+<td align="left">05 Focus femmes</td>
+<td align="center">12-25 Novembre 2018</td>
+</tr>
+<tr>
+<td align="left">05 Focus hommes</td>
+<td align="center">12-25 Novembre 2018</td>
+</tr>
+<tr>
+<td align="left">04 Focus jeunes :</td>
+<td align="center">12-25 Novembre 2018</td>
+</tr>
+</tbody>
+</table>
+<p>La population est globalement satisfaite de la qualité de l'eau des puits, sa principale source d'eau potable. Toutefois, les femmes insistent particulièrement sur les la fatigue et les douleurs musculo-squelettiques qu'engendre l'utilisation des puits. Situés sur une butte, les puits sont très profonds et remonter la puisette est éreintant. Elles aimeraient que leurs habitations soient raccordées au réseau de distribution de l'eau potable de la SODECI.</p>
+<p>Les hommes tendent à privilégier des sources d'eau de qualité, mais meilleur marché que la SODECI. Ils préfèreraient donc que des forages collectifs indépendants du réseau de la SODECI soient construits, car ils estiment que l'eau y est moins chère, mais de très bonne qualité. Notons que ce voeu se heurte à la législation ivoirienne qui attribue le monopole de l'exploitation des forages en ville à la SODECI.</p>
+<h2>Tensions ressenties lors des entretiens</h2>
+<h3>Tensions générales</h3>
+<p>Aucune tension signalée</p>
+<h3>Tensions autour de l'eau</h3>
+<p>Les habitants de Maroc 1 se plaignent des coupures intempestives sur le réseau d'AEP géré par la SODECI. Ils aimeraient que cela cesse ou être mieux informé en amont pour pouvoir s'y préparer.</p>
+<p>Les principaux récits de tensions autour de l’approvisionnement en eau concernent la période de pénurie de 2018. De nombreuses querelles éclataient alors dans la file d’attente des citernes affrétées en urgence par l’office national de l’eau potable (ONEP). Ces disputes concernaient le respect de l’ordre de passage et la quantité des rations accordées à chacun.</p>
+<h3>Relations avec les localités voisines</h3>
+<p>Les relations avec les quartiers voisins sont bonnes. On ne note aucun incident.</p>
+	</div>
+	
+	
+	
+	</div>
+</div>
+    </div>
+    <footer class="footer-bar">
+
+
+
+	<a href="http://urgenceeau.com/"><img src="http://localhost:8000/static/images/UElogo.png" alt="Urgence Eau logo"></a>
+	<a href="http://urgenceeau.com/urgence-eau-cote-divoire-ueci/"><img src="http://localhost:8000/static/images/UECIlogo.png" alt="Urgence Eau - Côte d'Ivoire logo"></a>
+	<span class="footer-text"> <a href="http://urgenceeau.com/">Urgence Eau </a><br>
+	<a href="http://urgenceeau.com/urgence-eau-cote-divoire-ueci/">Urgence Eau - Côte d'Ivoire</a></span>
+    <span class="footer-text" style="text-align: center;">Site développé par <a href='http://www.ladyss.com/thomas-maillard'>Thomas Maillard</a><br>© 2018 Urgence Eau | <a href="http://urgenceeau.com/mentions-legales/">Mentions légales</a></span>
+    <span class="footer-text" style="text-align: right;">Un projet soutenu par la <a href="https://www.normandie.fr/">Région Normandie</a><br>à travers l'initiative <a href="https://www.normandie.fr/normandie-pour-la-paix">Normandie pour la Paix.</a></span>
+    <a href="https://www.normandie.fr/"><img src="http://localhost:8000/static/images/logo_r_normandie-portrait-cmjn.jpg" alt="Region Normandie logo"></a>
+	<a href="https://www.normandie.fr/normandie-pour-la-paix"><img src="http://localhost:8000/static/images/Label_Normandie-pour-la-Paix.jpg" alt="Label Normandie pour la paix logo"></a>
+  
+    <script src="http://localhost:8000/static/js/script.js"></script>
+    
+<!-- liens vers les fichiers permettant de créer les controles de groupes de couche dans la carte -->
+<script type="text/javascript" src="http://localhost:8000/static/dist/leaflet.groupedlayercontrol.min.js.map"></script>
+	<script type="text/javascript" src="http://localhost:8000/static/dist/leaflet.groupedlayercontrol.min.js"></script>
+<!-- les scripts d'affichage de l'habillage de la carte -->
+<script type="text/javascript" src="http://localhost:8000/doc/map/map_habillage.js" ></script>
+<!-- script d'affichage des groupes de couche dans le contrôleur de couches -->
+<script type="text/javascript" src="http://localhost:8000/doc/map/groupecontrole.js"></script>
+<!-- script d'affichage des différentes couches -->
+<script type="text/javascript" src="http://localhost:8000/doc/map/localites_type.js" ></script>
+<script type="text/javascript" src="http://localhost:8000/doc/map/pe_type.js" ></script>
+
+
+
+
+<!-- jQuery 1.7.2+ or Zepto.js 1.0+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
+
+<!-- Magnific Popup core JS file -->
+<script type="text/javascript" src="http://localhost:8000/static/dist/jquery.magnific-popup.js"></script>	
+	
+    </footer>
+</body>
+ 
+</html>
