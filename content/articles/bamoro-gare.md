@@ -1,5 +1,5 @@
 template: article
-title: Bamaro Gare
+title: Bamoro Gare
 slug: bamorogare
 iddbb: Bamoro gare
 tags: Rural
