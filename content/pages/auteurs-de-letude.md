@@ -62,7 +62,7 @@ Enfin il est  bloggeur  c’est-à-dire qu’il réalise des vidéos sur Youtube
 	</div>
 	<div class="capsule">
 	<details>
-	<summary><img src="../pages/image/jonathanSeri_Portrait.png" alt="Seri Jonathan"  style="display:inline-block;height:100px;padding:10px;"><strong>SERI Jonathan</strong></summary>
+	<summary><img src="../pages/image/jonathanSeri_Portrait.jpg" alt="Seri Jonathan"  style="display:inline-block;height:100px;padding:10px;"><strong>SERI Jonathan</strong></summary>
 	<p>Socioanthropologue, il a travaillé a Urgence Eau Côte d'Ivoire comme assistant de recherche de octobre 2018 à Mai 2019</p>
 	</details>	
 	</div>
