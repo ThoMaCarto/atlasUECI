@@ -406,7 +406,7 @@ $.getJSON(urllocalites,function(data)
 
 localites.addTo(map);
 
-});
+}); 
 
 
 	
