@@ -405,7 +405,8 @@ td{
 
 
 .leaflet-control-layers,
-.legendin {
+.legendin,
+.inputs {
     padding: 4px 6px;
     background: white;
     /* font: 14px/16px Arial, Helvetica, sans-serif; */
@@ -488,3 +489,4 @@ td{
 }
 
 .tablehidden{display: none;}
+

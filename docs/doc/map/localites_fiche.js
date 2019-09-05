@@ -1,9 +1,13 @@
+
+
 //Création des différents pane
 map.createPane('fond');
 map.getPane('fond').style.zIndex = 500;
 map.getPane('fond').style.pointerEvents = 'none';
 map.createPane('marker2');
 map.getPane('marker2').style.zIndex = 600;
+map.createPane('marker3');
+map.getPane('marker3').style.zIndex = 610;
 
 function creatAlias(prop){
 	switch(prop) {
@@ -93,7 +97,7 @@ function oneachfeature(feature, layer){
 //fonction pour afficher un cible bleu autour du point sélectionné
 function cible(e){
 						
-		var marker = new L.circleMarker([e.latlng.lat, e.latlng.lng],{radius: 5, color: 'dodgerblue', fillColor: 'dodgerblue',weight: 3,fillOpacity: 0,dashArray:"5",})
+		var marker = new L.circleMarker([e.latlng.lat, e.latlng.lng],{pane : 'marker3',radius: 5, color: 'dodgerblue', fillColor: 'dodgerblue',weight: 3,fillOpacity: 0,dashArray:"5",})
 		.addTo(map);
 		if (markers.length > 0) {map.removeLayer(markers.pop());}
 		var marker;

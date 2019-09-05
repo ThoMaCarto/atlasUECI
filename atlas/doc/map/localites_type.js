@@ -1,3 +1,5 @@
+
+
 ////Fonction qui défini la couleur en fonction de la vulnérabilité  
 /// e sera le nombre de point d'eau conforme, f le nmbre de pts d'eau diag, et g le raccordement à la SODECI, h le nombre de pompe fonctionnelles        
 function getColorVuln (e,f,g,h){

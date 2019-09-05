@@ -52,6 +52,6 @@ north.addTo(map);
 //var controlLayers= L.control.layers(null,null,{}).addTo(map);
 var groupedOverlays = { 
  "Diagnostic des points d'eau": {},"Diagnostic des localites":{},
- };
+};
 
 

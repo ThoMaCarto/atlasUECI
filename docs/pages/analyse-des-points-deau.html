@@ -112,7 +112,12 @@ $('.fiche').find('img').magnificPopup({
 </header>
     <div id="main"> 
     
+
+
 <section class="content">
+	
+	
+	
 	<div class="mapall" id="map" title="Cliquer sur un point d'eau pour accéder à son diagnostic détaillé">
 	<script type="text/javascript">
 	////Carte de la page d'accueil
@@ -150,6 +155,46 @@ var hash = new L.Hash(map);
 		</script>
 	</div>
 	<div class="fichelight">
+
+<div class="inputs" id="filters">
+<h4>Filtrer les données de la carte par type de points d'eau :</h4>	
+<input type="checkbox" id="filter"><label><strong>Tout sélectionner</strong></label>
+<div class="input" id="forages" styles="display:inline-block;">
+	
+	<input type="checkbox" id="forage"><label>Forages à pompe motorisée</label>
+	<!--<input type="checkbox" class="forage" id="Forage quip d'une PMH" value="Forage quip d'une PMH" style="display:none;"><label for="Forage quip d'une PMH" style="display:none;">Forage équipés d'une PMH</label>-->
+	<input type="checkbox" class="forage" id="Forage quip d'une pompe immerge" value="Forage quip d'une pompe immerge" style="display:none;"><label for="Forage quip d'une pompe immerge" style="display:none;">Forage équipés d'une pompe immergée</label>
+	
+</div>
+<div class="input" id="puitss" styles="display:inline-block;">
+	<input type="checkbox" id="puits"><label>Puits sans pompe</label>
+	<input type="checkbox" class="puits" id="Puits traditionnels" value="Puits traditionnels" style="display:none;"><label for="Puits traditionnels" style="display:none;">Puits traditionnels</label>
+	<input type="checkbox" class="puits" id="Puits buss" value="Puits buss" style="display:none;"><label for="Puits buss" style="display:none;">Puits busés</label>
+	<input type="checkbox" class="puits" id="Puits maonns" value="Puits maonns" style="display:none;"><label for="Puits maonns" style="display:none;">Puits maçonnés</label>
+	<!--<input type="checkbox" class="puits" id="Puits quip d'une PMH" value="Puits quip d'une PMH" style="display:none;"><label for="Puits quip d'une PMH" style="display:none;">Puits équipé d'une PMH</label>-->
+	
+</div>
+<div class="input" id="pmhs" styles="display:inline-block;">
+<input type="checkbox" id="pmh"><label>Points d'eau équipés d'une pompe à motricité humaine (puits ou forage)</label>
+<input type="checkbox" class="forage" id="Forage quip d'une PMH" value="Forage quip d'une PMH" style="display:none;"><label for="Forage quip d'une PMH" style="display:none;">Forage équipés d'une PMH</label>
+<input type="checkbox" class="puits" id="Puits quip d'une PMH" value="Puits quip d'une PMH" style="display:none;"><label for="Puits quip d'une PMH" style="display:none;">Puits équipé d'une PMH</label>
+</div>
+
+
+<div class="input" id="surfaces" styles="display:inline-block;">
+	<input type="checkbox" id="surface"><label>Eaux de de surface</label>
+	<input type="checkbox" class="surface" id="Marigot" value="Marigot" style="display:none;"><label for="Marigot" style="display:none;">Marigot</label>
+	<input type="checkbox" class="surface" id="Mare" value="Mare" style="display:none;"><label for="Mare" style="display:none;">Mare</label>
+	<input type="checkbox" class="surface" id="Lac" value="Lac" style="display:none;"><label for="Lac" style="display:none;">Lac</label>
+	<input type="checkbox" class="surface" id="Rivière" value="Rivière" style="display:none;"><label for="Rivière" style="display:none;">Rivière</label>
+</div>
+<div class="input" id="bornes" styles="display:inline-block;">
+	<input type="checkbox" id="borne"><label>Borne-fontaines</label>
+	<input type="checkbox" class="borne" id="Borne fontaine" value="Borne fontaine" style="display:none;"><label for="Borne fontaine" style="display:none;">Borne-fontaines</label>
+</div>	
+</div>	
+	
+	
 	<h4>Diagnostic détaillé du point d'eau sélectionné :</h4>
 		<div id="popupstatic">
 		</div>
@@ -177,9 +222,9 @@ var hash = new L.Hash(map);
 <script type="text/javascript" src="https://thomacarto.github.io/atlasUECI/static/dist/leaflet.groupedlayercontrol.min.js.map"></script>
 	<script type="text/javascript" src="https://thomacarto.github.io/atlasUECI/static/dist/leaflet.groupedlayercontrol.min.js"></script>	
 <!-- les scripts d'affichage de l'habillage de la carte -->
-<script type="text/javascript" src="https://thomacarto.github.io/atlasUECI/doc/map/map_habillage.js" ></script>
+<script type="text/javascript" src="https://thomacarto.github.io/atlasUECI/doc/map/map_habillage2.js" ></script>
 <!-- script d'affichage des groupes de couche dans le contrôleur de couches -->
-<script type="text/javascript" src="https://thomacarto.github.io/atlasUECI/doc/map/groupecontrole.js"></script>
+<script type="text/javascript" src="https://thomacarto.github.io/atlasUECI/doc/map/groupecontrole2.js"></script>
 <!-- script d'affichage des différentes couches -->
 
 <script type="text/javascript" src="https://thomacarto.github.io/atlasUECI/doc/map/pe_fiche.js" ></script>

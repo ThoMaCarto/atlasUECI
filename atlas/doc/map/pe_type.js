@@ -1,4 +1,8 @@
-//
+var groupedOverlays = { 
+ "Diagnostic des points d'eau": {},"Diagnostic des localites":{},
+ };
+
+var controlLayers = L.control.groupedLayers(null, groupedOverlays, options).addTo(map);
 
 
 ///// Création de la charte graphique

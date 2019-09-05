@@ -777,4 +777,4 @@ svg.leaflet-image-layer.leaflet-interactive path {
 	border-right-color: #fff;
 	}
 
-.tablehidden{display: none;height:0;width:0;}
+.tablehidden,.inputs{display: none;height:0;width:0;}

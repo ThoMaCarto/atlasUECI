@@ -1,5 +1,5 @@
 
-var attribUECI ='Fond de carte © <a href="http://osm.org/copyright">Contributeurs OpenStreetMap</a><br>Données © <a href="http://urgenceeau.com/urgence-eau-cote-divoire-ueci/">Urgence Eaux Côte d\'Ivoire</a> | Cartographie © <a href="http://www.ladyss.com/thomas-maillard">T.Maillard</a> et Firmain Kouakou N\'guessan '
+var attribUECI ='Fond de carte © <a href="http://osm.org/copyright">Contributeurs OpenStreetMap</a><br>Données © <a href="http://urgenceeau.com/urgence-eau-cote-divoire-ueci/">Urgence Eaux Côte d\'Ivoire</a> | Cartographie © <a href="http://www.ladyss.com/thomas-maillard">T.Maillard</a> et F. K. N\'guessan '
 
 //// Fonds de carte et habillage
 
@@ -50,6 +50,8 @@ north.addTo(map);
 
 
 //var controlLayers= L.control.layers(null,null,{}).addTo(map);
-var groupedOverlays = {  "Diagnostic des points d'eau": {},"Diagnostic des localites":{},};
+var groupedOverlays = { 
+ "Diagnostic des points d'eau": {},"Diagnostic des localites":{},
+ };
 
 
