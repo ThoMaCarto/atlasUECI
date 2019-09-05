@@ -6,6 +6,30 @@ map.createPane('marker2');
 map.getPane('marker2').style.zIndex = 600;
 
 
+
+
+
+// variable pour paramétrer les groupes de couches
+
+// variable pour paramétrer l'affichage des groupes exclusif
+var options = {
+  // Make the "Landmarks" group exclusive (use radio inputs)
+  exclusiveGroups: [
+  
+  "<strong>Analyse de l'eau</strong>",
+  "<strong>Analyse du point d'eau</strong>",
+  "<strong>Diagnostic des localités</strong>",
+  "<strong>Diagnostic des points d'eau</strong>",
+  
+  ],
+  // Show a checkbox next to non-exclusive group labels for toggling all
+  groupCheckboxes: false,
+  Checkboxes: true,
+  // collapse le controle de couche
+  collapsed : false
+};
+
+
 //Légende du score de vulnérabilité points d'eau
 var div1 = L.DomUtil.create("div", "legendin");
 var legendScoreVuln = L.control({position:"bottomleft",},);
@@ -319,169 +343,318 @@ function getColorBool(b){
  
 
 
+
+var checkboxStates; 
  
+// Création de la liste de filtre
+
+function filterType1 (feature){
+	const isTypeChecked = checkboxStates.Type.includes(feature.properties.Type || feature.properties.type_1)
+	return isTypeChecked
+	
+}
+
+function updateCheckboxStates(){
+	checkboxStates = {
+		Type:[],
+	}
+	
+	for (let input of document.querySelectorAll('input')){
+		if (input.checked){
+			switch (input.className){
+				case 'forage': checkboxStates.Type.push(input.value);
+				break
+				case 'puits': checkboxStates.Type.push(input.value);
+				break
+				case 'surface': checkboxStates.Type.push(input.value);
+				break
+				case 'borne': checkboxStates.Type.push(input.value);
+				break
+			}
+		}
+	}
+}
+
+
+
+//création dune couche geoJSON qui appelle le fichier "agglo_Bouake.geojson"
+$.getJSON(urlAggloBouake,function(data)
+{
+	const tacheUrbBouake = L.geoJson(data,{
+		style: function (feature){return {pane : 'fond', weight : 1, color : 'purple',fillColor:'white',fillOpacity : 0,};},
+	});
+	tacheUrbBouake.addTo(map);
+	;
+}
+);
+
+
+//Les contours des localités en fond de carte.
+$.getJSON(urllocalites,function(data)
+{
+	const localites= L.geoJson(data,{style: function(feature){return {pane : 'fond', color : 'red', weight : 1.5, fillColor : 'red', fillOpacity : .0, };},
+	onEachFeature : function(feature, layer ) {layer.bindPopup(
+	'Nom de la localité : <b>' + feature.properties.a_quartier+'</b>'
+	+ '<br>Population : <b>' + feature.properties.population+'</b>'
+	+ '<br>Points d\'eau analysés : <b>' + feature.properties.analyse+'</b>'
+	+ '<br>Points d\'eau conformes aux normes OMS : <b>' + feature.properties.conforme+'</b>'
+	+ '<br>Type de voie d\'accès : <b>' + feature.properties.route+'</b>'
+	+'<br><strong>Diagnostic détaillé : </strong> <a href="'+ articlespath + feature.properties.link_1 +'" style="text-transform: capitalize;">'
+		+ feature.properties.a_quartier +'</a>'
+	)}
+	});
+
+localites.addTo(map);
+
+});
+
+
+	
 
 //lecture de la base de donnée
-$.getJSON(urlpointdeau,function(data){
+var dataJson = $.getJSON(urlpointdeau,function(data){
+	
+		controlLayers = L.control.groupedLayers(null, groupedOverlays, options);
+		
 	
 	
+ function filterMaps (){	
+
+		
 	
+	var groupedOverlays = {  "Diagnostic des points d'eau": {}};
+	controlLayers.remove();
+	controlLayers = L.control.groupedLayers(null, groupedOverlays, options);
+
+		
+		
+		
+	
+		// insertion des groupe dans le contrôleur de couches
+
+
+
 	////Groupe des couche ANALYSE DE L'EAU
-	//transformation de la base de donnée en couche (Layer)
+	//Couche Chlore libre
 	var chlorelib = L.geoJson(data,{
 		onEachFeature: oneachfeature,
-		
+		filter: filterType1,
 		pointToLayer: function (feature,latlng){
 			return L.circleMarker(latlng,{pane : 'marker2',fillColor:getColorOMS(feature.properties.chlorelib,0.5,5),radius:5, fillOpacity:.8, color:'black',weight:1});
 		}
 	}).on("click", cible);
-//	.addTo(map);
+	
 	controlLayers.addOverlay(chlorelib, "Concentration en Chlore Libre", "<strong>Analyse de l'eau</strong>");
 	
 	
-	//transformation de la base de donnée en couche (Layer)
+	//Couche Chlore Total
 	var chloretot = L.geoJson(data,{
 		onEachFeature: oneachfeature,
-		
+		filter: filterType1,
 		pointToLayer: function (feature,latlng){
 			return L.circleMarker(latlng,{pane : 'marker2',fillColor:getColorOMS(feature.properties.chloretot,0,5),radius:5, fillOpacity:.8, color:'black',weight:1});
 		}
 	}).on("click", cible);
-//	.addTo(map);
 	controlLayers.addOverlay(chloretot, "Concentration en Chlore total", "<strong>Analyse de l'eau</strong>");
 	
 	
-	//transformation de la base de donnée en couche (Layer)
+	//Couche Ammoniac
 	var ammoniac = L.geoJson(data,{
 		onEachFeature: oneachfeature,
-		
+		filter: filterType1,
 		pointToLayer: function (feature,latlng){
 			return L.circleMarker(latlng,{pane : 'marker2',fillColor:getColorOMS(feature.properties.ammoniac,0,0.9),radius:5, fillOpacity:.8, color:'black',weight:1});
 		}
 	}).on("click", cible);
-//	.addTo(map);
-	controlLayers.addOverlay(ammoniac, "Pollution Ammoniac", "<strong>Analyse de l'eau</strong>");
+   controlLayers.addOverlay(ammoniac, "Pollution Ammoniac", "<strong>Analyse de l'eau</strong>");
 	
-	//transformation de la base de donnée en couche (Layer)
+	//Couche nitrate
 	var nitrate = L.geoJson(data,{
 		onEachFeature: oneachfeature,
-		
+		filter: filterType1,
 		pointToLayer: function (feature,latlng){
 			return L.circleMarker(latlng,{pane : 'marker2',fillColor:getColorOMS(feature.properties.nitrate,0,50),radius:5, fillOpacity:.8, color:'black',weight:1});
 		}
 	}).on("click", cible);
-//	.addTo(map);
 	controlLayers.addOverlay(nitrate, "Pollution Nitrate", "<strong>Analyse de l'eau</strong>");
 	
 	
-	//transformation de la base de donnée en couche (Layer)
+	//Couche nitrite
 	var nitrite = L.geoJson(data,{
 		onEachFeature: oneachfeature,
-		
+		filter: filterType1,
 		pointToLayer: function (feature,latlng){
 			return L.circleMarker(latlng,{pane : 'marker2',fillColor:getColorOMS(feature.properties.nitrite,0,0.1),radius:5, fillOpacity:.8, color:'black',weight:1});
 		}
 	}).on("click", cible);
-//	.addTo(map);
 	controlLayers.addOverlay(nitrite, "Pollution Nitrite", "<strong>Analyse de l'eau</strong>");
 	
 	
 		
-	//transformation de la base de donnée en couche (Layer)
+	//Couche Arsenic
 	var arsenic = L.geoJson(data,{
 		onEachFeature: oneachfeature,
-		
+		filter: filterType1,
 		pointToLayer: function (feature,latlng){
 			return L.circleMarker(latlng,{pane : 'marker2',fillColor:getColorOMS(feature.properties.arsenic,0,0.01),radius:5, fillOpacity:.8, color:'black',weight:1});
 		}
 	}).on("click", cible);
-//	.addTo(map);
 	controlLayers.addOverlay(arsenic, "Pollution Arsenic", "<strong>Analyse de l'eau</strong>");
 	
 	
-	//transformation de la base de donnée en couche (Layer)
+	//Courche fluor
 	var fluor = L.geoJson(data,{
 		onEachFeature: oneachfeature,
-		
+		filter: filterType1,
 		pointToLayer: function (feature,latlng){
 			return L.circleMarker(latlng,{pane : 'marker2',fillColor:getColorOMS(feature.properties.fluor,0,1),radius:5, fillOpacity:.8, color:'black',weight:1});
 		}
 	}).on("click", cible);
-	//.addTo(map);
 	controlLayers.addOverlay(fluor, "Pollution fluorure", "<strong>Analyse de l'eau</strong>");
 	
 	
-	//transformation de la base de donnée en couche (Layer)
+	//Couche E. coli
 	var ecoli = L.geoJson(data,{
 		onEachFeature: oneachfeature,
-		
+		filter: filterType1,
 		pointToLayer: function (feature,latlng){
 			return L.circleMarker(latlng,{pane : 'marker2',fillColor:getColorOMS(feature.properties.ecoli,0,0),radius:5, fillOpacity:.8, color:'black',weight:1});
 		}
 	}).on("click", cible)
 	.addTo(map);
 	controlLayers.addOverlay(ecoli, "Contamination <em>E. Coli</em>", "<strong>Analyse de l'eau</strong>");
+
+
+	
+	
 	
 	////groupe de couche état du point d'eau
+	//Couche Score de vulnérabilité
 	var scoreVuln = L.geoJson(data,{
 		onEachFeature: oneachfeature,
-		
+		filter: filterType1,
 		pointToLayer: function (feature,latlng){
 			return L.circleMarker(latlng,{pane : 'fond',color:getColorVulnSan(feature.properties.niveau2),radius:6, fillOpacity:0, fillColor:'black',weight:4});
 		}
 	}).on("click", cible);
 	scoreVuln.addTo(map);
-	legendScoreVuln.addTo(map);
-	
-	scoreVuln.beforeAdd = function (map) {legendPollut.remove(map);};
-	scoreVuln.beforeAdd = function (map) {legendScoreVuln.addTo(map);};
 	controlLayers.addOverlay(scoreVuln, "Vulnérabilité Sanitaire", "<strong>Analyse du point d'eau</strong>");
 	
+	
+	//Couche source de pollution identifiable
 	var Pollution = L.geoJson (data,{
 		onEachFeature: oneachfeature,
-		
+		filter: filterType1,
 		pointToLayer: function (feature,latlng){
 			return L.circleMarker(latlng,{pane : 'fond',color:getColorBool(feature.properties.polluti),radius:6, fillOpacity:0, fillColor:'black',weight:4});
 		}
-		
 	}).on("click", cible);
-	Pollution.beforeAdd = function (map) {legendScoreVuln.remove(map);};
-	Pollution.beforeAdd = function (map) {legendPollut.addTo(map);};
 	controlLayers.addOverlay(Pollution, "Sources de pollution", "<strong>Analyse du point d'eau</strong>");
 	
-});
+	//Gestion des affichage de légende.
+	
+	legendScoreVuln.addTo(map); //// légende initiale
+	scoreVuln.beforeAdd = function (map) {legendPollut.remove(map);};
+	scoreVuln.beforeAdd = function (map) {legendScoreVuln.addTo(map);};
+	Pollution.beforeAdd = function (map) {legendScoreVuln.remove(map);};
+	Pollution.beforeAdd = function (map) {legendPollut.addTo(map);};
 
+if (checkboxStates.Type.length != 0) {
+return map.addControl(controlLayers);};
 
+	
+};	
+
+for (let input of document.querySelectorAll('input')){
+	input.onchange = (e) =>{
+		
+		
 //création dune couche geoJSON qui appelle le fichier "agglo_Bouake.geojson"
 $.getJSON(urlAggloBouake,function(data)
 {
-	var tacheUrbBouake = L.geoJson(data,{
-		style: function (feature){return { weight : 1, color : 'purple',fillColor:'white',fillOpacity : 0,};},
+	const tacheUrbBouake = L.geoJson(data,{
+		style: function (feature){return { pane : 'fond',weight : 1, color : 'purple',fillColor:'white',fillOpacity : 0,};},
 	});
 	tacheUrbBouake.addTo(map);
-	
-//	controlLayers.addOverlay(tacheUrbBouake,'Agglomération de Bouaké'
-//	+'<table class="legendin">'
-//	+'<tr>'
-//	+'<td style="width:30px;border:1px solid purple;text-align:center;"></td>'
-//	+'<td>Tache urbaine en 2018</td>'
-//	+'</tr>'
-//	+'</table>','<strong>Urbanisation</strong>');
+	;
 }
 );
 
+
+//Les contours des localités en fond de carte.
 $.getJSON(urllocalites,function(data)
 {
-	var localites= L.geoJson(data,{style: function(feature){return { color : 'red', weight : 1.5, fillColor : 'red', fillOpacity : .0, };},
+	const localites= L.geoJson(data,{style: function(feature){return { pane : 'fond',color : 'red', weight : 1.5, fillColor : 'red', fillOpacity : .0, };},
+	onEachFeature : function(feature, layer ) {layer.bindPopup(
+	'Nom de la localité : <b>' + feature.properties.a_quartier+'</b>'
+	+ '<br>Population : <b>' + feature.properties.population+'</b>'
+	+ '<br>Points d\'eau analysés : <b>' + feature.properties.analyse+'</b>'
+	+ '<br>Points d\'eau conformes aux normes OMS : <b>' + feature.properties.conforme+'</b>'
+	+ '<br>Type de voie d\'accès : <b>' + feature.properties.route+'</b>'
+	+'<br><strong>Diagnostic détaillé : </strong> <a href="'+ articlespath + feature.properties.link_1 +'" style="text-transform: capitalize;">'
+		+ feature.properties.a_quartier +'</a>'
+	)}
 	});
 
 localites.addTo(map);
-//controlLayers.addOverlay(localites, 'Quartier ou village analysés'
-//+'<table class="legendin">'
-//+'<tr><td style="background-color:white;height:10px;width:30px;opacity:.8;border:2px solid red;"></td><td>Localité diagnostiquée</td></tr>'
-//+'</table>',"<strong>Enquête Urgence Eau</strong>");
+
+});		
+		
+//mise a jour des couches et controles		
+		updateCheckboxStates();
+		
+	
+		map.eachLayer(function (layer) {map.removeLayer(layer)});
+		
+		
+		map.addLayer(HOTOSM);
+		map.addLayer(osmfr);
+		
+		filterMaps ();
+		
+	
+
+	
+
+		
+	
+		
+		
+		
+	
+	}
+}
+
+	
 });
 
+
+
+//gestion des select all
+
+$('#forage').click(function () {
+	$('#forages input[type="checkbox"]').prop('checked',this.checked)
+});
+
+$('#puits').click(function () {
+	$('#puitss input[type="checkbox"]').prop('checked',this.checked)
+});
+
+$('#surface').click(function () {
+	$('#surfaces input[type="checkbox"]').prop('checked',this.checked)
+});
+
+$('#borne').click(function () {
+	$('#bornes input[type="checkbox"]').prop('checked',this.checked)
+});
+
+$('#pmh').click(function () {
+	$('#pmhs input[type="checkbox"]').prop('checked',this.checked)
+});
+
+$('#filter').click(function () {
+	$('#filters input[type="checkbox"]').prop('checked',this.checked)
+});
 
 
 
