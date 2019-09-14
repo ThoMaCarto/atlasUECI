@@ -1,4 +1,4 @@
-Les site internet est accessible sur la page : https://thomacarto.github.io/atlasUECI/public/index.html
+Les site internet est accessible sur la page : https://thomacarto.github.io/atlasUECI
 
 #Procédure de travail
 
