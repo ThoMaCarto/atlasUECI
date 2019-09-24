@@ -1,7 +1,13 @@
-//Création des différents pane
+///COUCHES POINTS D'EAUX POUR LA PAGE "DIAGNOSTIC POINTS EAUX"
+/*création Thomas Maillard*/
+
+///Paramètre généraux et habillage de la carte
+
+//Création des différents panes (ordre de superposition des couches)
 map.createPane('fond');
 map.getPane('fond').style.zIndex = 500;
 map.getPane('fond').style.pointerEvents = 'none';
+
 map.createPane('marker2');
 map.getPane('marker2').style.zIndex = 600;
 
@@ -9,27 +15,24 @@ map.getPane('marker2').style.zIndex = 600;
 
 
 
-// variable pour paramétrer les groupes de couches
+// variable pour paramétrer les groupes de couches et leur affichage dans un panneau de contrôle des couches
 
-// variable pour paramétrer l'affichage des groupes exclusif
 var options = {
-  // Make the "Landmarks" group exclusive (use radio inputs)
+  // Rendre certains groupe exclusif
   exclusiveGroups: [
-  
   "<strong>Analyse de l'eau</strong>",
   "<strong>Analyse du point d'eau</strong>",
   "<strong>Diagnostic des localités</strong>",
   "<strong>Diagnostic des points d'eau</strong>",
-  
   ],
-  // Show a checkbox next to non-exclusive group labels for toggling all
-  groupCheckboxes: false,
+  // Affichage des cases à cocher
+  groupCheckboxes: false,//ne pas afficher de case "tout sélectionner" avant les couches non-exclusives
   Checkboxes: true,
-  // collapse le controle de couche
+  // Ne pas cacher le panneau de controle de couches
   collapsed : false
 };
 
-
+///Paramètre des différentes légendes
 //Légende du score de vulnérabilité points d'eau
 var div1 = L.DomUtil.create("div", "legendin");
 var legendScoreVuln = L.control({position:"bottomleft",},);
@@ -69,7 +72,7 @@ legendPollut.onAdd = function (){
 	return div1;
 };
 
-//Titre et légende de la carte
+//Légendes des paramètres chimiques et biologiques
 var omsLegend = L.control({position:"bottomright",},);
 omsLegend.onAdd = function (){
 var div3 = L.DomUtil.create("div", "legendin");
@@ -108,83 +111,7 @@ omsLegend.addTo(map);
 
 
 
-
-
-        
-////Création des icones par type de points d'eau
-
-var modernIcon = L.icon({shadowUrl:urlwhiteshadow,shadowSize:[,30],shadowAnchor: [15, 15],iconAnchor:[10,5],iconSize:[20,],iconUrl: urlpuitsmoderne});
-var tradiIcon = L.icon({shadowUrl:urlwhiteshadow,shadowSize:[,30],shadowAnchor: [15, 15],iconAnchor:[ 10,5],iconSize:[20,],iconUrl: urlpuitstradi});
-var forageIcon = L.icon({shadowUrl:urlwhiteshadow,shadowSize:[,30],shadowAnchor: [15, 15],iconAnchor:[5,10],iconSize:[,20],iconUrl: urlforage}); 
-var borneIcon = L.icon({shadowUrl:urlwhiteshadow,shadowSize:[,30],shadowAnchor: [15, 15],iconAnchor:[5,10],iconSize:[,20],iconUrl: urlborne}); 
-var surfaceIcon = L.icon({shadowUrl:urlwhiteshadow,shadowSize:[,30],shadowAnchor: [15, 15],iconAnchor:[10,10],iconSize:[,20],iconUrl: urlsurface});
-var testIcon = L.icon({shadowUrl:urlredshadow,shadowSize:[,30],shadowAnchor: [15, 15],iconAnchor:[10,10],iconSize:[,20],iconUrl: urlredshadow});
-
-//création de la fonction qui appliquera l'icone en fonction de la variable type de points d'eau feature.properties.Type de point d'eau
-function geticontype(t) {
-          switch (t) {
-            case 'Marigot':
-              return  surfaceIcon;
-            case 'Mare':
-              return  surfaceIcon;
-            case 'Lac':
-              return  surfaceIcon;
-            case 'Rivière':
-              return  surfaceIcon;
-              
-             case 'Borne fontaine':
-              return borneIcon;
-              
-            case 'Puits traditionnels':
-              return  tradiIcon;
-              
-            case 'Puits busés':
-              return  modernIcon;                                                                                   
-            case 'Puits maçonnés':
-              return modernIcon;  
-              
-//            case 'Puits équipé d\'une PMH':
-  //            return modernIcon;
-    //        case 'Puits équipé d\'une  pompe immergée':
-      //        return modernIcon;
-              
- //            case 'Forage équipé d\'une pompe immergée':
-   //           return  forageIcon;
-     //       case 'Forage équipé d\'une PMH':
-       //       return forageIcon;
-              
-     		default:
-              return forageIcon;
-          }
-        }
- //création de la couche type de point d'eau
-$.getJSON(urlpointdeau,function(data){
-	//transformation de la base de donnée en couche (Layer)
-	
-	var typePE = L.geoJson(data,{
-		
-		onEachFeature: oneachfeature,
-		//Affichage sous forme de point
-		pointToLayer:function(feature,latlng){
-			//caractéristique des points
-			var marker = L.marker(latlng,{icon:geticontype(feature.properties.Type)});
-			//caractéristiques des popup
-			//marker2.bindPopup('<p>Comptage <em>E. coli</em>: ' + feature.properties.ecoli + ' UFC / 100 ml</p>');
-			//Affichage des marqueurs
-			return marker;
-		}
-		
-		
-		});
-		//.on("click", cible);
-	//Affichage sur la carte
-	
-	//typePE.addTo(map);
-	//Affichage dans le controleur de couche
-	
-	//controlLayers.addOverlay(Ecoli, "" );
-	//controlLayers.addOverlay(typePE, "Type de Point d'eau", "Analyse de l'eau");
-});    
+/// Création des Alias pour les en têtes de colonnes   
 
 function creatAlias(prop){
 	switch(prop) {
@@ -255,34 +182,27 @@ function creatAlias(prop){
 		case 'type_1' :return 'Type de point d\'eau';
 		case 'descr' :return 'Description';
 		case '__Date de' :return 'Date des analyses';
-		
-		
-		
-		
-		
 	}
 };
+
        
- // fonction pour l'affichage dans le panneau à droite des données du point       
+// fonction pour l'affichage dans le panneau à droite des données du point       
 function oneachfeature(feature, layer){
-		 	//marker.setOpacity(0); 
-           layer.on({
-                click: function showResultsInDiv() {
-                    var d = document.getElementById('popupstatic');
-                    d.innerHTML = "";
-                    tableNew = "<table>";
-                    //tableNew += "<tr><td></td></tr>";
+	layer.on({
+        click: function showResultsInDiv() {
+            var d = document.getElementById('popupstatic');
+            d.innerHTML = "";
+            tableNew = "<table>";
+    
                        
-                        for (prop in feature.properties){
-                        	
-                        	
-                        	 if (feature.properties[prop] !== null
-                        	 && prop !== '__Prendre' 
-                        	 && prop !== '__Prendr_1' 
-                        	 && prop !== '__Prendr_2' 
-                        	 && prop !== '__Prendr_3' 
-                        	 && prop !== '___index' 
-                        	 ) 
+			for (prop in feature.properties){
+                if (feature.properties[prop] !== null
+					&& prop !== '__Prendre' 
+                    && prop !== '__Prendr_1' 
+                    && prop !== '__Prendr_2' 
+                    && prop !== '__Prendr_3' 
+                    && prop !== '___index' 
+                ) 
                         		{
                         			tableNew += "<tr><td><strong>"+creatAlias(prop)+" : </strong></td><td>"+feature.properties[prop]+"</td></tr>" ;
                         			}
