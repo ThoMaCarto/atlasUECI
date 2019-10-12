@@ -81,7 +81,7 @@ le diagnostic de vulnérabilité sanitaire du point d'eau et l'analyse de la qua
 </tr>
 <tr>
 <td align="left"><strong>Diagnostic de la qualité de l'eau :</strong> Analyse organoleptique, physicochimique et bactériologique de l'eau</td>
-<td align="left">Couleur, Goût, Odeur, pH, Conductivité, turbidité, température, concentration de certains éléments chimiques (chlore libre, chlore total, ammoniac, nitrate, nitrite, arsenic, fluor), Comptage des bactéries <em>Echerichya Coli</em></td>
+<td align="left">Couleur, Goût, Odeur, pH, Conductivité, turbidité, température, concentration de certains éléments chimiques (chlore libre, chlore total, ammoniac, nitrate, nitrite, arsenic, fluor), Comptage des bactéries <em>Escherichia Coli</em></td>
 </tr>
 </tbody>
 </table>
