@@ -1,7 +1,13 @@
-//Création des différents pane
+///COUCHES POINTS D'EAUX POUR LA PAGE "DIAGNOSTIC POINTS EAUX"
+/*création Thomas Maillard*/
+
+///Paramètre généraux et habillage de la carte
+
+//Création des différents panes (ordre de superposition des couches)
 map.createPane('fond');
 map.getPane('fond').style.zIndex = 500;
 map.getPane('fond').style.pointerEvents = 'none';
+
 map.createPane('marker2');
 map.getPane('marker2').style.zIndex = 600;
 
@@ -9,27 +15,24 @@ map.getPane('marker2').style.zIndex = 600;
 
 
 
-// variable pour paramétrer les groupes de couches
+// variable pour paramétrer les groupes de couches et leur affichage dans un panneau de contrôle des couches
 
-// variable pour paramétrer l'affichage des groupes exclusif
 var options = {
-  // Make the "Landmarks" group exclusive (use radio inputs)
+  // Rendre certains groupe exclusif
   exclusiveGroups: [
-  
   "<strong>Analyse de l'eau</strong>",
   "<strong>Analyse du point d'eau</strong>",
   "<strong>Diagnostic des localités</strong>",
   "<strong>Diagnostic des points d'eau</strong>",
-  
   ],
-  // Show a checkbox next to non-exclusive group labels for toggling all
-  groupCheckboxes: false,
+  // Affichage des cases à cocher
+  groupCheckboxes: false,//ne pas afficher de case "tout sélectionner" avant les couches non-exclusives
   Checkboxes: true,
-  // collapse le controle de couche
+  // Ne pas cacher le panneau de controle de couches
   collapsed : false
 };
 
-
+///Paramètre des différentes légendes
 //Légende du score de vulnérabilité points d'eau
 var div1 = L.DomUtil.create("div", "legendin");
 var legendScoreVuln = L.control({position:"bottomleft",},);
@@ -69,7 +72,7 @@ legendPollut.onAdd = function (){
 	return div1;
 };
 
-//Titre et légende de la carte
+//Légendes des paramètres chimiques et biologiques
 var omsLegend = L.control({position:"bottomright",},);
 omsLegend.onAdd = function (){
 var div3 = L.DomUtil.create("div", "legendin");
@@ -108,83 +111,7 @@ omsLegend.addTo(map);
 
 
 
-
-
-        
-////Création des icones par type de points d'eau
-
-var modernIcon = L.icon({shadowUrl:urlwhiteshadow,shadowSize:[,30],shadowAnchor: [15, 15],iconAnchor:[10,5],iconSize:[20,],iconUrl: urlpuitsmoderne});
-var tradiIcon = L.icon({shadowUrl:urlwhiteshadow,shadowSize:[,30],shadowAnchor: [15, 15],iconAnchor:[ 10,5],iconSize:[20,],iconUrl: urlpuitstradi});
-var forageIcon = L.icon({shadowUrl:urlwhiteshadow,shadowSize:[,30],shadowAnchor: [15, 15],iconAnchor:[5,10],iconSize:[,20],iconUrl: urlforage}); 
-var borneIcon = L.icon({shadowUrl:urlwhiteshadow,shadowSize:[,30],shadowAnchor: [15, 15],iconAnchor:[5,10],iconSize:[,20],iconUrl: urlborne}); 
-var surfaceIcon = L.icon({shadowUrl:urlwhiteshadow,shadowSize:[,30],shadowAnchor: [15, 15],iconAnchor:[10,10],iconSize:[,20],iconUrl: urlsurface});
-var testIcon = L.icon({shadowUrl:urlredshadow,shadowSize:[,30],shadowAnchor: [15, 15],iconAnchor:[10,10],iconSize:[,20],iconUrl: urlredshadow});
-
-//création de la fonction qui appliquera l'icone en fonction de la variable type de points d'eau feature.properties.Type de point d'eau
-function geticontype(t) {
-          switch (t) {
-            case 'Marigot':
-              return  surfaceIcon;
-            case 'Mare':
-              return  surfaceIcon;
-            case 'Lac':
-              return  surfaceIcon;
-            case 'Rivière':
-              return  surfaceIcon;
-              
-             case 'Borne fontaine':
-              return borneIcon;
-              
-            case 'Puits traditionnels':
-              return  tradiIcon;
-              
-            case 'Puits busés':
-              return  modernIcon;                                                                                   
-            case 'Puits maçonnés':
-              return modernIcon;  
-              
-//            case 'Puits équipé d\'une PMH':
-  //            return modernIcon;
-    //        case 'Puits équipé d\'une  pompe immergée':
-      //        return modernIcon;
-              
- //            case 'Forage équipé d\'une pompe immergée':
-   //           return  forageIcon;
-     //       case 'Forage équipé d\'une PMH':
-       //       return forageIcon;
-              
-     		default:
-              return forageIcon;
-          }
-        }
- //création de la couche type de point d'eau
-$.getJSON(urlpointdeau,function(data){
-	//transformation de la base de donnée en couche (Layer)
-	
-	var typePE = L.geoJson(data,{
-		
-		onEachFeature: oneachfeature,
-		//Affichage sous forme de point
-		pointToLayer:function(feature,latlng){
-			//caractéristique des points
-			var marker = L.marker(latlng,{icon:geticontype(feature.properties.Type)});
-			//caractéristiques des popup
-			//marker2.bindPopup('<p>Comptage <em>E. coli</em>: ' + feature.properties.ecoli + ' UFC / 100 ml</p>');
-			//Affichage des marqueurs
-			return marker;
-		}
-		
-		
-		});
-		//.on("click", cible);
-	//Affichage sur la carte
-	
-	//typePE.addTo(map);
-	//Affichage dans le controleur de couche
-	
-	//controlLayers.addOverlay(Ecoli, "" );
-	//controlLayers.addOverlay(typePE, "Type de Point d'eau", "Analyse de l'eau");
-});    
+/// Création des Alias pour les en têtes de colonnes   
 
 function creatAlias(prop){
 	switch(prop) {
@@ -255,66 +182,55 @@ function creatAlias(prop){
 		case 'type_1' :return 'Type de point d\'eau';
 		case 'descr' :return 'Description';
 		case '__Date de' :return 'Date des analyses';
-		
-		
-		
-		
-		
 	}
 };
+
        
- // fonction pour l'affichage dans le panneau à droite des données du point       
+// fonction pour l'affichage dans le panneau à droite des données du point       
 function oneachfeature(feature, layer){
-		 	//marker.setOpacity(0); 
-           layer.on({
-                click: function showResultsInDiv() {
-                    var d = document.getElementById('popupstatic');
-                    d.innerHTML = "";
-                    tableNew = "<table>";
-                    //tableNew += "<tr><td></td></tr>";
+	layer.on({
+        click: function showResultsInDiv() {
+            var d = document.getElementById('popupstatic');
+            d.innerHTML = "";
+            tableNew = "<table>";
+    
                        
-                        for (prop in feature.properties){
-                        	
-                        	
-                        	 if (feature.properties[prop] !== null
-                        	 && prop !== '__Prendre' 
-                        	 && prop !== '__Prendr_1' 
-                        	 && prop !== '__Prendr_2' 
-                        	 && prop !== '__Prendr_3' 
-                        	 && prop !== '___index' 
-                        	 ) 
-                        		{
-                        			tableNew += "<tr><td><strong>"+creatAlias(prop)+" : </strong></td><td>"+feature.properties[prop]+"</td></tr>" ;
-                        			}
-                        		else {;}
-                        		;
-                        		
-                        	  }                     	
-                        	
-                        
-                    
-                    tableNew += "</table>";
-                    d.innerHTML = tableNew;
-                    
-                    
-                }
-            }) }
+			for (prop in feature.properties){
+                if (feature.properties[prop] !== null
+					&& prop !== '__Prendre' 
+                    && prop !== '__Prendr_1' 
+                    && prop !== '__Prendr_2' 
+                    && prop !== '__Prendr_3' 
+                    && prop !== '___index' 
+                ) 
+					{
+					tableNew += "<tr><td><strong>"+creatAlias(prop)+" : </strong></td><td>"+feature.properties[prop]+"</td></tr>" ;
+					}
+                else {;}
+                ;
+            }                     	
+                   
+        tableNew += "</table>";
+        d.innerHTML = tableNew;
+		}
+	}) 
+}
+
+
 //fonction pour afficher un cible bleu autour du point sélectionné
 function cible(e){
-						
 		var marker = new L.circleMarker([e.latlng.lat, e.latlng.lng],{radius: 10, color: 'dodgerblue', fillColor: 'dodgerblue',weight: 3,fillOpacity: 0,dashArray:"5",})
 		.addTo(map);
 		if (markers.length > 0) {map.removeLayer(markers.pop());}
 		var marker;
 		markers.push(marker)
       return marker;
-		
-		
 }
 
 //Création d'un compteur de marker
 var markers = [];	 
 
+///Fonction de colorisation des points d'eau
 // Couleur en fonction de la norme OMS
 	function getColorOMS (Field,minOMS,maxOMS){
 	if (Field < minOMS == true) {return('red');}
@@ -343,17 +259,17 @@ function getColorBool(b){
  
 
 
-
+///Création du filtrage des données par type de points d'eau
 var checkboxStates; 
  
 // Création de la liste de filtre
-
 function filterType1 (feature){
 	const isTypeChecked = checkboxStates.Type.includes(feature.properties.Type || feature.properties.type_1)
 	return isTypeChecked
 	
 }
 
+// fonction de mise à jours de la liste des filtre
 function updateCheckboxStates(){
 	checkboxStates = {
 		Type:[],
@@ -421,21 +337,14 @@ var dataJson = $.getJSON(urlpointdeau,function(data){
  function filterMaps (){	
 
 		
-	
+// insertion des groupe dans le contrôleur de couches	
 	var groupedOverlays = {  "Diagnostic des points d'eau": {}};
 	controlLayers.remove();
 	controlLayers = L.control.groupedLayers(null, groupedOverlays, options);
 
-		
-		
-		
-	
-		// insertion des groupe dans le contrôleur de couches
 
-
-
-	////Groupe des couche ANALYSE DE L'EAU
-	//Couche Chlore libre
+///Groupe des couche ANALYSE DE L'EAU
+//Couche Chlore libre
 	var chlorelib = L.geoJson(data,{
 		onEachFeature: oneachfeature,
 		filter: filterType1,
@@ -447,7 +356,7 @@ var dataJson = $.getJSON(urlpointdeau,function(data){
 	controlLayers.addOverlay(chlorelib, "Concentration en Chlore Libre", "<strong>Analyse de l'eau</strong>");
 	
 	
-	//Couche Chlore Total
+//Couche Chlore Total
 	var chloretot = L.geoJson(data,{
 		onEachFeature: oneachfeature,
 		filter: filterType1,
@@ -458,7 +367,7 @@ var dataJson = $.getJSON(urlpointdeau,function(data){
 	controlLayers.addOverlay(chloretot, "Concentration en Chlore total", "<strong>Analyse de l'eau</strong>");
 	
 	
-	//Couche Ammoniac
+//Couche Ammoniac
 	var ammoniac = L.geoJson(data,{
 		onEachFeature: oneachfeature,
 		filter: filterType1,
@@ -468,7 +377,7 @@ var dataJson = $.getJSON(urlpointdeau,function(data){
 	}).on("click", cible);
    controlLayers.addOverlay(ammoniac, "Pollution Ammoniac", "<strong>Analyse de l'eau</strong>");
 	
-	//Couche nitrate
+//Couche nitrate
 	var nitrate = L.geoJson(data,{
 		onEachFeature: oneachfeature,
 		filter: filterType1,
@@ -479,7 +388,7 @@ var dataJson = $.getJSON(urlpointdeau,function(data){
 	controlLayers.addOverlay(nitrate, "Pollution Nitrate", "<strong>Analyse de l'eau</strong>");
 	
 	
-	//Couche nitrite
+//Couche nitrite
 	var nitrite = L.geoJson(data,{
 		onEachFeature: oneachfeature,
 		filter: filterType1,
@@ -491,7 +400,7 @@ var dataJson = $.getJSON(urlpointdeau,function(data){
 	
 	
 		
-	//Couche Arsenic
+//Couche Arsenic
 	var arsenic = L.geoJson(data,{
 		onEachFeature: oneachfeature,
 		filter: filterType1,
@@ -502,7 +411,7 @@ var dataJson = $.getJSON(urlpointdeau,function(data){
 	controlLayers.addOverlay(arsenic, "Pollution Arsenic", "<strong>Analyse de l'eau</strong>");
 	
 	
-	//Courche fluor
+//Courche fluor
 	var fluor = L.geoJson(data,{
 		onEachFeature: oneachfeature,
 		filter: filterType1,
@@ -513,7 +422,7 @@ var dataJson = $.getJSON(urlpointdeau,function(data){
 	controlLayers.addOverlay(fluor, "Pollution fluorure", "<strong>Analyse de l'eau</strong>");
 	
 	
-	//Couche E. coli
+//Couche E. coli
 	var ecoli = L.geoJson(data,{
 		onEachFeature: oneachfeature,
 		filter: filterType1,
@@ -523,13 +432,10 @@ var dataJson = $.getJSON(urlpointdeau,function(data){
 	}).on("click", cible)
 	.addTo(map);
 	controlLayers.addOverlay(ecoli, "Contamination <em>E. Coli</em>", "<strong>Analyse de l'eau</strong>");
-
-
 	
 	
-	
-	////groupe de couche état du point d'eau
-	//Couche Score de vulnérabilité
+///groupe de couche état du point d'eau
+//Couche Score de vulnérabilité
 	var scoreVuln = L.geoJson(data,{
 		onEachFeature: oneachfeature,
 		filter: filterType1,
@@ -540,8 +446,7 @@ var dataJson = $.getJSON(urlpointdeau,function(data){
 	scoreVuln.addTo(map);
 	controlLayers.addOverlay(scoreVuln, "Vulnérabilité Sanitaire", "<strong>Analyse du point d'eau</strong>");
 	
-	
-	//Couche source de pollution identifiable
+//Couche source de pollution identifiable
 	var Pollution = L.geoJson (data,{
 		onEachFeature: oneachfeature,
 		filter: filterType1,
@@ -551,7 +456,7 @@ var dataJson = $.getJSON(urlpointdeau,function(data){
 	}).on("click", cible);
 	controlLayers.addOverlay(Pollution, "Sources de pollution", "<strong>Analyse du point d'eau</strong>");
 	
-	//Gestion des affichage de légende.
+//Gestion des affichage de légende.
 	
 	legendScoreVuln.addTo(map); //// légende initiale
 	scoreVuln.beforeAdd = function (map) {legendPollut.remove(map);};
@@ -581,45 +486,13 @@ $.getJSON(urlAggloBouake,function(data)
 );
 
 
-//Les contours des localités en fond de carte.
-$.getJSON(urllocalites,function(data)
-{
-	const localites= L.geoJson(data,{style: function(feature){return { pane : 'fond',color : 'red', weight : 1.5, fillColor : 'red', fillOpacity : .0, };},
-	onEachFeature : function(feature, layer ) {layer.bindPopup(
-	'Nom de la localité : <b>' + feature.properties.a_quartier+'</b>'
-	+ '<br>Population : <b>' + feature.properties.population+'</b>'
-	+ '<br>Points d\'eau analysés : <b>' + feature.properties.analyse+'</b>'
-	+ '<br>Points d\'eau conformes aux normes OMS : <b>' + feature.properties.conforme+'</b>'
-	+ '<br>Type de voie d\'accès : <b>' + feature.properties.route+'</b>'
-	+'<br><strong>Diagnostic détaillé : </strong> <a href="'+ articlespath + feature.properties.link_1 +'" style="text-transform: capitalize;">'
-		+ feature.properties.a_quartier +'</a>'
-	)}
-	});
-
-localites.addTo(map);
-
-});		
 		
 //mise a jour des couches et controles		
-		updateCheckboxStates();
-		
-	
-		map.eachLayer(function (layer) {map.removeLayer(layer)});
-		
-		
-		map.addLayer(HOTOSM);
-		map.addLayer(osmfr);
-		
-		filterMaps ();
-		
-	
-
-	
-
-		
-	
-		
-		
+updateCheckboxStates();
+map.eachLayer(function (layer) {map.removeLayer(layer)});
+map.addLayer(HOTOSM);
+map.addLayer(osmfr);
+filterMaps ();
 		
 	
 	}
