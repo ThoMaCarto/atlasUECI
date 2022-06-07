@@ -8,7 +8,7 @@ var attribUECI ='Fond de carte © <a href="http://osm.org/copyright">Contributeu
 
 
 // Fond de carte grisaille de mapnik
-var toner = L.tileLayer('https://tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png', {
+var toner = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
      attribution: attribUECI ,
 	  opacity:0.9, 	     
      });
