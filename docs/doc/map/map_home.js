@@ -4,7 +4,7 @@
 /// Habillage de la carte
 
 //Les sources
-var attribUECI ='Fond de carte © <a href="http://osm.org/copyright">Contributeurs OpenStreetMap</a><br>Données © <a href="http://urgenceeau.com/urgence-eau-cote-divoire-ueci/">Urgence Eaux Côte d\'Ivoire</a> | Cartographie © <a href="http://www.ladyss.com/thomas-maillard">T.Maillard</a> et F. K. N\'guessan '
+var attribUECI ='Fond de carte © <a href="http://osm.org/copyright">Contributeurs OpenStreetMap </a>&copy; <a href="http://cartodb.com/attributions">CartoDB</a><br>Données © <a href="http://urgenceeau.com/urgence-eau-cote-divoire-ueci/">Urgence Eaux Côte d\'Ivoire</a> | Cartographie © <a href="http://www.ladyss.com/thomas-maillard">T.Maillard</a> et F. K. N\'guessan '
 
 
 // Fond de carte grisaille de mapnik
